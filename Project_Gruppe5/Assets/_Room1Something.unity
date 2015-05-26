@@ -1455,7 +1455,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 728cf43e5aa63ac47a4a8aa8a7704bef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 7
+  speed: 14
   playWithControllerMac: 1
   playWithControllerWin: 0
 --- !u!65 &1422693751
