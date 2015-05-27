@@ -1533,8 +1533,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10
-  playWithControllerMac: 0
-  playWithControllerWin: 1
+  playWithControllerMac: 1
+  playWithControllerWin: 0
 --- !u!65 &1422693751
 BoxCollider:
   m_ObjectHideFlags: 0
