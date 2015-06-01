@@ -1,10 +1,10 @@
 using UnityEngine;
 using System.Collections;
 
-public class EnemyMovementFromPlayer : EnemyMovement {
+public class EnemyMovementFromLight : EnemyMovement {
 	
 	protected override void Move (){
-		Vector3 trans = transform.position - player.position;
+		Vector3 trans = transform.position - gazeLight.position;
 		trans.y = 0;
 		transform.rotation = Quaternion.LookRotation(trans);
 		
