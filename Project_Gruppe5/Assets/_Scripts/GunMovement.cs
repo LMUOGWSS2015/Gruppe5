@@ -14,14 +14,15 @@ public class GunMovement : MonoBehaviour {
 		float rotationX;
 		float rotationY;
 
-		rotationX = Input.GetAxis("XboxMacRightX") * sensitifity;
-		rotationY = Input.GetAxis("XboxMacRightY") * sensitifity;  
+		rotationX = Input.GetAxis ("XboxMacRightX") * sensitifity;
+		rotationY = Input.GetAxis ("XboxMacRightY") * sensitifity;
 
 		Debug.Log ("X/Y: " + rotationX + " ~ " + rotationY);
 
 		float _angle = Mathf.Atan2(rotationX, rotationY) * (180 / Mathf.PI);
 
-		_transform.rotation = Quaternion.Lerp(_transform.rotation, Quaternion.Euler(new Vector3(0, _angle, 0)), Time.deltaTime * speed);
-
+		if (!(rotationY == 0f && rotationX == 0)) {
+			_transform.rotation = Quaternion.Lerp (_transform.rotation, Quaternion.Euler (new Vector3 (0, _angle, 0)), Time.deltaTime * speed);
+		}
 	}
 }
