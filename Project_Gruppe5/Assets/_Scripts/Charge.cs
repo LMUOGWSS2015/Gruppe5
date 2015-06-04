@@ -35,7 +35,7 @@ public class Charge : MonoBehaviour {
 		}
 	}
 	
-	void OnTriggerLeave (Collider other){
+	void OnTriggerExit (Collider other){
 		if(other.gameObject.tag == "Light"){
 			charging = false;
 		}

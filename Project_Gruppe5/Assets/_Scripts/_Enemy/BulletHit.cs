@@ -10,6 +10,7 @@ public class BulletHit : MonoBehaviour {
 			Destroy(other.gameObject);
 			enemyHealth = this.GetComponent <EnemyHealth> ();
 			if(enemyHealth != null){
+				Debug.Log("Hit");
 				enemyHealth.TakeDamage (damagePerShot);
 			}
 		}

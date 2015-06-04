@@ -2,12 +2,11 @@
 using System.Collections;
 
 public class EnemyMovementRotOnly : MonoBehaviour {
-	protected Transform player;					//Position of Player
+	protected Transform player;
 	protected PlayerHealth playerHealth;
 	EnemyHealth enemyHealth;
 	
 	protected void Awake (){
-		// Set up the references.
 		player = GameObject.FindGameObjectWithTag ("Player").transform;
 		playerHealth = player.GetComponent <PlayerHealth> ();
 		enemyHealth = GetComponent <EnemyHealth> ();
