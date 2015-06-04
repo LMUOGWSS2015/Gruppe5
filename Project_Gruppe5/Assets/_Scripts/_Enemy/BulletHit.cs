@@ -2,7 +2,7 @@ using UnityEngine;
 using System.Collections;
 
 public class BulletHit : MonoBehaviour {
-	public int damagePerShot;
+	public int damagePerShot = 1;
 	EnemyHealth enemyHealth;
 	
 	void OnTriggerEnter (Collider other) {
@@ -10,7 +10,6 @@ public class BulletHit : MonoBehaviour {
 			Destroy(other.gameObject);
 			enemyHealth = this.GetComponent <EnemyHealth> ();
 			if(enemyHealth != null){
-				// ... the enemy should take damage.
 				enemyHealth.TakeDamage (damagePerShot);
 			}
 		}
