@@ -85,5 +85,7 @@ public class PlayerHealth : MonoBehaviour {
 		// Turn off the movement and shooting scripts.
 		playerMovement.enabled = false;
 		//shotsFired.enabled = false;
+
+		Destroy (this.gameObject);
 	}    
 }
