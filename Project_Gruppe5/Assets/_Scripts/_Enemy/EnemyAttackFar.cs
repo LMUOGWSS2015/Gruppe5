@@ -55,7 +55,7 @@ public class EnemyAttackFar : MonoBehaviour {
 		gunLine.SetPosition (0, gunLine.transform.position);
 		gunLine.SetPosition (1, playerPos.position);
 
-		Debug.DrawRay(shootRay.origin, shootRay.direction, Color.white, 3.0f, true);
+		//Debug.DrawRay(shootRay.origin, shootRay.direction, Color.white, 3.0f, true);
 
 		if (Physics.Raycast (shootRay, out shootHit, range, mask)){
 			Debug.Log(shootHit.collider.gameObject);
