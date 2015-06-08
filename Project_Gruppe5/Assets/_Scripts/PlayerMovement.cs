@@ -9,15 +9,15 @@ public class PlayerMovement: MonoBehaviour {
 
 	void FixedUpdate() {
 
-		float translation;
-		float translationH;
+		float translationX;
+		float translationY;
 		float rotationX;
 		float rotationY;
 
 
 		if (playWithControllerMac) {
-			translation = Input.GetAxis ("XboxMacLeftY") * speed;
-			translationH = Input.GetAxis ("XboxMacLeftX") * speed;
+			translationX = Input.GetAxis ("XboxMacLeftY") * speed;
+			translationY = Input.GetAxis ("XboxMacLeftX") * speed;
 
 			rotationX = Input.GetAxis ("XboxMacRightX");
 			rotationY = Input.GetAxis ("XboxMacRightY");
@@ -26,8 +26,8 @@ public class PlayerMovement: MonoBehaviour {
 
 		}
 		else if (playWithControllerWin) {
-			translation = Input.GetAxis ("XboxWinLeftY") * speed;
-			translationH = Input.GetAxis ("XboxWinLeftX") * speed;
+			translationX = Input.GetAxis ("XboxWinLeftY") * speed;
+			translationY = Input.GetAxis ("XboxWinLeftX") * speed;
 
 			rotationX = Input.GetAxis ("XboxWinRightX");
 			rotationY = Input.GetAxis ("XboxWinRightY");
@@ -36,12 +36,12 @@ public class PlayerMovement: MonoBehaviour {
 			
 		}
 		else {
-			translation = Input.GetAxis ("Vertical") * speed;
-			translationH = Input.GetAxis ("Horizontal") * speed;
+			translationX = Input.GetAxis ("Vertical") * speed;
+			translationY = Input.GetAxis ("Horizontal") * speed;
 		}
 
-		translation *= Time.deltaTime;
-		translationH *= Time.deltaTime;
-		transform.Translate(translationH, 0, translation);
+		translationX *= Time.deltaTime;
+		translationY *= Time.deltaTime;
+		transform.Translate(translationY, 0, translationX);
 	}
 }
