@@ -12,6 +12,9 @@ TagManager:
   - enemyExplosion
   - GazeController
   - DDoors
+  - enemyBullet
+  - playerHit
+  - playerExplosion
   layers:
   - Default
   - TransparentFX

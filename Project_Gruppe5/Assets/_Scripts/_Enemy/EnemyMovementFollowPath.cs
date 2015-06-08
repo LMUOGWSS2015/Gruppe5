@@ -35,14 +35,14 @@ public class EnemyMovementFollowPath : MonoBehaviour {
 	
 	
 	void Update (){
-		if (follow == Follow.PathOnly)
-			currentDist = distance + 1;
-		else
+		if(playerHealth.currentHealth > 0 && follow != Follow.PathOnly)
 			currentDist = Vector3.Distance (followedObj.position, transform.position);
+		else
+			currentDist = distance + 1;
 
 		if (currentDist > distance)
 			Move ();
-		else if(enemyHealth.currentHealth > 0 && playerHealth.currentHealth > 0) 
+		else if(enemyHealth.currentHealth > 0) 
 			nav.SetDestination(followedObj.position);
 		else
 			nav.enabled = false;

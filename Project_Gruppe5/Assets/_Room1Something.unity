@@ -1989,6 +1989,8 @@ GameObject:
   - 33: {fileID: 1099587759}
   - 65: {fileID: 1099587758}
   - 23: {fileID: 1099587757}
+  - 114: {fileID: 1099587761}
+  - 54: {fileID: 1099587762}
   m_Layer: 8
   m_Name: Cube
   m_TagString: Untagged
@@ -2030,8 +2032,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1.23159885, y: 1.0328325, z: 1.09397042}
+  m_Center: {x: .115799427, y: .016416233, z: .0469851494}
 --- !u!33 &1099587759
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -2051,6 +2053,33 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 12
+--- !u!114 &1099587761
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1099587756}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8a91bd5e05abfa4eaab517e822b0090, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletExplosion: {fileID: 192264, guid: 579562710378d4fdab9e9b804dea0672, type: 2}
+--- !u!54 &1099587762
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1099587756}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: .0500000007
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &1107579334
 GameObject:
   m_ObjectHideFlags: 0
@@ -2854,7 +2883,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1ad30093f3f7b246a76c81f188c9dc7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  follow: 0
+  follow: 2
   distance: 8
   patrolSpeed: 3
   followSpeed: 5
@@ -2987,7 +3016,7 @@ LineRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_Materials:
-  - {fileID: 0}
+  - {fileID: 2100000, guid: df18fe099815d411fb917d28c382aa0a, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 1
@@ -3151,6 +3180,8 @@ MonoBehaviour:
   damageImage: {fileID: 898563327}
   flashSpeed: 5
   flashColour: {r: 1, g: 0, b: 0, a: .100000001}
+  playerHit: {fileID: 126894, guid: 3b578bd44f0574c49bda39c7d730a97e, type: 2}
+  playerExplosion: {fileID: 168372, guid: dc91594f738d241109fa46fb952a9c34, type: 2}
 --- !u!1 &1475513860
 GameObject:
   m_ObjectHideFlags: 0
@@ -3480,6 +3511,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1fa65546e429094aae95625795d2c21, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  useEyeTracking: 0
+  speed: 2
+  stagewidth: 40
+  stageheight: 20
 --- !u!108 &1853827012
 Light:
   m_ObjectHideFlags: 0
@@ -3608,7 +3643,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 1954360052}
   - 108: {fileID: 1954360054}
-  - 114: {fileID: 1954360053}
   m_Layer: 0
   m_Name: Spotlight2
   m_TagString: Light
@@ -3628,17 +3662,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1853827013}
   m_RootOrder: 1
---- !u!114 &1954360053
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1954360051}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f1fa65546e429094aae95625795d2c21, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!108 &1954360054
 Light:
   m_ObjectHideFlags: 0

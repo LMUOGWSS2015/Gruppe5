@@ -58,7 +58,7 @@ public class EnemyAttackFar : MonoBehaviour {
 		//Debug.DrawRay(shootRay.origin, shootRay.direction, Color.white, 3.0f, true);
 
 		if (Physics.Raycast (shootRay, out shootHit, range, mask)){
-			Debug.Log(shootHit.collider.gameObject);
+//			Debug.Log(shootHit.collider.gameObject);
 			if(shootHit.transform.gameObject == player){
 				playerHealth.TakeDamage (dmgAmnt);
 
