@@ -4,12 +4,15 @@ using System.Collections;
 public class EnemyMovement : MonoBehaviour {
 	public float distance = 8f;
 	public float speed = 5f;
+	public bool freezeInLight = false;
 
 	protected Transform gazeLight;				//Position of Light
 	protected Transform player;					//Position of Player
 	protected PlayerHealth playerHealth;
 	protected EnemyHealth enemyHealth;
 	protected NavMeshAgent nav;	
+
+	protected bool frozen;
 	
 	protected void Awake (){
 		gazeLight = GameObject.FindGameObjectWithTag ("Light").transform;
@@ -22,7 +25,7 @@ public class EnemyMovement : MonoBehaviour {
 	
 	
 	protected void Update (){
-		if (enemyHealth.currentHealth > 0 && playerHealth.currentHealth > 0 && Vector3.Distance (player.position, transform.position) <= distance) {
+		if (enemyHealth.currentHealth > 0 && playerHealth.currentHealth > 0) {
 			Move ();
 		} else {
 			nav.enabled = false;
@@ -31,5 +34,17 @@ public class EnemyMovement : MonoBehaviour {
 
 	protected virtual void Move(){
 
+	}
+
+	void OnTriggerEnter (Collider other){
+		if(freezeInLight && other.gameObject.tag == "Light"){
+			frozen = true;
+		}
+	}
+	
+	void OnTriggerExit (Collider other){
+		if(freezeInLight && other.gameObject.tag == "Light"){
+			frozen = false;
+		}
 	}
 }

@@ -1806,6 +1806,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timeToChargeInSec: 3
   chargePercentage: 0
+  id: 0
 --- !u!23 &979055306
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2748,6 +2749,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   distance: 8
   speed: 5
+  freezeInLight: 0
 --- !u!114 &1389265332
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2761,6 +2763,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   distance: 8
   speed: 5
+  freezeInLight: 1
 --- !u!114 &1389265333
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2785,8 +2788,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8d8a8b1549532f46a5b1dfbe5cee08c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  distance: 8
+  distance: 10
   speed: 5
+  freezeInLight: 0
 --- !u!114 &1389265335
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2798,8 +2802,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea7462374b1bc414cabdf89043805087, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  distance: 8
+  distance: 10
   speed: 5
+  freezeInLight: 0
 --- !u!114 &1389265336
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2854,6 +2859,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1ad30093f3f7b246a76c81f188c9dc7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  freezeInLight: 1
   follow: 0
   distance: 8
   patrolSpeed: 3
@@ -3120,7 +3126,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10
-  playWithControllerMac: 1
+  playWithControllerMac: 0
   playWithControllerWin: 0
 --- !u!65 &1422693751
 BoxCollider:
@@ -3480,6 +3486,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1fa65546e429094aae95625795d2c21, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  useEyeTracking: 0
+  speed: 2
+  stagewidth: 40
+  stageheight: 20
 --- !u!108 &1853827012
 Light:
   m_ObjectHideFlags: 0
@@ -3608,7 +3618,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 1954360052}
   - 108: {fileID: 1954360054}
-  - 114: {fileID: 1954360053}
   m_Layer: 0
   m_Name: Spotlight2
   m_TagString: Light
@@ -3628,17 +3637,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1853827013}
   m_RootOrder: 1
---- !u!114 &1954360053
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1954360051}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f1fa65546e429094aae95625795d2c21, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!108 &1954360054
 Light:
   m_ObjectHideFlags: 0

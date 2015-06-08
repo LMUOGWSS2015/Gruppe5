@@ -3,6 +3,8 @@ using System.Collections;
 
 public class EnemyMovementFollowPath : MonoBehaviour {
 	public enum Follow{PathOnly, GazeLight, Player};
+	
+	public bool freezeInLight = false;
 
 	public Follow follow = Follow.PathOnly;
 	public float distance = 8f;
@@ -21,6 +23,7 @@ public class EnemyMovementFollowPath : MonoBehaviour {
 	int wayPointIndex;
 	float currentDist;
 
+	bool frozen;
 	
 	void Awake (){
 		player = GameObject.FindGameObjectWithTag ("Player").transform;
@@ -31,6 +34,7 @@ public class EnemyMovementFollowPath : MonoBehaviour {
 		playerHealth = player.GetComponent <PlayerHealth> ();
 		enemyHealth = GetComponent <EnemyHealth> ();
 		nav = GetComponent <NavMeshAgent> ();
+		frozen = false;
 	}
 	
 	
@@ -42,7 +46,7 @@ public class EnemyMovementFollowPath : MonoBehaviour {
 
 		if (currentDist > distance)
 			Move ();
-		else if(enemyHealth.currentHealth > 0) 
+		else if(enemyHealth.currentHealth > 0 && !frozen) 
 			nav.SetDestination(followedObj.position);
 		else
 			nav.enabled = false;
@@ -65,7 +69,23 @@ public class EnemyMovementFollowPath : MonoBehaviour {
 		}
 		else
 			timer = 0;
-		
-		nav.destination = patrolWayPoints[wayPointIndex].position;
+
+		if (frozen)
+			nav.destination = transform.position;
+		else
+			nav.destination = patrolWayPoints[wayPointIndex].position;
+	}
+
+	
+	void OnTriggerEnter (Collider other){
+		if(freezeInLight && other.gameObject.tag == "Light"){
+			frozen = true;
+		}
+	}
+	
+	void OnTriggerExit (Collider other){
+		if(freezeInLight && other.gameObject.tag == "Light"){
+			frozen = false;
+		}
 	}
 }
