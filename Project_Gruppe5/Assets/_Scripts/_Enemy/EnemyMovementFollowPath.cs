@@ -35,10 +35,10 @@ public class EnemyMovementFollowPath : MonoBehaviour {
 	
 	
 	void Update (){
-		if (follow == Follow.PathOnly)
-			currentDist = distance + 1;
-		else
+		if(playerHealth.currentHealth > 0 && follow != Follow.PathOnly)
 			currentDist = Vector3.Distance (followedObj.position, transform.position);
+		else
+			currentDist = distance + 1;
 
 		if (currentDist > distance)
 			Move ();
