@@ -7,9 +7,6 @@ TagManager:
   - Wall
   - Floor
   - Bullet
-  - Light
-  - bulletExplosion
-  - enemyExplosion
   layers:
   - Default
   - TransparentFX
@@ -19,7 +16,7 @@ TagManager:
   - UI
   - 
   - 
-  - Shootable
+  - 
   - 
   - 
   - 
