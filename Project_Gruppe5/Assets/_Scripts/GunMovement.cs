@@ -17,7 +17,7 @@ public class GunMovement : MonoBehaviour {
 		rotationX = Input.GetAxis ("XboxMacRightX") * sensitifity;
 		rotationY = Input.GetAxis ("XboxMacRightY") * sensitifity;
 
-		Debug.Log ("X/Y: " + rotationX + " ~ " + rotationY);
+//		Debug.Log ("X/Y: " + rotationX + " ~ " + rotationY);
 
 		float _angle = Mathf.Atan2(rotationX, rotationY) * (180 / Mathf.PI);
 
