@@ -22,7 +22,6 @@ public class PlayerMovement: MonoBehaviour {
 			rotationX = Input.GetAxis ("XboxMacRightX");
 			rotationY = Input.GetAxis ("XboxMacRightY");
 
-			Debug.Log ("X/Y: " + rotationX + " ~ " + rotationY);
 
 		}
 		else if (playWithControllerWin) {
@@ -31,8 +30,7 @@ public class PlayerMovement: MonoBehaviour {
 
 			rotationX = Input.GetAxis ("XboxWinRightX");
 			rotationY = Input.GetAxis ("XboxWinRightY");
-			
-			Debug.Log ("X/Y: " + rotationX + " ~ " + rotationY);
+
 			
 		}
 		else {

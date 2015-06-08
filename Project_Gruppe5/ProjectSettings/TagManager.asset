@@ -12,6 +12,9 @@ TagManager:
   - enemyExplosion
   - GazeController
   - DDoors
+  - ChargeChecker
+  - Charge
+  - Charger
   layers:
   - Default
   - TransparentFX

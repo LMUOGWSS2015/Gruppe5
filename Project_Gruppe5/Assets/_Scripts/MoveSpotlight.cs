@@ -39,7 +39,6 @@ public class MoveSpotlight : MonoBehaviour
 		RaycastHit hit;
 		if (plane.Raycast(ray, out hit,100f)) {
 			newPosition = new Vector3(hit.point.x, 5f, hit.point.z);
-			Debug.Log (" m:"+ Input.mousePosition+"position:"+newPosition);
 			Vector3 to = newPosition-transform.position;
 			float length= Vector3.Magnitude(to);
 			to = to.normalized;
