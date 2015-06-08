@@ -20,7 +20,7 @@ AnimatorController:
     m_DefaultWeight: 0
     m_IKPass: 0
     m_SyncedLayerAffectsTiming: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   m_MultiThreadedStateMachine: 1
 --- !u!114 &11496386
 MonoBehaviour:
@@ -33,23 +33,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c65022dd2060e3a4f81a4e0ecab0744d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1102 &110202278
-AnimatorState:
-  serializedVersion: 5
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_Name: Spindel|idle
-  m_Speed: 1
-  m_CycleOffset: 0
-  m_Transitions: []
-  m_StateMachineBehaviours: []
-  m_Position: {x: 50, y: 50, z: 0}
-  m_IKOnFeet: 0
-  m_WriteDefaultValues: 1
-  m_Mirror: 0
-  m_Motion: {fileID: 7400006, guid: 69f5fd40b6447ed45a60084b911d430d, type: 3}
-  m_Tag: 
 --- !u!1102 &110233756
 AnimatorState:
   serializedVersion: 5
@@ -67,6 +50,23 @@ AnimatorState:
   m_Mirror: 0
   m_Motion: {fileID: 7400020, guid: 69f5fd40b6447ed45a60084b911d430d, type: 3}
   m_Tag: 
+--- !u!1102 &110248150
+AnimatorState:
+  serializedVersion: 5
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: Kreisler|attack
+  m_Speed: 1
+  m_CycleOffset: 0
+  m_Transitions: []
+  m_StateMachineBehaviours: []
+  m_Position: {x: 50, y: 50, z: 0}
+  m_IKOnFeet: 0
+  m_WriteDefaultValues: 1
+  m_Mirror: 0
+  m_Motion: {fileID: 7400006, guid: abb5aa1d965b1d241b9fb4923b932454, type: 3}
+  m_Tag: 
 --- !u!1107 &110772342
 AnimatorStateMachine:
   serializedVersion: 5
@@ -76,8 +76,8 @@ AnimatorStateMachine:
   m_Name: Base Layer
   m_ChildStates:
   - serializedVersion: 1
-    m_State: {fileID: 110202278}
-    m_Position: {x: 504, y: 24, z: 0}
+    m_State: {fileID: 110248150}
+    m_Position: {x: 671, y: 19, z: 0}
   m_ChildStateMachines: []
   m_AnyStateTransitions: []
   m_EntryTransitions: []
@@ -86,11 +86,11 @@ AnimatorStateMachine:
       first: {fileID: 110772342}
       second: []
   m_StateMachineBehaviours: []
-  m_AnyStatePosition: {x: 528, y: -132, z: 0}
-  m_EntryPosition: {x: 288, y: 36, z: 0}
-  m_ExitPosition: {x: 528, y: -96, z: 0}
+  m_AnyStatePosition: {x: 564, y: -216, z: 0}
+  m_EntryPosition: {x: 432, y: -24, z: 0}
+  m_ExitPosition: {x: 696, y: -108, z: 0}
   m_ParentStateMachinePosition: {x: 800, y: 20, z: 0}
-  m_DefaultState: {fileID: 110202278}
+  m_DefaultState: {fileID: 110248150}
 --- !u!1107 &110779464
 AnimatorStateMachine:
   serializedVersion: 5
