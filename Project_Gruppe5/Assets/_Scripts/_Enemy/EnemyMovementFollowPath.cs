@@ -42,7 +42,7 @@ public class EnemyMovementFollowPath : MonoBehaviour {
 
 		if (currentDist > distance)
 			Move ();
-		else if(enemyHealth.currentHealth > 0 && playerHealth.currentHealth > 0) 
+		else if(enemyHealth.currentHealth > 0) 
 			nav.SetDestination(followedObj.position);
 		else
 			nav.enabled = false;
