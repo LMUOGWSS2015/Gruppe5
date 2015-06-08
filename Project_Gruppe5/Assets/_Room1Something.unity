@@ -2701,6 +2701,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startingHealth: 8
   currentHealth: 0
+  enemyExplosion: {fileID: 198994, guid: c34abd0785c51404ea213bbc128567d8, type: 2}
 --- !u!114 &1389265337
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2713,6 +2714,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damagePerShot: 1
+  bulletExplosion: {fileID: 192264, guid: 579562710378d4fdab9e9b804dea0672, type: 2}
 --- !u!114 &1389265338
 MonoBehaviour:
   m_ObjectHideFlags: 0

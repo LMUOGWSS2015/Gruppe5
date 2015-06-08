@@ -7,6 +7,8 @@ public class ShotsFired : MonoBehaviour {
 	private float rightTrigger;
 	int counter = 0;
 	public int shotSpeed = 15;
+	private GameObject[] bulletExplosion;
+	private GameObject[] enemyExplosion;
 
 	void Start () {
 	
@@ -32,9 +34,13 @@ public class ShotsFired : MonoBehaviour {
 
 			Instantiate (bullet, new Vector3(this.transform.position.x, this.transform.position.y, this.transform.position.z + 1.1f), Quaternion.identity);
 
-			if (GameObject.FindGameObjectWithTag("bulletExplosion")) {
-				GameObject bulletExplosion = GameObject.FindGameObjectWithTag("bulletExplosion");
-				Destroy(bulletExplosion);
+			bulletExplosion = GameObject.FindGameObjectsWithTag("bulletExplosion");
+			enemyExplosion = GameObject.FindGameObjectsWithTag("enemyExplosion");
+			foreach (GameObject obj in bulletExplosion) {
+				Destroy(obj);
+			}
+			foreach (GameObject obj in enemyExplosion) {
+				Destroy(obj);
 			}
 		}
 	}

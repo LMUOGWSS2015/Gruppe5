@@ -8,6 +8,8 @@ TagManager:
   - Floor
   - Bullet
   - Light
+  - bulletExplosion
+  - enemyExplosion
   layers:
   - Default
   - TransparentFX
