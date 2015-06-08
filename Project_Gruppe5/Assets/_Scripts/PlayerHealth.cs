@@ -18,6 +18,9 @@ public class PlayerHealth : MonoBehaviour {
 	//ShotsFired shotsFired;     			                         // Reference to the PlayerShooting script.
 	bool isDead;                                                // Whether the player is dead.
 	bool damaged;                                               // True when the player gets damaged.
+
+	public GameObject playerHit;
+	public GameObject playerExplosion;
 	
 	
 	void Awake ()
@@ -58,17 +61,27 @@ public class PlayerHealth : MonoBehaviour {
 		
 		// Play the hurt sound effect.
 		//playerAudio.Play ();
-		
+
 		// If the player has lost all it's health and the death flag hasn't been set yet...
 		if(currentHealth <= 0 && !isDead) {
 			// ... it should die.
+			Debug.Log("FATAL");
 			Death ();
 		}
+
+		else{
+			Debug.Log("Hit");
+			Instantiate (playerHit, this.gameObject.transform.position, Quaternion.identity);
+		}
+
+
 	}
 	
 	
 	void Death ()
 	{
+
+		Instantiate (playerExplosion, this.gameObject.transform.position, Quaternion.identity);
 		// Set the death flag so this function won't be called again.
 		isDead = true;
 		
@@ -85,7 +98,6 @@ public class PlayerHealth : MonoBehaviour {
 		// Turn off the movement and shooting scripts.
 		playerMovement.enabled = false;
 		//shotsFired.enabled = false;
-
 		Destroy (this.gameObject);
 	}    
 }

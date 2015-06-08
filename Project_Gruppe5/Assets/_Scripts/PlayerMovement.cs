@@ -22,7 +22,10 @@ public class PlayerMovement: MonoBehaviour {
 			rotationX = Input.GetAxis ("XboxMacRightX");
 			rotationY = Input.GetAxis ("XboxMacRightY");
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> c85ec3bab234c06d31a8c2520432cf34ab1a669f
 		}
 		else if (playWithControllerWin) {
 			translationX = Input.GetAxis ("XboxWinLeftY") * speed;
@@ -30,7 +33,10 @@ public class PlayerMovement: MonoBehaviour {
 
 			rotationX = Input.GetAxis ("XboxWinRightX");
 			rotationY = Input.GetAxis ("XboxWinRightY");
+<<<<<<< HEAD
 
+=======
+>>>>>>> c85ec3bab234c06d31a8c2520432cf34ab1a669f
 			
 		}
 		else {
