@@ -19,7 +19,7 @@ public class DoubleDoorsOpen : MonoBehaviour {
 	}
 	
 	
-	public void OpenDoors () {
+	void Update () {
 		leftRotation = Quaternion.AngleAxis(-90, Vector3.up);
 		leftDoor.rotation= Quaternion.Slerp(leftDoor.rotation, leftRotation, .05f); 
 

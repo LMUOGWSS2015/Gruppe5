@@ -36,7 +36,8 @@ public class Charge : MonoBehaviour {
 			checker.ChargerCharged(number);
 		} else  {
 			DoubleDoorsOpen doors = GameObject.FindGameObjectWithTag ("DDoors").gameObject.GetComponent<DoubleDoorsOpen> ();
-			doors.OpenDoors ();
+			//doors.OpenDoors ();
+			doors.enabled = true;
 		}
 	}
 	public void resetCharge(){

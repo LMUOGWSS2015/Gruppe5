@@ -19,7 +19,8 @@ public class ChargeChecker : MonoBehaviour {
 		if (isFull()) {
 			if(isInOrder()) {
 				DoubleDoorsOpen doors = GameObject.FindGameObjectWithTag ("DDoors").gameObject.GetComponent<DoubleDoorsOpen> ();
-				doors.OpenDoors ();
+				//doors.OpenDoors ();
+				doors.enabled = true;
 			} else {
 				resetChargers();
 				clearArray();
