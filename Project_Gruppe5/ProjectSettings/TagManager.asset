@@ -12,15 +12,9 @@ TagManager:
   - enemyExplosion
   - GazeController
   - DDoors
-<<<<<<< HEAD
-  - ChargeChecker
-  - Charge
-  - Charger
-=======
   - enemyBullet
   - playerHit
   - playerExplosion
->>>>>>> c85ec3bab234c06d31a8c2520432cf34ab1a669f
   layers:
   - Default
   - TransparentFX
