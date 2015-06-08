@@ -36,6 +36,7 @@ public class MoveSpotlight : MonoBehaviour
 				ray = Camera.main.ScreenPointToRay (averageGazePosition);
 		} else
 			ray = Camera.main.ScreenPointToRay (Input.mousePosition);
+
 		RaycastHit hit;
 		if (plane.Raycast(ray, out hit,100f)) {
 			newPosition = new Vector3(hit.point.x, 5f, hit.point.z);
