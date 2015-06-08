@@ -4,6 +4,7 @@ using iView;
 
 public class MoveSpotlight : MonoBehaviour
 {
+	public bool useEyeTracking = false;
 	public float speed = 2f;
 	public float stagewidth = 40f;
 	public float stageheight = 20f;
@@ -21,23 +22,22 @@ public class MoveSpotlight : MonoBehaviour
 	}
 	
 	void Update() {
-		
-		//get the Sample from the Server
-		sample = SMIGazeController.Instance.GetSample();
-		//get the averaged GazePosition
-		averageGazePosition = sample.averagedEye.gazePosInUnityScreenCoords();
-		
+
 		Ray ray;
+		if (useEyeTracking) {
+			//get the Sample from the Server
+			sample = SMIGazeController.Instance.GetSample ();
+			//get the averaged GazePosition
+			averageGazePosition = sample.averagedEye.gazePosInUnityScreenCoords ();
 		
-		if (averageGazePosition.x==0f) 
+			if (averageGazePosition.x == 0f) 
+				ray = Camera.main.ScreenPointToRay (Input.mousePosition);
+			else
+				ray = Camera.main.ScreenPointToRay (averageGazePosition);
+		} else
 			ray = Camera.main.ScreenPointToRay (Input.mousePosition);
-		else
-			ray = Camera.main.ScreenPointToRay (averageGazePosition);
 		RaycastHit hit;
-		//float hit;
 		if (plane.Raycast(ray, out hit,100f)) {
-			//Vector3 hitpoint = ray.GetPoint(hit);
-			//newPosition = new Vector3(hitpoint.x,5f,hitpoint.z);
 			newPosition = new Vector3(hit.point.x, 5f, hit.point.z);
 			Debug.Log (" m:"+ Input.mousePosition+"position:"+newPosition);
 			Vector3 to = newPosition-transform.position;
