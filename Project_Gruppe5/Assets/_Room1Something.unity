@@ -3757,7 +3757,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bullet: {fileID: 138146, guid: cf60ba45d98b54865b8bbb647a6b94fb, type: 2}
-  shotSpeed: 20
+  shotSpeed: 15
   playerMovement: {fileID: 0}
 --- !u!1 &2012601004
 GameObject:
