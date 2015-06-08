@@ -31,6 +31,11 @@ public class ShotsFired : MonoBehaviour {
 		if (Input.GetKeyDown (KeyCode.Space)) {
 
 			Instantiate (bullet, new Vector3(this.transform.position.x, this.transform.position.y, this.transform.position.z + 1.1f), Quaternion.identity);
+
+			if (GameObject.FindGameObjectWithTag("bulletExplosion")) {
+				GameObject bulletExplosion = GameObject.FindGameObjectWithTag("bulletExplosion");
+				Destroy(bulletExplosion);
+			}
 		}
 	}
 }
