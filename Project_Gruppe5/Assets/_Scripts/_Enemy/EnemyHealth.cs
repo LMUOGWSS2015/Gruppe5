@@ -4,7 +4,8 @@ public class EnemyHealth : MonoBehaviour {
 	public int startingHealth = 8;
 	public int currentHealth;
 	public GameObject enemyExplosion;
-	//public AudioClip deathClip;     
+	//public AudioClip deathClip;    
+	public float explDuration = 5f; 
 	
 	
 	//Animator anim;              
@@ -47,7 +48,7 @@ public class EnemyHealth : MonoBehaviour {
 		//enemyAudio.clip = deathClip;
 		//enemyAudio.Play ();
 
-		Instantiate (enemyExplosion, this.gameObject.transform.position, Quaternion.identity);
+		Destroy(Instantiate (enemyExplosion, this.gameObject.transform.position, Quaternion.identity),explDuration);
 		Destroy(this.gameObject);
 	}
 }

@@ -10,14 +10,12 @@ public class ShowSparkle : MonoBehaviour {
 	
 	void OnTriggerEnter (Collider other){
 		if(other.gameObject.tag == "Light"){
-			Debug.Log("true");
 			animator.SetBool ("Light", true);
 		}
 	}
 	
 	void OnTriggerExit (Collider other){
 		if(other.gameObject.tag == "Light"){
-			Debug.Log("false");
 			animator.SetBool ("Light", false);
 		}
 	}
