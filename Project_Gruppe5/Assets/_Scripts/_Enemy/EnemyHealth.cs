@@ -50,5 +50,7 @@ public class EnemyHealth : MonoBehaviour {
 
 		Destroy(Instantiate (enemyExplosion, this.gameObject.transform.position, Quaternion.identity),explDuration);
 		Destroy(this.gameObject);
+
+		transform.GetComponentInParent<Enemies> ().Less(1);
 	}
 }

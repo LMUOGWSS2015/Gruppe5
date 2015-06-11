@@ -3,6 +3,8 @@ using System.Collections;
 
 public class DoubleDoorsOpen : MonoBehaviour {
 	public float doorSpeed = 7f;
+
+	public bool enemiesDead;
 	
 	private Transform leftDoor;
 	private Transform rightDoor;
@@ -16,15 +18,16 @@ public class DoubleDoorsOpen : MonoBehaviour {
 	void Awake (){
 		leftDoor = GameObject.Find("DoorLeft").transform;
 		rightDoor = GameObject.Find("DoorRight").transform;
+		
+		leftRotation = Quaternion.AngleAxis(-90, Vector3.up);
+		rightRotation = Quaternion.AngleAxis(90, Vector3.up);
 	}
 	
 	
 	void Update () {
-		leftRotation = Quaternion.AngleAxis(-90, Vector3.up);
-		leftDoor.rotation= Quaternion.Slerp(leftDoor.rotation, leftRotation, .05f); 
-
-		
-		rightRotation = Quaternion.AngleAxis(90, Vector3.up);
-		rightDoor.rotation= Quaternion.Slerp(rightDoor.rotation, rightRotation, .05f);
+		if (enemiesDead) {
+			leftDoor.rotation = Quaternion.Slerp (leftDoor.rotation, leftRotation, .05f); 
+			rightDoor.rotation = Quaternion.Slerp (rightDoor.rotation, rightRotation, .05f);
+		}
 	}
 }
