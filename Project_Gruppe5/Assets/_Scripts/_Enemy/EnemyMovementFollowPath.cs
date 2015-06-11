@@ -46,8 +46,10 @@ public class EnemyMovementFollowPath : MonoBehaviour {
 
 		if (currentDist > distance)
 			Move ();
-		else if(enemyHealth.currentHealth > 0 && !frozen) 
-			nav.SetDestination(followedObj.position);
+		else if (enemyHealth.currentHealth > 0 && !frozen) 
+			nav.SetDestination (followedObj.position);
+		else if (frozen)
+			nav.SetDestination (transform.position);
 		else
 			nav.enabled = false;
 	} 
