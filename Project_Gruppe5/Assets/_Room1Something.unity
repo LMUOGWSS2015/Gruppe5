@@ -2789,11 +2789,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f185b7a41b3d018489d7b76cf3fd84a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canMiss: 1
   dmgAmnt: 1
   timeBetweenBullets: 1
   range: 8
   flashIntensity: 5
-  fadeSpeed: 3
+  flashFadeSpeed: 3
+  effectsDisplayTime: .100000001
 --- !u!114 &1389265339
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2806,7 +2808,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   freezeInLight: 1
-  follow: 0
+  follow: 2
   distance: 8
   patrolSpeed: 3
   followSpeed: 5
@@ -3474,7 +3476,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1fa65546e429094aae95625795d2c21, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  useEyeTracking: 1
+  useEyeTracking: 0
   speed: 2
   stagewidth: 40
   stageheight: 20

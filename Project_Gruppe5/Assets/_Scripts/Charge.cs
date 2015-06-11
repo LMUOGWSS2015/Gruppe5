@@ -9,26 +9,29 @@ public class Charge : MonoBehaviour {
 	
 	bool charging;
 	float timer;
+
+	Animator animator;
+
+	void Start(){
+		animator = this.GetComponentInChildren<Animator>();
+	}
 	
 	void Update () {
 		if (chargePercentage >= 100) {
 			EndAction ();
 			return;
 		}
-		/*
-		if (chargePercentage >= 100) {
-			charging = false;
-		} */
-		
+
 		if(charging) {
 			chargePercentage += Time.deltaTime * (100 / timeToChargeInSec);
 		}
 		
-		//chargePercentage = Mathf.Clamp(chargePercentage, 0, 100);
+		chargePercentage = Mathf.Clamp(chargePercentage, 0, 100);
 		
 		changeMaterial ();
 
 	}
+
 	void EndAction(){
 		enabled = false;
 		if (partOfOrder) {
@@ -40,12 +43,24 @@ public class Charge : MonoBehaviour {
 			doors.enabled = true;
 		}
 	}
+
 	public void resetCharge(){
 		chargePercentage = 0;
 		changeMaterial ();
 		this.enabled = true;
 	}
+
 	void changeMaterial(){
+		if (chargePercentage == 0)
+			animator.SetInteger ("Charge", 0);
+		else if (chargePercentage < 34)
+			animator.SetInteger ("Charge", 1);
+		else if (chargePercentage < 67)
+			animator.SetInteger ("Charge", 2);
+		else if (chargePercentage < 100)
+			animator.SetInteger ("Charge", 3);
+		else
+			animator.SetInteger ("Charge", 4);
 		float c = chargePercentage/100f;
 		this.gameObject.GetComponent<Renderer>().material.color =  new Color(c,c,c, 1f);
 	}
