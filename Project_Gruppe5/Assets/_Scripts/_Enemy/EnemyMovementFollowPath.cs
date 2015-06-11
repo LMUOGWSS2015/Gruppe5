@@ -14,6 +14,7 @@ public class EnemyMovementFollowPath : MonoBehaviour {
 	public Transform[] patrolWayPoints;
 
 
+	Animator animator;
 	Transform followedObj;
 	Transform player;
 	PlayerHealth playerHealth;
@@ -35,6 +36,7 @@ public class EnemyMovementFollowPath : MonoBehaviour {
 		enemyHealth = GetComponent <EnemyHealth> ();
 		nav = GetComponent <NavMeshAgent> ();
 		frozen = false;
+		animator = GetComponentInChildren<Animator>();
 	}
 	
 	
@@ -80,12 +82,14 @@ public class EnemyMovementFollowPath : MonoBehaviour {
 	void OnTriggerEnter (Collider other){
 		if(freezeInLight && other.gameObject.tag == "Light"){
 			frozen = true;
+			animator.SetBool("frozen",frozen);
 		}
 	}
 	
 	void OnTriggerExit (Collider other){
 		if(freezeInLight && other.gameObject.tag == "Light"){
 			frozen = false;
+			animator.SetBool("frozen",frozen);
 		}
 	}
 }
