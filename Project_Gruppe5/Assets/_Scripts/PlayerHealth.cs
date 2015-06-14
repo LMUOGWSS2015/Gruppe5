@@ -21,17 +21,16 @@ public class PlayerHealth : MonoBehaviour {
 
 	public GameObject playerHit;
 	public GameObject playerExplosion;
+
+	public float explDuration = 1f;
+	public float hitDuration = 2f;
 	
-	
-	void Awake ()
-	{
-		// Setting up the references.
+	void Awake (){
 		//anim = GetComponent <Animator> ();
 		//playerAudio = GetComponent <AudioSource> ();
 		playerMovement = GetComponent <PlayerMovement> ();
 		//shotsFired = GetComponent <ShotsFired> ();
-		
-		// Set the initial health of the player.
+
 		currentHealth = startingHealth;
 	}
 	
@@ -65,28 +64,18 @@ public class PlayerHealth : MonoBehaviour {
 		// If the player has lost all it's health and the death flag hasn't been set yet...
 		if(currentHealth <= 0 && !isDead) {
 			// ... it should die.
-			Debug.Log("FATAL");
+			//Debug.Log("FATAL");
 			Death ();
+		} else {
+			//Debug.Log("Hit");
+			Destroy(Instantiate (playerHit, this.gameObject.transform.position, Quaternion.identity),hitDuration);
 		}
-
-		else{
-			Debug.Log("Hit");
-			Instantiate (playerHit, this.gameObject.transform.position, Quaternion.identity);
-		}
-
-
 	}
 	
 	
-	void Death ()
-	{
-
-		Instantiate (playerExplosion, this.gameObject.transform.position, Quaternion.identity);
-		// Set the death flag so this function won't be called again.
+	void Death (){
+		Destroy(Instantiate (playerExplosion, this.gameObject.transform.position, Quaternion.identity),explDuration);
 		isDead = true;
-		
-		// Turn off any remaining shooting effects.
-		//shotsFired.DisableEffects ();
 		
 		// Tell the animator that the player is dead.
 		//anim.SetTrigger ("Die");

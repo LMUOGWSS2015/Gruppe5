@@ -2,12 +2,13 @@
 using System.Collections;
 
 public class EnemyAttackFar : MonoBehaviour {
+	public bool canMiss = true;
 	public int dmgAmnt = 1;
 	public float timeBetweenBullets = 0.15f;
 	public float range = 8f;
-	public float flashIntensity = 10f; 
-	public float fadeSpeed = 3f;
-
+	public float flashIntensity = 3f; 
+	public float flashFadeSpeed = 3f;
+	public float effectsDisplayTime = 0.1f;
 
 	float timer;
 	LineRenderer gunLine; 
@@ -15,7 +16,7 @@ public class EnemyAttackFar : MonoBehaviour {
 	PlayerHealth playerHealth; 
 	GameObject player;
 	Transform playerPos;
-	float effectsDisplayTime = 0.3f;
+
 
 	Ray shootRay;  
 	RaycastHit shootHit;
@@ -43,7 +44,7 @@ public class EnemyAttackFar : MonoBehaviour {
 		if(timer >= timeBetweenBullets * effectsDisplayTime) {
 			DisableEffects ();
 		}
-		gunLight.intensity = Mathf.Lerp(gunLight.intensity, 0f, fadeSpeed * Time.deltaTime);
+		gunLight.intensity = Mathf.Lerp(gunLight.intensity, 0f, flashFadeSpeed * Time.deltaTime);
 	}
 
 	void Shoot(){
@@ -53,19 +54,28 @@ public class EnemyAttackFar : MonoBehaviour {
 		shootRay.direction = transform.forward;
 			
 		gunLine.SetPosition (0, gunLine.transform.position);
-		gunLine.SetPosition (1, playerPos.position);
 
 		//Debug.DrawRay(shootRay.origin, shootRay.direction, Color.white, 3.0f, true);
 
-		if (Physics.Raycast (shootRay, out shootHit, range, mask)){
+		if (Physics.Raycast (shootRay, out shootHit, range, mask)) {
 //			Debug.Log(shootHit.collider.gameObject);
-			if(shootHit.transform.gameObject == player){
+			gunLine.SetPosition (1, shootHit.point + Vector3.up * 1.2f);
+
+			if (shootHit.transform.gameObject == player) {
 				playerHealth.TakeDamage (dmgAmnt);
 
 				gunLight.intensity = flashIntensity;
-
 				gunLine.enabled = true;
 			}
+			if (canMiss) {
+				gunLight.intensity = flashIntensity;
+				gunLine.enabled = true;
+			}
+		} else if(canMiss) {
+			gunLine.SetPosition (1, shootRay.origin + shootRay.direction * range);
+			gunLight.intensity = flashIntensity;
+			
+			gunLine.enabled = true;
 		}
 	}
 
