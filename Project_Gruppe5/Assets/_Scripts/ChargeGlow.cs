@@ -31,8 +31,9 @@ public class ChargeGlow : MonoBehaviour {
 	private float b;
 	private float a;
 
-	bool inEnter = false;
-	bool counterCharge = true;
+	bool doCharge = true;
+	bool doCounterCharge = true;
+	bool full = false;
 
 	public int number = 1;
 
@@ -41,8 +42,6 @@ public class ChargeGlow : MonoBehaviour {
 	void Start () {
 		obj = this.gameObject;
 		rend = obj.GetComponent<Renderer> ();
-//		rend.material.shader = Shader.Find("Self-Illumin/Specular");
-//		rend.material.SetColor ("_Color", new Color(61f/255f, 158f/255f, 61f/255f, 255f/255f));
 
 		r = rStart;
 		g = gStart;
@@ -56,49 +55,52 @@ public class ChargeGlow : MonoBehaviour {
 	}
 
 	void EndAction(){
-		inEnter = false;
-		counterCharge = false;
-		enabled = false;
+//		enabled = false;
 		if (partOfOrder) {
 			ChargeChecker checker = GameObject.FindGameObjectWithTag ("ChargeChecker").gameObject.GetComponent<ChargeChecker>();
 			checker.ChargerCharged(number);
 		} else  {
 			DoubleDoorsOpen doors = GameObject.FindGameObjectWithTag ("DDoors").gameObject.GetComponent<DoubleDoorsOpen> ();
-			//doors.OpenDoors ();
+//			doors.OpenDoors ();
 			doors.enabled = true;
 		}
 	}
 
 	void OnTriggerEnter(Collider other) {
 		if (other.gameObject.tag == "Light") {
+
 			Debug.Log ("enter");
-			inEnter = true;
-			counterCharge = false;
-			StopCoroutine(CounterCharge());
+				
+			doCharge = true;
+			doCounterCharge = false;
+
 			StartCoroutine (Charging ());
+			StopCoroutine(CounterCharge());
 		}
 	}
 
-	void OnTriggerExit () {
-		inEnter = false;
-		counterCharge = true;
-		if (!counterCharge) {
-			StopCoroutine (Charging ());
+	void OnTriggerExit (Collider other) {
+		if (other.gameObject.tag == "Light") {
+			
+			Debug.Log ("enter");
+			
+			doCounterCharge = true;
+			doCharge = false;
+
 			StartCoroutine (CounterCharge ());
-		}
-	}
-
-	void Update () {
-		if (!inEnter) {
 			StopCoroutine (Charging ());
-//			StartCoroutine (CounterCharge ());
 		}
+
+		StartCoroutine (CounterCharge ());
+		StopCoroutine (Charging ());
+	}
+	
+	void Update () {
+
 	}
 
 	IEnumerator Charging () {
-		while (inEnter) {
-			if (r == rEnd)
-				break;
+		while (doCharge && !full) {
 
 			Debug.Log ("charging");
 
@@ -108,15 +110,12 @@ public class ChargeGlow : MonoBehaviour {
 				b += bStep;
 				a += aStep;
 			}
-
 			else {
-				Debug.Log ("FULL");
-				inEnter = false;
-				counterCharge = false;
-				StopCoroutine (CounterCharge());
-				StopCoroutine (Charging());
-//				EndAction();
+				doCharge = false;
+				full = true;
+				EndAction();
 			}
+
 			rend.material.shader = Shader.Find("Self-Illumin/Specular");
 			rend.material.SetColor ("_Color", new Color(r/255f, g/255f, b/255f, a/255f));
 			pipe1.GetComponent<Renderer> ().material.shader = Shader.Find("Self-Illumin/Specular");
@@ -125,15 +124,13 @@ public class ChargeGlow : MonoBehaviour {
 			pipe2.GetComponent<Renderer> ().material.SetColor ("_Color", new Color(r/255f, g/255f, b/255f, a/255f));
 			pipe3.GetComponent<Renderer> ().material.shader = Shader.Find("Self-Illumin/Specular");
 			pipe3.GetComponent<Renderer> ().material.SetColor ("_Color", new Color(r/255f, g/255f, b/255f, a/255f));
+
 			yield return new WaitForSeconds (stepTime);
 		}
 	}
 
 	IEnumerator CounterCharge () {
-		while (counterCharge) {
-//			inEnter = true;
-			if (r == rStart)
-				break;
+		while (doCounterCharge && !full) {
 
 			Debug.Log ("countercharging");
 			
@@ -142,6 +139,9 @@ public class ChargeGlow : MonoBehaviour {
 				g -= gStep;
 				b -= bStep;
 				a -= aStep;
+			}
+			else {
+				doCounterCharge = false;
 			}
 			rend.material.shader = Shader.Find("Self-Illumin/Specular");
 			rend.material.SetColor ("_Color", new Color(r/255f, g/255f, b/255f, a/255f));
