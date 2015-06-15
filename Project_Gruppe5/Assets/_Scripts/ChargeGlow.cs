@@ -9,6 +9,8 @@ public class ChargeGlow : MonoBehaviour {
 	public GameObject pipe2;
 	public GameObject pipe3;
 
+	public GameObject pointLight;
+
 	private float rStart = 28f;
 	private float gStart = 38f;
 	private float bStart = 28f;
@@ -113,6 +115,7 @@ public class ChargeGlow : MonoBehaviour {
 			else {
 				doCharge = false;
 				full = true;
+				pointLight.GetComponent<Light> ().color = new Color(61f/255F, 158f/255f, 61f/255f);
 				EndAction();
 			}
 
