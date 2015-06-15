@@ -70,9 +70,6 @@ public class ChargeGlow : MonoBehaviour {
 
 	void OnTriggerEnter(Collider other) {
 		if (other.gameObject.tag == "Light") {
-
-			Debug.Log ("enter");
-				
 			doCharge = true;
 			doCounterCharge = false;
 
@@ -83,9 +80,6 @@ public class ChargeGlow : MonoBehaviour {
 
 	void OnTriggerExit (Collider other) {
 		if (other.gameObject.tag == "Light") {
-			
-			Debug.Log ("enter");
-			
 			doCounterCharge = true;
 			doCharge = false;
 
@@ -103,9 +97,6 @@ public class ChargeGlow : MonoBehaviour {
 
 	IEnumerator Charging () {
 		while (doCharge && !full) {
-
-			Debug.Log ("charging");
-
 			if (r < rEnd) {
 				r += rStep;
 				g += gStep;
@@ -134,9 +125,6 @@ public class ChargeGlow : MonoBehaviour {
 
 	IEnumerator CounterCharge () {
 		while (doCounterCharge && !full) {
-
-			Debug.Log ("countercharging");
-			
 			if (r > rStart) {
 				r -= rStep;
 				g -= gStep;
@@ -155,6 +143,35 @@ public class ChargeGlow : MonoBehaviour {
 			pipe3.GetComponent<Renderer> ().material.shader = Shader.Find("Self-Illumin/Specular");
 			pipe3.GetComponent<Renderer> ().material.SetColor ("_Color", new Color(r/255f, g/255f, b/255f, a/255f));
 			yield return new WaitForSeconds (stepTime);
+		}
+	}
+
+	public void resetCharge(){
+		r = rStart;
+		g = gStart;
+		b = bStart;
+		a = aStart;
+
+		rend.material.shader = Shader.Find("Self-Illumin/Specular");
+		Color reset = new Color(r/255f, g/255f, b/255f, a/255f);
+		rend.material.SetColor ("_Color", reset);
+		pipe1.GetComponent<Renderer> ().material.shader = Shader.Find("Self-Illumin/Specular");
+		pipe1.GetComponent<Renderer> ().material.SetColor ("_Color", reset);
+		pipe2.GetComponent<Renderer> ().material.shader = Shader.Find("Self-Illumin/Specular");
+		pipe2.GetComponent<Renderer> ().material.SetColor ("_Color", reset);
+		pipe3.GetComponent<Renderer> ().material.shader = Shader.Find("Self-Illumin/Specular");
+		pipe3.GetComponent<Renderer> ().material.SetColor ("_Color", reset);
+
+		pointLight.GetComponent<Light> ().color = Color.red;
+		full = false;
+
+		RaycastHit hit;
+		Vector3 v = transform.position + new Vector3(0,5,0);
+		if (Physics.Raycast (v, Vector3.down*5, out hit)) {
+			if(hit.collider.gameObject.tag == "Light"){
+				doCharge = true;
+				StartCoroutine (Charging ());
+			}
 		}
 	}
 }

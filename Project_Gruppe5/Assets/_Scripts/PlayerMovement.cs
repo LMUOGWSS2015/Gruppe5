@@ -68,7 +68,6 @@ public class PlayerMovement: MonoBehaviour {
 		
 
 		Vector3 shooting = new Vector3(shootDirectionY, 0, shootDirectionX);
-		Debug.Log (movement);
 		_transform.position += movement*speed;
 		if (translationX != 0 || translationY != 0) {
 		_transform.rotation = Quaternion.LookRotation(movement);
