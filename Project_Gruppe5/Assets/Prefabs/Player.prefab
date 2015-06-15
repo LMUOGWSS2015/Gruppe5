@@ -8,7 +8,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 404782}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: rarm1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23,7 +23,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 472260}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: leftshoulder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -39,7 +39,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 443718}
   - 95: {fileID: 9571638}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: roboBuddy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -54,7 +54,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 485856}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: headR
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -85,7 +85,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 498202}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: larm4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -100,7 +100,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 492970}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: larm2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -115,7 +115,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 470106}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: larm3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -130,7 +130,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 426826}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: rArm3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -163,7 +163,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 455184}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: larm4_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -178,7 +178,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 434916}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: larm1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -215,7 +215,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 438354}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: lowerspine
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -230,7 +230,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 479144}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: becken
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -247,7 +247,7 @@ GameObject:
   - 4: {fileID: 415240}
   - 33: {fileID: 3351168}
   - 23: {fileID: 2391494}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Blaster
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -262,7 +262,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 406662}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: leftshoulderC
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -278,7 +278,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 499438}
   - 137: {fileID: 13707346}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Arm._right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -293,7 +293,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 462170}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Armature_Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -308,7 +308,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 405966}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: upperspine
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -323,7 +323,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 499682}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: headR_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -338,7 +338,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 470654}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: blaster
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -353,7 +353,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 474740}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: rightshoulder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -369,7 +369,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 437894}
   - 137: {fileID: 13784756}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -384,7 +384,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 453470}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: rightshoulderC
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -400,7 +400,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 439158}
   - 137: {fileID: 13703314}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Arm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -415,7 +415,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 425480}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: rArm4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -430,7 +430,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 401064}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: blaster_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -445,7 +445,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 415356}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: rArm2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -462,8 +462,24 @@ GameObject:
   - 4: {fileID: 448302}
   - 33: {fileID: 3309494}
   - 23: {fileID: 2311622}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Head
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &196436
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 402668}
+  - 108: {fileID: 10839078}
+  m_Layer: 0
+  m_Name: Area Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -477,7 +493,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 494138}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: rArm4_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -496,6 +512,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 470654}
   m_RootOrder: 1
+--- !u!4 &402668
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 196436}
+  m_LocalRotation: {x: .698244929, y: -.110757679, z: .109986573, w: .698634207}
+  m_LocalPosition: {x: -1.28999996, y: 2.26999998, z: 3.28999996}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 444942}
+  m_RootOrder: 3
 --- !u!4 &404782
 Transform:
   m_ObjectHideFlags: 1
@@ -661,12 +689,13 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 139602}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: .5, z: 0}
+  m_LocalPosition: {x: .180000007, y: .550000012, z: .319999993}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 486518}
   - {fileID: 443718}
   - {fileID: 482184}
+  - {fileID: 402668}
   m_Father: {fileID: 0}
   m_RootOrder: 0
 --- !u!4 &448302
@@ -1074,6 +1103,38 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!108 &10839078
+Light:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 196436}
+  m_Enabled: 1
+  serializedVersion: 6
+  m_Type: 0
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Intensity: 8
+  m_Range: 5.28000021
+  m_SpotAngle: 40.7000008
+  m_CookieSize: 10
+  m_Shadows:
+    m_Type: 0
+    m_Resolution: -1
+    m_Strength: 1
+    m_Bias: .0500000007
+    m_NormalBias: .400000006
+  m_Cookie: {fileID: 0}
+  m_DrawHalo: 0
+  m_Flare: {fileID: 0}
+  m_RenderMode: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Lightmapping: 2
+  m_BounceIntensity: 1
+  m_ShadowRadius: 0
+  m_ShadowAngle: 0
+  m_AreaSize: {x: 2.68000007, y: 2.67000008}
 --- !u!114 &11440914
 MonoBehaviour:
   m_ObjectHideFlags: 1
