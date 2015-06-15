@@ -11,9 +11,10 @@ public class ShotsFired : MonoBehaviour {
 	private GameObject[] enemyExplosion;
 
 	public PlayerMovement playerMovement;
+	Animator animator;
 
 	void Start(){
-		
+		animator = GameObject.Find ("roboBuddy").GetComponent<Animator>();
 		playerMovement = GameObject.Find ("Player").GetComponent<PlayerMovement>();
 		
 	}
@@ -32,11 +33,16 @@ public class ShotsFired : MonoBehaviour {
 
 		}
 
-		if (rightTrigger < 0 && counter > shotSpeed) {
-			counter = 0;
-			Instantiate (bullet, new Vector3(this.transform.position.x, this.transform.position.y, this.transform.position.z), this.transform.rotation);
-		
+		if (rightTrigger < 0){
+			animator.SetBool ("firing", true);
+			if (counter > shotSpeed) {
+				counter = 0;
+				Instantiate (bullet, new Vector3 (this.transform.position.x, this.transform.position.y, this.transform.position.z), this.transform.rotation);
+			}
+		}else{
+			animator.SetBool ("firing", false);
 		}
+	
 
 
 	}

@@ -81,6 +81,8 @@ ModelImporter:
     7400002: walk
     7400004: Armature_Body|Armature_BodyAction
     7400006: Armature_Body|walk
+    7400008: Armature_Body|shoot
+    7400010: Armature_Body|preShoot
     9500000: //RootNode
     13700000: Arm
     13700002: Arm._right
@@ -101,88 +103,6 @@ ModelImporter:
     animationWrapMode: 0
     extraExposedTransformPaths: []
     clipAnimations:
-    - serializedVersion: 16
-      name: walk
-      takeName: walk
-      firstFrame: 0
-      lastFrame: 17
-      wrapMode: 0
-      orientationOffsetY: 0
-      level: 0
-      cycleOffset: 0
-      loop: 0
-      loopTime: 0
-      loopBlend: 0
-      loopBlendOrientation: 0
-      loopBlendPositionY: 0
-      loopBlendPositionXZ: 0
-      keepOriginalOrientation: 0
-      keepOriginalPositionY: 1
-      keepOriginalPositionXZ: 0
-      heightFromFeet: 0
-      mirror: 0
-      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
-      curves: []
-      events: []
-      transformMask:
-      - path: 
-        weight: 1
-      - path: Arm
-        weight: 1
-      - path: Arm._right
-        weight: 1
-      - path: Armature_Body
-        weight: 1
-      - path: Armature_Body/becken
-        weight: 1
-      - path: Armature_Body/becken/blaster
-        weight: 1
-      - path: Armature_Body/becken/blaster/blaster_end
-        weight: 1
-      - path: Armature_Body/becken/blaster/Cylinder.001
-        weight: 1
-      - path: Armature_Body/becken/lowerspine
-        weight: 1
-      - path: Armature_Body/becken/lowerspine/leftshoulder
-        weight: 1
-      - path: Armature_Body/becken/lowerspine/leftshoulder/leftshoulderC
-        weight: 1
-      - path: Armature_Body/becken/lowerspine/leftshoulder/leftshoulderC/larm1
-        weight: 1
-      - path: Armature_Body/becken/lowerspine/leftshoulder/leftshoulderC/larm1/larm2
-        weight: 1
-      - path: Armature_Body/becken/lowerspine/leftshoulder/leftshoulderC/larm1/larm2/larm3
-        weight: 1
-      - path: Armature_Body/becken/lowerspine/leftshoulder/leftshoulderC/larm1/larm2/larm3/larm4
-        weight: 1
-      - path: Armature_Body/becken/lowerspine/leftshoulder/leftshoulderC/larm1/larm2/larm3/larm4/larm4_end
-        weight: 1
-      - path: Armature_Body/becken/lowerspine/rightshoulder
-        weight: 1
-      - path: Armature_Body/becken/lowerspine/rightshoulder/rightshoulderC
-        weight: 1
-      - path: Armature_Body/becken/lowerspine/rightshoulder/rightshoulderC/rarm1
-        weight: 1
-      - path: Armature_Body/becken/lowerspine/rightshoulder/rightshoulderC/rarm1/rArm2
-        weight: 1
-      - path: Armature_Body/becken/lowerspine/rightshoulder/rightshoulderC/rarm1/rArm2/rArm3
-        weight: 1
-      - path: Armature_Body/becken/lowerspine/rightshoulder/rightshoulderC/rarm1/rArm2/rArm3/rArm4
-        weight: 1
-      - path: Armature_Body/becken/lowerspine/rightshoulder/rightshoulderC/rarm1/rArm2/rArm3/rArm4/rArm4_end
-        weight: 1
-      - path: Armature_Body/becken/lowerspine/upperspine
-        weight: 1
-      - path: Armature_Body/becken/lowerspine/upperspine/headR
-        weight: 1
-      - path: Armature_Body/becken/lowerspine/upperspine/headR/Head
-        weight: 1
-      - path: Armature_Body/becken/lowerspine/upperspine/headR/headR_end
-        weight: 1
-      - path: Body
-        weight: 1
-      maskType: 0
-      maskSource: {instanceID: 0}
     - serializedVersion: 16
       name: Armature_Body|idle
       takeName: Armature_Body|idle
@@ -304,6 +224,172 @@ ModelImporter:
       - path: Armature_Body/becken/blaster/blaster_end
         weight: 1
       - path: Armature_Body/becken/blaster/Cylinder.001
+        weight: 1
+      - path: Armature_Body/becken/lowerspine
+        weight: 1
+      - path: Armature_Body/becken/lowerspine/leftshoulder
+        weight: 1
+      - path: Armature_Body/becken/lowerspine/leftshoulder/leftshoulderC
+        weight: 1
+      - path: Armature_Body/becken/lowerspine/leftshoulder/leftshoulderC/larm1
+        weight: 1
+      - path: Armature_Body/becken/lowerspine/leftshoulder/leftshoulderC/larm1/larm2
+        weight: 1
+      - path: Armature_Body/becken/lowerspine/leftshoulder/leftshoulderC/larm1/larm2/larm3
+        weight: 1
+      - path: Armature_Body/becken/lowerspine/leftshoulder/leftshoulderC/larm1/larm2/larm3/larm4
+        weight: 1
+      - path: Armature_Body/becken/lowerspine/leftshoulder/leftshoulderC/larm1/larm2/larm3/larm4/larm4_end
+        weight: 1
+      - path: Armature_Body/becken/lowerspine/rightshoulder
+        weight: 1
+      - path: Armature_Body/becken/lowerspine/rightshoulder/rightshoulderC
+        weight: 1
+      - path: Armature_Body/becken/lowerspine/rightshoulder/rightshoulderC/rarm1
+        weight: 1
+      - path: Armature_Body/becken/lowerspine/rightshoulder/rightshoulderC/rarm1/rArm2
+        weight: 1
+      - path: Armature_Body/becken/lowerspine/rightshoulder/rightshoulderC/rarm1/rArm2/rArm3
+        weight: 1
+      - path: Armature_Body/becken/lowerspine/rightshoulder/rightshoulderC/rarm1/rArm2/rArm3/rArm4
+        weight: 1
+      - path: Armature_Body/becken/lowerspine/rightshoulder/rightshoulderC/rarm1/rArm2/rArm3/rArm4/rArm4_end
+        weight: 1
+      - path: Armature_Body/becken/lowerspine/upperspine
+        weight: 1
+      - path: Armature_Body/becken/lowerspine/upperspine/headR
+        weight: 1
+      - path: Armature_Body/becken/lowerspine/upperspine/headR/Head
+        weight: 1
+      - path: Armature_Body/becken/lowerspine/upperspine/headR/headR_end
+        weight: 1
+      - path: Body
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Armature_Body|shoot
+      takeName: Armature_Body|shoot
+      firstFrame: 0
+      lastFrame: 4
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Arm
+        weight: 1
+      - path: Arm._right
+        weight: 1
+      - path: Armature_Body
+        weight: 1
+      - path: Armature_Body/becken
+        weight: 1
+      - path: Armature_Body/becken/blaster
+        weight: 1
+      - path: Armature_Body/becken/blaster/Blaster
+        weight: 1
+      - path: Armature_Body/becken/blaster/blaster_end
+        weight: 1
+      - path: Armature_Body/becken/lowerspine
+        weight: 1
+      - path: Armature_Body/becken/lowerspine/leftshoulder
+        weight: 1
+      - path: Armature_Body/becken/lowerspine/leftshoulder/leftshoulderC
+        weight: 1
+      - path: Armature_Body/becken/lowerspine/leftshoulder/leftshoulderC/larm1
+        weight: 1
+      - path: Armature_Body/becken/lowerspine/leftshoulder/leftshoulderC/larm1/larm2
+        weight: 1
+      - path: Armature_Body/becken/lowerspine/leftshoulder/leftshoulderC/larm1/larm2/larm3
+        weight: 1
+      - path: Armature_Body/becken/lowerspine/leftshoulder/leftshoulderC/larm1/larm2/larm3/larm4
+        weight: 1
+      - path: Armature_Body/becken/lowerspine/leftshoulder/leftshoulderC/larm1/larm2/larm3/larm4/larm4_end
+        weight: 1
+      - path: Armature_Body/becken/lowerspine/rightshoulder
+        weight: 1
+      - path: Armature_Body/becken/lowerspine/rightshoulder/rightshoulderC
+        weight: 1
+      - path: Armature_Body/becken/lowerspine/rightshoulder/rightshoulderC/rarm1
+        weight: 1
+      - path: Armature_Body/becken/lowerspine/rightshoulder/rightshoulderC/rarm1/rArm2
+        weight: 1
+      - path: Armature_Body/becken/lowerspine/rightshoulder/rightshoulderC/rarm1/rArm2/rArm3
+        weight: 1
+      - path: Armature_Body/becken/lowerspine/rightshoulder/rightshoulderC/rarm1/rArm2/rArm3/rArm4
+        weight: 1
+      - path: Armature_Body/becken/lowerspine/rightshoulder/rightshoulderC/rarm1/rArm2/rArm3/rArm4/rArm4_end
+        weight: 1
+      - path: Armature_Body/becken/lowerspine/upperspine
+        weight: 1
+      - path: Armature_Body/becken/lowerspine/upperspine/headR
+        weight: 1
+      - path: Armature_Body/becken/lowerspine/upperspine/headR/Head
+        weight: 1
+      - path: Armature_Body/becken/lowerspine/upperspine/headR/headR_end
+        weight: 1
+      - path: Body
+        weight: 1
+      - path: Lamp
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Armature_Body|preShoot
+      takeName: Armature_Body|preShoot
+      firstFrame: 0
+      lastFrame: 19
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Arm
+        weight: 1
+      - path: Arm._right
+        weight: 1
+      - path: Armature_Body
+        weight: 1
+      - path: Armature_Body/becken
+        weight: 1
+      - path: Armature_Body/becken/blaster
+        weight: 1
+      - path: Armature_Body/becken/blaster/Blaster
+        weight: 1
+      - path: Armature_Body/becken/blaster/blaster_end
         weight: 1
       - path: Armature_Body/becken/lowerspine
         weight: 1
