@@ -39,19 +39,19 @@ public class EnemyMovementFollowPath : MonoBehaviour {
 		animator = GetComponentInChildren<Animator>();
 	}
 	
-	
+
 	void Update (){
-		if(playerHealth.currentHealth > 0 && follow != Follow.PathOnly)
+		if(follow == Follow.GazeLight || (playerHealth.currentHealth > 0 && follow == Follow.Player))
 			currentDist = Vector3.Distance (followedObj.position, transform.position);
 		else
 			currentDist = distance + 1;
 
-		if (currentDist > distance)
-			Move ();
-		else if (enemyHealth.currentHealth > 0 && !frozen) 
-			nav.SetDestination (followedObj.position);
-		else if (frozen)
+		if(frozen)
 			nav.SetDestination (transform.position);
+		else if (currentDist > distance && enemyHealth.currentHealth > 0)
+			Move ();
+		else if (enemyHealth.currentHealth > 0) 
+			nav.SetDestination (followedObj.position);
 		else
 			nav.enabled = false;
 	} 

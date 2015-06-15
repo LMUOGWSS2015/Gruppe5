@@ -2,7 +2,7 @@
 
 public class EnemyHealth : MonoBehaviour {
 	public int startingHealth = 8;
-	public int currentHealth;
+	public int currentHealth = 8;
 	public GameObject enemyExplosion;
 	//public AudioClip deathClip;    
 	public float explDuration = 5f; 

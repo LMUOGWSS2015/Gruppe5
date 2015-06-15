@@ -14,11 +14,14 @@ public class EnemyMovement : MonoBehaviour {
 
 	protected bool frozen;
 	
-	protected void Awake (){
+	protected Animator animator;
+	
+	protected virtual void Awake (){
 		gazeLight = GameObject.FindGameObjectWithTag ("Light").transform;
 		player = GameObject.FindGameObjectWithTag ("Player").transform;
 		playerHealth = player.GetComponent <PlayerHealth> ();
 		enemyHealth = GetComponent <EnemyHealth> ();
+		animator = GetComponentInChildren<Animator>();
 		nav = GetComponent <NavMeshAgent> ();
 		nav.speed = speed;
 	}
@@ -39,12 +42,14 @@ public class EnemyMovement : MonoBehaviour {
 	void OnTriggerEnter (Collider other){
 		if(freezeInLight && other.gameObject.tag == "Light"){
 			frozen = true;
+			animator.SetBool("frozen",frozen);
 		}
 	}
 	
 	void OnTriggerExit (Collider other){
 		if(freezeInLight && other.gameObject.tag == "Light"){
 			frozen = false;
+			animator.SetBool("frozen",frozen);
 		}
 	}
 }
