@@ -115,7 +115,7 @@ public class ChargeGlow : MonoBehaviour {
 			else {
 				doCharge = false;
 				full = true;
-				pointLight.GetComponent<Light> ().color = new Color(61f/255F, 158f/255f, 61f/255f);
+				pointLight.GetComponent<Light> ().color = Color.green;
 				EndAction();
 			}
 
