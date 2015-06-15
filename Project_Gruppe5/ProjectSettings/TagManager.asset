@@ -18,6 +18,8 @@ TagManager:
   - ChargeChecker
   - Charger
   - Enemy
+  - DoorLightLeft
+  - DoorLightRight
   layers:
   - Default
   - TransparentFX
