@@ -62,6 +62,7 @@ ModelImporter:
     4300012: Sender
     7400000: Armature|seeking
     7400002: Armature|shoot
+    7400004: Armature|focus.001
     9500000: //RootNode
   materials:
     importMaterials: 1
@@ -150,6 +151,66 @@ ModelImporter:
       cycleOffset: 0
       loop: 0
       loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Main
+        weight: 1
+      - path: Main/MainRotation
+        weight: 1
+      - path: Main/MainRotation/Bulb.004
+        weight: 1
+      - path: Main/MainShoot
+        weight: 1
+      - path: Main/MainShoot/Barrel1
+        weight: 1
+      - path: Main/MainShoot/Barrel1/Barrel2
+        weight: 1
+      - path: Main/MainShoot/Barrel1/Barrel2/Barrel1 1
+        weight: 1
+      - path: Main/MainShoot/Barrel1/Barrel2/Barrel2 1
+        weight: 1
+      - path: Main/MainShoot/Barrel1/Barrel2/Barrel3
+        weight: 1
+      - path: Main/MainShoot/Barrel1/Barrel2/Barrel3/Barrel3 1
+        weight: 1
+      - path: Main/MainShoot/Barrel1/Barrel2/Barrel3/Barrel3_end
+        weight: 1
+      - path: Main/SenderRoto
+        weight: 1
+      - path: Main/SenderRoto/Satteliter
+        weight: 1
+      - path: Main/SenderRoto/Satteliter/Satteliter_end
+        weight: 1
+      - path: Main/SenderRoto/Satteliter/Sender
+        weight: 1
+      - path: Main/SenderRoto/SenderHolder
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Armature|focus.001
+      takeName: Armature|focus.001
+      firstFrame: 0
+      lastFrame: 4
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 1
       loopBlend: 0
       loopBlendOrientation: 0
       loopBlendPositionY: 0

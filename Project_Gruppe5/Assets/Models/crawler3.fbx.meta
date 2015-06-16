@@ -1,0 +1,168 @@
+fileFormatVersion: 2
+guid: 9d9406bc08751934f9d3405365845daa
+timeCreated: 1434463460
+licenseType: Free
+ModelImporter:
+  serializedVersion: 18
+  fileIDToRecycleName:
+    100000: Bone
+    100002: Bone.001
+    100004: Bone.002
+    100006: Bone.002_end
+    100008: Bone.003
+    100010: Bone.004
+    100012: Bone.005
+    100014: Bone.005_end
+    100016: Bone.006
+    100018: Bone.007
+    100020: Bone.008
+    100022: Bone.008_end
+    100024: Bone.009
+    100026: Bone.010
+    100028: Bone.011
+    100030: Bone.011_end
+    100032: Bone.012
+    100034: //RootNode
+    100036: Cube
+    100038: Cylinder
+    100040: Cylinder.001
+    100042: Cylinder.002
+    100044: Cylinder.003
+    100046: Cylinder.004
+    100048: Cylinder.005
+    100050: Cylinder.006
+    100052: Cylinder.007
+    100054: Cylinder.008
+    100056: Cylinder.009
+    100058: Sockel
+    100060: Sockel.001
+    400000: Bone
+    400002: Bone.001
+    400004: Bone.002
+    400006: Bone.002_end
+    400008: Bone.003
+    400010: Bone.004
+    400012: Bone.005
+    400014: Bone.005_end
+    400016: Bone.006
+    400018: Bone.007
+    400020: Bone.008
+    400022: Bone.008_end
+    400024: Bone.009
+    400026: Bone.010
+    400028: Bone.011
+    400030: Bone.011_end
+    400032: Bone.012
+    400034: //RootNode
+    400036: Cube
+    400038: Cylinder
+    400040: Cylinder.001
+    400042: Cylinder.002
+    400044: Cylinder.003
+    400046: Cylinder.004
+    400048: Cylinder.005
+    400050: Cylinder.006
+    400052: Cylinder.007
+    400054: Cylinder.008
+    400056: Cylinder.009
+    400058: Sockel
+    400060: Sockel.001
+    2300000: Cube
+    2300002: Cylinder
+    2300004: Cylinder.001
+    2300006: Cylinder.002
+    2300008: Cylinder.003
+    2300010: Cylinder.004
+    2300012: Cylinder.005
+    2300014: Cylinder.006
+    2300016: Cylinder.007
+    2300018: Cylinder.008
+    2300020: Cylinder.009
+    2300022: Sockel
+    2300024: Sockel.001
+    3300000: Cube
+    3300002: Cylinder
+    3300004: Cylinder.001
+    3300006: Cylinder.002
+    3300008: Cylinder.003
+    3300010: Cylinder.004
+    3300012: Cylinder.005
+    3300014: Cylinder.006
+    3300016: Cylinder.007
+    3300018: Cylinder.008
+    3300020: Cylinder.009
+    3300022: Sockel
+    3300024: Sockel.001
+    4300000: Cube
+    4300002: Cylinder.002
+    4300004: Cylinder
+    4300006: Cylinder.001
+    4300008: Sockel
+    4300010: Cylinder.004
+    4300012: Cylinder.005
+    4300014: Sockel.001
+    4300016: Cylinder.003
+    4300018: Cylinder.006
+    4300020: Cylinder.007
+    4300022: Cylinder.008
+    4300024: Cylinder.009
+    7400000: Crawler|CrawlerAction.001
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
