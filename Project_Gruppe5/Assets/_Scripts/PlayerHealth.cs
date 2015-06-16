@@ -24,6 +24,9 @@ public class PlayerHealth : MonoBehaviour {
 
 	public float explDuration = 1f;
 	public float hitDuration = 2f;
+
+	
+	ShowDeathScreen sds;
 	
 	void Awake (){
 		//anim = GetComponent <Animator> ();
@@ -32,6 +35,9 @@ public class PlayerHealth : MonoBehaviour {
 		//shotsFired = GetComponent <ShotsFired> ();
 
 		currentHealth = startingHealth;
+
+		sds = GameObject.FindGameObjectWithTag ("DeathScreen").GetComponentInChildren<ShowDeathScreen>();
+		sds.Show(false);
 	}
 	
 	
@@ -88,5 +94,7 @@ public class PlayerHealth : MonoBehaviour {
 		playerMovement.enabled = false;
 		//shotsFired.enabled = false;
 		Destroy (this.gameObject);
+
+		sds.Show(true);
 	}    
 }
