@@ -38,9 +38,9 @@ public class EnemyMovementRotOnly : MonoBehaviour {
 
 	protected void Rotate(Transform t){
 		anim.SetTrigger ("shoot");
-		Vector3 trans = t.position - transform.position;
-		trans.y = 0;
-		transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(trans), Time.time * speed);
+		Vector3 dir = - t.position + transform.position;
+		dir.y = 0;
+		transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(dir), Time.time * speed);
 		//Debug.Log (transform.rotation);
 	}
 
