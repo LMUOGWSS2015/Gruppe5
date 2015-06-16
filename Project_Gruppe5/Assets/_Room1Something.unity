@@ -149,20 +149,6 @@ GameObject:
 Transform:
   m_PrefabParentObject: {fileID: 468926, guid: c709964071548764c9758fa1acb86b64, type: 2}
   m_PrefabInternal: {fileID: 2053695002}
---- !u!114 &73437057
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 73437055}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2a27c9b10cfc2b24d90f12a3cb7eae00, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  damagePerShot: 1
-  bulletExplosion: {fileID: 192264, guid: 579562710378d4fdab9e9b804dea0672, type: 2}
-  explDuration: 2
 --- !u!114 &73437060
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -176,39 +162,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   distance: 8
   speed: 3
---- !u!114 &73437061
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 73437055}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a44e025b62238774cabac351a14a808a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  startingHealth: 8
-  currentHealth: 8
-  enemyExplosion: {fileID: 198994, guid: c34abd0785c51404ea213bbc128567d8, type: 2}
-  explDuration: 5
---- !u!114 &73437062
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 73437055}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f185b7a41b3d018489d7b76cf3fd84a6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  canMiss: 0
-  dmgAmnt: 1
-  timeBetweenBullets: .150000006
-  range: 8
-  flashIntensity: 3
-  flashFadeSpeed: 3
-  effectsDisplayTime: .100000001
 --- !u!1 &74457314
 GameObject:
   m_ObjectHideFlags: 0
@@ -2818,7 +2771,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11461436, guid: 3a4a74b42f1b1fd44aa9dea958ef8ffc, type: 2}
       propertyPath: startingHealth
-      value: 9
+      value: 999
       objectReference: {fileID: 0}
     - target: {fileID: 11461436, guid: 3a4a74b42f1b1fd44aa9dea958ef8ffc, type: 2}
       propertyPath: currentHealth
@@ -4619,6 +4572,112 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1475513860}
+--- !u!1 &1500537577
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1500537578}
+  - 54: {fileID: 1500537580}
+  - 65: {fileID: 1500537579}
+  - 114: {fileID: 1500537581}
+  - 114: {fileID: 1500537582}
+  - 114: {fileID: 1500537583}
+  m_Layer: 0
+  m_Name: Hit
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1500537578
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1500537577}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 73437056}
+  m_RootOrder: 1
+--- !u!65 &1500537579
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1500537577}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 2, z: .53376317}
+  m_Center: {x: 0, y: 1.20000005, z: -1.10000002}
+--- !u!54 &1500537580
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1500537577}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: .0500000007
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!114 &1500537581
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1500537577}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a27c9b10cfc2b24d90f12a3cb7eae00, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damagePerShot: 1
+  bulletExplosion: {fileID: 192264, guid: 579562710378d4fdab9e9b804dea0672, type: 2}
+  explDuration: 2
+--- !u!114 &1500537582
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1500537577}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a44e025b62238774cabac351a14a808a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startingHealth: 8
+  currentHealth: 8
+  enemyExplosion: {fileID: 198994, guid: c34abd0785c51404ea213bbc128567d8, type: 2}
+  explDuration: 5
+--- !u!114 &1500537583
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1500537577}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f185b7a41b3d018489d7b76cf3fd84a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canMiss: 0
+  dmgAmnt: 1
+  timeBetweenBullets: .150000006
+  range: 8
+  flashIntensity: 3
+  flashFadeSpeed: 3
+  effectsDisplayTime: .100000001
 --- !u!1 &1505281110
 GameObject:
   m_ObjectHideFlags: 0
@@ -5646,7 +5705,16 @@ Prefab:
       propertyPath: m_LocalRotation.w
       value: -4.37113883e-08
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 6554990, guid: c709964071548764c9758fa1acb86b64, type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 13643522, guid: c709964071548764c9758fa1acb86b64, type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 6554990, guid: c709964071548764c9758fa1acb86b64, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: c709964071548764c9758fa1acb86b64, type: 2}
   m_IsPrefabParent: 0
 --- !u!1001 &2085835328

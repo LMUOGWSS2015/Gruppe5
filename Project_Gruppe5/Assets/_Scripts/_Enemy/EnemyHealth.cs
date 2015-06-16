@@ -39,9 +39,6 @@ public class EnemyHealth : MonoBehaviour {
 	
 	void Death () {
 		isDead = true;
-		
-		// Turn the collider into a trigger so shots can pass through it.
-		capsuleCollider.isTrigger = true;
 
 		//anim.SetTrigger ("Dead");
 		
@@ -49,7 +46,10 @@ public class EnemyHealth : MonoBehaviour {
 		//enemyAudio.Play ();
 
 		Destroy(Instantiate (enemyExplosion, this.gameObject.transform.position, Quaternion.identity),explDuration);
-		Destroy(this.gameObject);
+		if (this.gameObject.tag == "enemy")
+			Destroy (this.gameObject);
+		else
+			Destroy (this.transform.parent.gameObject);
 
 		transform.GetComponentInParent<Enemies> ().Less(1);
 	}

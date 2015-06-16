@@ -16,6 +16,8 @@ public class EnemyMovementRotOnly : MonoBehaviour {
 		player = GameObject.FindGameObjectWithTag ("Player").transform;
 		playerHealth = player.GetComponent <PlayerHealth> ();
 		enemyHealth = GetComponent <EnemyHealth> ();
+		if (enemyHealth == null)
+			enemyHealth = GetComponentInChildren<EnemyHealth> ();
 		anim = GetComponentInChildren<Animator>();
 	}
 	
