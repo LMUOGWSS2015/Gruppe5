@@ -35,6 +35,7 @@ ModelImporter:
     100054: upperspine
     100056: Blaster
     100058: Lamp
+    100060: Eyes
     400000: Arm
     400002: Arm._right
     400004: Armature_Body
@@ -65,18 +66,22 @@ ModelImporter:
     400054: upperspine
     400056: Blaster
     400058: Lamp
+    400060: Eyes
     2300000: Cylinder.001
     2300002: Head
     2300004: Blaster
+    2300006: Eyes
     3300000: Cylinder.001
     3300002: Head
     3300004: Blaster
+    3300006: Eyes
     4300000: Head
     4300002: Cylinder.001
     4300004: Arm._right
     4300006: Arm
     4300008: Body
     4300010: Blaster
+    4300012: Eyes
     7400000: Armature_Body|idle
     7400002: walk
     7400004: Armature_Body|Armature_BodyAction
