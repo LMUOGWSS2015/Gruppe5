@@ -26,9 +26,9 @@ public class EnemyMovementRotOnly : MonoBehaviour {
 			float gLDist = Vector3.Distance (gazeLight.position, transform.position);
 
 			if(plDist <= distance && plDist < gLDist)
-				Rotate(player);
+				Rotate(player, true);
 			else if(gLDist <= distance)
-				Rotate(gazeLight);
+				Rotate(gazeLight, false);
 			else
 				Idle();
 
@@ -36,9 +36,12 @@ public class EnemyMovementRotOnly : MonoBehaviour {
 			Idle();
 	}
 
-	protected void Rotate(Transform t){
-		anim.SetTrigger ("shoot");
-		Vector3 dir = - t.position + transform.position;
+	protected void Rotate(Transform t, bool player){
+		if (player)
+			anim.SetTrigger ("shoot");
+		else
+			anim.SetTrigger ("focus");
+		Vector3 dir = t.position - transform.position;
 		dir.y = 0;
 		transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(dir), Time.time * speed);
 		//Debug.Log (transform.rotation);
