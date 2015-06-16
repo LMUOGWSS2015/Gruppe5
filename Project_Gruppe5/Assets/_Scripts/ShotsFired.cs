@@ -3,6 +3,7 @@ using System.Collections;
 
 public class ShotsFired : MonoBehaviour {
 
+	public AudioClip shotSound;
 	public GameObject bullet;
 	private float rightTrigger;
 	int counter = 0;
@@ -37,8 +38,8 @@ public class ShotsFired : MonoBehaviour {
 			animator.SetBool ("firing", true);
 			if (counter > shotSpeed) {
 				counter = 0;
-				Instantiate (bullet, new Vector3 (this.transform.position.x, this.transform.position.y, this.transform.position.z), this.transform.rotation);
-			}
+				shoot ();
+				}
 		}else{
 			animator.SetBool ("firing", false);
 		}
@@ -63,5 +64,10 @@ public class ShotsFired : MonoBehaviour {
 				Destroy(obj);
 			}
 		}
+	}
+
+	void shoot(){
+		this.GetComponent<AudioSource> ().PlayOneShot(shotSound);
+		Instantiate (bullet, new Vector3 (this.transform.position.x, this.transform.position.y, this.transform.position.z), this.transform.rotation);
 	}
 }
