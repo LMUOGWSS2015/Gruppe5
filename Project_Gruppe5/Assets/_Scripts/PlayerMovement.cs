@@ -21,6 +21,13 @@ public class PlayerMovement: MonoBehaviour {
 	}
 
 	void FixedUpdate() {
+	
+
+		if(Input.GetKeyDown (KeyCode.Space)){
+			Debug.Log("okay");
+			Application.LoadLevel("LoadScene");
+		}
+
 
 		float translationX = 0;
 		float translationY = 0;
@@ -35,8 +42,8 @@ public class PlayerMovement: MonoBehaviour {
 			translationX = Input.GetAxis ("XboxMacLeftY") ;
 			translationY = Input.GetAxis ("XboxMacLeftX") ;
 
-			shootDirectionX = Input.GetAxis ("XboxMacRightX")*sensitifity;
-			shootDirectionY = Input.GetAxis ("XboxMacRightY")*sensitifity;
+			shootDirectionX = Input.GetAxis ("XboxMacRightY")*sensitifity;
+			shootDirectionY = Input.GetAxis ("XboxMacRightX")*sensitifity;
 
 		}
 		else if (playWithControllerWin) {
