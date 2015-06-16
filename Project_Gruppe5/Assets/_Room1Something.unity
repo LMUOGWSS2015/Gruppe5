@@ -220,7 +220,7 @@ GameObject:
   - 33: {fileID: 74457317}
   - 65: {fileID: 74457316}
   - 23: {fileID: 74457315}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: LightCubeLeft
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -645,7 +645,7 @@ GameObject:
   - 23: {fileID: 174789798}
   - 54: {fileID: 174789797}
   - 114: {fileID: 174789801}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: TopRight
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -779,7 +779,7 @@ GameObject:
   - 23: {fileID: 210123391}
   - 54: {fileID: 210123390}
   - 114: {fileID: 210123394}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: ButtomRight
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -907,7 +907,7 @@ GameObject:
   - 33: {fileID: 297956537}
   - 65: {fileID: 297956536}
   - 23: {fileID: 297956535}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RightCubeLeft
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -980,7 +980,7 @@ GameObject:
   - 4: {fileID: 310751061}
   - 114: {fileID: 310751063}
   - 114: {fileID: 310751062}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: DoubleDoors
   m_TagString: DDoors
   m_Icon: {fileID: 0}
@@ -1035,7 +1035,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 325090154}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Walls
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1059,7 +1059,7 @@ Transform:
   - {fileID: 767423782}
   - {fileID: 562612260}
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 11
 --- !u!1 &336587983
 GameObject:
   m_ObjectHideFlags: 0
@@ -1202,7 +1202,7 @@ Transform:
   - {fileID: 1389265325}
   - {fileID: 73437056}
   m_Father: {fileID: 0}
-  m_RootOrder: 24
+  m_RootOrder: 25
 --- !u!114 &352970817
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1379,7 +1379,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 553599117}
   - 108: {fileID: 553599118}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RightDoorPointlight
   m_TagString: DoorLightRight
   m_Icon: {fileID: 0}
@@ -1443,7 +1443,7 @@ GameObject:
   - 23: {fileID: 561742411}
   - 54: {fileID: 561742410}
   - 114: {fileID: 561742414}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: TopLeft
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -1546,7 +1546,7 @@ GameObject:
   - 23: {fileID: 562612262}
   - 54: {fileID: 562612261}
   - 114: {fileID: 562612265}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Right
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -1844,7 +1844,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 737662134}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: LeftDoorLight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2065,7 +2065,7 @@ GameObject:
   - 23: {fileID: 767423779}
   - 54: {fileID: 767423783}
   - 114: {fileID: 767423784}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Left
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -2336,12 +2336,12 @@ Light:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 837627728}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 6
   m_Type: 2
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Intensity: 0
-  m_Range: 10
+  m_Range: 3
   m_SpotAngle: 30
   m_CookieSize: 10
   m_Shadows:
@@ -2447,7 +2447,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 862006715}
   - 108: {fileID: 862006716}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: LeftDoorPointlight
   m_TagString: DoorLightLeft
   m_Icon: {fileID: 0}
@@ -2498,6 +2498,80 @@ Light:
   m_ShadowRadius: 0
   m_ShadowAngle: 0
   m_AreaSize: {x: 1, y: 1}
+--- !u!1 &866721521
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 866721522}
+  - 33: {fileID: 866721526}
+  - 65: {fileID: 866721525}
+  - 23: {fileID: 866721524}
+  m_Layer: 0
+  m_Name: LaserObjCube
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &866721522
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 866721521}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1407295952}
+  m_Father: {fileID: 1360659381}
+  m_RootOrder: 0
+--- !u!23 &866721524
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 866721521}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_Materials:
+  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 1
+  m_ReflectionProbeUsage: 1
+  m_ProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 1
+  m_ImportantGI: 0
+  m_AutoUVMaxDistance: .5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+--- !u!65 &866721525
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 866721521}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!33 &866721526
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 866721521}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &898563325
 GameObject:
   m_ObjectHideFlags: 0
@@ -2694,7 +2768,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 966949291}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: DoorRight
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -2728,7 +2802,7 @@ GameObject:
   - 23: {fileID: 998351074}
   - 54: {fileID: 998351073}
   - 114: {fileID: 998351077}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: ButtomLeft
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -2890,7 +2964,7 @@ Transform:
   m_LocalScale: {x: 1, y: 3, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 15
 --- !u!1 &1107579334
 GameObject:
   m_ObjectHideFlags: 0
@@ -2899,7 +2973,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1107579335}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: DoorLeft
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -3511,81 +3585,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 7
---- !u!1 &1293763678
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 1293763679}
-  - 33: {fileID: 1293763682}
-  - 136: {fileID: 1293763681}
-  - 23: {fileID: 1293763680}
-  m_Layer: 8
-  m_Name: Gun
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1293763679
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1293763678}
-  m_LocalRotation: {x: .5, y: .5, z: .5, w: .5}
-  m_LocalPosition: {x: 0, y: 1.5, z: .360000014}
-  m_LocalScale: {x: .5, y: .5, z: .5}
-  m_Children:
-  - {fileID: 1407295952}
-  m_Father: {fileID: 1389265325}
-  m_RootOrder: 0
---- !u!23 &1293763680
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1293763678}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
-  m_SubsetIndices: 
-  m_StaticBatchRoot: {fileID: 0}
-  m_UseLightProbes: 1
-  m_ReflectionProbeUsage: 1
-  m_ProbeAnchor: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_PreserveUVs: 1
-  m_ImportantGI: 0
-  m_AutoUVMaxDistance: .5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingOrder: 0
---- !u!136 &1293763681
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1293763678}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: .5
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!33 &1293763682
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1293763678}
-  m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &1359535596
 GameObject:
   m_ObjectHideFlags: 0
@@ -3647,6 +3646,77 @@ RectTransform:
   m_AnchoredPosition: {x: -150, y: 30}
   m_SizeDelta: {x: 919, y: 517}
   m_Pivot: {x: .5, y: .5}
+--- !u!1 &1360659380
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1360659381}
+  - 114: {fileID: 1360659382}
+  - 65: {fileID: 1360659383}
+  - 54: {fileID: 1360659384}
+  m_Layer: 0
+  m_Name: LaserObj
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1360659381
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1360659380}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -3.36170912, y: .899999976, z: 1.85500002}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 866721522}
+  m_Father: {fileID: 0}
+  m_RootOrder: 24
+--- !u!114 &1360659382
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1360659380}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a799fa490fc91443856bacaa8440b73, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dmgAmnt: 1
+  range: 20
+--- !u!65 &1360659383
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1360659380}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!54 &1360659384
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1360659380}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: .0500000007
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!1 &1364529097
 GameObject:
   m_ObjectHideFlags: 0
@@ -3686,7 +3756,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1381775978}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RightDoorLight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3726,7 +3796,6 @@ GameObject:
   - 114: {fileID: 1389265336}
   - 114: {fileID: 1389265337}
   - 114: {fileID: 1389265326}
-  - 114: {fileID: 1389265338}
   - 114: {fileID: 1389265339}
   m_Layer: 8
   m_Name: Enemy
@@ -3745,7 +3814,6 @@ Transform:
   m_LocalPosition: {x: -5.96000004, y: 0, z: 2.8499999}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 1293763679}
   - {fileID: 472477182}
   m_Father: {fileID: 352970816}
   m_RootOrder: 0
@@ -3920,24 +3988,6 @@ MonoBehaviour:
   damagePerShot: 1
   bulletExplosion: {fileID: 192264, guid: 579562710378d4fdab9e9b804dea0672, type: 2}
   explDuration: 2
---- !u!114 &1389265338
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1389265324}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f185b7a41b3d018489d7b76cf3fd84a6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  canMiss: 1
-  dmgAmnt: 1
-  timeBetweenBullets: 1
-  range: 8
-  flashIntensity: 5
-  flashFadeSpeed: 3
-  effectsDisplayTime: .100000001
 --- !u!114 &1389265339
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4021,7 +4071,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 1407295952}
   - 120: {fileID: 1407295954}
-  - 108: {fileID: 1407295953}
   m_Layer: 8
   m_Name: fx_laser
   m_TagString: Untagged
@@ -4035,44 +4084,12 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1407295951}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: .839999974, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: .5, y: .5, z: .5, w: .5}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: .5, y: .5, z: .5}
   m_Children: []
-  m_Father: {fileID: 1293763679}
+  m_Father: {fileID: 866721522}
   m_RootOrder: 0
---- !u!108 &1407295953
-Light:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1407295951}
-  m_Enabled: 0
-  serializedVersion: 6
-  m_Type: 2
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 0
-  m_Range: 10
-  m_SpotAngle: 30
-  m_CookieSize: 10
-  m_Shadows:
-    m_Type: 0
-    m_Resolution: -1
-    m_Strength: 1
-    m_Bias: .0500000007
-    m_NormalBias: .400000006
-  m_Cookie: {fileID: 0}
-  m_DrawHalo: 0
-  m_Flare: {fileID: 0}
-  m_RenderMode: 0
-  m_CullingMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_Lightmapping: 4
-  m_BounceIntensity: 1
-  m_ShadowRadius: 0
-  m_ShadowAngle: 0
-  m_AreaSize: {x: 1, y: 1}
 --- !u!120 &1407295954
 LineRenderer:
   m_ObjectHideFlags: 0
@@ -4618,7 +4635,7 @@ GameObject:
   - 33: {fileID: 1784610396}
   - 65: {fileID: 1784610395}
   - 23: {fileID: 1784610394}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4976,7 +4993,7 @@ GameObject:
   - 33: {fileID: 2012601008}
   - 65: {fileID: 2012601007}
   - 23: {fileID: 2012601006}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
