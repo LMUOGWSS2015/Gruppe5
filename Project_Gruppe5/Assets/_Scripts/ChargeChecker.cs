@@ -3,6 +3,7 @@ using System.Collections;
 
 public class ChargeChecker : MonoBehaviour {
 
+	public AudioClip noSound = null;
 	public int numChargers = 2;
 	int[] checkArray;
 	// Use this for initialization
@@ -22,6 +23,7 @@ public class ChargeChecker : MonoBehaviour {
 				//doors.OpenDoors ();
 				doors.enabled = true;
 			} else {
+				this.GetComponent<AudioSource>().PlayOneShot(noSound);
 				resetChargers();
 				clearArray();
 			}
