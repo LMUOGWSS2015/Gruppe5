@@ -167,6 +167,19 @@ MonoBehaviour:
   flashIntensity: 3
   flashFadeSpeed: 3
   effectsDisplayTime: .100000001
+--- !u!114 &73437058
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 73437055}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8a91bd5e05abfa4eaab517e822b0090, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletExplosion: {fileID: 192264, guid: 579562710378d4fdab9e9b804dea0672, type: 2}
+  explDuration: 2
 --- !u!114 &73437060
 MonoBehaviour:
   m_ObjectHideFlags: 0
