@@ -54,6 +54,12 @@ public class ChargeGlow : MonoBehaviour {
 		gStep = (gEnd - gStart) / 100f;
 		bStep = (bEnd - bStart) / 100f;
 		aStep = (aEnd - aStart) / 100f;
+
+		
+		rend.material.shader = Shader.Find("Self-Illumin/Specular");
+		pipe1.GetComponent<Renderer> ().material.shader = Shader.Find("Self-Illumin/Specular");
+		pipe2.GetComponent<Renderer> ().material.shader = Shader.Find("Self-Illumin/Specular");
+		pipe3.GetComponent<Renderer> ().material.shader = Shader.Find("Self-Illumin/Specular");
 	}
 
 	void EndAction(){
@@ -110,13 +116,9 @@ public class ChargeGlow : MonoBehaviour {
 				EndAction();
 			}
 
-			rend.material.shader = Shader.Find("Self-Illumin/Specular");
 			rend.material.SetColor ("_Color", new Color(r/255f, g/255f, b/255f, a/255f));
-			pipe1.GetComponent<Renderer> ().material.shader = Shader.Find("Self-Illumin/Specular");
 			pipe1.GetComponent<Renderer> ().material.SetColor ("_Color", new Color(r/255f, g/255f, b/255f, a/255f));
-			pipe2.GetComponent<Renderer> ().material.shader = Shader.Find("Self-Illumin/Specular");
 			pipe2.GetComponent<Renderer> ().material.SetColor ("_Color", new Color(r/255f, g/255f, b/255f, a/255f));
-			pipe3.GetComponent<Renderer> ().material.shader = Shader.Find("Self-Illumin/Specular");
 			pipe3.GetComponent<Renderer> ().material.SetColor ("_Color", new Color(r/255f, g/255f, b/255f, a/255f));
 
 			yield return new WaitForSeconds (stepTime);
@@ -134,13 +136,10 @@ public class ChargeGlow : MonoBehaviour {
 			else {
 				doCounterCharge = false;
 			}
-			rend.material.shader = Shader.Find("Self-Illumin/Specular");
+
 			rend.material.SetColor ("_Color", new Color(r/255f, g/255f, b/255f, a/255f));
-			pipe1.GetComponent<Renderer> ().material.shader = Shader.Find("Self-Illumin/Specular");
 			pipe1.GetComponent<Renderer> ().material.SetColor ("_Color", new Color(r/255f, g/255f, b/255f, a/255f));
-			pipe2.GetComponent<Renderer> ().material.shader = Shader.Find("Self-Illumin/Specular");
 			pipe2.GetComponent<Renderer> ().material.SetColor ("_Color", new Color(r/255f, g/255f, b/255f, a/255f));
-			pipe3.GetComponent<Renderer> ().material.shader = Shader.Find("Self-Illumin/Specular");
 			pipe3.GetComponent<Renderer> ().material.SetColor ("_Color", new Color(r/255f, g/255f, b/255f, a/255f));
 			yield return new WaitForSeconds (stepTime);
 		}
@@ -152,14 +151,10 @@ public class ChargeGlow : MonoBehaviour {
 		b = bStart;
 		a = aStart;
 
-		rend.material.shader = Shader.Find("Self-Illumin/Specular");
 		Color reset = new Color(r/255f, g/255f, b/255f, a/255f);
 		rend.material.SetColor ("_Color", reset);
-		pipe1.GetComponent<Renderer> ().material.shader = Shader.Find("Self-Illumin/Specular");
 		pipe1.GetComponent<Renderer> ().material.SetColor ("_Color", reset);
-		pipe2.GetComponent<Renderer> ().material.shader = Shader.Find("Self-Illumin/Specular");
 		pipe2.GetComponent<Renderer> ().material.SetColor ("_Color", reset);
-		pipe3.GetComponent<Renderer> ().material.shader = Shader.Find("Self-Illumin/Specular");
 		pipe3.GetComponent<Renderer> ().material.SetColor ("_Color", reset);
 
 		pointLight.GetComponent<Light> ().color = Color.red;
