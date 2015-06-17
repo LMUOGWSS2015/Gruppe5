@@ -22,6 +22,7 @@ TagManager:
   - DoorLightRight
   - NewLevelWall
   - DeathScreen
+  - DDoorsLower
   layers:
   - Default
   - TransparentFX
