@@ -39,20 +39,22 @@ public class PlayerMovement: MonoBehaviour {
 		shootDirectionY = _transform.rotation.y;
 
 		if (playWithControllerMac) {
-			translationX = Input.GetAxis ("XboxMacLeftY") ;
-			translationY = Input.GetAxis ("XboxMacLeftX") ;
+			translationX = Input.GetAxis ("XboxMacLeftY");
+			translationY = Input.GetAxis ("XboxMacLeftX");
 
-			shootDirectionX = Input.GetAxis ("XboxMacRightY")*sensitifity;
-			shootDirectionY = Input.GetAxis ("XboxMacRightX")*sensitifity;
+			shootDirectionX = Input.GetAxis ("XboxMacRightY") * sensitifity;
+			shootDirectionY = Input.GetAxis ("XboxMacRightX") * sensitifity;
 
-		}
-		else if (playWithControllerWin) {
+		} else if (playWithControllerWin) {
 			translationX = Input.GetAxis ("XboxWinLeftY");
-			translationY = Input.GetAxis ("XboxWinLeftX") ;
+			translationY = Input.GetAxis ("XboxWinLeftX");
 
-			shootDirectionX = Input.GetAxis ("XboxWinRightY")*sensitifity;
-			shootDirectionY = Input.GetAxis ("XboxWinRightX")*sensitifity;
+			shootDirectionX = Input.GetAxis ("XboxWinRightY") * sensitifity;
+			shootDirectionY = Input.GetAxis ("XboxWinRightX") * sensitifity;
 
+		} else {
+			translationX = Input.GetAxis ("Vertical");
+			translationY = Input.GetAxis ("Horizontal");
 		}
 
 	
