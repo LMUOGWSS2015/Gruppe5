@@ -10,11 +10,16 @@ public class Controller : MonoBehaviour {
 	private float step;
 	private DoubleDoorsLowerOpen doors;
 	public GameObject doubleDoorsLower;
+
+	Level level;
 	
 	void Start () {
 //		doors = GameObject.FindGameObjectWithTag ("DDoorsLower").gameObject.GetComponent<DoubleDoorsLowerOpen> ();
 		doors = doubleDoorsLower.gameObject.GetComponent<DoubleDoorsLowerOpen> ();
 		Debug.Log (doors);
+
+		level = transform.gameObject.GetComponent<Level> ();
+		level.StartLevel (false);
 	}
 	
 	void Update() {

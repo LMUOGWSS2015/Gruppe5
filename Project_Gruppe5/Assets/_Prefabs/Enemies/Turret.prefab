@@ -111,8 +111,8 @@ GameObject:
   - 54: {fileID: 5446138}
   - 136: {fileID: 13687708}
   - 114: {fileID: 11407136}
-  - 114: {fileID: 11421652}
   - 114: {fileID: 11484550}
+  - 114: {fileID: 11442212}
   m_Layer: 0
   m_Name: Turret
   m_TagString: Enemy
@@ -911,6 +911,7 @@ MonoBehaviour:
   flashIntensity: 3
   flashFadeSpeed: 3
   effectsDisplayTime: .100000001
+  enemyBullet: {fileID: 176972, guid: 08100ebfd130c4c15a51b9e5b671ae5f, type: 2}
 --- !u!114 &11407786
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -940,7 +941,7 @@ MonoBehaviour:
   damagePerShot: 1
   bulletExplosion: {fileID: 192264, guid: 579562710378d4fdab9e9b804dea0672, type: 2}
   explDuration: 2
---- !u!114 &11421652
+--- !u!114 &11442212
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -948,7 +949,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 128774}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e8a91bd5e05abfa4eaab517e822b0090, type: 3}
+  m_Script: {fileID: 11500000, guid: 4e6c65e78b7ad1742a21c40cd9fb36f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   bulletExplosion: {fileID: 192264, guid: 579562710378d4fdab9e9b804dea0672, type: 2}
@@ -966,6 +967,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   distance: 8
   speed: 3
+  freezeInLight: 0
 --- !u!120 &12090234
 LineRenderer:
   m_ObjectHideFlags: 1

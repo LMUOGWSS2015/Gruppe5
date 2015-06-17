@@ -560,6 +560,21 @@ MonoBehaviour:
   damagePerShot: 1
   bulletExplosion: {fileID: 126894, guid: 3b578bd44f0574c49bda39c7d730a97e, type: 2}
   explDuration: 2
+--- !u!1 &718041025 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 193724, guid: d6db4dd43fedf48478606bd277ae624b, type: 2}
+  m_PrefabInternal: {fileID: 1889037466}
+--- !u!114 &718041028
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 718041025}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d1762b7d45aed043ae2b4e29492265e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &730310439 stripped
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 11404696, guid: 4f2bd56eb933dc34ab53cf047115edf1,
@@ -1921,10 +1936,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 11407136, guid: e86e84bc723d21844a1fe2676c197033, type: 2}
-      propertyPath: enemyBullet
-      value: 
-      objectReference: {fileID: 176972, guid: 08100ebfd130c4c15a51b9e5b671ae5f, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e86e84bc723d21844a1fe2676c197033, type: 2}
   m_IsPrefabParent: 0

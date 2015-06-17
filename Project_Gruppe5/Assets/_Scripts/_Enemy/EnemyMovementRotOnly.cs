@@ -1,29 +1,31 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class EnemyMovementRotOnly : MonoBehaviour {
-	public float distance = 8;
+public class EnemyMovementRotOnly : EnemyMovement {
+	/*public float distance = 8;
 	public float speed = 0.01f;
 
 	protected Transform gazeLight;
 	protected Transform player;
 	protected PlayerHealth playerHealth;
 	EnemyHealth enemyHealth;
-	Animator anim;
+	Animator anim;*/
 	
-	protected void Awake (){
+	protected override void Awake (){
 		gazeLight = GameObject.FindGameObjectWithTag ("Light").transform;
 		player = GameObject.FindGameObjectWithTag ("Player").transform;
 		playerHealth = player.GetComponent <PlayerHealth> ();
 		enemyHealth = GetComponent <EnemyHealth> ();
 		if (enemyHealth == null)
 			enemyHealth = GetComponentInChildren<EnemyHealth> ();
-		anim = GetComponentInChildren<Animator>();
+		animator = GetComponentInChildren<Animator>();
 	}
 	
 	
-	protected void Update (){
-		if (enemyHealth.currentHealth > 0 && playerHealth.currentHealth > 0) {
+	protected override void Update (){
+		if (frozen) {
+			return;
+		} else if (enemyHealth.currentHealth > 0 && playerHealth.currentHealth > 0) {
 			float plDist = Vector3.Distance (player.position, transform.position);
 			float gLDist = Vector3.Distance (gazeLight.position, transform.position);
 
@@ -33,23 +35,21 @@ public class EnemyMovementRotOnly : MonoBehaviour {
 				Rotate(gazeLight, false);
 			else
 				Idle();
-
 		} else if(enemyHealth.currentHealth > 0)
 			Idle();
 	}
 
 	protected void Rotate(Transform t, bool player){
 		if (player)
-			anim.SetTrigger ("shoot");
+			animator.SetTrigger ("shoot");
 		else
-			anim.SetTrigger ("focus");
+			animator.SetTrigger ("focus");
 		Vector3 dir = t.position - transform.position;
 		dir.y = 0;
 		transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(dir), Time.time * speed);
-		//Debug.Log (transform.rotation);
 	}
 
 	protected void Idle(){
-		anim.SetTrigger ("seek");
+		animator.SetTrigger ("seek");
 	}
 }

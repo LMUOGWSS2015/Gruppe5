@@ -1,49 +1,51 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class EnemyMovementFollowPath : MonoBehaviour {
+public class EnemyMovementFollowPath : EnemyMovement {
 	public enum Follow{PathOnly, GazeLight, Player};
 	
-	public bool freezeInLight = false;
+	//public bool freezeInLight = false;
 
 	public Follow follow = Follow.PathOnly;
-	public float distance = 8f;
+	//public float distance = 8f;
 	public float patrolSpeed = 2f;
-	public float followSpeed = 5f; 
+	//public float followSpeed = 5f; 
 	public float waitTime = 5f;
 	public Transform[] patrolWayPoints;
 
 
-	Animator animator;
+//	Animator animator;
 	Transform followedObj;
-	Transform player;
-	PlayerHealth playerHealth;
-	EnemyHealth enemyHealth;
-	NavMeshAgent nav;	
+//	Transform player;
+//	PlayerHealth playerHealth;
+//	EnemyHealth enemyHealth;
+//	NavMeshAgent nav;	
 	float timer;
 	int wayPointIndex;
 	float currentDist;
 
-	bool frozen;
+//	bool frozen;
 	
-	void Awake (){
-		player = GameObject.FindGameObjectWithTag ("Player").transform;
+	protected override void Awake (){
+		base.Awake ();
+//		player = GameObject.FindGameObjectWithTag ("Player").transform;
 		if(follow == Follow.GazeLight)
-			followedObj = GameObject.FindGameObjectWithTag ("Light").transform;
+			followedObj = gazeLight;
 		if (follow == Follow.Player)
 			followedObj = player;
-		playerHealth = player.GetComponent <PlayerHealth> ();
-		enemyHealth = GetComponent <EnemyHealth> ();
-		nav = GetComponent <NavMeshAgent> ();
-		frozen = false;
-		animator = GetComponentInChildren<Animator>();
+//		playerHealth = player.GetComponent <PlayerHealth> ();
+//		enemyHealth = GetComponent <EnemyHealth> ();
+//		nav = GetComponent <NavMeshAgent> ();
+//		frozen = false;
+//		animator = GetComponentInChildren<Animator>();
 	}
 	
 
-	void Update (){
-		if(follow == Follow.GazeLight || (playerHealth.currentHealth > 0 && follow == Follow.Player))
+	protected override void Update (){
+		if (follow == Follow.GazeLight || (playerHealth.currentHealth > 0 && follow == Follow.Player)) {
+			nav.speed = speed;
 			currentDist = Vector3.Distance (followedObj.position, transform.position);
-		else
+		} else
 			currentDist = distance + 1;
 
 		if(frozen)
@@ -56,7 +58,7 @@ public class EnemyMovementFollowPath : MonoBehaviour {
 			nav.enabled = false;
 	} 
 
-	void Move () {
+	protected override void Move () {
 		nav.speed = patrolSpeed;
 
 		if(nav.remainingDistance < nav.stoppingDistance){
@@ -81,7 +83,7 @@ public class EnemyMovementFollowPath : MonoBehaviour {
 	}
 
 	
-	void OnTriggerEnter (Collider other){
+	/*void OnTriggerEnter (Collider other){
 		if(freezeInLight && other.gameObject.tag == "Light"){
 			frozen = true;
 			animator.SetBool("frozen",frozen);
@@ -93,5 +95,5 @@ public class EnemyMovementFollowPath : MonoBehaviour {
 			frozen = false;
 			animator.SetBool("frozen",frozen);
 		}
-	}
+	}*/
 }

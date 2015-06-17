@@ -20,7 +20,6 @@ public class DoubleDoorsLowerOpen : MonoBehaviour {
 	private bool isLowerDoors = false;
 	private bool closing = false;
 	
-	
 	void Awake (){
 		if (this.gameObject.tag == "DDoorsLower") {
 			isLowerDoors = true;
@@ -55,6 +54,10 @@ public class DoubleDoorsLowerOpen : MonoBehaviour {
 		if (closing) {
 			leftDoor.rotation = Quaternion.Slerp (leftDoor.rotation, leftRotationClose, .05f); 
 			rightDoor.rotation = Quaternion.Slerp (rightDoor.rotation, rightRotationClose, .05f);
+
+			if(Quaternion.Angle(leftDoor.rotation, leftRotationClose) < Mathf.Epsilon){
+				GameObject.Find("Controller").GetComponent<Level>().StartLevel(true);
+			}
 		}
 	}
 }
