@@ -12,7 +12,7 @@ public class EnemyMovement : MonoBehaviour {
 	protected EnemyHealth enemyHealth;
 	protected NavMeshAgent nav;	
 
-	protected bool frozen;
+	protected bool frozen = false;
 	
 	protected Animator animator;
 	
@@ -27,10 +27,13 @@ public class EnemyMovement : MonoBehaviour {
 	}
 	
 	
-	protected void Update (){
+	protected virtual void Update (){
 		if (enemyHealth.currentHealth > 0 && playerHealth.currentHealth > 0) {
+			animator.SetTrigger ("walking");
 			Move ();
 		} else {
+			animator.SetTrigger ("idle");
+
 			nav.enabled = false;
 		}
 	} 

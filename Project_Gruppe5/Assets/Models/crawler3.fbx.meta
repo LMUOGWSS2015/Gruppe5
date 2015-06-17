@@ -36,6 +36,14 @@ ModelImporter:
     100056: Cylinder.009
     100058: Sockel
     100060: Sockel.001
+    100062: Bone.013
+    100064: Bone.014
+    100066: Bone.014_end
+    100068: Circle
+    100070: Crawler
+    100072: Cube.001
+    100074: Empty
+    100076: Holder
     400000: Bone
     400002: Bone.001
     400004: Bone.002
@@ -67,6 +75,14 @@ ModelImporter:
     400056: Cylinder.009
     400058: Sockel
     400060: Sockel.001
+    400062: Bone.013
+    400064: Bone.014
+    400066: Bone.014_end
+    400068: Circle
+    400070: Crawler
+    400072: Cube.001
+    400074: Empty
+    400076: Holder
     2300000: Cube
     2300002: Cylinder
     2300004: Cylinder.001
@@ -80,6 +96,9 @@ ModelImporter:
     2300020: Cylinder.009
     2300022: Sockel
     2300024: Sockel.001
+    2300026: Circle
+    2300028: Cube.001
+    2300030: Holder
     3300000: Cube
     3300002: Cylinder
     3300004: Cylinder.001
@@ -93,6 +112,9 @@ ModelImporter:
     3300020: Cylinder.009
     3300022: Sockel
     3300024: Sockel.001
+    3300026: Circle
+    3300028: Cube.001
+    3300030: Holder
     4300000: Cube
     4300002: Cylinder.002
     4300004: Cylinder
@@ -106,7 +128,31 @@ ModelImporter:
     4300020: Cylinder.007
     4300022: Cylinder.008
     4300024: Cylinder.009
+    4300026: Circle
+    4300028: Holder
+    4300030: Cube.001
     7400000: Crawler|CrawlerAction.001
+    7400002: Circle|walk
+    7400004: Empty|walk
+    7400006: Crawler|idle
+    7400008: Crawler|walk
+    7400010: Crawler|walking
+    7400012: Holder|walk
+    7400014: Cube|walk
+    7400016: Sockel.001|walk
+    7400018: Cylinder.003|walk
+    7400020: Cylinder.008|walk
+    7400022: Cylinder.009|walk
+    7400024: Cylinder.006|walk
+    7400026: Cylinder.002|walk
+    7400028: Cylinder|walk
+    7400030: Cylinder.001|walk
+    7400032: Cylinder.005|walk
+    7400034: Cylinder.004|walk
+    7400036: Sockel|walk
+    7400038: Cylinder.007|walk
+    7400040: Cube.001|walk
+    7400042: Crawler|walking2
     9500000: //RootNode
   materials:
     importMaterials: 1
@@ -123,7 +169,211 @@ ModelImporter:
     animationScaleError: .5
     animationWrapMode: 0
     extraExposedTransformPaths: []
-    clipAnimations: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Crawler|idle
+      takeName: Crawler|idle
+      firstFrame: 0
+      lastFrame: 18
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Circle
+        weight: 1
+      - path: Crawler
+        weight: 1
+      - path: Crawler/Bone.012
+        weight: 1
+      - path: Crawler/Bone.012/Bone
+        weight: 1
+      - path: Crawler/Bone.012/Bone/Bone.001
+        weight: 1
+      - path: Crawler/Bone.012/Bone/Bone.001/Bone.002
+        weight: 1
+      - path: Crawler/Bone.012/Bone/Bone.001/Bone.002/Bone.002_end
+        weight: 1
+      - path: Crawler/Bone.012/Bone/Bone.001/Bone.002/Cylinder.001
+        weight: 1
+      - path: Crawler/Bone.012/Bone/Bone.001/Cylinder
+        weight: 1
+      - path: Crawler/Bone.012/Bone/Cylinder.002
+        weight: 1
+      - path: Crawler/Bone.012/Bone.003
+        weight: 1
+      - path: Crawler/Bone.012/Bone.003/Bone.004
+        weight: 1
+      - path: Crawler/Bone.012/Bone.003/Bone.004/Bone.005
+        weight: 1
+      - path: Crawler/Bone.012/Bone.003/Bone.004/Bone.005/Bone.005_end
+        weight: 1
+      - path: Crawler/Bone.012/Bone.003/Bone.004/Bone.005/Cylinder.005
+        weight: 1
+      - path: Crawler/Bone.012/Bone.003/Bone.004/Cylinder.004
+        weight: 1
+      - path: Crawler/Bone.012/Bone.003/Sockel
+        weight: 1
+      - path: Crawler/Bone.012/Bone.006
+        weight: 1
+      - path: Crawler/Bone.012/Bone.006/Bone.007
+        weight: 1
+      - path: Crawler/Bone.012/Bone.006/Bone.007/Bone.008
+        weight: 1
+      - path: Crawler/Bone.012/Bone.006/Bone.007/Bone.008/Bone.008_end
+        weight: 1
+      - path: Crawler/Bone.012/Bone.006/Bone.007/Bone.008/Cylinder.006
+        weight: 1
+      - path: Crawler/Bone.012/Bone.006/Bone.007/Cylinder.003
+        weight: 1
+      - path: Crawler/Bone.012/Bone.006/Sockel.001
+        weight: 1
+      - path: Crawler/Bone.012/Bone.009
+        weight: 1
+      - path: Crawler/Bone.012/Bone.009/Bone.010
+        weight: 1
+      - path: Crawler/Bone.012/Bone.009/Bone.010/Bone.011
+        weight: 1
+      - path: Crawler/Bone.012/Bone.009/Bone.010/Bone.011/Bone.011_end
+        weight: 1
+      - path: Crawler/Bone.012/Bone.009/Bone.010/Bone.011/Cylinder.009
+        weight: 1
+      - path: Crawler/Bone.012/Bone.009/Bone.010/Cylinder.008
+        weight: 1
+      - path: Crawler/Bone.012/Bone.009/Cylinder.007
+        weight: 1
+      - path: Crawler/Bone.012/Bone.013
+        weight: 1
+      - path: Crawler/Bone.012/Bone.013/Bone.014
+        weight: 1
+      - path: Crawler/Bone.012/Bone.013/Bone.014/Bone.014_end
+        weight: 1
+      - path: Crawler/Bone.012/Bone.013/Bone.014/Cube.001
+        weight: 1
+      - path: Crawler/Bone.012/Bone.013/Cube
+        weight: 1
+      - path: Crawler/Bone.012/Holder
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Crawler|walking2
+      takeName: Crawler|walking2
+      firstFrame: 0
+      lastFrame: 20
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Circle
+        weight: 1
+      - path: Crawler
+        weight: 1
+      - path: Crawler/Bone.012
+        weight: 1
+      - path: Crawler/Bone.012/Bone
+        weight: 1
+      - path: Crawler/Bone.012/Bone/Bone.001
+        weight: 1
+      - path: Crawler/Bone.012/Bone/Bone.001/Bone.002
+        weight: 1
+      - path: Crawler/Bone.012/Bone/Bone.001/Bone.002/Bone.002_end
+        weight: 1
+      - path: Crawler/Bone.012/Bone/Bone.001/Bone.002/Cylinder.001
+        weight: 1
+      - path: Crawler/Bone.012/Bone/Bone.001/Cylinder
+        weight: 1
+      - path: Crawler/Bone.012/Bone/Cylinder.002
+        weight: 1
+      - path: Crawler/Bone.012/Bone.003
+        weight: 1
+      - path: Crawler/Bone.012/Bone.003/Bone.004
+        weight: 1
+      - path: Crawler/Bone.012/Bone.003/Bone.004/Bone.005
+        weight: 1
+      - path: Crawler/Bone.012/Bone.003/Bone.004/Bone.005/Bone.005_end
+        weight: 1
+      - path: Crawler/Bone.012/Bone.003/Bone.004/Bone.005/Cylinder.005
+        weight: 1
+      - path: Crawler/Bone.012/Bone.003/Bone.004/Cylinder.004
+        weight: 1
+      - path: Crawler/Bone.012/Bone.003/Sockel
+        weight: 1
+      - path: Crawler/Bone.012/Bone.006
+        weight: 1
+      - path: Crawler/Bone.012/Bone.006/Bone.007
+        weight: 1
+      - path: Crawler/Bone.012/Bone.006/Bone.007/Bone.008
+        weight: 1
+      - path: Crawler/Bone.012/Bone.006/Bone.007/Bone.008/Bone.008_end
+        weight: 1
+      - path: Crawler/Bone.012/Bone.006/Bone.007/Bone.008/Cylinder.006
+        weight: 1
+      - path: Crawler/Bone.012/Bone.006/Bone.007/Cylinder.003
+        weight: 1
+      - path: Crawler/Bone.012/Bone.006/Sockel.001
+        weight: 1
+      - path: Crawler/Bone.012/Bone.009
+        weight: 1
+      - path: Crawler/Bone.012/Bone.009/Bone.010
+        weight: 1
+      - path: Crawler/Bone.012/Bone.009/Bone.010/Bone.011
+        weight: 1
+      - path: Crawler/Bone.012/Bone.009/Bone.010/Bone.011/Bone.011_end
+        weight: 1
+      - path: Crawler/Bone.012/Bone.009/Bone.010/Bone.011/Cylinder.009
+        weight: 1
+      - path: Crawler/Bone.012/Bone.009/Bone.010/Cylinder.008
+        weight: 1
+      - path: Crawler/Bone.012/Bone.009/Cylinder.007
+        weight: 1
+      - path: Crawler/Bone.012/Bone.013
+        weight: 1
+      - path: Crawler/Bone.012/Bone.013/Bone.014
+        weight: 1
+      - path: Crawler/Bone.012/Bone.013/Bone.014/Bone.014_end
+        weight: 1
+      - path: Crawler/Bone.012/Bone.013/Bone.014/Cube.001
+        weight: 1
+      - path: Crawler/Bone.012/Bone.013/Cube
+        weight: 1
+      - path: Crawler/Bone.012/Holder
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
     isReadable: 1
   meshes:
     lODScreenPercentages: []

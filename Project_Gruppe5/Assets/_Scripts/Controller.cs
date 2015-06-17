@@ -8,11 +8,18 @@ public class Controller : MonoBehaviour {
 	private bool movePlayer = false;
 	private Vector3 targetPos = new Vector3 (0f, 0.55f, -6f);
 	private float step;
-	private DoubleDoorsOpen doors;
+	private DoubleDoorsLowerOpen doors;
+	public GameObject doubleDoorsLower;
+
+	Level level;
 	
 	void Start () {
-		doors = GameObject.FindGameObjectWithTag ("DDoorsLower").gameObject.GetComponent<DoubleDoorsOpen> ();
-		Debug.Log (doors);
+//		doors = GameObject.FindGameObjectWithTag ("DDoorsLower").gameObject.GetComponent<DoubleDoorsLowerOpen> ();
+		doors = doubleDoorsLower.gameObject.GetComponent<DoubleDoorsLowerOpen> ();
+//		Debug.Log (doors);
+
+		level = transform.gameObject.GetComponent<Level> ();
+		level.StartLevel (false);
 	}
 	
 	void Update() {
