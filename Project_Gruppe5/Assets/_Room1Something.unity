@@ -762,6 +762,18 @@ Prefab:
       propertyPath: damageImage
       value: 
       objectReference: {fileID: 898563327}
+    - target: {fileID: 11450230, guid: d1cf23df406d6324687b6a9c26795dae, type: 2}
+      propertyPath: playWithControllerMac
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11450230, guid: d1cf23df406d6324687b6a9c26795dae, type: 2}
+      propertyPath: playWithControllerWin
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11471120, guid: d1cf23df406d6324687b6a9c26795dae, type: 2}
+      propertyPath: bullet
+      value: 
+      objectReference: {fileID: 138146, guid: cf60ba45d98b54865b8bbb647a6b94fb, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d1cf23df406d6324687b6a9c26795dae, type: 2}
   m_IsPrefabParent: 0
@@ -1362,6 +1374,24 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 81c2d88863ec2164fa1ce0fa3711c41d, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &1535184191 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 198446, guid: d1cf23df406d6324687b6a9c26795dae, type: 2}
+  m_PrefabInternal: {fileID: 932205692}
+--- !u!114 &1535184197
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1535184191}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a4b2784dafe74bdf9a1c299514e22f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damagePerShot: 1
+  bulletExplosion: {fileID: 126894, guid: 3b578bd44f0574c49bda39c7d730a97e, type: 2}
+  explDuration: 2
 --- !u!1001 &1552563862
 Prefab:
   m_ObjectHideFlags: 0
@@ -1718,7 +1748,7 @@ Light:
   serializedVersion: 6
   m_Type: 1
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 1
+  m_Intensity: 1.70000005
   m_Range: 10
   m_SpotAngle: 30
   m_CookieSize: 10
@@ -1878,6 +1908,22 @@ Prefab:
     - target: {fileID: 437072, guid: e86e84bc723d21844a1fe2676c197033, type: 2}
       propertyPath: m_RootOrder
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11421652, guid: e86e84bc723d21844a1fe2676c197033, type: 2}
+      propertyPath: bulletExplosion
+      value: 
+      objectReference: {fileID: 192264, guid: 579562710378d4fdab9e9b804dea0672, type: 2}
+    - target: {fileID: 11407136, guid: e86e84bc723d21844a1fe2676c197033, type: 2}
+      propertyPath: canMiss
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11407136, guid: e86e84bc723d21844a1fe2676c197033, type: 2}
+      propertyPath: enemyBullet
+      value: 
+      objectReference: {fileID: 176972, guid: 08100ebfd130c4c15a51b9e5b671ae5f, type: 2}
+    - target: {fileID: 11407136, guid: e86e84bc723d21844a1fe2676c197033, type: 2}
+      propertyPath: timeBetweenBullets
+      value: .300000012
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e86e84bc723d21844a1fe2676c197033, type: 2}

@@ -2,6 +2,7 @@
 using System.Collections;
 
 public class EnemyAttackFar : MonoBehaviour {
+
 	public bool canMiss = true;
 	public int dmgAmnt = 1;
 	public float timeBetweenBullets = 0.15f;
@@ -9,6 +10,8 @@ public class EnemyAttackFar : MonoBehaviour {
 	public float flashIntensity = 3f; 
 	public float flashFadeSpeed = 3f;
 	public float effectsDisplayTime = 0.1f;
+
+	public GameObject enemyBullet;
 
 	float timer;
 	LineRenderer gunLine; 
@@ -48,35 +51,37 @@ public class EnemyAttackFar : MonoBehaviour {
 	}
 
 	void Shoot(){
+
+		Instantiate (enemyBullet, new Vector3(this.transform.position.x, this.transform.position.y +0.65f, this.transform.position.z), this.transform.rotation);
+//
+//
 		timer = 0f;
-
-		shootRay.origin = transform.position;
-		shootRay.direction = transform.forward;
-			
-		gunLine.SetPosition (0, gunLine.transform.position);
-
-		//Debug.DrawRay(shootRay.origin, shootRay.direction, Color.white, 3.0f, true);
-
-		if (Physics.Raycast (shootRay, out shootHit, range, mask)) {
-//			Debug.Log(shootHit.collider.gameObject);
-			gunLine.SetPosition (1, shootHit.point + Vector3.up * 1.2f);
-
-			if (shootHit.transform.gameObject == player) {
-				playerHealth.TakeDamage (dmgAmnt);
-
-				gunLight.intensity = flashIntensity;
-				gunLine.enabled = true;
-			}
-			if (canMiss) {
-				gunLight.intensity = flashIntensity;
-				gunLine.enabled = true;
-			}
-		} else if(canMiss) {
-			gunLine.SetPosition (1, shootRay.origin + shootRay.direction * range);
-			gunLight.intensity = flashIntensity;
-			
-			gunLine.enabled = true;
-		}
+//
+//		shootRay.origin = transform.position;
+//		shootRay.direction = transform.forward;
+//			
+//		gunLine.SetPosition (0, gunLine.transform.position);
+//
+//		//Debug.DrawRay(shootRay.origin, shootRay.direction, Color.white, 3.0f, true);
+//
+//		if (Physics.Raycast (shootRay, out shootHit, range, mask)) {
+////			Debug.Log(shootHit.collider.gameObject);
+//			gunLine.SetPosition (1, shootHit.point + Vector3.up * 1.2f);
+//
+//			if (shootHit.transform.gameObject == player) {
+//				playerHealth.TakeDamage (dmgAmnt);
+//
+//			}
+//			if (canMiss) {
+//				gunLight.intensity = flashIntensity;
+//				gunLine.enabled = true;
+//			}
+//		} else if(canMiss) {
+//			gunLine.SetPosition (1, shootRay.origin + shootRay.direction * range);
+//			gunLight.intensity = flashIntensity;
+//			
+//			gunLine.enabled = true;
+//		}
 	}
 
 	void DisableEffects(){
