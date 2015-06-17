@@ -8,10 +8,10 @@ public class Controller : MonoBehaviour {
 	private bool movePlayer = false;
 	private Vector3 targetPos = new Vector3 (0f, 0.55f, -6f);
 	private float step;
-	private DoubleDoorsOpen doors;
+	private DoubleDoorsLowerOpen doors;
 	
 	void Start () {
-		doors = GameObject.FindGameObjectWithTag ("DDoorsLower").gameObject.GetComponent<DoubleDoorsOpen> ();
+		doors = GameObject.FindGameObjectWithTag ("DDoorsLower").gameObject.GetComponent<DoubleDoorsLowerOpen> ();
 		Debug.Log (doors);
 	}
 	
