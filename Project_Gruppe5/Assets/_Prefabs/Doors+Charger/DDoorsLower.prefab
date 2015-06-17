@@ -92,7 +92,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 489140}
   m_Layer: 8
-  m_Name: DoorLeft
+  m_Name: DoorLeftLower
   m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -175,7 +175,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 475406}
   m_Layer: 8
-  m_Name: DoorRight
+  m_Name: DoorRightLower
   m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -16,7 +16,7 @@ public class Controller : MonoBehaviour {
 	void Start () {
 //		doors = GameObject.FindGameObjectWithTag ("DDoorsLower").gameObject.GetComponent<DoubleDoorsLowerOpen> ();
 		doors = doubleDoorsLower.gameObject.GetComponent<DoubleDoorsLowerOpen> ();
-		Debug.Log (doors);
+//		Debug.Log (doors);
 
 		level = transform.gameObject.GetComponent<Level> ();
 		level.StartLevel (false);
