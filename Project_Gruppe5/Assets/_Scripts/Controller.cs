@@ -12,6 +12,7 @@ public class Controller : MonoBehaviour {
 	
 	void Start () {
 		doors = GameObject.FindGameObjectWithTag ("DDoorsLower").gameObject.GetComponent<DoubleDoorsOpen> ();
+		Debug.Log (doors);
 	}
 	
 	void Update() {
@@ -25,7 +26,7 @@ public class Controller : MonoBehaviour {
 		}
 		if (movePlayer) {
 			step = stepSpeed * Time.time;
-			Debug.Log(step);
+//			Debug.Log(step);
 			playerObject.transform.position = Vector3.MoveTowards (playerObject.transform.position, targetPos, 0.1f);
 			if (playerObject.transform.position == targetPos) {
 				movePlayer = false;
