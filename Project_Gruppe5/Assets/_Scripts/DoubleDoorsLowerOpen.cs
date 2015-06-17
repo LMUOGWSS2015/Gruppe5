@@ -27,18 +27,19 @@ public class DoubleDoorsLowerOpen : MonoBehaviour {
 		}
 		
 		//		if (!isLowerDoors) {
-		leftDoor = GameObject.Find ("DoorLeft").transform;
-		rightDoor = GameObject.Find ("DoorRight").transform;
+		leftDoor = GameObject.Find ("DoorLeftLower").transform;
+		rightDoor = GameObject.Find ("DoorRightLower").transform;
 		//		}
 		//		else if (isLowerDoors) {
 		//			leftDoor = GameObject.Find ("DoorLeft").transform;
 		//			rightDoor = GameObject.Find ("DoorRight").transform;
 		//		}
 		
-		leftRotation = Quaternion.AngleAxis(-90, Vector3.up);
-		rightRotation = Quaternion.AngleAxis(90, Vector3.up);
-	}
+		leftRotation = Quaternion.AngleAxis (-90, Vector3.up);
+		rightRotation = Quaternion.AngleAxis (90, Vector3.up);
 	
+	}
+
 	public void closeDoors () {
 		closing = true;
 		leftRotationClose = Quaternion.AngleAxis(-0, Vector3.down);
