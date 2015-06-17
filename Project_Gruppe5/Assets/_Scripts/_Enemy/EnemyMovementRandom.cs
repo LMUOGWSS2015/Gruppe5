@@ -29,11 +29,13 @@ public class EnemyMovementRandom : EnemyMovement {
 			nav.SetDestination (transform.position);
 		} else if (enemyHealth.currentHealth > 0){
 			if(currentDist < distance) {
+				Debug.Log("walk");
 				nav.speed = speed;
 				nav.SetDestination (followedObj.position);
 			} else {
 				nav.speed = walkSpeed;
 				if(nav.remainingDistance <= float.Epsilon){
+					Debug.Log("here");
 					Vector3 trans = new Vector3 (Random.Range (-20.0f, 20.0f), 0f, Random.Range (-10.0f, 10.0f));
 					trans = trans - transform.position;
 					trans.y = 0;

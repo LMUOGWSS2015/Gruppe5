@@ -17,7 +17,7 @@ public class EnemyAttackFar : MonoBehaviour {
 	PlayerHealth playerHealth; 
 	GameObject player;
 	Transform playerPos;
-
+	Animator animator;
 
 	Ray shootRay;  
 	RaycastHit shootHit;
@@ -27,11 +27,12 @@ public class EnemyAttackFar : MonoBehaviour {
 		player = GameObject.FindGameObjectWithTag ("Player");
 		playerPos = player.transform;
 		playerHealth = player.gameObject.GetComponent<PlayerHealth> ();
-		gunLine = GetComponentInChildren <LineRenderer> ();
-		gunLight = gunLine.gameObject.GetComponent<Light>();
+	//	gunLine = GetComponentInChildren <LineRenderer> ();
+	//	gunLight = gunLine.gameObject.GetComponent<Light>();
+		animator = GetComponentInChildren <Animator> ();
 
-		gunLine.enabled = false;
-		gunLight.intensity = 0f;
+	//	gunLine.enabled = false;
+	//	gunLight.intensity = 0f;
 
 		mask = LayerMask.GetMask ("Shootable");
 	}
@@ -43,12 +44,13 @@ public class EnemyAttackFar : MonoBehaviour {
 			Shoot();
 		}
 		if(timer >= timeBetweenBullets * effectsDisplayTime) {
-			DisableEffects ();
+			//DisableEffects ();
 		}
-		gunLight.intensity = Mathf.Lerp(gunLight.intensity, 0f, flashFadeSpeed * Time.deltaTime);
+		//gunLight.intensity = Mathf.Lerp(gunLight.intensity, 0f, flashFadeSpeed * Time.deltaTime);
 	}
 
 	void Shoot(){
+		animator.SetTrigger ("shoot");
 		timer = 0f;
 		Instantiate (enemyBullet, new Vector3(this.transform.position.x, this.transform.position.y, this.transform.position.z), this.transform.rotation);
 
@@ -83,7 +85,7 @@ public class EnemyAttackFar : MonoBehaviour {
 	}
 
 	void DisableEffects(){
-		gunLine.enabled = false;
-		gunLight.enabled = false;
+		//gunLine.enabled = false;
+		//gunLight.enabled = false;
 	}
 }

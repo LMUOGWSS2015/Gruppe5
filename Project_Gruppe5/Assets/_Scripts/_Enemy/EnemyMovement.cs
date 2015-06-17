@@ -29,8 +29,11 @@ public class EnemyMovement : MonoBehaviour {
 	
 	protected virtual void Update (){
 		if (enemyHealth.currentHealth > 0 && playerHealth.currentHealth > 0) {
+			animator.SetTrigger ("walking");
 			Move ();
 		} else {
+			animator.SetTrigger ("idle");
+
 			nav.enabled = false;
 		}
 	} 
