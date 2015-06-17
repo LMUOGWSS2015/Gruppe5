@@ -14,17 +14,17 @@ public class DoubleDoorsOpen : MonoBehaviour {
 	private Quaternion leftRotation;
 	private Quaternion rightRotation; 
 	
-	private Quaternion leftRotationClose;
-	private Quaternion rightRotationClose;
+//	private Quaternion leftRotationClose;
+//	private Quaternion rightRotationClose;
 	
-	private bool isLowerDoors = false;
-	private bool closing = false;
+//	private bool isLowerDoors = false;
+//	private bool closing = false;
 	
 	
 	void Awake (){
-		if (this.gameObject.tag == "DDoorsLower") {
-			isLowerDoors = true;
-		}
+//		if (this.gameObject.tag == "DDoorsLower") {
+//			isLowerDoors = true;
+//		}
 		
 		//		if (!isLowerDoors) {
 		leftDoor = GameObject.Find ("DoorLeft").transform;
@@ -39,21 +39,21 @@ public class DoubleDoorsOpen : MonoBehaviour {
 		rightRotation = Quaternion.AngleAxis(90, Vector3.up);
 	}
 	
-	public void closeDoors () {
-		closing = true;
-		leftRotationClose = Quaternion.AngleAxis(-0, Vector3.down);
-		rightRotationClose = Quaternion.AngleAxis(0, Vector3.down);
-	}
+//	public void closeDoors () {
+//		closing = true;
+//		leftRotationClose = Quaternion.AngleAxis(-0, Vector3.down);
+//		rightRotationClose = Quaternion.AngleAxis(0, Vector3.down);
+//	}
 	
 	
 	void Update () {
-		if ((enemiesDead || isLowerDoors) && !closing) {
+		if (enemiesDead /*|| isLowerDoors) && !closing*/) {
 			leftDoor.rotation = Quaternion.Slerp (leftDoor.rotation, leftRotation, .05f); 
 			rightDoor.rotation = Quaternion.Slerp (rightDoor.rotation, rightRotation, .05f);
 		}
-		if (closing) {
-			leftDoor.rotation = Quaternion.Slerp (leftDoor.rotation, leftRotationClose, .05f); 
-			rightDoor.rotation = Quaternion.Slerp (rightDoor.rotation, rightRotationClose, .05f);
-		}
+//		if (closing) {
+//			leftDoor.rotation = Quaternion.Slerp (leftDoor.rotation, leftRotationClose, .05f); 
+//			rightDoor.rotation = Quaternion.Slerp (rightDoor.rotation, rightRotationClose, .05f);
+//		}
 	}
 }
