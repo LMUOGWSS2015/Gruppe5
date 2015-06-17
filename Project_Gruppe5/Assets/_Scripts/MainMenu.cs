@@ -7,6 +7,11 @@ public class MainMenu : MonoBehaviour {
 	public Canvas mainMenu;
 	public Button play;
 	public Button exit;
+	public bool controllerMac = false;
+	public bool controllerWin = false;
+	public float updown;
+	Button[] buttons = new Button[2];
+	int current = 0;
 	float startTime;
 	float journeyLength;
 	float speed = 2f;
@@ -21,6 +26,9 @@ public class MainMenu : MonoBehaviour {
 		mainMenu = mainMenu.GetComponent<Canvas>();
 		play = play.GetComponent<Button> ();
 		exit = exit.GetComponent<Button> ();
+		
+		buttons [0] = play;
+		buttons [1] = exit;
 	}
 
 	public void exitPressed() {
@@ -44,9 +52,46 @@ public class MainMenu : MonoBehaviour {
 			
 			// Fraction of journey completed = current distance divided by total distance.
 			var fracJourney = distCovered / journeyLength;
-			cam.transform.position = Vector3.Lerp(start,goal,fracJourney);
-			if(Vector3.Distance(cam.transform.position,goal)<0.1) {
+			cam.transform.position = Vector3.Lerp (start, goal, fracJourney);
+			if (Vector3.Distance (cam.transform.position, goal) < 0.1) {
 				Application.LoadLevel ("_Room1Something");
+			}
+		} else {
+			bool abutton = false;
+			if (controllerMac) {
+				updown = Input.GetAxis ("XboxMacLeftY");
+				abutton = Input.GetButton("Fire1");
+			} else if (controllerWin) {
+				updown = Input.GetAxis ("XboxWinLeftY");
+				
+				abutton = Input.GetButton("Fire1");
+
+			} else {
+				updown = Input.GetAxis ("Vertical");
+				
+				//abutton = Input.GetButton("Space");
+			}
+			if(updown>0.2) {
+				current-=1;
+				if (current<0)
+					current = 0;
+			}
+			else if (updown<-0.2) {
+				current+=1;
+				if(current>1) current = 1;
+			}
+			for (int i=0; i<buttons.Length; i++) {
+				if(i==current)
+					buttons[i].GetComponentInChildren<Text>().fontSize=24;
+				else
+					buttons[i].GetComponentInChildren<Text>().fontSize=20;
+			}
+			if(abutton) {
+				Debug.Log ("Active");
+					if(current==0)
+					playPressed();
+				else if(current==1)
+					exitPressed();
 			}
 		}
 	}
