@@ -762,6 +762,14 @@ Prefab:
       propertyPath: damageImage
       value: 
       objectReference: {fileID: 898563327}
+    - target: {fileID: 11450230, guid: d1cf23df406d6324687b6a9c26795dae, type: 2}
+      propertyPath: playWithControllerWin
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 10819538, guid: d1cf23df406d6324687b6a9c26795dae, type: 2}
+      propertyPath: m_Intensity
+      value: 1.60000002
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d1cf23df406d6324687b6a9c26795dae, type: 2}
   m_IsPrefabParent: 0
