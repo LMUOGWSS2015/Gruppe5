@@ -152,6 +152,7 @@ ModelImporter:
     7400036: Sockel|walk
     7400038: Cylinder.007|walk
     7400040: Cube.001|walk
+    7400042: Crawler|walking2
     9500000: //RootNode
   materials:
     importMaterials: 1
@@ -272,10 +273,10 @@ ModelImporter:
       maskType: 0
       maskSource: {instanceID: 0}
     - serializedVersion: 16
-      name: Crawler|walking
-      takeName: Crawler|walking
+      name: Crawler|walking2
+      takeName: Crawler|walking2
       firstFrame: 0
-      lastFrame: 24
+      lastFrame: 20
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
