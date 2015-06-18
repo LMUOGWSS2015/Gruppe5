@@ -8,14 +8,14 @@ public class EnemyHealth : MonoBehaviour {
 	public float explDuration = 5f; 
 	
 	
-	//Animator anim;              
+	Animator anim;              
 	//AudioSource enemyAudio;     
 	CapsuleCollider capsuleCollider;   
 	bool isDead;     
 
 	
 	void Awake (){
-	//	anim = GetComponent <Animator> ();
+		anim = GetComponentInChildren <Animator> ();
 	//	enemyAudio = GetComponent <AudioSource> ();
 		capsuleCollider = GetComponent <CapsuleCollider> ();
 
@@ -40,7 +40,7 @@ public class EnemyHealth : MonoBehaviour {
 	void Death () {
 		isDead = true;
 
-		//anim.SetTrigger ("Dead");
+		anim.SetTrigger ("Dead");
 		
 		//enemyAudio.clip = deathClip;
 		//enemyAudio.Play ();
