@@ -42,7 +42,7 @@ public class EnemyMovement : MonoBehaviour {
 
 	}
 
-	void OnTriggerEnter (Collider other){
+	protected virtual void OnTriggerEnter (Collider other){
 		if(freezeInLight && other.gameObject.tag == "Light"){
 			frozen = true;
 			animator.SetBool("frozen",frozen);

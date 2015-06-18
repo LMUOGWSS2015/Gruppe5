@@ -39,8 +39,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c9d329fa047386438a81240fcf61234, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerObject: {fileID: 0}
+  playerObject: {fileID: 198446, guid: d1cf23df406d6324687b6a9c26795dae, type: 2}
   stepSpeed: 1
+  doubleDoorsLower: {fileID: 131994, guid: 5264a34ed5425457f9cfdba720e407a7, type: 2}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

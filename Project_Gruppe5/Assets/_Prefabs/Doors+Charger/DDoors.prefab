@@ -75,6 +75,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 427954}
+  - 65: {fileID: 6585766}
   m_Layer: 8
   m_Name: DoorLeft
   m_TagString: Wall
@@ -106,6 +107,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 499064}
+  - 65: {fileID: 6554114}
   m_Layer: 8
   m_Name: DoorRight
   m_TagString: Wall
@@ -471,6 +473,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!65 &6554114
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 158170}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: .5, y: 1, z: 1}
+  m_Center: {x: -.25, y: 0, z: 0}
 --- !u!65 &6556530
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -495,6 +509,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!65 &6585766
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 133540}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: .5, y: 1, z: 1}
+  m_Center: {x: .25, y: 0, z: 0}
 --- !u!108 &10818342
 Light:
   m_ObjectHideFlags: 1

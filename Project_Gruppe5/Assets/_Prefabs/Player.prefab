@@ -478,6 +478,7 @@ GameObject:
   - 114: {fileID: 11407560}
   - 136: {fileID: 13655260}
   - 65: {fileID: 6559618}
+  - 114: {fileID: 11478762}
   m_Layer: 8
   m_Name: Player
   m_TagString: Player
@@ -872,7 +873,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 198446}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: .550000012, z: 0}
+  m_LocalPosition: {x: 0, y: .550000012, z: -20}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 486726}
@@ -1272,6 +1273,20 @@ MonoBehaviour:
   bullet: {fileID: 138146, guid: cf60ba45d98b54865b8bbb647a6b94fb, type: 2}
   shotSpeed: 15
   playerMovement: {fileID: 0}
+--- !u!114 &11478762
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 198446}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5ae7fe9ea23c49fa967acb9d5f9f626, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damagePerShot: 1
+  bulletExplosion: {fileID: 192264, guid: 579562710378d4fdab9e9b804dea0672, type: 2}
+  explDuration: 2
 --- !u!124 &12481198
 Behaviour:
   m_ObjectHideFlags: 1
