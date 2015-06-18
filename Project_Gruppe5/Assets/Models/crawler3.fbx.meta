@@ -154,6 +154,8 @@ ModelImporter:
     7400040: Cube.001|walk
     7400042: Crawler|walking2
     7400044: Crawler|shooting
+    7400046: Empty|walking
+    7400048: Crawler|idle0
     9500000: //RootNode
   materials:
     importMaterials: 1
@@ -181,7 +183,7 @@ ModelImporter:
       level: 0
       cycleOffset: 0
       loop: 0
-      loopTime: 0
+      loopTime: 1
       loopBlend: 0
       loopBlendOrientation: 0
       loopBlendPositionY: 0
@@ -197,79 +199,75 @@ ModelImporter:
       transformMask:
       - path: 
         weight: 1
-      - path: Circle
+      - path: Bone.012
         weight: 1
-      - path: Crawler
+      - path: Bone.012/Bone
         weight: 1
-      - path: Crawler/Bone.012
+      - path: Bone.012/Bone/Bone.001
         weight: 1
-      - path: Crawler/Bone.012/Bone
+      - path: Bone.012/Bone/Bone.001/Bone.002
         weight: 1
-      - path: Crawler/Bone.012/Bone/Bone.001
+      - path: Bone.012/Bone/Bone.001/Bone.002/Bone.002_end
         weight: 1
-      - path: Crawler/Bone.012/Bone/Bone.001/Bone.002
+      - path: Bone.012/Bone/Bone.001/Bone.002/Cylinder.001
         weight: 1
-      - path: Crawler/Bone.012/Bone/Bone.001/Bone.002/Bone.002_end
+      - path: Bone.012/Bone/Bone.001/Cylinder
         weight: 1
-      - path: Crawler/Bone.012/Bone/Bone.001/Bone.002/Cylinder.001
+      - path: Bone.012/Bone/Cylinder.002
         weight: 1
-      - path: Crawler/Bone.012/Bone/Bone.001/Cylinder
+      - path: Bone.012/Bone.003
         weight: 1
-      - path: Crawler/Bone.012/Bone/Cylinder.002
+      - path: Bone.012/Bone.003/Bone.004
         weight: 1
-      - path: Crawler/Bone.012/Bone.003
+      - path: Bone.012/Bone.003/Bone.004/Bone.005
         weight: 1
-      - path: Crawler/Bone.012/Bone.003/Bone.004
+      - path: Bone.012/Bone.003/Bone.004/Bone.005/Bone.005_end
         weight: 1
-      - path: Crawler/Bone.012/Bone.003/Bone.004/Bone.005
+      - path: Bone.012/Bone.003/Bone.004/Bone.005/Cylinder.005
         weight: 1
-      - path: Crawler/Bone.012/Bone.003/Bone.004/Bone.005/Bone.005_end
+      - path: Bone.012/Bone.003/Bone.004/Cylinder.004
         weight: 1
-      - path: Crawler/Bone.012/Bone.003/Bone.004/Bone.005/Cylinder.005
+      - path: Bone.012/Bone.003/Sockel
         weight: 1
-      - path: Crawler/Bone.012/Bone.003/Bone.004/Cylinder.004
+      - path: Bone.012/Bone.006
         weight: 1
-      - path: Crawler/Bone.012/Bone.003/Sockel
+      - path: Bone.012/Bone.006/Bone.007
         weight: 1
-      - path: Crawler/Bone.012/Bone.006
+      - path: Bone.012/Bone.006/Bone.007/Bone.008
         weight: 1
-      - path: Crawler/Bone.012/Bone.006/Bone.007
+      - path: Bone.012/Bone.006/Bone.007/Bone.008/Bone.008_end
         weight: 1
-      - path: Crawler/Bone.012/Bone.006/Bone.007/Bone.008
+      - path: Bone.012/Bone.006/Bone.007/Bone.008/Cylinder.006
         weight: 1
-      - path: Crawler/Bone.012/Bone.006/Bone.007/Bone.008/Bone.008_end
+      - path: Bone.012/Bone.006/Bone.007/Cylinder.003
         weight: 1
-      - path: Crawler/Bone.012/Bone.006/Bone.007/Bone.008/Cylinder.006
+      - path: Bone.012/Bone.006/Sockel.001
         weight: 1
-      - path: Crawler/Bone.012/Bone.006/Bone.007/Cylinder.003
+      - path: Bone.012/Bone.009
         weight: 1
-      - path: Crawler/Bone.012/Bone.006/Sockel.001
+      - path: Bone.012/Bone.009/Bone.010
         weight: 1
-      - path: Crawler/Bone.012/Bone.009
+      - path: Bone.012/Bone.009/Bone.010/Bone.011
         weight: 1
-      - path: Crawler/Bone.012/Bone.009/Bone.010
+      - path: Bone.012/Bone.009/Bone.010/Bone.011/Bone.011_end
         weight: 1
-      - path: Crawler/Bone.012/Bone.009/Bone.010/Bone.011
+      - path: Bone.012/Bone.009/Bone.010/Bone.011/Cylinder.009
         weight: 1
-      - path: Crawler/Bone.012/Bone.009/Bone.010/Bone.011/Bone.011_end
+      - path: Bone.012/Bone.009/Bone.010/Cylinder.008
         weight: 1
-      - path: Crawler/Bone.012/Bone.009/Bone.010/Bone.011/Cylinder.009
+      - path: Bone.012/Bone.009/Cylinder.007
         weight: 1
-      - path: Crawler/Bone.012/Bone.009/Bone.010/Cylinder.008
+      - path: Bone.012/Bone.013
         weight: 1
-      - path: Crawler/Bone.012/Bone.009/Cylinder.007
+      - path: Bone.012/Bone.013/Bone.014
         weight: 1
-      - path: Crawler/Bone.012/Bone.013
+      - path: Bone.012/Bone.013/Bone.014/Bone.014_end
         weight: 1
-      - path: Crawler/Bone.012/Bone.013/Bone.014
+      - path: Bone.012/Bone.013/Bone.014/Cube.001
         weight: 1
-      - path: Crawler/Bone.012/Bone.013/Bone.014/Bone.014_end
+      - path: Bone.012/Bone.013/Cube
         weight: 1
-      - path: Crawler/Bone.012/Bone.013/Bone.014/Cube.001
-        weight: 1
-      - path: Crawler/Bone.012/Bone.013/Cube
-        weight: 1
-      - path: Crawler/Bone.012/Holder
+      - path: Bone.012/Holder
         weight: 1
       maskType: 0
       maskSource: {instanceID: 0}
@@ -299,79 +297,75 @@ ModelImporter:
       transformMask:
       - path: 
         weight: 1
-      - path: Circle
+      - path: Bone.012
         weight: 1
-      - path: Crawler
+      - path: Bone.012/Bone
         weight: 1
-      - path: Crawler/Bone.012
+      - path: Bone.012/Bone/Bone.001
         weight: 1
-      - path: Crawler/Bone.012/Bone
+      - path: Bone.012/Bone/Bone.001/Bone.002
         weight: 1
-      - path: Crawler/Bone.012/Bone/Bone.001
+      - path: Bone.012/Bone/Bone.001/Bone.002/Bone.002_end
         weight: 1
-      - path: Crawler/Bone.012/Bone/Bone.001/Bone.002
+      - path: Bone.012/Bone/Bone.001/Bone.002/Cylinder.001
         weight: 1
-      - path: Crawler/Bone.012/Bone/Bone.001/Bone.002/Bone.002_end
+      - path: Bone.012/Bone/Bone.001/Cylinder
         weight: 1
-      - path: Crawler/Bone.012/Bone/Bone.001/Bone.002/Cylinder.001
+      - path: Bone.012/Bone/Cylinder.002
         weight: 1
-      - path: Crawler/Bone.012/Bone/Bone.001/Cylinder
+      - path: Bone.012/Bone.003
         weight: 1
-      - path: Crawler/Bone.012/Bone/Cylinder.002
+      - path: Bone.012/Bone.003/Bone.004
         weight: 1
-      - path: Crawler/Bone.012/Bone.003
+      - path: Bone.012/Bone.003/Bone.004/Bone.005
         weight: 1
-      - path: Crawler/Bone.012/Bone.003/Bone.004
+      - path: Bone.012/Bone.003/Bone.004/Bone.005/Bone.005_end
         weight: 1
-      - path: Crawler/Bone.012/Bone.003/Bone.004/Bone.005
+      - path: Bone.012/Bone.003/Bone.004/Bone.005/Cylinder.005
         weight: 1
-      - path: Crawler/Bone.012/Bone.003/Bone.004/Bone.005/Bone.005_end
+      - path: Bone.012/Bone.003/Bone.004/Cylinder.004
         weight: 1
-      - path: Crawler/Bone.012/Bone.003/Bone.004/Bone.005/Cylinder.005
+      - path: Bone.012/Bone.003/Sockel
         weight: 1
-      - path: Crawler/Bone.012/Bone.003/Bone.004/Cylinder.004
+      - path: Bone.012/Bone.006
         weight: 1
-      - path: Crawler/Bone.012/Bone.003/Sockel
+      - path: Bone.012/Bone.006/Bone.007
         weight: 1
-      - path: Crawler/Bone.012/Bone.006
+      - path: Bone.012/Bone.006/Bone.007/Bone.008
         weight: 1
-      - path: Crawler/Bone.012/Bone.006/Bone.007
+      - path: Bone.012/Bone.006/Bone.007/Bone.008/Bone.008_end
         weight: 1
-      - path: Crawler/Bone.012/Bone.006/Bone.007/Bone.008
+      - path: Bone.012/Bone.006/Bone.007/Bone.008/Cylinder.006
         weight: 1
-      - path: Crawler/Bone.012/Bone.006/Bone.007/Bone.008/Bone.008_end
+      - path: Bone.012/Bone.006/Bone.007/Cylinder.003
         weight: 1
-      - path: Crawler/Bone.012/Bone.006/Bone.007/Bone.008/Cylinder.006
+      - path: Bone.012/Bone.006/Sockel.001
         weight: 1
-      - path: Crawler/Bone.012/Bone.006/Bone.007/Cylinder.003
+      - path: Bone.012/Bone.009
         weight: 1
-      - path: Crawler/Bone.012/Bone.006/Sockel.001
+      - path: Bone.012/Bone.009/Bone.010
         weight: 1
-      - path: Crawler/Bone.012/Bone.009
+      - path: Bone.012/Bone.009/Bone.010/Bone.011
         weight: 1
-      - path: Crawler/Bone.012/Bone.009/Bone.010
+      - path: Bone.012/Bone.009/Bone.010/Bone.011/Bone.011_end
         weight: 1
-      - path: Crawler/Bone.012/Bone.009/Bone.010/Bone.011
+      - path: Bone.012/Bone.009/Bone.010/Bone.011/Cylinder.009
         weight: 1
-      - path: Crawler/Bone.012/Bone.009/Bone.010/Bone.011/Bone.011_end
+      - path: Bone.012/Bone.009/Bone.010/Cylinder.008
         weight: 1
-      - path: Crawler/Bone.012/Bone.009/Bone.010/Bone.011/Cylinder.009
+      - path: Bone.012/Bone.009/Cylinder.007
         weight: 1
-      - path: Crawler/Bone.012/Bone.009/Bone.010/Cylinder.008
+      - path: Bone.012/Bone.013
         weight: 1
-      - path: Crawler/Bone.012/Bone.009/Cylinder.007
+      - path: Bone.012/Bone.013/Bone.014
         weight: 1
-      - path: Crawler/Bone.012/Bone.013
+      - path: Bone.012/Bone.013/Bone.014/Bone.014_end
         weight: 1
-      - path: Crawler/Bone.012/Bone.013/Bone.014
+      - path: Bone.012/Bone.013/Bone.014/Cube.001
         weight: 1
-      - path: Crawler/Bone.012/Bone.013/Bone.014/Bone.014_end
+      - path: Bone.012/Bone.013/Cube
         weight: 1
-      - path: Crawler/Bone.012/Bone.013/Bone.014/Cube.001
-        weight: 1
-      - path: Crawler/Bone.012/Bone.013/Cube
-        weight: 1
-      - path: Crawler/Bone.012/Holder
+      - path: Bone.012/Holder
         weight: 1
       maskType: 0
       maskSource: {instanceID: 0}
@@ -385,7 +379,7 @@ ModelImporter:
       level: 0
       cycleOffset: 0
       loop: 0
-      loopTime: 0
+      loopTime: 1
       loopBlend: 0
       loopBlendOrientation: 0
       loopBlendPositionY: 0
@@ -401,81 +395,75 @@ ModelImporter:
       transformMask:
       - path: 
         weight: 1
-      - path: Circle
+      - path: Bone.012
         weight: 1
-      - path: Empty
+      - path: Bone.012/Bone
         weight: 1
-      - path: Empty/Crawler
+      - path: Bone.012/Bone/Bone.001
         weight: 1
-      - path: Empty/Crawler/Bone.012
+      - path: Bone.012/Bone/Bone.001/Bone.002
         weight: 1
-      - path: Empty/Crawler/Bone.012/Bone
+      - path: Bone.012/Bone/Bone.001/Bone.002/Bone.002_end
         weight: 1
-      - path: Empty/Crawler/Bone.012/Bone/Bone.001
+      - path: Bone.012/Bone/Bone.001/Bone.002/Cylinder.001
         weight: 1
-      - path: Empty/Crawler/Bone.012/Bone/Bone.001/Bone.002
+      - path: Bone.012/Bone/Bone.001/Cylinder
         weight: 1
-      - path: Empty/Crawler/Bone.012/Bone/Bone.001/Bone.002/Bone.002_end
+      - path: Bone.012/Bone/Cylinder.002
         weight: 1
-      - path: Empty/Crawler/Bone.012/Bone/Bone.001/Bone.002/Cylinder.001
+      - path: Bone.012/Bone.003
         weight: 1
-      - path: Empty/Crawler/Bone.012/Bone/Bone.001/Cylinder
+      - path: Bone.012/Bone.003/Bone.004
         weight: 1
-      - path: Empty/Crawler/Bone.012/Bone/Cylinder.002
+      - path: Bone.012/Bone.003/Bone.004/Bone.005
         weight: 1
-      - path: Empty/Crawler/Bone.012/Bone.003
+      - path: Bone.012/Bone.003/Bone.004/Bone.005/Bone.005_end
         weight: 1
-      - path: Empty/Crawler/Bone.012/Bone.003/Bone.004
+      - path: Bone.012/Bone.003/Bone.004/Bone.005/Cylinder.005
         weight: 1
-      - path: Empty/Crawler/Bone.012/Bone.003/Bone.004/Bone.005
+      - path: Bone.012/Bone.003/Bone.004/Cylinder.004
         weight: 1
-      - path: Empty/Crawler/Bone.012/Bone.003/Bone.004/Bone.005/Bone.005_end
+      - path: Bone.012/Bone.003/Sockel
         weight: 1
-      - path: Empty/Crawler/Bone.012/Bone.003/Bone.004/Bone.005/Cylinder.005
+      - path: Bone.012/Bone.006
         weight: 1
-      - path: Empty/Crawler/Bone.012/Bone.003/Bone.004/Cylinder.004
+      - path: Bone.012/Bone.006/Bone.007
         weight: 1
-      - path: Empty/Crawler/Bone.012/Bone.003/Sockel
+      - path: Bone.012/Bone.006/Bone.007/Bone.008
         weight: 1
-      - path: Empty/Crawler/Bone.012/Bone.006
+      - path: Bone.012/Bone.006/Bone.007/Bone.008/Bone.008_end
         weight: 1
-      - path: Empty/Crawler/Bone.012/Bone.006/Bone.007
+      - path: Bone.012/Bone.006/Bone.007/Bone.008/Cylinder.006
         weight: 1
-      - path: Empty/Crawler/Bone.012/Bone.006/Bone.007/Bone.008
+      - path: Bone.012/Bone.006/Bone.007/Cylinder.003
         weight: 1
-      - path: Empty/Crawler/Bone.012/Bone.006/Bone.007/Bone.008/Bone.008_end
+      - path: Bone.012/Bone.006/Sockel.001
         weight: 1
-      - path: Empty/Crawler/Bone.012/Bone.006/Bone.007/Bone.008/Cylinder.006
+      - path: Bone.012/Bone.009
         weight: 1
-      - path: Empty/Crawler/Bone.012/Bone.006/Bone.007/Cylinder.003
+      - path: Bone.012/Bone.009/Bone.010
         weight: 1
-      - path: Empty/Crawler/Bone.012/Bone.006/Sockel.001
+      - path: Bone.012/Bone.009/Bone.010/Bone.011
         weight: 1
-      - path: Empty/Crawler/Bone.012/Bone.009
+      - path: Bone.012/Bone.009/Bone.010/Bone.011/Bone.011_end
         weight: 1
-      - path: Empty/Crawler/Bone.012/Bone.009/Bone.010
+      - path: Bone.012/Bone.009/Bone.010/Bone.011/Cylinder.009
         weight: 1
-      - path: Empty/Crawler/Bone.012/Bone.009/Bone.010/Bone.011
+      - path: Bone.012/Bone.009/Bone.010/Cylinder.008
         weight: 1
-      - path: Empty/Crawler/Bone.012/Bone.009/Bone.010/Bone.011/Bone.011_end
+      - path: Bone.012/Bone.009/Cylinder.007
         weight: 1
-      - path: Empty/Crawler/Bone.012/Bone.009/Bone.010/Bone.011/Cylinder.009
+      - path: Bone.012/Bone.013
         weight: 1
-      - path: Empty/Crawler/Bone.012/Bone.009/Bone.010/Cylinder.008
+      - path: Bone.012/Bone.013/Bone.014
         weight: 1
-      - path: Empty/Crawler/Bone.012/Bone.009/Cylinder.007
+      - path: Bone.012/Bone.013/Bone.014/Bone.014_end
         weight: 1
-      - path: Empty/Crawler/Bone.012/Bone.013
+      - path: Bone.012/Bone.013/Bone.014/Cube.001
         weight: 1
-      - path: Empty/Crawler/Bone.012/Bone.013/Bone.014
+      - path: Bone.012/Bone.013/Cube
         weight: 1
-      - path: Empty/Crawler/Bone.012/Bone.013/Bone.014/Bone.014_end
-        weight: 1
-      - path: Empty/Crawler/Bone.012/Bone.013/Bone.014/Cube.001
-        weight: 1
-      - path: Empty/Crawler/Bone.012/Bone.013/Cube
-        weight: 1
-      - path: Empty/Crawler/Bone.012/Holder
+      - path: Bone.012/Holder
         weight: 1
       maskType: 0
       maskSource: {instanceID: 0}
