@@ -6,7 +6,7 @@ public class EnemyMovementRandom : EnemyMovement {
 	public Follow follow = Follow.RandomOnly;
 	public float walkSpeed = 2f;
 	public float distToNewGoal = 1.2f;
-	public float rotSlow = 3f;
+	public float rotSpeed = 3f;
 
 	Transform followedObj;
 	NavMeshHit hit;
@@ -50,7 +50,7 @@ public class EnemyMovementRandom : EnemyMovement {
 			trans.y = 0;
 			Transform t = transform;
 			t.rotation = Quaternion.LookRotation (trans);
-			StartCoroutine(Rotation(t.rotation, rotSlow));
+			StartCoroutine(Rotation(t.rotation, rotSpeed));
 			
 			Vector3 runTo = t.position + t.forward * 10;
 			
@@ -58,19 +58,21 @@ public class EnemyMovementRandom : EnemyMovement {
 		}
 		nav.SetDestination (hit.position);
 	}
-
+	
 	IEnumerator Rotation(Quaternion to, float time) {
-		for(var t = 0f; t < 1; t += Time.deltaTime/time) {
-			transform.rotation = Quaternion.Lerp(transform.rotation, to, t);
-			yield return null;
+		float elapsedTime = 0f;
+		while (elapsedTime < time) {
+			elapsedTime += Time.deltaTime;
+			transform.rotation = Quaternion.Slerp(transform.rotation, to, elapsedTime);
+			yield return new WaitForEndOfFrame ();
 		}
+		yield return null;
 	}
 
 	protected override void OnTriggerEnter (Collider other){
 		base.OnTriggerEnter (other);
 
 		if(other.gameObject.tag == "Wall"){
-		//	Debug.Log("wall");
 			NewGoal();
 		}
 	}

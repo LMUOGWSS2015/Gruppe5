@@ -438,7 +438,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 128774}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.31999993, y: .0299999993, z: 3.29999995}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 492972}
@@ -906,12 +906,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canMiss: 0
   dmgAmnt: 1
-  timeBetweenBullets: .150000006
+  timeBetweenBullets: 1
   range: 8
-  flashIntensity: 3
-  flashFadeSpeed: 3
-  effectsDisplayTime: .100000001
-  enemyBullet: {fileID: 176972, guid: 08100ebfd130c4c15a51b9e5b671ae5f, type: 2}
+  enemyBullet: {fileID: 194906, guid: b1a961732601dc24bbf3d9d58e859efc, type: 2}
 --- !u!114 &11407786
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -968,6 +965,7 @@ MonoBehaviour:
   distance: 8
   speed: 3
   freezeInLight: 0
+  rotSlow: 3
 --- !u!120 &12090234
 LineRenderer:
   m_ObjectHideFlags: 1

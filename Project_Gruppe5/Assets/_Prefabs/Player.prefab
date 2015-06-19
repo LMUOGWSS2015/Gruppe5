@@ -479,6 +479,7 @@ GameObject:
   - 136: {fileID: 13655260}
   - 65: {fileID: 6559618}
   - 114: {fileID: 11478762}
+  - 114: {fileID: 11403098}
   m_Layer: 8
   m_Name: Player
   m_TagString: Player
@@ -1200,7 +1201,7 @@ Light:
   serializedVersion: 6
   m_Type: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 1.5
+  m_Intensity: 1.60000002
   m_Range: 10
   m_SpotAngle: 90
   m_CookieSize: 10
@@ -1222,6 +1223,20 @@ Light:
   m_ShadowRadius: 0
   m_ShadowAngle: 0
   m_AreaSize: {x: 1, y: 1}
+--- !u!114 &11403098
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 198446}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5ae7fe9ea23c49fa967acb9d5f9f626, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damagePerShot: 1
+  bulletExplosion: {fileID: 126894, guid: 3b578bd44f0574c49bda39c7d730a97e, type: 2}
+  explDuration: 2
 --- !u!114 &11407560
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1256,8 +1271,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: .200000003
   sensitifity: 1
-  playWithControllerMac: 0
-  playWithControllerWin: 1
+  playWithControllerMac: 1
+  playWithControllerWin: 0
 --- !u!114 &11471120
 MonoBehaviour:
   m_ObjectHideFlags: 1

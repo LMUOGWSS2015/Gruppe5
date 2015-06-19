@@ -3,6 +3,7 @@ using System.Collections;
 
 public class DoubleDoorsLowerOpen : MonoBehaviour {
 	public float doorSpeed = 7f;
+	public float startGameDoorDist = 3f;
 	
 	public bool enemiesDead;
 	
@@ -55,7 +56,7 @@ public class DoubleDoorsLowerOpen : MonoBehaviour {
 			leftDoor.rotation = Quaternion.Slerp (leftDoor.rotation, leftRotationClose, .05f); 
 			rightDoor.rotation = Quaternion.Slerp (rightDoor.rotation, rightRotationClose, .05f);
 
-			if(Quaternion.Angle(leftDoor.rotation, leftRotationClose) < 2f){// < Mathf.Epsilon){
+			if(Quaternion.Angle(leftDoor.rotation, leftRotationClose) < startGameDoorDist){// < Mathf.Epsilon){
 				GameObject.Find("Controller").GetComponent<Level>().StartLevel(true);
 			}
 		}

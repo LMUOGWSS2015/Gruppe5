@@ -24,14 +24,14 @@ public class Level : MonoBehaviour {
 
 		foreach (GameObject e in enemies) {
 			e.GetComponent<EnemyMovement>().enabled = start;
-			EnemyAttackFar eaf = e.GetComponent<EnemyAttackFar>();
+			/*EnemyAttackFar eaf = e.GetComponent<EnemyAttackFar>();
 			if(eaf != null)
-				eaf.enabled = start;
-			else{
+				eaf.enabled = false;
+			else{*/
 				EnemyAttackNear ean = e.GetComponent<EnemyAttackNear>();
 				if(ean != null)
 					ean.enabled = start;
-			}
+			//}
 		}
 	}
 }
