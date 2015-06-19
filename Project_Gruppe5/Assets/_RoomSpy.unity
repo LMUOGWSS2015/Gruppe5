@@ -178,6 +178,10 @@ Prefab:
       propertyPath: timeBetweenBullets
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 128774, guid: e86e84bc723d21844a1fe2676c197033, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e86e84bc723d21844a1fe2676c197033, type: 2}
   m_IsPrefabParent: 0
@@ -269,6 +273,10 @@ Prefab:
     - target: {fileID: 110432, guid: ac9324f58ed1f344a8380a287a789c61, type: 2}
       propertyPath: m_Name
       value: Crawler 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 13645410, guid: ac9324f58ed1f344a8380a287a789c61, type: 2}
+      propertyPath: m_Radius
+      value: 2.79999995
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ac9324f58ed1f344a8380a287a789c61, type: 2}

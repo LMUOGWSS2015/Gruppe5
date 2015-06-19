@@ -24,7 +24,7 @@ public class PlayerMovement: MonoBehaviour {
 	
 
 		if(Input.GetKeyDown (KeyCode.Space)){
-			Debug.Log("okay");
+//			Debug.Log("okay");
 			Application.LoadLevel("LoadScene");
 		}
 
