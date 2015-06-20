@@ -11,6 +11,7 @@ public class EnemyMovementRotOnly : EnemyMovement {
 	EnemyHealth enemyHealth;
 	Animator anim;*/
 	public float rotSpeed = 5f;
+	public bool preferLight = true;
 
 	private EnemyAttackFar eaf;
 	
@@ -34,10 +35,10 @@ public class EnemyMovementRotOnly : EnemyMovement {
 			float plDist = Vector3.Distance (player.position, transform.position);
 			float gLDist = Vector3.Distance (gazeLight.position, transform.position);
 
-			if (plDist <= distance && plDist < gLDist)
-				Rotate (player, true);
-			else if (gLDist <= distance)
+			if (preferLight && gLDist <= distance && gLDist < plDist){
 				Rotate (gazeLight, false);
+}			else if (plDist <= distance)
+				Rotate (player, true);
 			else
 				Idle ();
 		} else if (enemyHealth.currentHealth > 0) {
@@ -49,6 +50,8 @@ public class EnemyMovementRotOnly : EnemyMovement {
 	protected void Rotate(Transform t, bool player){
 		if (!player) {
 			eaf.enabled = false;
+		} else {
+			eaf.enabled = true;
 		}
 
 		animator.SetTrigger ("focus");
@@ -56,10 +59,11 @@ public class EnemyMovementRotOnly : EnemyMovement {
 		Vector3 dir = t.position - transform.position;
 		dir.y = 0;
 
-		StartCoroutine(Rotation(Quaternion.LookRotation(dir), rotSpeed));
-		if(player && Quaternion.Angle(transform.rotation, Quaternion.LookRotation(dir)) < Mathf.Epsilon){
-			eaf.enabled = true;
-		}
+		if(dir != Vector3.zero)
+			StartCoroutine(Rotation(Quaternion.LookRotation(dir), rotSpeed));
+//		if(player ){&& Quaternion.Angle(transform.rotation, Quaternion.LookRotation(dir)) < Mathf.Epsilon){
+//			eaf.enabled = true;
+//		}
 		// transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(dir), Time.time * speed);
 	}
 	

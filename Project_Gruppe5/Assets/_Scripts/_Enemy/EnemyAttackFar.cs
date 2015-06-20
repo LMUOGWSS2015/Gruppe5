@@ -2,7 +2,7 @@
 using System.Collections;
 
 public class EnemyAttackFar : MonoBehaviour {
-	public bool canMiss = true;
+//	public bool canMiss = true;
 	public int dmgAmnt = 1;
 	public float timeBetweenBullets = 0.15f;
 	public float range = 8f;
@@ -19,9 +19,9 @@ public class EnemyAttackFar : MonoBehaviour {
 	Transform playerPos;
 	Animator animator;
 
-/*	Ray shootRay;  
+	Ray shootRay;  
 	RaycastHit shootHit;
-	int mask;*/
+	int mask;
 
 	void Awake(){
 		player = GameObject.FindGameObjectWithTag ("Player");
@@ -35,14 +35,24 @@ public class EnemyAttackFar : MonoBehaviour {
 	//	gunLine.enabled = false;
 	//	gunLight.intensity = 0f;
 
-	//	mask = LayerMask.GetMask ("Shootable");
+		mask = LayerMask.GetMask ("Shootable");
 	}
 	
 	void Update(){
 		timer += Time.deltaTime;
 
 		if (timer >= timeBetweenBullets && playerHealth != null && Vector3.Distance (playerPos.position, transform.position) <= range) {
-			Shoot ();
+			shootRay.origin = transform.position;
+			shootRay.direction = transform.forward;
+
+			if (Physics.Raycast (shootRay, out shootHit, range, mask)) {
+				if (shootHit.transform.gameObject == player
+				    || Vector3.Distance (shootHit.transform.position, transform.position)
+				    > Vector3.Distance (player.transform.position, transform.position))
+				    Shoot ();
+			} else {
+				Shoot ();
+			}
 		} 
 
 //		if(timer >= timeBetweenBullets * effectsDisplayTime) {

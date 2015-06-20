@@ -47,7 +47,7 @@ public class EnemyHealth : MonoBehaviour {
 		//enemyAudio.Play ();
 
 		Destroy(Instantiate (enemyExplosion, this.gameObject.transform.position, Quaternion.identity),explDuration);
-		Debug.Log(this.gameObject.tag);
+//		Debug.Log(this.gameObject.tag);
 		if (this.gameObject.tag == "Enemy")
 			Destroy (this.gameObject);
 		else

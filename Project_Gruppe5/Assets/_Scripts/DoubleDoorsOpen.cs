@@ -4,7 +4,7 @@ using System.Collections;
 public class DoubleDoorsOpen : MonoBehaviour {
 	public float doorSpeed = 7f;
 	
-	public bool enemiesDead;
+	private bool enemiesDead;
 	
 	private Transform leftDoor;
 	private Transform rightDoor;
@@ -29,5 +29,13 @@ public class DoubleDoorsOpen : MonoBehaviour {
 			leftDoor.rotation = Quaternion.Slerp (leftDoor.rotation, leftRotation, .05f); 
 			rightDoor.rotation = Quaternion.Slerp (rightDoor.rotation, rightRotation, .05f);
 		}
+	}
+
+	public void SetEnemiesDead(bool ed){
+		enemiesDead = ed;
+	}
+
+	public bool GetEnemiesDead(){
+		return enemiesDead;
 	}
 }

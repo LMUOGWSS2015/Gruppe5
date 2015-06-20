@@ -3,39 +3,51 @@ using System.Collections;
 
 public class ButtonPress : MonoBehaviour {
 	public DoorOpen door;
+	public bool opensDoor = true;
+	public bool stay = false;
+	public bool pressed = false;
 
-	bool pressed = false;
-	ArrayList al = new ArrayList ();
+	ArrayList gOsPressingButton = new ArrayList ();
+	ArrayList ignore = new ArrayList();
 
 	void Start(){
-		if (pressed) {
-			door.Open ();
+		ignore.Add ("Light");
+		ignore.Add ("Floor");
+		ignore.Add ("Bullet");
+		ignore.Add ("enemyBullet");
+		ignore.Add ("bulletExplosion");
+		ignore.Add ("playerExplosion");
+		ignore.Add ("enemyExplosion");
 
+		if (pressed) {
+			door.Open (opensDoor);
+
+			int mask = LayerMask.GetMask ("Shootable");
 			RaycastHit hit;
 			Vector3 v = transform.position + new Vector3 (0, 5, 0);
-			if (Physics.Raycast (v, Vector3.down * 5, out hit)) {
+			if (Physics.Raycast (v, Vector3.down * 5, out hit, 5f, mask)) {
 				if(hit.collider.gameObject.tag != "Light")
-					al.Add(hit.collider.gameObject);
+					gOsPressingButton.Add(hit.collider.gameObject);
 			}
 		}
 	}
 
 	void OnTriggerEnter (Collider other){
-		if(other.gameObject.tag != "Light" && other.gameObject.tag != "Floor"){
-			pressed = true;
-			al.Add(other.gameObject);
-			door.Open();
+		if(!ignore.Contains(other.gameObject.tag)){
+			gOsPressingButton.Add(other.gameObject);
+			door.Open(opensDoor);
 		}
 	}
 	
 	void OnTriggerExit (Collider other){
-		if (al.Contains(other.gameObject)) {
-			al.Remove(other.gameObject);
-		}
+		if (!stay) {
+			if (gOsPressingButton.Contains (other.gameObject)) {
+				gOsPressingButton.Remove (other.gameObject);
 
-		if(al.Count == 0){
-			pressed = false;
-			door.Close ();
+				if (gOsPressingButton.Count == 0) {
+					door.Open (!opensDoor);
+				}
+			}
 		}
 	}
 }

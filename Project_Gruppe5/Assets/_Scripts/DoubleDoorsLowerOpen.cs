@@ -5,8 +5,6 @@ public class DoubleDoorsLowerOpen : MonoBehaviour {
 	public float doorSpeed = 7f;
 	public float startGameDoorDist = 3f;
 	
-	public bool enemiesDead;
-	
 	private Transform leftDoor;
 	private Transform rightDoor;
 	private float leftClosed;
@@ -18,13 +16,13 @@ public class DoubleDoorsLowerOpen : MonoBehaviour {
 	private Quaternion leftRotationClose;
 	private Quaternion rightRotationClose;
 	
-	private bool isLowerDoors = false;
+//	private bool isLowerDoors = false;
 	private bool closing = false;
 	
 	void Awake (){
-		if (this.gameObject.tag == "DDoorsLower") {
-			isLowerDoors = true;
-		}
+//		if (this.gameObject.tag == "DDoorsLower") {
+//			isLowerDoors = true;
+//		}
 		
 		//		if (!isLowerDoors) {
 		leftDoor = GameObject.Find ("DoorLeftLower").transform;
@@ -48,7 +46,7 @@ public class DoubleDoorsLowerOpen : MonoBehaviour {
 	
 	
 	void Update () {
-		if ((enemiesDead || isLowerDoors) && !closing) {
+		if (!closing) {
 			leftDoor.rotation = Quaternion.Slerp (leftDoor.rotation, leftRotation, .05f); 
 			rightDoor.rotation = Quaternion.Slerp (rightDoor.rotation, rightRotation, .05f);
 		}
@@ -58,6 +56,7 @@ public class DoubleDoorsLowerOpen : MonoBehaviour {
 
 			if(Quaternion.Angle(leftDoor.rotation, leftRotationClose) < startGameDoorDist){// < Mathf.Epsilon){
 				GameObject.Find("Controller").GetComponent<Level>().StartLevel(true);
+				this.enabled = false;
 			}
 		}
 	}

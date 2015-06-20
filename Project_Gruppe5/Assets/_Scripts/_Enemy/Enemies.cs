@@ -6,7 +6,7 @@ public class Enemies : MonoBehaviour {
 	public void Less(int amnt){
 		size -= amnt;
 		if (size <= 0)
-			GameObject.FindGameObjectWithTag ("DDoors").GetComponent<DoubleDoorsOpen> ().enemiesDead = true;
+			GameObject.FindGameObjectWithTag ("DDoors").GetComponent<DoubleDoorsOpen> ().SetEnemiesDead(true);
 	}
 
 	public void More(int amnt){

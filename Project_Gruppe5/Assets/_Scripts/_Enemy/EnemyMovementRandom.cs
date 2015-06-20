@@ -64,7 +64,7 @@ public class EnemyMovementRandom : EnemyMovement {
 		nav.speed = walkSpeed;
 		if(nav.remainingDistance <= distToNewGoal){//<= float.Epsilon){
 			Vector3 trans = new Vector3 (Random.Range (-17.0f, 17.0f), 0f, Random.Range (-7.0f, 7.0f));
-			trans = trans;// + transform.position;
+//			trans = trans;// + transform.position;
 			trans.y = 0;
 //			Debug.Log(trans);
 			
