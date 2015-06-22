@@ -56,7 +56,8 @@ public class DoubleDoorsLowerOpen : MonoBehaviour {
 
 			if(Quaternion.Angle(leftDoor.rotation, leftRotationClose) < startGameDoorDist){// < Mathf.Epsilon){
 				GameObject.Find("Controller").GetComponent<Level>().StartLevel(true);
-				this.enabled = false;
+				if(Quaternion.Angle(leftDoor.rotation, leftRotationClose) < Mathf.Epsilon)
+					this.enabled = false;
 			}
 		}
 	}

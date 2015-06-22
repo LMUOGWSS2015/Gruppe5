@@ -3,12 +3,15 @@ using System.Collections;
 
 public class ButtonPress : MonoBehaviour {
 	public DoorOpen door;
+	public enum Stay{Never, UntilNextPress, Forever};
+	public Stay stay = Stay.Never;
 	public bool opensDoor = true;
-	public bool stay = false;
 	public bool pressed = false;
 
 	ArrayList gOsPressingButton = new ArrayList ();
 	ArrayList ignore = new ArrayList();
+
+	private bool changed = false;
 
 	void Start(){
 		ignore.Add ("Light");
@@ -33,19 +36,28 @@ public class ButtonPress : MonoBehaviour {
 	}
 
 	void OnTriggerEnter (Collider other){
-		if(!ignore.Contains(other.gameObject.tag)){
-			gOsPressingButton.Add(other.gameObject);
-			door.Open(opensDoor);
+		if(!ignore.Contains(other.gameObject.tag) && !(stay == Stay.Forever && changed)){
+			if(other.gameObject.tag == "Player" && !gOsPressingButton.Contains(other.gameObject)){
+				gOsPressingButton.Add(other.gameObject);
+				if(stay == Stay.UntilNextPress && changed) {
+					door.Open(!opensDoor);
+					changed = false; 
+				} else {
+					door.Open(opensDoor);
+					changed = true; 
+				}
+			}
 		}
 	}
 	
 	void OnTriggerExit (Collider other){
-		if (!stay) {
+		if (stay != Stay.Forever) {
 			if (gOsPressingButton.Contains (other.gameObject)) {
 				gOsPressingButton.Remove (other.gameObject);
 
-				if (gOsPressingButton.Count == 0) {
+				if (gOsPressingButton.Count == 0 && stay != Stay.UntilNextPress) {
 					door.Open (!opensDoor);
+					changed = false;
 				}
 			}
 		}

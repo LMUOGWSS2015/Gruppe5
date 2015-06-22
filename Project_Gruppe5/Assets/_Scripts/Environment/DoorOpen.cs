@@ -42,10 +42,13 @@ public class DoorOpen : MonoBehaviour {
 	}
 
 	public void Open(bool openDoor){
-		if (openDoor)
+		if (openDoor) {
 			toOpen = true;
-		else 
+			toClose = false;
+		} else {
 			toClose = true;
+			toOpen = false;
+		}
 		startTime = Time.time;
 	}
 }

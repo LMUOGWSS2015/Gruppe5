@@ -828,8 +828,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a44e025b62238774cabac351a14a808a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startingHealth: 8
-  currentHealth: 8
+  startingHealth: 3
+  currentHealth: 3
   enemyExplosion: {fileID: 198994, guid: c34abd0785c51404ea213bbc128567d8, type: 2}
   explDuration: 5
 --- !u!114 &11455340
@@ -845,8 +845,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dmgAmnt: 1
   timeBetweenBullets: .150000006
-  range: 8
+  range: 20
   enemyBullet: {fileID: 176972, guid: 08100ebfd130c4c15a51b9e5b671ae5f, type: 2}
+  height: 1
 --- !u!136 &13661958
 CapsuleCollider:
   m_ObjectHideFlags: 1

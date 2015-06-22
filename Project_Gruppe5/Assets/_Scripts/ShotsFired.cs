@@ -35,6 +35,11 @@ public class ShotsFired : MonoBehaviour {
 		}
 
 		if (rightTrigger < 0){
+			if (!animator.GetNextAnimatorStateInfo(0).IsName("shooting"))
+				animator.SetBool ("shooting", true);
+			else 
+				animator.SetBool ("shooting", false);
+
 			animator.SetBool ("firing", true);
 			if (counter > shotSpeed) {
 				counter = 0;

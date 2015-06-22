@@ -10,6 +10,7 @@ public class EnemyAttackFar : MonoBehaviour {
 //	public float flashFadeSpeed = 3f;
 //	public float effectsDisplayTime = 0.1f;
 	public GameObject enemyBullet;
+	public float height = 1f;
 
 	float timer;
 /*	LineRenderer gunLine; 
@@ -42,13 +43,13 @@ public class EnemyAttackFar : MonoBehaviour {
 		timer += Time.deltaTime;
 
 		if (timer >= timeBetweenBullets && playerHealth != null && Vector3.Distance (playerPos.position, transform.position) <= range) {
-			shootRay.origin = transform.position;
+			shootRay.origin = transform.position + Vector3.up * 1f;
 			shootRay.direction = transform.forward;
 
 			if (Physics.Raycast (shootRay, out shootHit, range, mask)) {
-				if (shootHit.transform.gameObject == player
-				    || Vector3.Distance (shootHit.transform.position, transform.position)
-				    > Vector3.Distance (player.transform.position, transform.position))
+				if (shootHit.transform.gameObject == player)
+//				    || Vector3.Distance (shootHit.transform.position, transform.position)
+//				    > Vector3.Distance (player.transform.position, transform.position)){
 				    Shoot ();
 			} else {
 				Shoot ();
@@ -64,7 +65,7 @@ public class EnemyAttackFar : MonoBehaviour {
 	void Shoot(){
 		animator.SetTrigger ("shoot");
 		timer = 0f;
-		Instantiate (enemyBullet, transform.position, this.transform.rotation);
+		Instantiate (enemyBullet, transform.position + Vector3.up*height, this.transform.rotation);
 
 
 //		shootRay.origin = transform.position;
