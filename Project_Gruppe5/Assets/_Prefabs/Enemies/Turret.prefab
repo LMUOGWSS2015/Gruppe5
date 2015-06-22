@@ -842,11 +842,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f185b7a41b3d018489d7b76cf3fd84a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canMiss: 0
   dmgAmnt: 1
   timeBetweenBullets: 1
   range: 8
   enemyBullet: {fileID: 194906, guid: b1a961732601dc24bbf3d9d58e859efc, type: 2}
+  height: 1
 --- !u!114 &11407786
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -904,6 +904,7 @@ MonoBehaviour:
   speed: 3
   freezeInLight: 0
   rotSpeed: 5
+  preferLight: 1
 --- !u!136 &13687708
 CapsuleCollider:
   m_ObjectHideFlags: 1
