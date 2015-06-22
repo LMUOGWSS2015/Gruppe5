@@ -9,7 +9,9 @@ public class EnemyMovementToPlayer : EnemyMovement {
 		else if (Vector3.Distance (player.position, transform.position) <= distance) {
 			nav.SetDestination (player.position);
 		} else {
+			animator.ResetTrigger("walking");
 			animator.SetTrigger("idle");
+
 		}
 	}
 }
