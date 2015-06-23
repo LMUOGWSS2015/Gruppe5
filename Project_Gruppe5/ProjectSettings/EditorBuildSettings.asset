@@ -9,7 +9,7 @@ EditorBuildSettings:
     path: Assets/_Room1Something.unity
   - enabled: 0
     path: Assets/LoadScene.unity
-  - enabled: 1
+  - enabled: 0
     path: Assets/_Room2.unity
-  - enabled: 1
+  - enabled: 0
     path: Assets/mainmenu.unity
