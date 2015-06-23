@@ -32,10 +32,14 @@ Material:
         first:
           name: _MatCap
         second:
-          m_Texture: {fileID: 2800000, guid: 08f995fc44e29da4d9327759f69a63df, type: 3}
+          m_Texture: {fileID: 2800000, guid: 5a049a5395c90154dbc3d1cc025c2f59, type: 3}
           m_Scale: {x: 1, y: 1}
           m_Offset: {x: 0, y: 0}
     m_Floats:
+      data:
+        first:
+          name: _MatCapAccurate
+        second: 0
       data:
         first:
           name: _SkinnedMesh
