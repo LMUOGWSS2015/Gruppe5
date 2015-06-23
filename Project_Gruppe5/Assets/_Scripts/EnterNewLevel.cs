@@ -8,7 +8,7 @@ public class EnterNewLevel : MonoBehaviour {
 
 		float fadeTime = this.GetComponent<Fading>().BeginFade(1);
 		yield return new WaitForSeconds(fadeTime);
-		Application.LoadLevel("_Room2");
+		Application.LoadLevel("_RoomMaze");
 
 
 	}
