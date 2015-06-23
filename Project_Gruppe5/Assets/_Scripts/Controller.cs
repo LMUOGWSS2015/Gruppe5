@@ -20,6 +20,9 @@ public class Controller : MonoBehaviour {
 
 		level = transform.gameObject.GetComponent<Level> ();
 		level.StartLevel (false);
+
+		doors.enabled = true;
+		movePlayer = true;
 	}
 	
 	void Update() {
@@ -27,10 +30,10 @@ public class Controller : MonoBehaviour {
 			Application.Quit ();
 		}
 		
-		if (Input.GetKeyDown (KeyCode.G)) {
-			doors.enabled = true;
-			movePlayer = true;
-		}
+//		if (Input.GetKeyDown (KeyCode.G)) {
+//			doors.enabled = true;
+//			movePlayer = true;
+//		}
 		if (movePlayer) {
 			step = stepSpeed * Time.time;
 //			Debug.Log(step);
