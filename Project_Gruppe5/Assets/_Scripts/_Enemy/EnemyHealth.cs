@@ -8,14 +8,14 @@ public class EnemyHealth : MonoBehaviour {
 	public float explDuration = 5f; 
 	
 	
-	Animator anim;              
+//	Animator anim;              
 	//AudioSource enemyAudio;     
 	CapsuleCollider capsuleCollider;   
 	bool isDead;     
 
 	
 	void Awake (){
-		anim = GetComponentInChildren <Animator> ();
+//		anim = GetComponentInChildren <Animator> ();
 	//	enemyAudio = GetComponent <AudioSource> ();
 
 		currentHealth = startingHealth;
