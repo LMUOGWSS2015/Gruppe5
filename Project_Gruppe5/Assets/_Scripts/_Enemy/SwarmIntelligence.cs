@@ -26,3 +26,4 @@ public class SwarmIntelligence : MonoBehaviour {
 			spheres.Add(s);
 		}
 	}
+}
