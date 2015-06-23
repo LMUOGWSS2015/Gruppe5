@@ -23,6 +23,9 @@ public class EnemyMovementFollowPath : EnemyMovement {
 	float timer;
 	int wayPointIndex;
 	float currentDist;
+	
+	Ray shootRay;  
+	RaycastHit shootHit;
 
 //	bool frozen;
 	
@@ -48,17 +51,27 @@ public class EnemyMovementFollowPath : EnemyMovement {
 		} else
 			currentDist = distance + 1;
 
-		if(frozen)
+		if (frozen)
 			nav.SetDestination (transform.position);
 		else if (currentDist > distance && enemyHealth.currentHealth > 0)
 			Move ();
-		else if (enemyHealth.currentHealth > 0) 
-			nav.SetDestination (followedObj.position);
-		else
+		else if (enemyHealth.currentHealth > 0) {
+			shootRay.origin = transform.position;
+			shootRay.direction = player.transform.position;
+			
+			if (Physics.Raycast (shootRay, out shootHit, distance)) {
+				if (shootHit.transform.gameObject == player)
+					nav.SetDestination (followedObj.position);
+				else Move ();
+			}
+		} else {
 			nav.enabled = false;
+			animator.SetTrigger ("idle");
+		}
 	} 
 
 	protected override void Move () {
+		animator.SetTrigger ("walking");
 		nav.speed = patrolSpeed;
 
 		if(nav.remainingDistance < nav.stoppingDistance){

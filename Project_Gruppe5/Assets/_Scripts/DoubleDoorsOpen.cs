@@ -19,8 +19,8 @@ public class DoubleDoorsOpen : MonoBehaviour {
 		leftDoor = GameObject.Find ("DoorLeft").transform;
 		rightDoor = GameObject.Find ("DoorRight").transform;
 
-		leftRotation = Quaternion.AngleAxis(-90, Vector3.up);
-		rightRotation = Quaternion.AngleAxis(90, Vector3.up);
+		leftRotation = Quaternion.AngleAxis(-70, Vector3.up);
+		rightRotation = Quaternion.AngleAxis(70, Vector3.up);
 	}
 	
 	
