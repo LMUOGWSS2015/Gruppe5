@@ -106,6 +106,12 @@ ModelImporter:
         weight: 1
       - path: Spine/Eye/Eye_end
         weight: 1
+      - path: Spine/Iris
+        weight: 1
+      - path: Spine/Iris/Iris_end
+        weight: 1
+      - path: Spine/Iris/IrisMesh
+        weight: 1
       - path: Spine/Spindel
         weight: 1
       maskType: 0
@@ -150,6 +156,12 @@ ModelImporter:
         weight: 1
       - path: Spine/Eye/Eye_end
         weight: 1
+      - path: Spine/Iris
+        weight: 1
+      - path: Spine/Iris/Iris_end
+        weight: 1
+      - path: Spine/Iris/IrisMesh
+        weight: 1
       - path: Spine/Spindel
         weight: 1
       maskType: 0
@@ -193,6 +205,12 @@ ModelImporter:
       - path: Spine/Eye/Eye 1
         weight: 1
       - path: Spine/Eye/Eye_end
+        weight: 1
+      - path: Spine/Iris
+        weight: 1
+      - path: Spine/Iris/Iris_end
+        weight: 1
+      - path: Spine/Iris/IrisMesh
         weight: 1
       - path: Spine/Spindel
         weight: 1
