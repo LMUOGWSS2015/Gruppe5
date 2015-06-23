@@ -7,6 +7,7 @@ public class ButtonPress : MonoBehaviour {
 	public Stay stay = Stay.Never;
 	public bool opensDoor = true;
 	public bool pressed = false;
+	public bool playerActivated = false;
 
 	ArrayList gOsPressingButton = new ArrayList ();
 	ArrayList ignore = new ArrayList();
@@ -37,7 +38,7 @@ public class ButtonPress : MonoBehaviour {
 
 	void OnTriggerEnter (Collider other){
 		if(!ignore.Contains(other.gameObject.tag) && !(stay == Stay.Forever && changed)){
-			if(other.gameObject.tag == "Player" && !gOsPressingButton.Contains(other.gameObject)){
+			if(!gOsPressingButton.Contains(other.gameObject)){
 				gOsPressingButton.Add(other.gameObject);
 				if(stay == Stay.UntilNextPress && changed) {
 					door.Open(!opensDoor);
@@ -46,7 +47,8 @@ public class ButtonPress : MonoBehaviour {
 					door.Open(opensDoor);
 					changed = true; 
 				}
-			}
+			} else if(playerActivated)
+				return;
 		}
 	}
 	
