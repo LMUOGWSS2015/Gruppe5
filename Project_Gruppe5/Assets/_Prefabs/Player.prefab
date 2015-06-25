@@ -526,7 +526,6 @@ GameObject:
   - 4: {fileID: 482386}
   - 54: {fileID: 5455408}
   - 114: {fileID: 11450230}
-  - 114: {fileID: 11407560}
   - 136: {fileID: 13655260}
   - 65: {fileID: 6559618}
   - 114: {fileID: 11478762}
@@ -961,8 +960,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 198446}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: .550000012, z: -18}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: -4.37113883e-08}
+  m_LocalPosition: {x: -.0170000009, y: .219999999, z: -20}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 418942}
@@ -1077,7 +1076,7 @@ EllipsoidParticleEmitter:
   m_Enabled: 1
   m_Emit: 1
   minSize: .0299999993
-  maxSize: .970000029
+  maxSize: .219999999
   minEnergy: .270000011
   maxEnergy: .439999998
   minEmission: 41.9000015
@@ -1184,7 +1183,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_Materials:
-  - {fileID: 2100000, guid: e52c42245cc405949a95d615ff298789, type: 2}
+  - {fileID: 2100000, guid: c9a4253a8c01d7d4089ecf9fc43c5b6d, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 1
@@ -1451,27 +1450,6 @@ MonoBehaviour:
   damagePerShot: 1
   bulletExplosion: {fileID: 126894, guid: 3b578bd44f0574c49bda39c7d730a97e, type: 2}
   explDuration: 2
---- !u!114 &11407560
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 198446}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aeaa805a36f8b5a4ba9e823c6a10722e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  startingHealth: 9
-  currentHealth: 9
-  healthSlider: {fileID: 0}
-  damageImage: {fileID: 0}
-  flashSpeed: 5
-  flashColour: {r: 1, g: 0, b: 0, a: .100000001}
-  playerHit: {fileID: 126894, guid: 3b578bd44f0574c49bda39c7d730a97e, type: 2}
-  playerExplosion: {fileID: 168372, guid: dc91594f738d241109fa46fb952a9c34, type: 2}
-  explDuration: 1
-  hitDuration: 1
 --- !u!114 &11450230
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1485,8 +1463,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: .200000003
   sensitifity: 1
-  playWithControllerMac: 1
-  playWithControllerWin: 0
+  playWithControllerMac: 0
+  playWithControllerWin: 1
 --- !u!114 &11469134
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1560,7 +1538,7 @@ SkinnedMeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_Materials:
-  - {fileID: 2100000, guid: 69abbd19d98ea2345b05e96800c14a20, type: 2}
+  - {fileID: 2100000, guid: fb11b1a30065f5844aeeca0dc4daac3b, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 1
@@ -1664,7 +1642,7 @@ SkinnedMeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_Materials:
-  - {fileID: 2100000, guid: 69abbd19d98ea2345b05e96800c14a20, type: 2}
+  - {fileID: 2100000, guid: d83d3417a3546d14697a4cbd4dd71ff9, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 1

@@ -7,7 +7,7 @@ Material:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: Robot MatCap Bumped
-  m_Shader: {fileID: 4800000, guid: 0a5ee393eb41d614ebbcc13355b73393, type: 3}
+  m_Shader: {fileID: 4800000, guid: f5d01bbba3dd4e94a9d60ae9526d5186, type: 3}
   m_ShaderKeywords: SKINNED_MESH
   m_LightmapFlags: 5
   m_CustomRenderQueue: -1
@@ -18,32 +18,32 @@ Material:
         first:
           name: _MainTex
         second:
-          m_Texture: {fileID: 2800000, guid: 7f5077d68b405ce45a95a2638a373656, type: 3}
+          m_Texture: {fileID: 2800000, guid: 80ac88cfc317b8545892a8e19cfcb0f4, type: 3}
           m_Scale: {x: 1, y: 1}
           m_Offset: {x: 0, y: 0}
       data:
         first:
           name: _BumpMap
         second:
-          m_Texture: {fileID: 2800000, guid: c3212145c8d80af4eb8f7ad1495d3200, type: 3}
+          m_Texture: {fileID: 0}
           m_Scale: {x: 4, y: 4}
           m_Offset: {x: 0, y: 0}
       data:
         first:
           name: _MatCap
         second:
-          m_Texture: {fileID: 2800000, guid: 5a049a5395c90154dbc3d1cc025c2f59, type: 3}
+          m_Texture: {fileID: 2800000, guid: 04173e7d552d5854ebf8b2080ac3eb27, type: 3}
           m_Scale: {x: 1, y: 1}
           m_Offset: {x: 0, y: 0}
     m_Floats:
       data:
         first:
-          name: _MatCapAccurate
-        second: 0
-      data:
-        first:
           name: _SkinnedMesh
         second: 1
+      data:
+        first:
+          name: _MatCapAccurate
+        second: 0
     m_Colors:
       data:
         first:
