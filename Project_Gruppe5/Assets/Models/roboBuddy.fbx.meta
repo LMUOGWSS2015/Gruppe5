@@ -276,7 +276,7 @@ ModelImporter:
       name: Armature_Body|shoot
       takeName: Armature_Body|shoot
       firstFrame: 0
-      lastFrame: 4
+      lastFrame: 13
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
