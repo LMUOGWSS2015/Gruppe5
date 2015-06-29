@@ -19,11 +19,16 @@ public class SwarmIntelligence : MonoBehaviour {
 			sb.spheres = this.spheres;
 			sb.swarm = this;
 
-			Vector3 pos = new Vector2(transform.position.x, transform.position.y) + Random.insideUnitCircle * spawnArea;
+			Vector2 pos = new Vector2(transform.position.x, transform.position.z) + Random.insideUnitCircle * spawnArea;
 			s.transform.position = new Vector3(pos.x, transform.position.y, pos.y);
 			//s.transform.parent = transform;
 			
 			spheres.Add(s);
 		}
 	}
+/*
+	void OnDrawGizmosSelected()
+	{
+		Gizmos.DrawSphere (transform.position, spawnArea);
+	}*/
 }
