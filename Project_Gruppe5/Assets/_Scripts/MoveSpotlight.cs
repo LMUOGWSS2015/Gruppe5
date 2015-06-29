@@ -22,6 +22,7 @@ public class MoveSpotlight : MonoBehaviour
 	private AudioSource source;
 
 	private float random;
+	public float flickerAmount = 0.0001f;
 
 	public bool flicker = true;
 
@@ -73,13 +74,13 @@ public class MoveSpotlight : MonoBehaviour
 		if (done) {
 			flicker = true;
 			StopCoroutine (LightFlicker ());
-			Debug.Log ("FLICKER STOPPED");
+//			Debug.Log ("FLICKER STOPPED");
 		}
 
 		if (flicker) {
 			random = Random.value;
 //			Debug.Log (random);
-			if (random > 0.999f) {
+			if (random > (1f - flickerAmount)) {
 				StartCoroutine (LightFlicker ());
 				flicker = false;
 			}

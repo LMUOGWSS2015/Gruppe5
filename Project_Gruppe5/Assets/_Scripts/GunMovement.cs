@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 
 public class GunMovement : MonoBehaviour {
@@ -22,11 +22,11 @@ public class GunMovement : MonoBehaviour {
 		float rotationX;
 		float rotationY;
 
-		if(playerMovement.playWithControllerMac){
+		if(playerMovement.mac){
 			rotationX = Input.GetAxis ("XboxMacRightX") * sensitifity;
 			rotationY = Input.GetAxis ("XboxMacRightY") * sensitifity;
 		}
-		else if (playerMovement.playWithControllerWin) {
+		else if (playerMovement.win) {
 			rotationX = Input.GetAxis ("XboxWinRightX") * sensitifity;
 			rotationY = Input.GetAxis ("XboxWinRightY") * sensitifity;
 			

@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 
 public class MoveBox : MonoBehaviour {
@@ -14,9 +14,9 @@ public class MoveBox : MonoBehaviour {
 	void Update(){
 		bool pressed1;
 
-		if (!pm.playWithControllerMac && ! pm.playWithControllerWin)
+		if (!pm.mac && ! pm.win)
 			pressed1 = Input.GetKeyDown (KeyCode.Space);
-		else if (pm.playWithControllerWin)
+		else if (pm.win)
 			pressed1 = Input.GetButton ("Fire2");
 		else
 			pressed1 = Input.GetButton ("Fire2");
@@ -26,9 +26,9 @@ public class MoveBox : MonoBehaviour {
 		}
 
 		bool pressed0;
-		if (!pm.playWithControllerMac && ! pm.playWithControllerWin)
+		if (!pm.mac && ! pm.win)
 			pressed0 = Input.GetKeyDown (KeyCode.Space);
-		else if (pm.playWithControllerWin)
+		else if (pm.win)
 			pressed0 = Input.GetButton ("Fire1");
 		else
 			pressed0 = Input.GetButton ("Fire1");

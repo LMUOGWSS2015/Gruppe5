@@ -11,7 +11,7 @@ public class ShotsFired : MonoBehaviour {
 	private GameObject[] bulletExplosion;
 	private GameObject[] enemyExplosion;
 
-	public PlayerMovement playerMovement;
+	private PlayerMovement playerMovement;
 	Animator animator;
 
 	void Start(){
@@ -22,12 +22,12 @@ public class ShotsFired : MonoBehaviour {
 
 	void FixedUpdate(){
 
-		if (playerMovement.playWithControllerMac) {
+		if (playerMovement.mac) {
 
 			rightTrigger = Input.GetAxis ("XboxMacRightTrigger");
 			counter++;
 		}
-		else if(playerMovement.playWithControllerWin){
+		else if(playerMovement.win){
 
 			rightTrigger = Input.GetAxis ("XboxWinRightTrigger");
 			counter++;
