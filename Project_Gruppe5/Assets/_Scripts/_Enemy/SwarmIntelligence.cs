@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 public class SwarmIntelligence : MonoBehaviour {
 	public int amntOfSpheres = 20;
-	public float spawnArea = 3f;
+	public float spawnArea = 3.5f;
 	
 	public List<GameObject> spheres;
 	public GameObject sphere;
@@ -24,11 +24,12 @@ public class SwarmIntelligence : MonoBehaviour {
 			//s.transform.parent = transform;
 			
 			spheres.Add(s);
+			s.transform.parent = transform;
 		}
+		transform.GetComponentInParent<Enemies> ().More(amntOfSpheres);
 	}
-/*
-	void OnDrawGizmosSelected()
-	{
+	/*
+	void OnDrawGizmosSelected(){
 		Gizmos.DrawSphere (transform.position, spawnArea);
 	}*/
 }

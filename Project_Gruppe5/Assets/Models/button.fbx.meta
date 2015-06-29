@@ -8,15 +8,30 @@ ModelImporter:
     100000: //RootNode
     100002: button
     100004: sockel.001
+    100006: "Dr\xFCcker"
+    100008: GlowRing
+    100010: Sockel
     400000: //RootNode
     400002: button
     400004: sockel.001
+    400006: "Dr\xFCcker"
+    400008: GlowRing
+    400010: Sockel
     2300000: button
     2300002: sockel.001
+    2300004: "Dr\xFCcker"
+    2300006: GlowRing
+    2300008: Sockel
     3300000: button
     3300002: sockel.001
+    3300004: "Dr\xFCcker"
+    3300006: GlowRing
+    3300008: Sockel
     4300000: button
     4300002: sockel.001
+    4300004: "Dr\xFCcker"
+    4300006: GlowRing
+    4300008: Sockel
   materials:
     importMaterials: 1
     materialName: 0

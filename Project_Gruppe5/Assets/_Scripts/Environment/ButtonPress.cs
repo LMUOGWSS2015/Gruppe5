@@ -12,6 +12,8 @@ public class ButtonPress : MonoBehaviour {
 	ArrayList gOsPressingButton = new ArrayList ();
 	ArrayList ignore = new ArrayList();
 
+	private Renderer ringMaterialRenderer;
+
 	private bool changed = false;
 
 	void Start(){
@@ -23,6 +25,8 @@ public class ButtonPress : MonoBehaviour {
 		ignore.Add ("playerExplosion");
 		ignore.Add ("enemyExplosion");
 
+		ringMaterialRenderer = GetComponentsInChildren <Renderer> ()[1];
+
 		if (pressed) {
 			door.Open (opensDoor);
 
@@ -30,15 +34,21 @@ public class ButtonPress : MonoBehaviour {
 			RaycastHit hit;
 			Vector3 v = transform.position + new Vector3 (0, 5, 0);
 			if (Physics.Raycast (v, Vector3.down * 5, out hit, 5f, mask)) {
-				if(hit.collider.gameObject.tag != "Light")
-					gOsPressingButton.Add(hit.collider.gameObject);
+				if (hit.collider.gameObject.tag != "Light")
+					gOsPressingButton.Add (hit.collider.gameObject);
 			}
+		} else {
+			ringMaterialRenderer.material.SetColor ("_Color", Color.red);
 		}
 	}
 
 	void OnTriggerEnter (Collider other){
 		if(!ignore.Contains(other.gameObject.tag) && !(stay == Stay.Forever && changed)){
-			if(!gOsPressingButton.Contains(other.gameObject)){
+			if((!playerActivated
+			    || (playerActivated && other.gameObject.tag == "Player"))
+			    && !gOsPressingButton.Contains(other.gameObject)){
+
+				ringMaterialRenderer.material.SetColor ("_Color", Color.green);
 				gOsPressingButton.Add(other.gameObject);
 				if(stay == Stay.UntilNextPress && changed) {
 					door.Open(!opensDoor);
@@ -47,8 +57,7 @@ public class ButtonPress : MonoBehaviour {
 					door.Open(opensDoor);
 					changed = true; 
 				}
-			} else if(playerActivated)
-				return;
+			}
 		}
 	}
 	
@@ -57,7 +66,9 @@ public class ButtonPress : MonoBehaviour {
 			if (gOsPressingButton.Contains (other.gameObject)) {
 				gOsPressingButton.Remove (other.gameObject);
 
+
 				if (gOsPressingButton.Count == 0 && stay != Stay.UntilNextPress) {
+					ringMaterialRenderer.material.SetColor ("_Color", Color.red);
 					door.Open (!opensDoor);
 					changed = false;
 				}
