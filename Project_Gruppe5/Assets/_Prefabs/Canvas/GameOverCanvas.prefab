@@ -252,6 +252,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1f2bbfeb7cf30d4987bab40b5ab3210, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  restart: {fileID: 11449076}
+  mainmenu: {fileID: 11450100}
+  controllerMac: 0
+  controllerWin: 1
 --- !u!114 &11462162
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -274,7 +278,7 @@ MonoBehaviour:
     m_MaxSize: 40
     m_Alignment: 4
     m_RichText: 1
-    m_HorizontalOverflow: 0
+    m_HorizontalOverflow: 1
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: Return to Main Menu
@@ -300,7 +304,7 @@ MonoBehaviour:
     m_MaxSize: 40
     m_Alignment: 4
     m_RichText: 1
-    m_HorizontalOverflow: 0
+    m_HorizontalOverflow: 1
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: Restart Level
@@ -373,7 +377,7 @@ RectTransform:
   m_RootOrder: 1
   m_AnchorMin: {x: .5, y: .5}
   m_AnchorMax: {x: .5, y: .5}
-  m_AnchoredPosition: {x: 0, y: -30}
+  m_AnchoredPosition: {x: 0, y: -45}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: .5, y: .5}
 --- !u!224 &22470780
@@ -390,7 +394,7 @@ RectTransform:
   m_RootOrder: 2
   m_AnchorMin: {x: .5, y: .5}
   m_AnchorMax: {x: .5, y: .5}
-  m_AnchoredPosition: {x: 0, y: -45}
+  m_AnchoredPosition: {x: 0, y: -30}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: .5, y: .5}
 --- !u!224 &22471612

@@ -38,6 +38,8 @@ public class PlayerHealth : MonoBehaviour {
 
 		sds = GameObject.FindGameObjectWithTag ("DeathScreen").GetComponentInChildren<ShowDeathScreen>();
 		sds.Show(false);
+
+		healthSlider.maxValue = startingHealth;
 	}
 	
 	
