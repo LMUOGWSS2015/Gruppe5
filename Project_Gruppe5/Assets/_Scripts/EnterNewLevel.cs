@@ -16,7 +16,7 @@ public class EnterNewLevel : MonoBehaviour {
 	void OnTriggerEnter(Collider other) {
 		if (other.gameObject.tag == "Player") {
 
-			Debug.Log("Loading Level 2");
+//			Debug.Log("Loading Level 2");
 			StartCoroutine(enterNewLevel());
 
 		}

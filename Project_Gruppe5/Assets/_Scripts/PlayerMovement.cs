@@ -20,11 +20,9 @@ public class PlayerMovement: MonoBehaviour {
 		rb = GetComponent<Rigidbody>();
 
 		if (Application.platform == RuntimePlatform.OSXEditor || Application.platform == RuntimePlatform.OSXPlayer) {
-			Debug.Log ("MAC");
 			mac = true;
 			win = false;
 		} else if (Application.platform == RuntimePlatform.WindowsEditor || Application.platform == RuntimePlatform.WindowsPlayer) {
-			Debug.Log ("WIN");
 			mac = false;
 			win = true;
 		} else {

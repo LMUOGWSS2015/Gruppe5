@@ -34,7 +34,6 @@ public class LaserHealth : MonoBehaviour {
 	}
 	
 	void OnTriggerEnter (Collider other) {
-		Debug.Log (other.gameObject);
 		if (other.gameObject.tag == "Bullet") {
 			Destroy(Instantiate (bulletExplosion, other.gameObject.transform.position, Quaternion.identity),bExplDuration);
 			Destroy(other.gameObject);
