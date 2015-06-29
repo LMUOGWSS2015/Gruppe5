@@ -83,17 +83,22 @@ public class PlayerMovement: MonoBehaviour {
 
 		}
 
+		//self_destruct 
+		if (Input.GetKeyDown ("joystick 1 button 10") && mac) {
+			animator.SetTrigger("selfDestruct");
+		} else if (Input.GetKeyDown ("joystick 1 button 6") && win) {
+			animator.SetTrigger("selfDestruct");
+			
+		}
 
-
-
-			Vector3 movement = new Vector3 (translationY, 0, translationX);
+		Vector3 movement = new Vector3 (translationY, 0, translationX);
 		
 
 		Vector3 shooting = new Vector3(shootDirectionY, 0, shootDirectionX);
 		_transform.position += movement*speed;
 		if (translationX != 0 || translationY != 0) {
 		_transform.rotation = Quaternion.LookRotation(movement);
-	}
+		}
 		if (shootDirectionX != 0 || shootDirectionY != 0) {
 			_transform.rotation = Quaternion.LookRotation (shooting);
 			animator.SetBool ("shooting", true);

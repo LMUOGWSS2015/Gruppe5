@@ -12,11 +12,12 @@ public class PlayerHealth : MonoBehaviour {
 	public Color flashColour = new Color(1f, 0f, 0f, 0.1f);     // The colour the damageImage is set to, to flash.
 	
 	
-	//Animator anim;                                              // Reference to the Animator component.
+	Animator anim;                                              // Reference to the Animator component.
 	//AudioSource playerAudio;                                    // Reference to the AudioSource component.
 	PlayerMovement playerMovement;                              // Reference to the player's movement.
 	//ShotsFired shotsFired;     			                         // Reference to the PlayerShooting script.
-	bool isDead;                                                // Whether the player is dead.
+	bool isDead;
+	bool deathTriggered;   // Whether the player is dead.
 	bool damaged;                                               // True when the player gets damaged.
 
 	public GameObject playerHit;
@@ -25,11 +26,14 @@ public class PlayerHealth : MonoBehaviour {
 	public float explDuration = 1f;
 	public float hitDuration = 2f;
 
+	static int deadState = Animator.StringToHash("Base.Dead");  
+
 	
 	ShowDeathScreen sds;
 	
 	void Awake (){
-		//anim = GetComponent <Animator> ();
+		Debug.Log (deadState);
+		anim = GetComponentInChildren <Animator> ();
 		//playerAudio = GetComponent <AudioSource> ();
 		playerMovement = GetComponent <PlayerMovement> ();
 		//shotsFired = GetComponent <ShotsFired> ();
@@ -53,6 +57,19 @@ public class PlayerHealth : MonoBehaviour {
 		
 		// Reset the damaged flag.
 		damaged = false;
+
+
+		//Check if Player is In Dead State
+		AnimatorStateInfo currentState = anim.GetCurrentAnimatorStateInfo(0);
+		if (currentState.IsName("Base.Dead"))
+		{
+
+			//Explode :)
+			Destroy(Instantiate (playerExplosion, this.gameObject.transform.position, Quaternion.identity),explDuration);
+			Destroy (this.gameObject);
+			sds.Show(true);
+			isDead = true;
+		}
 	}
 	
 	
@@ -78,15 +95,18 @@ public class PlayerHealth : MonoBehaviour {
 			//Debug.Log("Hit");
 			Destroy(Instantiate (playerHit, this.gameObject.transform.position, Quaternion.identity),hitDuration);
 		}
+
+
+
+	
 	}
 	
 	
 	void Death (){
-		Destroy(Instantiate (playerExplosion, this.gameObject.transform.position, Quaternion.identity),explDuration);
-		isDead = true;
-		
 		// Tell the animator that the player is dead.
-		//anim.SetTrigger ("Die");
+		if(!deathTriggered)anim.SetTrigger ("Die");
+		deathTriggered = true;
+		//
 		
 		// Set the audiosource to play the death clip and play it (this will stop the hurt sound from playing).
 		//playerAudio.clip = deathClip;
@@ -95,8 +115,18 @@ public class PlayerHealth : MonoBehaviour {
 		// Turn off the movement and shooting scripts.
 		playerMovement.enabled = false;
 		//shotsFired.enabled = false;
-		Destroy (this.gameObject);
+	
+	
+	
 
-		sds.Show(true);
-	}    
+
+
+
+
+	
+	} 
+
+
+
+
 }
