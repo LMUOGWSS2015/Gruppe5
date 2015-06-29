@@ -78,7 +78,7 @@ public class MoveSpotlight : MonoBehaviour
 
 		if (flicker) {
 			random = Random.value;
-			Debug.Log (random);
+//			Debug.Log (random);
 			if (random > 0.999f) {
 				StartCoroutine (LightFlicker ());
 				flicker = false;
