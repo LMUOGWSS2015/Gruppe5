@@ -44,14 +44,11 @@ public class ButtonPress : MonoBehaviour {
 
 	void OnTriggerEnter (Collider other){
 		if(!ignore.Contains(other.gameObject.tag) && !(stay == Stay.Forever && changed)){
-<<<<<<< HEAD
-			if(!gOsPressingButton.Contains(other.gameObject)){
-				ringMaterialRenderer.material.SetColor ("_Color", Color.green);
-=======
 			if((!playerActivated
-				|| (playerActivated && other.gameObject.tag == "Player"))
-				&& !gOsPressingButton.Contains(other.gameObject)){
->>>>>>> 12a81c3a9b3f79bb32267330cebdb56ac874e262
+			    || (playerActivated && other.gameObject.tag == "Player"))
+			    && !gOsPressingButton.Contains(other.gameObject)){
+
+				ringMaterialRenderer.material.SetColor ("_Color", Color.green);
 				gOsPressingButton.Add(other.gameObject);
 				if(stay == Stay.UntilNextPress && changed) {
 					door.Open(!opensDoor);
