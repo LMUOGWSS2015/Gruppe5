@@ -36,7 +36,10 @@ public class PlayerMovement: MonoBehaviour {
 	void FixedUpdate() {
 	
 
-		if(Input.GetAxis ("XboxMacLeftY") != 0.0f){
+		if((Input.GetAxis ("XboxMacLeftY") != 0.0f) || (Input.GetAxis ("XboxMacLeftX") != 0.0f) ||
+		   (Input.GetAxis ("XboxMacRightY") != 0.0f) || (Input.GetAxis ("XboxMacRightX") != 0.0f) ||
+		   (Input.GetAxis ("XboxWinLeftY") != 0.0f) || (Input.GetAxis ("XboxWinLeftX") != 0.0f) ||
+		   (Input.GetAxis ("XboxWinRightY") != 0.0f) || (Input.GetAxis ("XboxWinRightX") != 0.0f)) {
 			Controller = true;
 		}
 

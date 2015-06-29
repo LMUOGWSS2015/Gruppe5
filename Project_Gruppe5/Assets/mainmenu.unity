@@ -209,6 +209,10 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!1 &216418314 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 198446, guid: d1cf23df406d6324687b6a9c26795dae, type: 2}
+  m_PrefabInternal: {fileID: 523040778}
 --- !u!1 &258082209
 GameObject:
   m_ObjectHideFlags: 0
@@ -510,7 +514,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 482386, guid: d1cf23df406d6324687b6a9c26795dae, type: 2}
       propertyPath: m_LocalRotation.w
-      value: -4.37113883e-08
+      value: -1.62920685e-07
       objectReference: {fileID: 0}
     - target: {fileID: 482386, guid: d1cf23df406d6324687b6a9c26795dae, type: 2}
       propertyPath: m_RootOrder
@@ -542,6 +546,8 @@ Prefab:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 11414094, guid: d1cf23df406d6324687b6a9c26795dae, type: 2}
+    - {fileID: 11450230, guid: d1cf23df406d6324687b6a9c26795dae, type: 2}
+    - {fileID: 11471120, guid: d1cf23df406d6324687b6a9c26795dae, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: d1cf23df406d6324687b6a9c26795dae, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &574122832
@@ -654,6 +660,7 @@ MonoBehaviour:
   controllerMac: 0
   controllerWin: 1
   updown: 0
+  player: {fileID: 216418314}
 --- !u!1 &692506541
 GameObject:
   m_ObjectHideFlags: 0
@@ -727,6 +734,7 @@ GameObject:
   - 124: {fileID: 815931564}
   - 81: {fileID: 815931563}
   - 82: {fileID: 815931568}
+  - 114: {fileID: 815931569}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -808,9 +816,9 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: d53fe2b0f28bf4f729f890db31174ebe, type: 3}
+  m_audioClip: {fileID: 8300000, guid: e6b449cf3bf334edaab0b5ef2016cf14, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: .699999988
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -868,6 +876,18 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
+--- !u!114 &815931569
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 815931562}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56019f19e84ed47a7aa24fbcc8200aa4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 216418314}
 --- !u!1 &1130655602
 GameObject:
   m_ObjectHideFlags: 0

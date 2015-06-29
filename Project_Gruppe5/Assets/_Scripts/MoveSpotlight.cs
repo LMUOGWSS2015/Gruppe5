@@ -39,6 +39,8 @@ public class MoveSpotlight : MonoBehaviour
 
 		source = this.GetComponent<AudioSource>();
 		source.mute = true;
+
+		Application.targetFrameRate = 60;
 	}
 	
 	void Update() {

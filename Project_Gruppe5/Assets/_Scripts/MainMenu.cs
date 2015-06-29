@@ -19,6 +19,7 @@ public class MainMenu : MonoBehaviour {
 	Vector3 goal;
 	bool moveCam = false;
 	Camera cam;
+	public GameObject player;
 
 	// Use this for initialization
 	void Start () {
@@ -53,6 +54,8 @@ public class MainMenu : MonoBehaviour {
 			// Fraction of journey completed = current distance divided by total distance.
 			var fracJourney = distCovered / journeyLength;
 			cam.transform.position = Vector3.Lerp (start, goal, fracJourney);
+			player.transform.rotation = Quaternion.Slerp (player.transform.rotation, Quaternion.Euler(new Vector3(0f, 0f, 0f)), 0.05f);
+			player.transform.position = Vector3.Lerp (player.transform.position, new Vector3(player.transform.position.x, player.transform.position.y, -1f), fracJourney);
 			if (Vector3.Distance (cam.transform.position, goal) < 0.1) {
 				Application.LoadLevel ("_Room1Something");
 			}
