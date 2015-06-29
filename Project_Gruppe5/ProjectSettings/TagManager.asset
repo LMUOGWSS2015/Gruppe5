@@ -23,6 +23,7 @@ TagManager:
   - NewLevelWall
   - DeathScreen
   - DDoorsLower
+  - HealthCanvas
   layers:
   - Default
   - TransparentFX
