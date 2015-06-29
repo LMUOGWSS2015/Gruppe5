@@ -21,6 +21,10 @@ public class MoveSpotlight : MonoBehaviour
 
 	private AudioSource source;
 
+	private float random;
+
+	public bool flicker = true;
+
 
 	void Start () {
 		Vector3 diagonal= new Vector3(stagewidth,0,stageheight);
@@ -61,12 +65,24 @@ public class MoveSpotlight : MonoBehaviour
 			transform.position = transform.position+(to*speed*length/diagonallength);
 		}
 
+
+
 		if (Input.GetKeyDown (KeyCode.T)) {
 			StartCoroutine (LightFlicker ());
 		}
 		if (done) {
+			flicker = true;
 			StopCoroutine (LightFlicker ());
 			Debug.Log ("FLICKER STOPPED");
+		}
+
+		if (flicker) {
+			random = Random.value;
+			Debug.Log (random);
+			if (random > 0.999f) {
+				StartCoroutine (LightFlicker ());
+				flicker = false;
+			}
 		}
 	}
 
