@@ -960,7 +960,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 198446}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: .550000012, z: -20}
+  m_LocalPosition: {x: -.0170000009, y: .219999999, z: -20}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 418942}
@@ -1449,7 +1449,7 @@ MonoBehaviour:
   startingHealth: 9
   currentHealth: 3
   healthSlider: {fileID: 0}
-  damageImage: {fileID: 11489314, guid: 4f2bd56eb933dc34ab53cf047115edf1, type: 2}
+  damageImage: {fileID: 0}
   flashSpeed: 5
   flashColour: {r: 1, g: 0, b: 0, a: .100000001}
   playerHit: {fileID: 126894, guid: 3b578bd44f0574c49bda39c7d730a97e, type: 2}

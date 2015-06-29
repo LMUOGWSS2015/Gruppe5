@@ -83,13 +83,7 @@ public class PlayerMovement: MonoBehaviour {
 
 		}
 
-		//self_destruct 
-		if (Input.GetKeyDown ("joystick 1 button 10") && mac) {
-			animator.SetTrigger("selfDestruct");
-		} else if (Input.GetKeyDown ("joystick 1 button 6") && win) {
-			animator.SetTrigger("selfDestruct");
-			
-		}
+	
 
 		Vector3 movement = new Vector3 (translationY, 0, translationX);
 		
@@ -108,5 +102,14 @@ public class PlayerMovement: MonoBehaviour {
 			animator.SetBool ("shooting", false);
 
 		}
+
+		//self_destruct 
+		if (Input.GetKeyDown ("joystick 1 button 10") && mac) {
+			animator.SetTrigger("selfDestruct");
+		} else if (Input.GetKeyDown ("joystick 1 button 6") && win) {
+			animator.SetTrigger("selfDestruct");
+			
+		}
+
 	}
 }
