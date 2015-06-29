@@ -38,7 +38,9 @@ public class ButtonPress : MonoBehaviour {
 
 	void OnTriggerEnter (Collider other){
 		if(!ignore.Contains(other.gameObject.tag) && !(stay == Stay.Forever && changed)){
-			if(!gOsPressingButton.Contains(other.gameObject)){
+			if((!playerActivated
+				|| (playerActivated && other.gameObject.tag == "Player"))
+				&& !gOsPressingButton.Contains(other.gameObject)){
 				gOsPressingButton.Add(other.gameObject);
 				if(stay == Stay.UntilNextPress && changed) {
 					door.Open(!opensDoor);
@@ -47,8 +49,7 @@ public class ButtonPress : MonoBehaviour {
 					door.Open(opensDoor);
 					changed = true; 
 				}
-			} else if(playerActivated)
-				return;
+			}
 		}
 	}
 	

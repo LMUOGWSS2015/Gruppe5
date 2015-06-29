@@ -10,7 +10,7 @@ public class EnemyHealth : MonoBehaviour {
 	
 //	Animator anim;              
 	//AudioSource enemyAudio;     
-	CapsuleCollider capsuleCollider;   
+//	CapsuleCollider capsuleCollider;   
 	bool isDead;     
 
 	
@@ -47,16 +47,16 @@ public class EnemyHealth : MonoBehaviour {
 		Destroy (Instantiate (enemyExplosion, this.gameObject.transform.position, Quaternion.identity), explDuration);
 //		Debug.Log(this.gameObject.tag);
 		if (this.gameObject.tag == "Enemy") {
-			capsuleCollider = GetComponent <CapsuleCollider> ();
-			capsuleCollider.isTrigger = true;
+//			capsuleCollider = GetComponent <CapsuleCollider> ();
+//			capsuleCollider.isTrigger = true;
 
 			Destroy (this.gameObject);
 		} else {
-			capsuleCollider = GetComponentInParent <CapsuleCollider> ();
-			capsuleCollider.isTrigger = true;
+//			capsuleCollider = GetComponentInParent <CapsuleCollider> ();
+//			capsuleCollider.isTrigger = true;
 			
-			BoxCollider boxCollider = GetComponent <BoxCollider> ();
-			boxCollider.isTrigger = true;
+//			BoxCollider boxCollider = GetComponent <BoxCollider> ();
+//			boxCollider.isTrigger = true;
 
 			Destroy (this.transform.parent.gameObject);
 		}
