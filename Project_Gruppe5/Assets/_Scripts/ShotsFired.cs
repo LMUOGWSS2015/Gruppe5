@@ -11,7 +11,7 @@ public class ShotsFired : MonoBehaviour {
 	private GameObject[] bulletExplosion;
 	private GameObject[] enemyExplosion;
 
-	public PlayerMovement playerMovement;
+	private PlayerMovement playerMovement;
 	Animator animator;
 
 	void Start(){
