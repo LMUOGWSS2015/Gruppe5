@@ -960,7 +960,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 198446}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -.0170000009, y: .219999999, z: -20}
+  m_LocalPosition: {x: 0, y: .550000012, z: -18}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 418942}
@@ -1075,11 +1075,11 @@ EllipsoidParticleEmitter:
   m_Enabled: 1
   m_Emit: 1
   minSize: .0299999993
-  maxSize: .219999999
+  maxSize: 1.60000002
   minEnergy: .270000011
   maxEnergy: .439999998
   minEmission: 41.9000015
-  maxEmission: 56.5999985
+  maxEmission: 58.6100006
   worldVelocity: {x: 0, y: 0, z: 0}
   localVelocity: {x: 0, y: 0, z: 2.8499999}
   rndVelocity: {x: 0, y: 0, z: 0}
@@ -1289,7 +1289,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: .600000024
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -1470,7 +1470,7 @@ MonoBehaviour:
   speed: .200000003
   sensitifity: 1
   playWithControllerMac: 0
-  playWithControllerWin: 1
+  playWithControllerWin: 0
 --- !u!114 &11469134
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1499,7 +1499,6 @@ MonoBehaviour:
   shotSound: {fileID: 8300000, guid: bf75b984df8a84987bcf3a8bf6e2862d, type: 3}
   bullet: {fileID: 138146, guid: cf60ba45d98b54865b8bbb647a6b94fb, type: 2}
   shotSpeed: 15
-  playerMovement: {fileID: 0}
 --- !u!124 &12481198
 Behaviour:
   m_ObjectHideFlags: 1

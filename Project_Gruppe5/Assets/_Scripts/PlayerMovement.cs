@@ -5,8 +5,9 @@ public class PlayerMovement: MonoBehaviour {
 
 	public float speed = 3.0f;
 	public float sensitifity = 1.0f;
-	public bool playWithControllerMac = false;
-	public bool playWithControllerWin = false;
+	public bool mac = false;
+	public bool win = false;
+	public bool Controller = false;
 
 	private Transform _transform;
 	private Rigidbody rb;
@@ -18,14 +19,28 @@ public class PlayerMovement: MonoBehaviour {
 		animator = GetComponentInChildren<Animator>();
 		rb = GetComponent<Rigidbody>();
 
+		if (Application.platform == RuntimePlatform.OSXEditor || Application.platform == RuntimePlatform.OSXPlayer) {
+			Debug.Log ("MAC");
+			mac = true;
+			win = false;
+		} else if (Application.platform == RuntimePlatform.WindowsEditor || Application.platform == RuntimePlatform.WindowsPlayer) {
+			Debug.Log ("WIN");
+			mac = false;
+			win = true;
+		} else {
+			mac = false;
+			win = true;
+		}
 	}
 
 	void FixedUpdate() {
 	
 
-		if(Input.GetKeyDown (KeyCode.Space)){
-//			Debug.Log("okay");
-//			Application.LoadLevel("LoadScene");
+		if((Input.GetAxis ("XboxMacLeftY") != 0.0f) || (Input.GetAxis ("XboxMacLeftX") != 0.0f) ||
+		   (Input.GetAxis ("XboxMacRightY") != 0.0f) || (Input.GetAxis ("XboxMacRightX") != 0.0f) ||
+		   (Input.GetAxis ("XboxWinLeftY") != 0.0f) || (Input.GetAxis ("XboxWinLeftX") != 0.0f) ||
+		   (Input.GetAxis ("XboxWinRightY") != 0.0f) || (Input.GetAxis ("XboxWinRightX") != 0.0f)) {
+			Controller = true;
 		}
 
 
@@ -38,14 +53,14 @@ public class PlayerMovement: MonoBehaviour {
 		shootDirectionX = _transform.rotation.x;
 		shootDirectionY = _transform.rotation.y;
 
-		if (playWithControllerMac) {
+		if (mac && Controller) {
 			translationX = Input.GetAxis ("XboxMacLeftY");
 			translationY = Input.GetAxis ("XboxMacLeftX");
 
 			shootDirectionX = Input.GetAxis ("XboxMacRightY") * sensitifity;
 			shootDirectionY = Input.GetAxis ("XboxMacRightX") * sensitifity;
 
-		} else if (playWithControllerWin) {
+		} else if (win && Controller) {
 			translationX = Input.GetAxis ("XboxWinLeftY");
 			translationY = Input.GetAxis ("XboxWinLeftX");
 
