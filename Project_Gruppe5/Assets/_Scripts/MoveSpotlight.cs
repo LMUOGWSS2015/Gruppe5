@@ -14,11 +14,26 @@ public class MoveSpotlight : MonoBehaviour
 	SampleData sample;
 	Vector3 averageGazePosition;
 	float diagonallength;
+	private Light lt1;
+	private Light lt2;
+	private Light lt3;
+	private bool done = false;
+
+	private AudioSource source;
+
+
 	void Start () {
 		Vector3 diagonal= new Vector3(stagewidth,0,stageheight);
 		diagonallength=Vector3.Magnitude(diagonal);
 		newPosition = transform.position;
 		plane = GameObject.Find ("Floor").GetComponent<Collider>();
+
+		lt1 = this.GetComponent<Light>();
+		lt2 = this.GetComponentsInChildren<Light> () [1];
+		lt3 = this.GetComponentsInChildren<Light> () [2];
+
+		source = this.GetComponent<AudioSource>();
+		source.mute = true;
 	}
 	
 	void Update() {
@@ -45,5 +60,58 @@ public class MoveSpotlight : MonoBehaviour
 			to = to.normalized;
 			transform.position = transform.position+(to*speed*length/diagonallength);
 		}
+
+		if (Input.GetKeyDown (KeyCode.T)) {
+			StartCoroutine (LightFlicker ());
+		}
+		if (done) {
+			StopCoroutine (LightFlicker ());
+			Debug.Log ("FLICKER STOPPED");
+		}
+	}
+
+	IEnumerator LightFlicker () {
+		Debug.Log ("IN FLICKER");
+		ChangeIntensityTo (3f);
+		yield return new WaitForSeconds (0.5f);
+
+		ChangeIntensityTo (6f);
+		yield return new WaitForSeconds (0.3f);
+
+		source.mute = !source.mute;
+
+		ChangeIntensityTo (8f);
+		yield return new WaitForSeconds (0.2f);
+
+		ChangeIntensityTo (4f);
+		yield return new WaitForSeconds (0.3f);
+
+		ChangeIntensityTo (0f);
+		yield return new WaitForSeconds (0.15f);
+
+		ChangeIntensityTo (4f);
+		yield return new WaitForSeconds (0.15f);
+
+		ChangeIntensityTo (5f);
+		yield return new WaitForSeconds (0.15f);
+
+		ChangeIntensityTo (6f);
+		yield return new WaitForSeconds (0.15f);
+
+		source.mute = !source.mute;
+
+		ChangeIntensityTo (7f);
+		yield return new WaitForSeconds (0.15f);
+		done = true;
+
+		ChangeIntensityTo (8f);
+
+		done = true;
+	}
+
+	void ChangeIntensityTo (float intensity) {
+		lt1.intensity = intensity;
+		lt2.intensity = intensity;
+		lt3.intensity = intensity;
 	}
 }

@@ -528,7 +528,20 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: .300000012
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 1572782, guid: d1cf23df406d6324687b6a9c26795dae, type: 2}
+      propertyPath: maxSize
+      value: .519999981
+      objectReference: {fileID: 0}
+    - target: {fileID: 1572782, guid: d1cf23df406d6324687b6a9c26795dae, type: 2}
+      propertyPath: maxEnergy
+      value: 1.11000001
+      objectReference: {fileID: 0}
+    - target: {fileID: 1572782, guid: d1cf23df406d6324687b6a9c26795dae, type: 2}
+      propertyPath: maxEmission
+      value: 18
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 11414094, guid: d1cf23df406d6324687b6a9c26795dae, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: d1cf23df406d6324687b6a9c26795dae, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &574122832
