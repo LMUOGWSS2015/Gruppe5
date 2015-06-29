@@ -28,8 +28,8 @@ public class SwarmIntelligence : MonoBehaviour {
 		}
 		transform.GetComponentInParent<Enemies> ().More(amntOfSpheres);
 	}
-	/*
+
 	void OnDrawGizmosSelected(){
 		Gizmos.DrawSphere (transform.position, spawnArea);
-	}*/
+	}
 }
