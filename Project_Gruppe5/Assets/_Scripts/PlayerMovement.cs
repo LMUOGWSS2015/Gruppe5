@@ -11,6 +11,8 @@ public class PlayerMovement: MonoBehaviour {
 	public bool mac = false;
 	public bool win = false;
 	public bool Controller = false;
+	public bool male = false;
+	public bool female = false;
 
 	private Transform _transform;
 	private Rigidbody rb;
