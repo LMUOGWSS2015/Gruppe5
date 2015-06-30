@@ -992,7 +992,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 110432}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.74819517, y: .5, z: 2.23705149}
+  m_LocalPosition: {x: .603812218, y: .5, z: 3.28242564}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 464196}
@@ -1583,12 +1583,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   distance: 8
-  speed: 2
+  speed: 1
   freezeInLight: 0
   follow: 2
   walkSpeed: 2
   distToNewGoal: 1.20000005
   rotSpeed: 4
+  rotEpsilon: 6
 --- !u!114 &11427630
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1603,6 +1604,7 @@ MonoBehaviour:
   damagePerShot: 1
   bulletExplosion: {fileID: 192264, guid: 579562710378d4fdab9e9b804dea0672, type: 2}
   explDuration: 2
+  redFlashTime: .150000006
 --- !u!114 &11471250
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1633,6 +1635,7 @@ MonoBehaviour:
   timeBetweenBullets: .150000006
   range: 8
   enemyBullet: {fileID: 176972, guid: 08100ebfd130c4c15a51b9e5b671ae5f, type: 2}
+  height: 1
 --- !u!135 &13526570
 SphereCollider:
   m_ObjectHideFlags: 1
