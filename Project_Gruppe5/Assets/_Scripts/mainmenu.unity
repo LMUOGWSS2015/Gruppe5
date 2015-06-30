@@ -419,9 +419,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Play
-
-'
+  m_Text: Enter
 --- !u!222 &522713164
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1021,7 +1019,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: AMAZING GAME
+  m_Text: Head.Light
 --- !u!222 &1530591597
 CanvasRenderer:
   m_ObjectHideFlags: 0
