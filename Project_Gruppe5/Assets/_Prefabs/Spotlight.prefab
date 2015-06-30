@@ -196,7 +196,7 @@ Light:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 131336}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 6
   m_Type: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -228,7 +228,7 @@ Light:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 194508}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 6
   m_Type: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -266,9 +266,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   useEyeTracking: 0
-  speed: 2
+  speed: 8
   stagewidth: 40
   stageheight: 20
+  flickerAmount: 9.99999975e-05
   flicker: 1
 --- !u!136 &13602826
 CapsuleCollider:

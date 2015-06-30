@@ -35,7 +35,6 @@ public class ShowDeathScreen : MonoBehaviour {
 	}
 
 	public void Update(){
-		Debug.Log ("Update in DeathScreen");
 		bool abutton = false;
 		if (controllerMac) {
 			updown = Input.GetAxis ("XboxMacLeftY");
@@ -66,7 +65,6 @@ public class ShowDeathScreen : MonoBehaviour {
 				buttons[i].GetComponentInChildren<Text>().fontSize=15;
 		}
 		if(abutton) {
-			Debug.Log ("Active");
 			if(current==0)
 				RestartLevel();
 			else if(current==1)
