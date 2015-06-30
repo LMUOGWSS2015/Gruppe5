@@ -104,11 +104,11 @@ public class PlayerMovement: MonoBehaviour {
 		}
 
 		//self_destruct 
-		if (Input.GetKeyDown ("joystick 1 button 10") && mac) {
+		if ((Input.GetKeyDown ("joystick 1 button 10") && mac)
+			|| (Input.GetKeyDown ("joystick 1 button 6") && win)) {
 			animator.SetTrigger("selfDestruct");
-		} else if (Input.GetKeyDown ("joystick 1 button 6") && win) {
-			animator.SetTrigger("selfDestruct");
-			
+			PlayerHealth ph = GetComponent<PlayerHealth>();
+			ph.currentHealth = 0;
 		}
 
 	}
