@@ -28,6 +28,8 @@ public class EnemyMovementFollowPath : EnemyMovement {
 	RaycastHit shootHit;
 
 //	bool frozen;
+
+	int mask;
 	
 	protected override void Awake (){
 		base.Awake ();
@@ -41,6 +43,8 @@ public class EnemyMovementFollowPath : EnemyMovement {
 //		nav = GetComponent <NavMeshAgent> ();
 //		frozen = false;
 //		animator = GetComponentInChildren<Animator>();
+
+		mask = LayerMask.GetMask ("Shootable");
 	}
 	
 
@@ -53,14 +57,14 @@ public class EnemyMovementFollowPath : EnemyMovement {
 
 		if (frozen)
 			nav.SetDestination (transform.position);
-		else if (currentDist > distance && enemyHealth.currentHealth > 0)
+		else if (currentDist > distance)
 			Move ();
 		else if (enemyHealth.currentHealth > 0) {
 			shootRay.origin = transform.position;
-			shootRay.direction = player.transform.position;
-			
-			if (Physics.Raycast (shootRay, out shootHit, distance)) {
-				if (shootHit.transform.gameObject == player)
+			shootRay.direction = player.transform.position - transform.position;
+
+			if (Physics.Raycast (shootRay, out shootHit, distance, mask)) {
+				if (shootHit.transform.gameObject.transform == followedObj)
 					nav.SetDestination (followedObj.position);
 				else Move ();
 			}
