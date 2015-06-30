@@ -54,6 +54,7 @@ public class ButtonPress : MonoBehaviour {
 					door.Open(!opensDoor);
 					changed = false; 
 				} else {
+					door.Open(opensDoor);
 					changed = true; 
 				}
 			}
