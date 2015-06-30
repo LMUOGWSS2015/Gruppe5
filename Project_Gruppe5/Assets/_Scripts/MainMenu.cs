@@ -56,9 +56,7 @@ public class MainMenu : MonoBehaviour {
 			cam.transform.position = Vector3.Lerp (start, goal, fracJourney);
 			player.transform.rotation = Quaternion.Slerp (player.transform.rotation, Quaternion.Euler(new Vector3(0f, 0f, 0f)), 0.05f);
 			player.transform.position = Vector3.Lerp (player.transform.position, new Vector3(player.transform.position.x, player.transform.position.y, -1f), fracJourney);
-			if (Vector3.Distance (cam.transform.position, goal) < 0.1) {
-				Application.LoadLevel ("_Room1Something");
-			}
+
 		} else {
 			bool abutton = false;
 			if (controllerMac) {
