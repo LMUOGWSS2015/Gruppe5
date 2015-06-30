@@ -90,7 +90,6 @@ public class MoveSpotlight : MonoBehaviour
 	}
 
 	IEnumerator LightFlicker () {
-		Debug.Log ("IN FLICKER");
 		ChangeIntensityTo (3f);
 		yield return new WaitForSeconds (0.5f);
 
