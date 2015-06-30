@@ -5,9 +5,9 @@ public class ChargeGlow : MonoBehaviour {
 
 	private GameObject obj;
 	private Renderer rend;
-	public GameObject pipe1;
-	public GameObject pipe2;
-	public GameObject pipe3;
+	public GameObject pipes;
+	private Animator animator;
+	private ChargeChecker checker;
 
 	public GameObject pointLight;
 
@@ -42,7 +42,9 @@ public class ChargeGlow : MonoBehaviour {
 	public bool partOfOrder = true;
 
 	void Start () {
-		obj = this.gameObject;
+		obj = this.gameObject.transform.Find ("Sphere").gameObject;
+		checker = GameObject.FindGameObjectWithTag ("ChargeChecker").gameObject.GetComponent<ChargeChecker>();
+		animator = GetComponent<Animator> ();
 		rend = obj.GetComponent<Renderer> ();
 
 		r = rStart;
@@ -55,17 +57,18 @@ public class ChargeGlow : MonoBehaviour {
 		bStep = (bEnd - bStart) / 100f;
 		aStep = (aEnd - aStart) / 100f;
 
-		
-		rend.material.shader = Shader.Find("Self-Illumin/Specular");
-		pipe1.GetComponent<Renderer> ().material.shader = Shader.Find("Self-Illumin/Specular");
-		pipe2.GetComponent<Renderer> ().material.shader = Shader.Find("Self-Illumin/Specular");
-		pipe3.GetComponent<Renderer> ().material.shader = Shader.Find("Self-Illumin/Specular");
-	}
+		Shader shader = Shader.Find("Self-Illumin/Specular");
+		rend.material.shader = shader;
 
+		if(pipes!=null)
+		for (int i = 0; i < pipes.transform.childCount; ++i) {
+			pipes.transform.GetChild (i).GetComponent<Renderer> ().material.shader = shader;
+		}
+	}
 	void EndAction(){
 //		enabled = false;
 		if (partOfOrder) {
-			ChargeChecker checker = GameObject.FindGameObjectWithTag ("ChargeChecker").gameObject.GetComponent<ChargeChecker>();
+
 			checker.ChargerCharged(number);
 		} else  {
 			DoubleDoorsOpen doors = GameObject.FindGameObjectWithTag ("DDoors").gameObject.GetComponent<DoubleDoorsOpen> ();
@@ -75,7 +78,10 @@ public class ChargeGlow : MonoBehaviour {
 	}
 
 	void OnTriggerEnter(Collider other) {
+		
+		Debug.Log ("Hit");
 		if (other.gameObject.tag == "Light") {
+
 			doCharge = true;
 			doCounterCharge = false;
 
@@ -110,16 +116,24 @@ public class ChargeGlow : MonoBehaviour {
 				a += aStep;
 			}
 			else {
+				animator.SetTrigger("close");
 				doCharge = false;
 				full = true;
-				pointLight.GetComponent<Light> ().color = Color.green;
+
+				if(pointLight!=null) {
+					if(checker.numChargers<3)
+						pointLight.GetComponent<Light> ().color = Color.green;
+					else
+						pointLight.GetComponent<Light> ().color = Color.yellow;
+				}
 				EndAction();
 			}
 
 			rend.material.SetColor ("_Color", new Color(r/255f, g/255f, b/255f, a/255f));
-			pipe1.GetComponent<Renderer> ().material.SetColor ("_Color", new Color(r/255f, g/255f, b/255f, a/255f));
-			pipe2.GetComponent<Renderer> ().material.SetColor ("_Color", new Color(r/255f, g/255f, b/255f, a/255f));
-			pipe3.GetComponent<Renderer> ().material.SetColor ("_Color", new Color(r/255f, g/255f, b/255f, a/255f));
+			if(pipes!=null)
+			for (int i = 0; i < pipes.transform.childCount; ++i) {
+				pipes.transform.GetChild (i).GetComponent<Renderer> ().material.SetColor ("_Color", new Color(r/255f, g/255f, b/255f, a/255f));
+			}
 
 			yield return new WaitForSeconds (stepTime);
 		}
@@ -138,14 +152,16 @@ public class ChargeGlow : MonoBehaviour {
 			}
 
 			rend.material.SetColor ("_Color", new Color(r/255f, g/255f, b/255f, a/255f));
-			pipe1.GetComponent<Renderer> ().material.SetColor ("_Color", new Color(r/255f, g/255f, b/255f, a/255f));
-			pipe2.GetComponent<Renderer> ().material.SetColor ("_Color", new Color(r/255f, g/255f, b/255f, a/255f));
-			pipe3.GetComponent<Renderer> ().material.SetColor ("_Color", new Color(r/255f, g/255f, b/255f, a/255f));
+			if(pipes!=null)
+			for (int i = 0; i < pipes.transform.childCount; ++i) {
+				pipes.transform.GetChild (i).GetComponent<Renderer> ().material.SetColor ("_Color", new Color(r/255f, g/255f, b/255f, a/255f));
+			}
 			yield return new WaitForSeconds (stepTime);
 		}
 	}
 
 	public void resetCharge(){
+		Debug.Log ("Reset");
 		r = rStart;
 		g = gStart;
 		b = bStart;
@@ -153,11 +169,14 @@ public class ChargeGlow : MonoBehaviour {
 
 		Color reset = new Color(r/255f, g/255f, b/255f, a/255f);
 		rend.material.SetColor ("_Color", reset);
-		pipe1.GetComponent<Renderer> ().material.SetColor ("_Color", reset);
-		pipe2.GetComponent<Renderer> ().material.SetColor ("_Color", reset);
-		pipe3.GetComponent<Renderer> ().material.SetColor ("_Color", reset);
+		if(pipes!=null)
+		for (int i = 0; i < pipes.transform.childCount; ++i) {
+			pipes.transform.GetChild (i).GetComponent<Renderer> ().material.SetColor ("_Color", reset);
+		}
+		animator.SetTrigger ("open");
 
-		pointLight.GetComponent<Light> ().color = Color.red;
+		if(pointLight!=null)
+			pointLight.GetComponent<Light> ().color = Color.red;
 		full = false;
 
 		RaycastHit hit;
