@@ -39,7 +39,7 @@ ModelImporter:
     4300006: Plane
     7400000: Eye|ArmatureAction
     7400002: Eye|bottAction
-    7400004: Eye|open
+    7400004: Eye|close
     7400006: Eye|PlaneAction.001
     7400008: Eye|SphereAction.001
     7400010: Eye|topAction
@@ -63,6 +63,7 @@ ModelImporter:
     7400046: Plane|PlaneAction.001
     7400048: Plane|SphereAction.001
     7400050: Plane|topAction
+    7400052: Eye|open
     9500000: //RootNode
   materials:
     importMaterials: 1
@@ -81,10 +82,56 @@ ModelImporter:
     extraExposedTransformPaths: []
     clipAnimations:
     - serializedVersion: 16
-      name: Eye|open
+      name: Eye|close
       takeName: Eye|open
       firstFrame: 0
       lastFrame: 30
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Eye
+        weight: 1
+      - path: Eye/Bone
+        weight: 1
+      - path: Eye/Bone/Bone_end
+        weight: 1
+      - path: Eye/Bone/bott
+        weight: 1
+      - path: Eye/Bone.001
+        weight: 1
+      - path: Eye/Bone.001/Bone.001_end
+        weight: 1
+      - path: Eye/Bone.001/top
+        weight: 1
+      - path: Plane
+        weight: 1
+      - path: Sphere
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Eye|open
+      takeName: Eye|close
+      firstFrame: 0
+      lastFrame: 29
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
