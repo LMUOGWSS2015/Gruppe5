@@ -16,6 +16,7 @@ GameObject:
   - 114: {fileID: 11410412}
   - 114: {fileID: 11478534}
   - 114: {fileID: 11427674}
+  - 122: {fileID: 12200246}
   m_Layer: 0
   m_Name: Sphere
   m_TagString: Enemy
@@ -41,7 +42,7 @@ MeshRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 186608}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_Materials:
@@ -145,6 +146,17 @@ MonoBehaviour:
   damagePerShot: 1
   bulletExplosion: {fileID: 192264, guid: 579562710378d4fdab9e9b804dea0672, type: 2}
   explDuration: 2
+--- !u!122 &12200246
+Halo:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 186608}
+  m_Enabled: 1
+  m_Color:
+    serializedVersion: 2
+    rgba: 4291495856
+  m_Size: 1
 --- !u!135 &13576392
 SphereCollider:
   m_ObjectHideFlags: 1
