@@ -1,0 +1,88 @@
+﻿using UnityEngine;
+using System.Collections;
+
+public class IntroDDoorsLowerOpen : MonoBehaviour {
+	public float doorSpeed = 7f;
+	public float startGameDoorDist = 3f;
+	
+	private Transform leftDoor;
+	private Transform rightDoor;
+	private float leftClosed;
+	private float rightClosed; 
+	
+	private Quaternion leftRotation;
+	private Quaternion rightRotation; 
+	
+	private Quaternion leftRotationClose;
+	private Quaternion rightRotationClose;
+	
+	//	private bool isLowerDoors = false;
+	private bool closing = false;
+
+	public GameObject manTV;
+	public GameObject womanTV;
+	private Renderer rendererMan;
+	private Renderer rendererWoman;
+
+	public Texture manTexture;
+	public Texture womanTexture;
+
+	AudioSource audio;
+	
+
+	void Awake (){
+
+		audio = GetComponent<AudioSource>();
+		rendererMan = manTV.GetComponent<Renderer> ();
+		rendererWoman = womanTV.GetComponent<Renderer> ();
+		//		if (this.gameObject.tag == "DDoorsLower") {
+		//			isLowerDoors = true;
+		//		}
+		
+		//		if (!isLowerDoors) {
+		leftDoor = GameObject.Find ("DoorLeftLower").transform;
+		rightDoor = GameObject.Find ("DoorRightLower").transform;
+		//		}
+		//		else if (isLowerDoors) {
+		//			leftDoor = GameObject.Find ("DoorLeft").transform;
+		//			rightDoor = GameObject.Find ("DoorRight").transform;
+		//		}
+		
+		leftRotation = Quaternion.AngleAxis (-70, Vector3.up);
+		rightRotation = Quaternion.AngleAxis (70, Vector3.up);
+		
+	}
+	
+	public void closeDoors () {
+		audio.Play();
+		closing = true;
+		leftRotationClose = Quaternion.AngleAxis(-0, Vector3.down);
+		rightRotationClose = Quaternion.AngleAxis(0, Vector3.down);
+	}
+	
+	
+	void Update () {
+
+		if (!closing) {
+			leftDoor.rotation = Quaternion.Slerp (leftDoor.rotation, leftRotation, .05f); 
+			rightDoor.rotation = Quaternion.Slerp (rightDoor.rotation, rightRotation, .05f);
+		}
+		if (closing) {
+
+			leftDoor.rotation = Quaternion.Slerp (leftDoor.rotation, leftRotationClose, .05f); 
+			rightDoor.rotation = Quaternion.Slerp (rightDoor.rotation, rightRotationClose, .05f);
+
+		}
+			
+			if(Quaternion.Angle(leftDoor.rotation, leftRotationClose) < Mathf.Epsilon && !audio.isPlaying){
+
+			rendererMan.material.SetTexture(0,manTexture);
+			rendererWoman.material.SetTexture(0,womanTexture);
+
+
+				GameObject.Find("IntroController").GetComponent<IntroLevel>().StartLevel(true);
+				this.enabled = false;
+			}
+		}
+	}
+
