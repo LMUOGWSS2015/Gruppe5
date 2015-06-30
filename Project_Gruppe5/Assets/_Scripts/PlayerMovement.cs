@@ -3,14 +3,20 @@ using System.Collections;
 
 public class PlayerMovement: MonoBehaviour {
 
-	public float speed = 3.0f;
+	public float speed = 5f;// 3.0f;
+	public float speedWhileShooting = 3f;
+	public float turnSmoothing = 15f; 
 	public float sensitifity = 1.0f;
+
 	public bool mac = false;
 	public bool win = false;
 	public bool Controller = false;
 
 	private Transform _transform;
 	private Rigidbody rb;
+	private float currentSpeed;
+
+	Vector3 movement;  
 
 	Animator animator;
 
@@ -18,6 +24,7 @@ public class PlayerMovement: MonoBehaviour {
 		//Transform upperSpine = transform.find("bones/lowerSpine/upperspine");
 		animator = GetComponentInChildren<Animator>();
 		rb = GetComponent<Rigidbody>();
+		currentSpeed = speed;
 
 		if (Application.platform == RuntimePlatform.OSXEditor || Application.platform == RuntimePlatform.OSXPlayer) {
 			mac = true;
@@ -79,28 +86,26 @@ public class PlayerMovement: MonoBehaviour {
 
 		} else {
 			animator.SetBool("walking",true);
-		
-
+			Move (translationY, translationX);
 		}
 
-	
+		//Vector3 movement = new Vector3 (translationY, 0, translationX);
 
-		Vector3 movement = new Vector3 (translationY, 0, translationX);
-		
+		//Vector3 shooting = new Vector3(shootDirectionY, 0, shootDirectionX);
 
-		Vector3 shooting = new Vector3(shootDirectionY, 0, shootDirectionX);
-		_transform.position += movement*speed;
+		//_transform.position += movement*speed;
 		if (translationX != 0 || translationY != 0) {
-		_transform.rotation = Quaternion.LookRotation(movement);
+			//_transform.rotation = Quaternion.LookRotation(movement);
+			Rotate (translationY, translationX);
 		}
 		if (shootDirectionX != 0 || shootDirectionY != 0) {
-			_transform.rotation = Quaternion.LookRotation (shooting);
+			//_transform.rotation = Quaternion.LookRotation (shooting);
+			Rotate(shootDirectionY, shootDirectionX);
 			animator.SetBool ("shooting", true);
-
-
+			currentSpeed = speedWhileShooting;
 		} else {
 			animator.SetBool ("shooting", false);
-
+			currentSpeed = speed;
 		}
 
 		//self_destruct 
@@ -111,5 +116,17 @@ public class PlayerMovement: MonoBehaviour {
 			ph.currentHealth = 0;
 		}
 
+	}
+
+	void Move(float x, float y){
+		movement.Set (x, 0f, y);
+		movement = movement.normalized * currentSpeed * Time.deltaTime;
+		rb.MovePosition (transform.position + movement);
+	}
+
+	void Rotate(float x, float y){
+		Quaternion targetRotation = Quaternion.LookRotation(new Vector3(x, 0f, y), Vector3.up);
+		Quaternion lookRotation = Quaternion.Lerp(rb.rotation, targetRotation, turnSmoothing);
+		rb.MoveRotation (lookRotation);
 	}
 }
