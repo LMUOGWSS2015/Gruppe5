@@ -141,6 +141,7 @@ GameObject:
   - 114: {fileID: 11443794}
   - 114: {fileID: 11412116}
   - 114: {fileID: 11444426}
+  - 114: {fileID: 11451980}
   m_Layer: 0
   m_Name: MiniTurret
   m_TagString: Enemy
@@ -480,7 +481,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 169964}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -6.3650322, y: .5, z: 6.03487062}
   m_LocalScale: {x: .699999988, y: .699999988, z: .699999988}
   m_Children:
   - {fileID: 447858}
@@ -832,6 +833,18 @@ MonoBehaviour:
   currentHealth: 3
   enemyExplosion: {fileID: 198994, guid: c34abd0785c51404ea213bbc128567d8, type: 2}
   explDuration: 5
+--- !u!114 &11451980
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 169964}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11534442db9a96146989ca23d8fe3da7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  redFlashTime: .150000006
 --- !u!114 &11455340
 MonoBehaviour:
   m_ObjectHideFlags: 1

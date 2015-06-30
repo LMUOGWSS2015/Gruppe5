@@ -1,0 +1,170 @@
+fileFormatVersion: 2
+guid: 5bd8c771b5524444fa48980a3a0385fa
+timeCreated: 1435674722
+licenseType: Free
+ModelImporter:
+  serializedVersion: 18
+  fileIDToRecycleName:
+    100000: Bone
+    100002: Bone.001
+    100004: Bone.001_end
+    100006: Bone_end
+    100008: bott
+    100010: Eye
+    100012: //RootNode
+    100014: Plane
+    100016: Sphere
+    100018: top
+    400000: Bone
+    400002: Bone.001
+    400004: Bone.001_end
+    400006: Bone_end
+    400008: bott
+    400010: Eye
+    400012: //RootNode
+    400014: Plane
+    400016: Sphere
+    400018: top
+    2300000: bott
+    2300002: Plane
+    2300004: Sphere
+    2300006: top
+    3300000: bott
+    3300002: Plane
+    3300004: Sphere
+    3300006: top
+    4300000: bott
+    4300002: top
+    4300004: Sphere
+    4300006: Plane
+    7400000: Eye|ArmatureAction
+    7400002: Eye|bottAction
+    7400004: Eye|open
+    7400006: Eye|PlaneAction.001
+    7400008: Eye|SphereAction.001
+    7400010: Eye|topAction
+    7400012: bott|bottAction
+    7400014: bott|open
+    7400016: bott|PlaneAction.001
+    7400018: bott|SphereAction.001
+    7400020: bott|topAction
+    7400022: top|bottAction
+    7400024: top|open
+    7400026: top|PlaneAction.001
+    7400028: top|SphereAction.001
+    7400030: top|topAction
+    7400032: Sphere|bottAction
+    7400034: Sphere|open
+    7400036: Sphere|PlaneAction.001
+    7400038: Sphere|SphereAction.001
+    7400040: Sphere|topAction
+    7400042: Plane|bottAction
+    7400044: Plane|open
+    7400046: Plane|PlaneAction.001
+    7400048: Plane|SphereAction.001
+    7400050: Plane|topAction
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Eye|open
+      takeName: Eye|open
+      firstFrame: 0
+      lastFrame: 30
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Eye
+        weight: 1
+      - path: Eye/Bone
+        weight: 1
+      - path: Eye/Bone/Bone_end
+        weight: 1
+      - path: Eye/Bone/bott
+        weight: 1
+      - path: Eye/Bone.001
+        weight: 1
+      - path: Eye/Bone.001/Bone.001_end
+        weight: 1
+      - path: Eye/Bone.001/top
+        weight: 1
+      - path: Plane
+        weight: 1
+      - path: Sphere
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

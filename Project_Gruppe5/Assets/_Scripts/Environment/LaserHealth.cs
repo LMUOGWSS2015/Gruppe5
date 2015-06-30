@@ -38,6 +38,7 @@ public class LaserHealth : MonoBehaviour {
 			Destroy(Instantiate (bulletExplosion, other.gameObject.transform.position, Quaternion.identity),bExplDuration);
 			Destroy(other.gameObject);
 			if(currentHealth > 0){
+				this.GetComponent<FlashRed>().Flash();
 				TakeDamage (1);
 			}
 		}

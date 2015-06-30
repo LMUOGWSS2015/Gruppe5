@@ -7,6 +7,7 @@ public class EnemyMovementRandom : EnemyMovement {
 	public float walkSpeed = 2f;
 	public float distToNewGoal = 1.2f;
 	public float rotSpeed = 8f;
+	public float rotEpsilon = 0.1f;
 
 	Transform followedObj;
 	NavMeshHit hit;
@@ -34,14 +35,18 @@ public class EnemyMovementRandom : EnemyMovement {
 			float angle = Vector3.Cross(transform.forward, nav.destination).y;
 			//Quaternion.Angle(Quaternion.Euler(trans), transform.rotation);
 			
-			//Debug.Log(angle);
+			Debug.Log(angle);
 			int a;
-			if(angle < -0.1)
+			if(angle < -rotEpsilon){
 				a = -2;
-			else if(angle < 0.1)
+				nav.speed = speed/5;
+			}else if(angle < rotEpsilon){
 				a = 0;
-			else
+				nav.speed = speed;
+			}else{
 				a = 2;
+				nav.speed = speed/5;
+			}
 
 			if(a != oldAngle){
 				animator.SetInteger("turn", a);

@@ -32,7 +32,6 @@ public class PlayerHealth : MonoBehaviour {
 	ShowDeathScreen sds;
 	
 	void Awake (){
-		Debug.Log (deadState);
 		anim = GetComponentInChildren <Animator> ();
 		//playerAudio = GetComponent <AudioSource> ();
 		playerMovement = GetComponent <PlayerMovement> ();
@@ -44,6 +43,7 @@ public class PlayerHealth : MonoBehaviour {
 		sds.Show(false);
 
 		healthSlider.maxValue = startingHealth;
+		healthSlider.value = startingHealth;
 	}
 	
 	
@@ -51,7 +51,6 @@ public class PlayerHealth : MonoBehaviour {
 		if(damaged) {
 			damageImage.color = flashColour;
 		} else {
-			// Transition the colour back to clear.
 			damageImage.color = Color.Lerp (damageImage.color, Color.clear, flashSpeed * Time.deltaTime);
 		}
 		
@@ -74,59 +73,32 @@ public class PlayerHealth : MonoBehaviour {
 	
 	
 	public void TakeDamage (int amount) {
-		// Set the damaged flag so the screen will flash.
 		damaged = true;
-		
-		// Reduce the current health by the damage amount.
-		currentHealth -= amount;
-		
-		// Set the health bar's value to the current health.
-		healthSlider.value = currentHealth;
-		
-		// Play the hurt sound effect.
-		//playerAudio.Play ();
 
-		// If the player has lost all it's health and the death flag hasn't been set yet...
-		if(currentHealth <= 0 && !isDead) {
-			// ... it should die.
-			//Debug.Log("FATAL");
-			Death ();
-		} else {
-			//Debug.Log("Hit");
-			Destroy(Instantiate (playerHit, this.gameObject.transform.position, Quaternion.identity),hitDuration);
+		if (!isDead) {
+			currentHealth -= amount;
+			healthSlider.value = currentHealth;
 		}
 
+		//playerAudio.Play ();
 
-
-	
+		if(currentHealth <= 0 && !isDead) {
+			isDead = true;
+			Death ();
+		} else {
+			Destroy(Instantiate (playerHit, this.gameObject.transform.position, Quaternion.identity),hitDuration);
+		}
 	}
 	
 	
 	void Death (){
-		// Tell the animator that the player is dead.
-		if(!deathTriggered)anim.SetTrigger ("Die");
+		if(!deathTriggered)
+			anim.SetTrigger ("Die");
 		deathTriggered = true;
-		//
 		
-		// Set the audiosource to play the death clip and play it (this will stop the hurt sound from playing).
 		//playerAudio.clip = deathClip;
 		//playerAudio.Play ();
 		
-		// Turn off the movement and shooting scripts.
 		playerMovement.enabled = false;
-		//shotsFired.enabled = false;
-	
-	
-	
-
-
-
-
-
-	
 	} 
-
-
-
-
 }
