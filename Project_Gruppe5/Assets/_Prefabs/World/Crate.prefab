@@ -12,6 +12,7 @@ GameObject:
   - 23: {fileID: 2348644}
   - 95: {fileID: 9585418}
   - 122: {fileID: 12269136}
+  - 114: {fileID: 11453454}
   m_Layer: 0
   m_Name: pickupHealth
   m_TagString: Untagged
@@ -317,6 +318,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   explDuration: 2
   brokenCrate: {fileID: 173600, guid: 7b7a9989d1a3a5545bd8ff0b5c2303c0, type: 2}
+--- !u!114 &11453454
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 118448}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5dbbf96599e95ea4c91b9c06fc03eec8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &11471994
 MonoBehaviour:
   m_ObjectHideFlags: 1
