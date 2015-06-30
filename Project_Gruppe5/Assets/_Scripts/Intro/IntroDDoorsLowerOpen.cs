@@ -7,6 +7,9 @@ public class IntroDDoorsLowerOpen : MonoBehaviour {
 	
 	private Transform leftDoor;
 	private Transform rightDoor;
+
+	private GameObject button;
+
 	private float leftClosed;
 	private float rightClosed; 
 	
@@ -26,6 +29,9 @@ public class IntroDDoorsLowerOpen : MonoBehaviour {
 
 	public Texture manTexture;
 	public Texture womanTexture;
+	public Texture blankTexture;
+
+	private PlayerMovement player;
 
 	AudioSource audio;
 	
@@ -35,6 +41,7 @@ public class IntroDDoorsLowerOpen : MonoBehaviour {
 		audio = GetComponent<AudioSource>();
 		rendererMan = manTV.GetComponent<Renderer> ();
 		rendererWoman = womanTV.GetComponent<Renderer> ();
+		player = GameObject.Find ("Player").GetComponent<PlayerMovement> ();
 		//		if (this.gameObject.tag == "DDoorsLower") {
 		//			isLowerDoors = true;
 		//		}
@@ -42,6 +49,7 @@ public class IntroDDoorsLowerOpen : MonoBehaviour {
 		//		if (!isLowerDoors) {
 		leftDoor = GameObject.Find ("DoorLeftLower").transform;
 		rightDoor = GameObject.Find ("DoorRightLower").transform;
+		button = GameObject.Find ("Button");
 		//		}
 		//		else if (isLowerDoors) {
 		//			leftDoor = GameObject.Find ("DoorLeft").transform;
@@ -58,6 +66,8 @@ public class IntroDDoorsLowerOpen : MonoBehaviour {
 		closing = true;
 		leftRotationClose = Quaternion.AngleAxis(-0, Vector3.down);
 		rightRotationClose = Quaternion.AngleAxis(0, Vector3.down);
+
+		GameObject.Find ("Spotlight").GetComponent<CapsuleCollider> ().enabled = true;
 	}
 	
 	
@@ -80,9 +90,21 @@ public class IntroDDoorsLowerOpen : MonoBehaviour {
 			rendererWoman.material.SetTexture(0,womanTexture);
 
 
-				GameObject.Find("IntroController").GetComponent<IntroLevel>().StartLevel(true);
-				this.enabled = false;
 			}
+
+		if (player.male) {
+
+			rendererWoman.material.SetTexture(0,blankTexture);
+			GameObject.Find("IntroController").GetComponent<IntroLevel>().StartLevel(true);
+			button.transform.position = new Vector3(0f, 0.57f, 6.52f);
+
+		}
+		if (player.female) {
+			rendererMan.material.SetTexture(0,blankTexture);
+			GameObject.Find("IntroController").GetComponent<IntroLevel>().StartLevel(true);
+			button.transform.position = new Vector3(0f, 0.57f, 6.52f);
+			
+		}
 		}
 	}
 
