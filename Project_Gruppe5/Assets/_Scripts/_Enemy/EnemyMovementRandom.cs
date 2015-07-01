@@ -9,6 +9,9 @@ public class EnemyMovementRandom : EnemyMovement {
 	public float rotSpeed = 8f;
 	public float rotEpsilon = 0.1f;
 
+	public float[] rangeXXYY = {-15f, 15f, -5f, 5f};
+
+
 	Transform followedObj;
 	NavMeshHit hit;
 	int oldAngle = 0;
@@ -67,16 +70,18 @@ public class EnemyMovementRandom : EnemyMovement {
 
 	void NewGoal(){
 		nav.speed = walkSpeed;
-		if(nav.remainingDistance <= distToNewGoal){//<= float.Epsilon){
-			Vector3 trans = new Vector3 (Random.Range (-15.0f, 15.0f), 0f, Random.Range (-5.0f, 5.0f));
+		if (nav.enabled == true) {
+			if (nav.remainingDistance <= distToNewGoal) {//<= float.Epsilon){
+				Vector3 trans = new Vector3 (Random.Range (rangeXXYY [0], rangeXXYY [1]), 0f, Random.Range (rangeXXYY [2], rangeXXYY [3]));
 //			trans = trans;// + transform.position;
-			trans.y = 0;
+				trans.y = 0;
 //			Debug.Log(trans);
 			
-			NavMesh.SamplePosition (trans, out hit, 1f, 1 << NavMesh.GetAreaFromName ("Walkable"));
+				NavMesh.SamplePosition (trans, out hit, 1f, 1 << NavMesh.GetAreaFromName ("Walkable"));
+				nav.SetDestination (hit.position);
+			}
 			nav.SetDestination (hit.position);
 		}
-		nav.SetDestination (hit.position);
 	}
 
 	protected override void OnTriggerEnter (Collider other){

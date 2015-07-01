@@ -23,7 +23,8 @@ public class Level : MonoBehaviour {
 		sf.enabled = start;
 
 		foreach (GameObject e in enemies) {
-			e.GetComponent<EnemyMovement>().enabled = start;
+			if(e != null){
+				e.GetComponent<EnemyMovement>().enabled = start;
 			/*EnemyAttackFar eaf = e.GetComponent<EnemyAttackFar>();
 			if(eaf != null)
 				eaf.enabled = false;
@@ -32,6 +33,7 @@ public class Level : MonoBehaviour {
 				if(ean != null)
 					ean.enabled = start;
 			//}
+			}
 		}
 	}
 }
