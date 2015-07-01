@@ -1467,13 +1467,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 728cf43e5aa63ac47a4a8aa8a7704bef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 6
-  speedWhileShooting: 3
+  speed: 10
+  speedWhileShooting: 8
   turnSmoothing: 15
   sensitifity: 1
   mac: 0
   win: 0
   Controller: 0
+  male: 0
+  female: 0
 --- !u!114 &11469134
 MonoBehaviour:
   m_ObjectHideFlags: 1

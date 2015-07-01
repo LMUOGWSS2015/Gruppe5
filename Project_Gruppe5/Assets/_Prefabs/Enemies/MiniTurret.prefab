@@ -858,7 +858,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dmgAmnt: 1
   timeBetweenBullets: .150000006
-  range: 20
+  range: 12
   enemyBullet: {fileID: 176972, guid: 08100ebfd130c4c15a51b9e5b671ae5f, type: 2}
   height: 1
 --- !u!136 &13661958

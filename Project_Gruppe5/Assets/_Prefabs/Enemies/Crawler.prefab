@@ -79,7 +79,6 @@ GameObject:
   - 114: {fileID: 11427630}
   - 114: {fileID: 11472086}
   - 114: {fileID: 11426764}
-  - 114: {fileID: 11430500}
   m_Layer: 8
   m_Name: Crawler
   m_TagString: Enemy
@@ -1605,20 +1604,6 @@ MonoBehaviour:
   damagePerShot: 1
   bulletExplosion: {fileID: 192264, guid: 579562710378d4fdab9e9b804dea0672, type: 2}
   explDuration: 2
---- !u!114 &11430500
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 110432}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d2e885bbc2e260c41ab5e619ead348b8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  redMaterial: {fileID: 0}
-  indexForOldMaterial: 0
-  redFlashTime: .150000006
 --- !u!114 &11471250
 MonoBehaviour:
   m_ObjectHideFlags: 1
