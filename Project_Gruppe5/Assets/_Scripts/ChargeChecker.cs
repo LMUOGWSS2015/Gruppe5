@@ -36,7 +36,10 @@ public class ChargeChecker : MonoBehaviour {
 		GameObject[] chargers = GameObject.FindGameObjectsWithTag("Charger");
 		foreach (GameObject charger in chargers) {
 			ChargeGlow c = charger.gameObject.GetComponent<ChargeGlow>();
-			c.resetCharge();
+			if(c==null)
+				continue;
+			if(c.partOfOrder)
+				c.resetCharge();
 		}
 	}
 

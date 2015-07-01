@@ -107,9 +107,18 @@ public class ChargeGlow : MonoBehaviour {
 	}
 
 	IEnumerator Charging () {
+		/*
+		Debug.Log (animator.GetCurrentAnimatorStateInfo (0).IsName ("Base.Opened"));
+		while (!animator.GetCurrentAnimatorStateInfo(0).IsName ("Base.Opened")) {
+			yield return new WaitForSeconds (stepTime);
+		} */
 		while (doCharge && !full) {
 			//if(!animator.GetCurrentAnimatorStateInfo(0).IsName("Base Layer.Closed"))
+			//Debug.Log("Closed:"+animator.GetCurrentAnimatorStateInfo(0).IsName ("Base.Closed"));
+			//Debug.Log("Open:"+animator.GetCurrentAnimatorStateInfo(0).IsName ("Base.Open"));
 			//	continue;
+	
+			if (animator.GetCurrentAnimatorStateInfo(0).IsName ("Base.Opened")) {
 			if (r < rEnd) {
 				r += rStep;
 				g += gStep;
@@ -135,7 +144,7 @@ public class ChargeGlow : MonoBehaviour {
 			for (int i = 0; i < pipes.transform.childCount; ++i) {
 				pipes.transform.GetChild (i).GetComponent<Renderer> ().material.SetColor ("_Color", new Color(r/255f, g/255f, b/255f, a/255f));
 			}
-
+			}
 			yield return new WaitForSeconds (stepTime);
 		}
 	}

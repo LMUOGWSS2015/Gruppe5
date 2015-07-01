@@ -25,6 +25,7 @@ TagManager:
   - DDoorsLower
   - DamageImage
   - HealthSlider
+  - Button
   layers:
   - Default
   - TransparentFX
