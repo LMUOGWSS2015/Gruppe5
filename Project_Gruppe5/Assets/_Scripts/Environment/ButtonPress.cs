@@ -9,6 +9,7 @@ public class ButtonPress : MonoBehaviour {
 	public bool pressed = false;
 	public bool playerActivated = false;
 	public bool exclusive = false;
+	private bool activated;
 
 	GameObject[] buttons;
 
@@ -46,6 +47,7 @@ public class ButtonPress : MonoBehaviour {
 			}
 		} else {
 			ringMaterialRenderer.material.SetColor ("_Color", Color.red);
+			activated=false;
 		}
 	}
 
@@ -56,6 +58,7 @@ public class ButtonPress : MonoBehaviour {
 			    && !gOsPressingButton.Contains(other.gameObject)){
 
 				ringMaterialRenderer.material.SetColor ("_Color", Color.green);
+				activated=true;
 				gOsPressingButton.Add(other.gameObject);
 				if(stay == Stay.UntilNextPress && changed) {
 					door.Open(!opensDoor);
@@ -84,6 +87,7 @@ public class ButtonPress : MonoBehaviour {
 
 				if (gOsPressingButton.Count == 0 && stay != Stay.UntilNextPress) {
 					ringMaterialRenderer.material.SetColor ("_Color", Color.red);
+					activated=false;
 					door.Open (!opensDoor);
 					changed = false;
 				}
@@ -91,8 +95,13 @@ public class ButtonPress : MonoBehaviour {
 		}
 	}
 	public void Deactivate(){
+		if (!activated)
+			return;
 		ringMaterialRenderer.material.SetColor ("_Color", Color.red);
+		activated = false;
+
 		door.Open (!opensDoor);
 		changed = false;
 	}
+
 }

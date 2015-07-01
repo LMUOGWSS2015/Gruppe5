@@ -108,6 +108,8 @@ public class ChargeGlow : MonoBehaviour {
 
 	IEnumerator Charging () {
 		while (doCharge && !full) {
+			//if(!animator.GetCurrentAnimatorStateInfo(0).IsName("Base Layer.Closed"))
+			//	continue;
 			if (r < rEnd) {
 				r += rStep;
 				g += gStep;
