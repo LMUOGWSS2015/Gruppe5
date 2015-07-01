@@ -15,10 +15,6 @@ public class SphereBehaviour : MonoBehaviour {
 	public float separation = 1f;
 	public float cohesion = 2f;
 
-//	public bool hasGoal = true;
-//	public float maxDistanceToGoal = 3f;
-//	public Transform goal;
-
 	public List<GameObject> spheres;
 	public SwarmIntelligence swarm;
 
@@ -28,8 +24,11 @@ public class SphereBehaviour : MonoBehaviour {
 
 	private Rigidbody rb;
 
+	private Animator anim;
+
 	void Awake(){
 		rb = GetComponent<Rigidbody> ();
+		anim = GetComponent<Animator> ();
 	}
 
 	void FixedUpdate(){
@@ -123,5 +122,17 @@ public class SphereBehaviour : MonoBehaviour {
 			return v.normalized * max;
 		else
 			return v;
+	}
+
+	void OnTriggerEnter (Collider other){
+		if(other.gameObject.tag == "Light"){
+			anim.SetBool("visible", false);
+		}
+	}
+
+	void OnTriggerExit (Collider other){
+		if(other.gameObject.tag == "Light"){
+			anim.SetBool("visible", true);
+		}
 	}
 }
