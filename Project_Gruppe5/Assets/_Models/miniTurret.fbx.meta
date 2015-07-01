@@ -1,0 +1,220 @@
+fileFormatVersion: 2
+guid: f875b67fd634010418b91b4a3e766697
+timeCreated: 1435753229
+licenseType: Free
+ModelImporter:
+  serializedVersion: 18
+  fileIDToRecycleName:
+    100000: Barrel1
+    100002: Barrel2
+    100004: Barrel3
+    100006: Barrel3_end
+    100008: Main
+    100010: MainRotation
+    100012: MainRotation.001
+    100014: MainRotation.002
+    100016: MainRotation.003
+    100018: MainShoot
+    100020: //RootNode
+    100022: SenderHolder
+    100024: SenderRoto
+    100026: SenderRoto_end
+    400000: Barrel1
+    400002: Barrel2
+    400004: Barrel3
+    400006: Barrel3_end
+    400008: Main
+    400010: MainRotation
+    400012: MainRotation.001
+    400014: MainRotation.002
+    400016: MainRotation.003
+    400018: MainShoot
+    400020: //RootNode
+    400022: SenderHolder
+    400024: SenderRoto
+    400026: SenderRoto_end
+    2300000: MainRotation
+    2300002: MainRotation.001
+    2300004: MainRotation.002
+    2300006: MainRotation.003
+    2300008: SenderHolder
+    3300000: MainRotation
+    3300002: MainRotation.001
+    3300004: MainRotation.002
+    3300006: MainRotation.003
+    3300008: SenderHolder
+    4300000: MainRotation
+    4300002: MainRotation.001
+    4300004: MainRotation.002
+    4300006: MainRotation.003
+    4300008: SenderHolder
+    7400000: Armature|shoot
+    7400002: shoot
+    7400004: seeking
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 3
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: shoot
+      takeName: shoot
+      firstFrame: 0
+      lastFrame: 6
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Main
+        weight: 1
+      - path: Main/MainRotation
+        weight: 1
+      - path: Main/MainShoot
+        weight: 1
+      - path: Main/MainShoot/Barrel1
+        weight: 1
+      - path: Main/MainShoot/Barrel1/Barrel2
+        weight: 1
+      - path: Main/MainShoot/Barrel1/Barrel2/Barrel3
+        weight: 1
+      - path: Main/MainShoot/Barrel1/Barrel2/Barrel3/Barrel3_end
+        weight: 1
+      - path: Main/MainShoot/Barrel1/Barrel2/Barrel3/MainRotation.003
+        weight: 1
+      - path: Main/MainShoot/Barrel1/Barrel2/MainRotation.002
+        weight: 1
+      - path: Main/MainShoot/Barrel1/MainRotation.001
+        weight: 1
+      - path: Main/SenderRoto
+        weight: 1
+      - path: Main/SenderRoto/SenderHolder
+        weight: 1
+      - path: Main/SenderRoto/SenderRoto_end
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: seeking
+      takeName: seeking
+      firstFrame: 0
+      lastFrame: 59
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Main
+        weight: 1
+      - path: Main/MainRotation
+        weight: 1
+      - path: Main/MainShoot
+        weight: 1
+      - path: Main/MainShoot/Barrel1
+        weight: 1
+      - path: Main/MainShoot/Barrel1/Barrel2
+        weight: 1
+      - path: Main/MainShoot/Barrel1/Barrel2/Barrel3
+        weight: 1
+      - path: Main/MainShoot/Barrel1/Barrel2/Barrel3/Barrel3_end
+        weight: 1
+      - path: Main/MainShoot/Barrel1/Barrel2/Barrel3/MainRotation.003
+        weight: 1
+      - path: Main/MainShoot/Barrel1/Barrel2/MainRotation.002
+        weight: 1
+      - path: Main/MainShoot/Barrel1/MainRotation.001
+        weight: 1
+      - path: Main/SenderRoto
+        weight: 1
+      - path: Main/SenderRoto/SenderHolder
+        weight: 1
+      - path: Main/SenderRoto/SenderRoto_end
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
