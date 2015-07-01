@@ -41,6 +41,7 @@ public class ChargeGlow : MonoBehaviour {
 	public int number = 1;
 
 	public bool partOfOrder = true;
+	public bool isBlocked = false;
 
 	void Start () {
 		obj = this.gameObject.transform.Find ("Sphere").gameObject;
@@ -118,7 +119,7 @@ public class ChargeGlow : MonoBehaviour {
 			//Debug.Log("Open:"+animator.GetCurrentAnimatorStateInfo(0).IsName ("Base.Open"));
 			//	continue;
 	
-			if (animator.GetCurrentAnimatorStateInfo(0).IsName ("Base.Opened")) {
+			if (!isBlocked&&animator.GetCurrentAnimatorStateInfo(0).IsName ("Base.Opened")) {
 			if (r < rEnd) {
 				r += rStep;
 				g += gStep;
@@ -197,5 +198,8 @@ public class ChargeGlow : MonoBehaviour {
 				StartCoroutine (Charging ());
 			}
 		}
+	}
+	public void setBlocked(bool blocked){
+		isBlocked = blocked;
 	}
 }
