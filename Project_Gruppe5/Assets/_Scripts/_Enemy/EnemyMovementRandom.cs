@@ -35,7 +35,7 @@ public class EnemyMovementRandom : EnemyMovement {
 			float angle = Vector3.Cross(transform.forward, nav.destination).y;
 			//Quaternion.Angle(Quaternion.Euler(trans), transform.rotation);
 			
-			Debug.Log(angle);
+		//	Debug.Log(angle);
 			int a;
 			if(angle < -rotEpsilon){
 				a = -2;
@@ -68,7 +68,7 @@ public class EnemyMovementRandom : EnemyMovement {
 	void NewGoal(){
 		nav.speed = walkSpeed;
 		if(nav.remainingDistance <= distToNewGoal){//<= float.Epsilon){
-			Vector3 trans = new Vector3 (Random.Range (-17.0f, 17.0f), 0f, Random.Range (-7.0f, 7.0f));
+			Vector3 trans = new Vector3 (Random.Range (-15.0f, 15.0f), 0f, Random.Range (-5.0f, 5.0f));
 //			trans = trans;// + transform.position;
 			trans.y = 0;
 //			Debug.Log(trans);
@@ -83,7 +83,7 @@ public class EnemyMovementRandom : EnemyMovement {
 		base.OnTriggerEnter (other);
 
 		if(other.gameObject.tag == "Wall"){
-			Debug.Log("wall " + transform.position);
+//			Debug.Log("wall " + transform.position);
 			NewGoal();
 		}
 	}
