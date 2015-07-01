@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class DoubleDoorsOpen : MonoBehaviour {
+public class DoubleDoorsOpen : Activatable {
 	public float doorSpeed = 7f;
 	
 	private bool enemiesDead;
