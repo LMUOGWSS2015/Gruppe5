@@ -7,6 +7,7 @@ public class ChargeGlow : MonoBehaviour {
 	private Renderer rend;
 	public GameObject pipes;
 	private Animator animator;
+	public GameObject activatableObject;
 	private ChargeChecker checker;
 
 	public GameObject pointLight;
@@ -71,9 +72,7 @@ public class ChargeGlow : MonoBehaviour {
 
 			checker.ChargerCharged(number);
 		} else  {
-			DoubleDoorsOpen doors = GameObject.FindGameObjectWithTag ("DDoors").gameObject.GetComponent<DoubleDoorsOpen> ();
-//			doors.OpenDoors ();
-			doors.enabled = true;
+			activatableObject.GetComponent<Activatable>().enabled = true;
 		}
 	}
 
@@ -121,7 +120,7 @@ public class ChargeGlow : MonoBehaviour {
 				full = true;
 
 				if(pointLight!=null) {
-					if(checker.numChargers<3)
+					if(!partOfOrder||checker.numChargers<3)
 						pointLight.GetComponent<Light> ().color = Color.green;
 					else
 						pointLight.GetComponent<Light> ().color = Color.yellow;

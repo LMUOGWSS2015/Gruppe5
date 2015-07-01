@@ -8,6 +8,9 @@ public class ButtonPress : MonoBehaviour {
 	public bool opensDoor = true;
 	public bool pressed = false;
 	public bool playerActivated = false;
+	public bool exclusive = false;
+
+	GameObject[] buttons;
 
 	ArrayList gOsPressingButton = new ArrayList ();
 	ArrayList ignore = new ArrayList();
@@ -24,6 +27,10 @@ public class ButtonPress : MonoBehaviour {
 		ignore.Add ("bulletExplosion");
 		ignore.Add ("playerExplosion");
 		ignore.Add ("enemyExplosion");
+
+		if (exclusive) {
+			buttons = GameObject.FindGameObjectsWithTag("Button");
+		}
 
 		ringMaterialRenderer = GetComponentsInChildren <Renderer> ()[1];
 
@@ -54,6 +61,14 @@ public class ButtonPress : MonoBehaviour {
 					door.Open(!opensDoor);
 					changed = false; 
 				} else {
+					if(exclusive) {
+						for(int i=0; i<buttons.Length; i++) {
+							if(buttons[i]==this.gameObject)
+								continue;
+							buttons[i].GetComponent<ButtonPress>().Deactivate();
+						}
+					}
+
 					door.Open(opensDoor);
 					changed = true; 
 				}
@@ -74,5 +89,10 @@ public class ButtonPress : MonoBehaviour {
 				}
 			}
 		}
+	}
+	public void Deactivate(){
+		ringMaterialRenderer.material.SetColor ("_Color", Color.red);
+		door.Open (!opensDoor);
+		changed = false;
 	}
 }
