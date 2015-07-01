@@ -381,6 +381,10 @@ Prefab:
       propertyPath: m_Name
       value: Kreisler 5
       objectReference: {fileID: 0}
+    - target: {fileID: 11441478, guid: 81c2d88863ec2164fa1ce0fa3711c41d, type: 2}
+      propertyPath: freezeInLight
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 81c2d88863ec2164fa1ce0fa3711c41d, type: 2}
   m_IsPrefabParent: 0
@@ -993,6 +997,10 @@ Prefab:
       propertyPath: m_Name
       value: Kreisler 2
       objectReference: {fileID: 0}
+    - target: {fileID: 11441478, guid: 81c2d88863ec2164fa1ce0fa3711c41d, type: 2}
+      propertyPath: freezeInLight
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 81c2d88863ec2164fa1ce0fa3711c41d, type: 2}
   m_IsPrefabParent: 0
@@ -1195,7 +1203,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 400004, guid: c54ff35177db8f64f8923638c6a1c66f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -16.6499996
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: c54ff35177db8f64f8923638c6a1c66f, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1203,7 +1211,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: c54ff35177db8f64f8923638c6a1c66f, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 7.40999985
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: c54ff35177db8f64f8923638c6a1c66f, type: 3}
       propertyPath: m_LocalRotation.x
@@ -1315,6 +1323,10 @@ Prefab:
     - target: {fileID: 103860, guid: 81c2d88863ec2164fa1ce0fa3711c41d, type: 2}
       propertyPath: m_Name
       value: Kreisler 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 11441478, guid: 81c2d88863ec2164fa1ce0fa3711c41d, type: 2}
+      propertyPath: freezeInLight
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 81c2d88863ec2164fa1ce0fa3711c41d, type: 2}
@@ -1451,6 +1463,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 11441478, guid: 81c2d88863ec2164fa1ce0fa3711c41d, type: 2}
+      propertyPath: freezeInLight
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 81c2d88863ec2164fa1ce0fa3711c41d, type: 2}
   m_IsPrefabParent: 0
@@ -1549,6 +1565,8 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 624494037}
+  - 114: {fileID: 624494039}
+  - 65: {fileID: 624494038}
   m_Layer: 0
   m_Name: HeadLight
   m_TagString: Untagged
@@ -1563,12 +1581,35 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 624494036}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -16.6499996, y: 0, z: 7.40999985}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 458606253}
   m_Father: {fileID: 0}
   m_RootOrder: 19
+--- !u!65 &624494038
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 624494036}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2, y: 1, z: 2}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &624494039
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 624494036}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8647b5c629ceb3f42912671519383854, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &651911188
 GameObject:
   m_ObjectHideFlags: 0
@@ -1653,7 +1694,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 409442, guid: cc80cc8be25268e45a9898720798c0ae, type: 2}
       propertyPath: m_RootOrder
-      value: 6
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: cc80cc8be25268e45a9898720798c0ae, type: 2}
@@ -2120,6 +2161,10 @@ Prefab:
       propertyPath: m_Name
       value: Kreisler 6
       objectReference: {fileID: 0}
+    - target: {fileID: 11441478, guid: 81c2d88863ec2164fa1ce0fa3711c41d, type: 2}
+      propertyPath: freezeInLight
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 81c2d88863ec2164fa1ce0fa3711c41d, type: 2}
   m_IsPrefabParent: 0
@@ -2169,6 +2214,10 @@ Prefab:
     - target: {fileID: 103860, guid: 81c2d88863ec2164fa1ce0fa3711c41d, type: 2}
       propertyPath: m_Name
       value: Kreisler 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 11441478, guid: 81c2d88863ec2164fa1ce0fa3711c41d, type: 2}
+      propertyPath: freezeInLight
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 81c2d88863ec2164fa1ce0fa3711c41d, type: 2}
@@ -3177,6 +3226,10 @@ Prefab:
       propertyPath: m_Name
       value: Kreisler 4
       objectReference: {fileID: 0}
+    - target: {fileID: 11441478, guid: 81c2d88863ec2164fa1ce0fa3711c41d, type: 2}
+      propertyPath: freezeInLight
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 81c2d88863ec2164fa1ce0fa3711c41d, type: 2}
   m_IsPrefabParent: 0
@@ -3314,6 +3367,10 @@ Prefab:
     - target: {fileID: 103860, guid: 81c2d88863ec2164fa1ce0fa3711c41d, type: 2}
       propertyPath: m_Name
       value: Kreisler 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11441478, guid: 81c2d88863ec2164fa1ce0fa3711c41d, type: 2}
+      propertyPath: freezeInLight
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 81c2d88863ec2164fa1ce0fa3711c41d, type: 2}

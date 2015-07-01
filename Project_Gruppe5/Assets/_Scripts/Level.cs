@@ -24,7 +24,9 @@ public class Level : MonoBehaviour {
 
 		foreach (GameObject e in enemies) {
 			if(e != null){
-				e.GetComponent<EnemyMovement>().enabled = start;
+				EnemyMovement em = e.GetComponent<EnemyMovement>();
+				if(em != null)
+					em.enabled = start;
 			/*EnemyAttackFar eaf = e.GetComponent<EnemyAttackFar>();
 			if(eaf != null)
 				eaf.enabled = false;
