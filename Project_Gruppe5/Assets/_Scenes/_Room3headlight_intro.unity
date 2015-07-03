@@ -159,7 +159,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   distance: 8
   speed: 5
-  freezeInLight: 0
+  freezeInLight: 1
   follow: 2
   patrolSpeed: 2
   waitTime: .5
@@ -868,7 +868,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11441478, guid: 81c2d88863ec2164fa1ce0fa3711c41d, type: 2}
       propertyPath: freezeInLight
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 103860, guid: 81c2d88863ec2164fa1ce0fa3711c41d, type: 2}
       propertyPath: m_Name
@@ -1339,7 +1339,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   distance: 8
   speed: 5
-  freezeInLight: 0
+  freezeInLight: 1
   follow: 2
   patrolSpeed: 2
   waitTime: .5
