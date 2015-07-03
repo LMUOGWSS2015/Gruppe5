@@ -25,6 +25,8 @@ public class EnemyMovementRotOnly : EnemyMovement {
 		eaf = GetComponent <EnemyAttackFar>();
 		eaf.enabled = false;
 		animator = GetComponentInChildren<Animator>();
+		
+		transform.GetComponentInParent<Enemies> ().More(1);
 	}
 	
 	

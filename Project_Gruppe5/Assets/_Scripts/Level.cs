@@ -7,7 +7,6 @@ public class Level : MonoBehaviour {
 
 	PlayerMovement pm;
 	EnemyMovement[] em;
-	//EnemyAttack
 	ShotsFired sf;
 
 	void Awake(){
@@ -27,14 +26,15 @@ public class Level : MonoBehaviour {
 				EnemyMovement em = e.GetComponent<EnemyMovement>();
 				if(em != null)
 					em.enabled = start;
-			/*EnemyAttackFar eaf = e.GetComponent<EnemyAttackFar>();
-			if(eaf != null)
-				eaf.enabled = false;
-			else{*/
-				EnemyAttackNear ean = e.GetComponent<EnemyAttackNear>();
-				if(ean != null)
-					ean.enabled = start;
-			//}
+
+				EnemyAttackFar eaf = e.GetComponent<EnemyAttackFar>();
+				if(eaf != null)
+					eaf.enabled = start;
+				else{
+					EnemyAttackNear ean = e.GetComponent<EnemyAttackNear>();
+					if(ean != null)
+						ean.enabled = start;
+				}
 			}
 		}
 	}

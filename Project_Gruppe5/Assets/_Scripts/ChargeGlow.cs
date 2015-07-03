@@ -78,8 +78,6 @@ public class ChargeGlow : MonoBehaviour {
 	}
 
 	void OnTriggerEnter(Collider other) {
-		
-		Debug.Log ("Hit");
 		if (other.gameObject.tag == "Light") {
 
 			doCharge = true;

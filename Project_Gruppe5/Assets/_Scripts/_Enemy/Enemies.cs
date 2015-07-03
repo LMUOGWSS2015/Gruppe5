@@ -1,7 +1,7 @@
 using UnityEngine;
 
 public class Enemies : MonoBehaviour {
-	public int size = 0;
+	protected int size = 0;
 
 	public virtual void Less(int amnt){
 		size -= amnt;

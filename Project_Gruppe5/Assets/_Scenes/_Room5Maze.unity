@@ -130,6 +130,10 @@ Prefab:
       propertyPath: m_Name
       value: Corridor 1
       objectReference: {fileID: 0}
+    - target: {fileID: 11443388, guid: 47da28b3f04144ce2aa90b882a17315f, type: 2}
+      propertyPath: Levelname
+      value: _FinalRoom
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 47da28b3f04144ce2aa90b882a17315f, type: 2}
   m_IsPrefabParent: 0
@@ -3717,7 +3721,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22437020, guid: 4f2bd56eb933dc34ab53cf047115edf1, type: 2}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 171120, guid: 4f2bd56eb933dc34ab53cf047115edf1, type: 2}
       propertyPath: m_IsActive
@@ -4740,7 +4744,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6b9543ba23526b4487c86f17a400fd5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  size: 8
 --- !u!4 &1843785603
 Transform:
   m_ObjectHideFlags: 0

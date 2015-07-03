@@ -22,7 +22,6 @@ public class ChargeChecker : MonoBehaviour {
 			if(isInOrder()) {
 				//DoubleDoorsOpen doors = GameObject.FindGameObjectWithTag ("DDoors").gameObject.GetComponent<DoubleDoorsOpen> ();
 				//doors.OpenDoors ();
-				Debug.Log ("Doors open!");
 				//doors.enabled = true;
 				activateObject.GetComponent<Activatable>().enabled=true;
 			} else {
