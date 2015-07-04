@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: f875b67fd634010418b91b4a3e766697
-timeCreated: 1435753229
+guid: 00c002335f2e58746a1a1c1916dbc22f
+timeCreated: 1435759288
 licenseType: Free
 ModelImporter:
   serializedVersion: 18
@@ -48,9 +48,8 @@ ModelImporter:
     4300004: MainRotation.002
     4300006: MainRotation.003
     4300008: SenderHolder
-    7400000: Armature|shoot
-    7400002: shoot
-    7400004: seeking
+    7400000: shoot
+    7400002: seeking
     9500000: //RootNode
   materials:
     importMaterials: 1
@@ -61,121 +60,13 @@ ModelImporter:
     bakeSimulation: 0
     optimizeGameObjects: 0
     motionNodeName: 
-    animationCompression: 3
+    animationCompression: 1
     animationRotationError: .5
     animationPositionError: .5
     animationScaleError: .5
     animationWrapMode: 0
     extraExposedTransformPaths: []
-    clipAnimations:
-    - serializedVersion: 16
-      name: shoot
-      takeName: shoot
-      firstFrame: 0
-      lastFrame: 6
-      wrapMode: 0
-      orientationOffsetY: 0
-      level: 0
-      cycleOffset: 0
-      loop: 0
-      loopTime: 1
-      loopBlend: 0
-      loopBlendOrientation: 0
-      loopBlendPositionY: 0
-      loopBlendPositionXZ: 0
-      keepOriginalOrientation: 0
-      keepOriginalPositionY: 1
-      keepOriginalPositionXZ: 0
-      heightFromFeet: 0
-      mirror: 0
-      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
-      curves: []
-      events: []
-      transformMask:
-      - path: 
-        weight: 1
-      - path: Main
-        weight: 1
-      - path: Main/MainRotation
-        weight: 1
-      - path: Main/MainShoot
-        weight: 1
-      - path: Main/MainShoot/Barrel1
-        weight: 1
-      - path: Main/MainShoot/Barrel1/Barrel2
-        weight: 1
-      - path: Main/MainShoot/Barrel1/Barrel2/Barrel3
-        weight: 1
-      - path: Main/MainShoot/Barrel1/Barrel2/Barrel3/Barrel3_end
-        weight: 1
-      - path: Main/MainShoot/Barrel1/Barrel2/Barrel3/MainRotation.003
-        weight: 1
-      - path: Main/MainShoot/Barrel1/Barrel2/MainRotation.002
-        weight: 1
-      - path: Main/MainShoot/Barrel1/MainRotation.001
-        weight: 1
-      - path: Main/SenderRoto
-        weight: 1
-      - path: Main/SenderRoto/SenderHolder
-        weight: 1
-      - path: Main/SenderRoto/SenderRoto_end
-        weight: 1
-      maskType: 0
-      maskSource: {instanceID: 0}
-    - serializedVersion: 16
-      name: seeking
-      takeName: seeking
-      firstFrame: 0
-      lastFrame: 59
-      wrapMode: 0
-      orientationOffsetY: 0
-      level: 0
-      cycleOffset: 0
-      loop: 0
-      loopTime: 1
-      loopBlend: 0
-      loopBlendOrientation: 0
-      loopBlendPositionY: 0
-      loopBlendPositionXZ: 0
-      keepOriginalOrientation: 0
-      keepOriginalPositionY: 1
-      keepOriginalPositionXZ: 0
-      heightFromFeet: 0
-      mirror: 0
-      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
-      curves: []
-      events: []
-      transformMask:
-      - path: 
-        weight: 1
-      - path: Main
-        weight: 1
-      - path: Main/MainRotation
-        weight: 1
-      - path: Main/MainShoot
-        weight: 1
-      - path: Main/MainShoot/Barrel1
-        weight: 1
-      - path: Main/MainShoot/Barrel1/Barrel2
-        weight: 1
-      - path: Main/MainShoot/Barrel1/Barrel2/Barrel3
-        weight: 1
-      - path: Main/MainShoot/Barrel1/Barrel2/Barrel3/Barrel3_end
-        weight: 1
-      - path: Main/MainShoot/Barrel1/Barrel2/Barrel3/MainRotation.003
-        weight: 1
-      - path: Main/MainShoot/Barrel1/Barrel2/MainRotation.002
-        weight: 1
-      - path: Main/MainShoot/Barrel1/MainRotation.001
-        weight: 1
-      - path: Main/SenderRoto
-        weight: 1
-      - path: Main/SenderRoto/SenderHolder
-        weight: 1
-      - path: Main/SenderRoto/SenderRoto_end
-        weight: 1
-      maskType: 0
-      maskSource: {instanceID: 0}
+    clipAnimations: []
     isReadable: 1
   meshes:
     lODScreenPercentages: []
