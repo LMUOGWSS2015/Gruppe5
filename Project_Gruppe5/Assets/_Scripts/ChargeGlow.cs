@@ -45,6 +45,7 @@ public class ChargeGlow : MonoBehaviour {
 
 	void Start () {
 		obj = this.gameObject.transform.Find ("Sphere").gameObject;
+		if(partOfOrder)
 		checker = GameObject.FindGameObjectWithTag ("ChargeChecker").gameObject.GetComponent<ChargeChecker>();
 		animator = GetComponent<Animator> ();
 		rend = obj.GetComponent<Renderer> ();
