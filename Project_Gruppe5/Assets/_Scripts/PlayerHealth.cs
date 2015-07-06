@@ -73,6 +73,8 @@ public class PlayerHealth : MonoBehaviour {
 	
 	
 	public void TakeDamage (int amount) {
+
+		GameObject.FindGameObjectWithTag ("MainCamera").gameObject.GetComponent<ScreenShake>().shake++;
 		damaged = true;
 
 		if (!isDead) {
