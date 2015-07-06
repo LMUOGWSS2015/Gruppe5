@@ -5,12 +5,14 @@ using System.Collections;
 public class MainMenu : MonoBehaviour {
 
 	public Canvas mainMenu;
+	public Canvas controlsCanvas;
 	public Button play;
+	public Button controls;
 	public Button exit;
 	public bool controllerMac = false;
 	public bool controllerWin = false;
 	public float updown;
-	Button[] buttons = new Button[2];
+	Button[] buttons = new Button[3];
 	int current = 0;
 	float startTime;
 	float journeyLength;
@@ -25,19 +27,27 @@ public class MainMenu : MonoBehaviour {
 	void Start () {
 		goal = new Vector3 (0, 0.55f, -2);
 		mainMenu = mainMenu.GetComponent<Canvas>();
+
 		play = play.GetComponent<Button> ();
+		controls = controls.GetComponent<Button> ();
 		exit = exit.GetComponent<Button> ();
 		
 		buttons [0] = play;
-		buttons [1] = exit;
+		buttons [1] = controls;
+		buttons [2] = exit;
 	}
 
 	public void exitPressed() {
-		Debug.Log ("exit pressed");
+		//Debug.Log ("exit pressed");
 		Application.Quit ();
 	}
+
+	public void controlsPressed() {
+		controlsCanvas.GetComponent<CaPCanvas>().Show(true);
+	}
+
 	public void playPressed() {
-		Debug.Log ("play pressed");
+		//Debug.Log ("play pressed");
 		
 		cam = Camera.main;
 		start = cam.transform.position;
@@ -65,7 +75,7 @@ public class MainMenu : MonoBehaviour {
 			} else if (controllerWin) {
 				updown = Input.GetAxis ("XboxWinLeftY");
 				
-				abutton = Input.GetButton("Fire1");
+				abutton = Input.GetButtonDown("Fire1");
 
 			} else {
 				updown = Input.GetAxis ("Vertical");
@@ -88,11 +98,13 @@ public class MainMenu : MonoBehaviour {
 					buttons[i].GetComponentInChildren<Text>().fontSize=20;
 			}
 			if(abutton) {
-				Debug.Log ("Active");
-					if(current==0)
-					playPressed();
-				else if(current==1)
-					exitPressed();
+				//Debug.Log ("Active");
+				switch(current){
+				case 0: playPressed(); break;
+				case 1: controlsPressed(); break;
+				case 2: exitPressed(); break;
+				default: Debug.Log("Pressed non-existing button"); return;
+				}
 			}
 		}
 	}

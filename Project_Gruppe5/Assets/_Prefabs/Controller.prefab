@@ -43,6 +43,7 @@ MonoBehaviour:
   playerObject: {fileID: 198446, guid: d1cf23df406d6324687b6a9c26795dae, type: 2}
   stepSpeed: 1
   doubleDoorsLower: {fileID: 131994, guid: 5264a34ed5425457f9cfdba720e407a7, type: 2}
+  pauseCanvas: {fileID: 0}
 --- !u!114 &11459426
 MonoBehaviour:
   m_ObjectHideFlags: 1

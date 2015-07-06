@@ -5,11 +5,13 @@ public class Controller : MonoBehaviour {
 	
 	public GameObject playerObject;
 	public float stepSpeed;
+	public GameObject doubleDoorsLower;
+	public Canvas pauseCanvas;
+
 	private bool movePlayer = false;
 	private Vector3 targetPos = new Vector3 (0f, 0.55f, -6f);
 	private float step;
 	private DoubleDoorsLowerOpen doors;
-	public GameObject doubleDoorsLower;
 
 	Level level;
 	
@@ -28,6 +30,8 @@ public class Controller : MonoBehaviour {
 	void Update() {
 		if (Input.GetKey (KeyCode.Escape)) {
 			Application.Quit ();
+		} else if (Input.GetButtonDown ("Start")) {
+			pauseCanvas.GetComponent<PauseCanvas> ().Show(true);
 		}
 		
 //		if (Input.GetKeyDown (KeyCode.G)) {
