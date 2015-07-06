@@ -103,8 +103,13 @@ public class IntroDDoorsLowerOpen : MonoBehaviour {
 			rendererMan.material.SetTexture(0,blankTexture);
 			GameObject.Find("IntroController").GetComponent<IntroLevel>().StartLevel(true);
 			button.transform.position = new Vector3(0f, 0.57f, 6.52f);
+			button.transform.position = new Vector3(
+				transform.position.x + (2f * Time.deltaTime),
+				transform.position.y,
+				transform.position.z
+				);
 			
 		}
-		}
+	}
 	}
 
