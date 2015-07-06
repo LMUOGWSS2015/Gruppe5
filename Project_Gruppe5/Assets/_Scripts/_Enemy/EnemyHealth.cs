@@ -7,15 +7,12 @@ public class EnemyHealth : MonoBehaviour {
 	//public AudioClip deathClip;    
 	public float explDuration = 5f; 
 	
-	
-//	Animator anim;              
-	//AudioSource enemyAudio;     
-//	CapsuleCollider capsuleCollider;   
+	 
+	//AudioSource enemyAudio;       
 	bool isDead;     
 
 	
 	void Awake (){
-//		anim = GetComponentInChildren <Animator> ();
 	//	enemyAudio = GetComponent <AudioSource> ();
 
 		currentHealth = startingHealth;
@@ -39,26 +36,16 @@ public class EnemyHealth : MonoBehaviour {
 	void Death () {
 		isDead = true;
 
-//		anim.SetTrigger ("Dead");
 		
 		//enemyAudio.clip = deathClip;
 		//enemyAudio.Play ();
 
 		Destroy (Instantiate (enemyExplosion, this.gameObject.transform.position, Quaternion.identity), explDuration);
-//		Debug.Log(this.gameObject.tag);
-		if (this.gameObject.tag == "Enemy") {
-//			capsuleCollider = GetComponent <CapsuleCollider> ();
-//			capsuleCollider.isTrigger = true;
-
-			Destroy (this.gameObject);
-		} else {
-//			capsuleCollider = GetComponentInParent <CapsuleCollider> ();
-//			capsuleCollider.isTrigger = true;
-			
-//			BoxCollider boxCollider = GetComponent <BoxCollider> ();
-//			boxCollider.isTrigger = true;
-
+	
+		if (transform.parent.gameObject.tag == "Enemy") {
 			Destroy (this.transform.parent.gameObject);
+		} else {
+			Destroy (this.gameObject);
 		}
 
 		transform.GetComponentInParent<Enemies> ().Less(1);

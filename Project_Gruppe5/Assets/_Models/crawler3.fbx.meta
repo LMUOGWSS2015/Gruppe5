@@ -44,6 +44,7 @@ ModelImporter:
     100072: Cube.001
     100074: Empty
     100076: Holder
+    100078: Weakpoint
     400000: Bone
     400002: Bone.001
     400004: Bone.002
@@ -83,6 +84,7 @@ ModelImporter:
     400072: Cube.001
     400074: Empty
     400076: Holder
+    400078: Weakpoint
     2300000: Cube
     2300002: Cylinder
     2300004: Cylinder.001
@@ -99,6 +101,7 @@ ModelImporter:
     2300026: Circle
     2300028: Cube.001
     2300030: Holder
+    2300032: Weakpoint
     3300000: Cube
     3300002: Cylinder
     3300004: Cylinder.001
@@ -115,6 +118,7 @@ ModelImporter:
     3300026: Circle
     3300028: Cube.001
     3300030: Holder
+    3300032: Weakpoint
     4300000: Cube
     4300002: Cylinder.002
     4300004: Cylinder
@@ -131,6 +135,7 @@ ModelImporter:
     4300026: Circle
     4300028: Holder
     4300030: Cube.001
+    4300032: Weakpoint
     7400000: Crawler|CrawlerAction.001
     7400002: Circle|walk
     7400004: Empty|walk

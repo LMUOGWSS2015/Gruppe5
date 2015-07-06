@@ -3,8 +3,8 @@ using System.Collections;
 
 public class PlayerMovement: MonoBehaviour {
 
-	public float speed = 5f;// 3.0f;
-	public float speedWhileShooting = 3f;
+	public float speed = 10f;// 3.0f;
+	public float speedWhileShooting = 8f;
 	public float turnSmoothing = 15f; 
 	public float sensitifity = 1.0f;
 

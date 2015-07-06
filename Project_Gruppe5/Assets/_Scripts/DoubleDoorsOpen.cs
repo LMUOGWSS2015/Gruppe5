@@ -1,8 +1,9 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class DoubleDoorsOpen : MonoBehaviour {
+public class DoubleDoorsOpen : Activatable {
 	public float doorSpeed = 7f;
+	public bool roomHasEnemies = true;
 	
 	private bool enemiesDead;
 	
@@ -25,7 +26,7 @@ public class DoubleDoorsOpen : MonoBehaviour {
 	
 	
 	void Update () {
-		if (enemiesDead) {
+		if (!roomHasEnemies || enemiesDead) {
 			leftDoor.rotation = Quaternion.Slerp (leftDoor.rotation, leftRotation, .05f); 
 			rightDoor.rotation = Quaternion.Slerp (rightDoor.rotation, rightRotation, .05f);
 		}

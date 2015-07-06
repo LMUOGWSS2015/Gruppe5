@@ -25,6 +25,8 @@ public class EnemyMovementRotOnly : EnemyMovement {
 		eaf = GetComponent <EnemyAttackFar>();
 		eaf.enabled = false;
 		animator = GetComponentInChildren<Animator>();
+		
+		transform.GetComponentInParent<Enemies> ().More(1);
 	}
 	
 	
@@ -37,7 +39,7 @@ public class EnemyMovementRotOnly : EnemyMovement {
 
 			if (preferLight && gLDist <= distance && gLDist < plDist){
 				Rotate (gazeLight, false);
-}			else if (plDist <= distance)
+ 			} else if (plDist <= distance)
 				Rotate (player, true);
 			else
 				Idle ();

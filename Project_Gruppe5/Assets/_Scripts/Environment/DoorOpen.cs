@@ -23,7 +23,7 @@ public class DoorOpen : MonoBehaviour {
 		journeyLength = Vector3.Distance(up, down);
 	}
 
-	void Update () {
+	void FixedUpdate () {
 		if (toOpen) {
 			var distCovered = (Time.time - startTime) * doorSpeed;
 		

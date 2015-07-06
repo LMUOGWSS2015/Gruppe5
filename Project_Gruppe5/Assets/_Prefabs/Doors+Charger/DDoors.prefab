@@ -11,6 +11,7 @@ GameObject:
   - 33: {fileID: 3338168}
   - 65: {fileID: 6516576}
   - 23: {fileID: 2339180}
+  - 114: {fileID: 11420360}
   m_Layer: 8
   m_Name: Cube
   m_TagString: Untagged
@@ -29,6 +30,7 @@ GameObject:
   - 33: {fileID: 3320066}
   - 65: {fileID: 6556530}
   - 23: {fileID: 2355406}
+  - 114: {fileID: 11403320}
   m_Layer: 8
   m_Name: Cube
   m_TagString: Untagged
@@ -174,7 +176,6 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 409442}
-  - 114: {fileID: 11459366}
   - 114: {fileID: 11489658}
   m_Layer: 8
   m_Name: DDoors
@@ -585,12 +586,25 @@ Light:
   m_ShadowRadius: 0
   m_ShadowAngle: 0
   m_AreaSize: {x: 1, y: 1}
---- !u!114 &11459366
+--- !u!114 &11403320
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 197094}
+  m_GameObject: {fileID: 122350}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8a91bd5e05abfa4eaab517e822b0090, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletExplosion: {fileID: 192264, guid: 579562710378d4fdab9e9b804dea0672, type: 2}
+  explDuration: 2
+--- !u!114 &11420360
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 107774}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e8a91bd5e05abfa4eaab517e822b0090, type: 3}

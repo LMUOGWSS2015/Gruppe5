@@ -8,6 +8,10 @@ public class ButtonPress : MonoBehaviour {
 	public bool opensDoor = true;
 	public bool pressed = false;
 	public bool playerActivated = false;
+	public bool exclusive = false;
+	private bool activated;
+
+	GameObject[] buttons;
 
 	ArrayList gOsPressingButton = new ArrayList ();
 	ArrayList ignore = new ArrayList();
@@ -25,6 +29,10 @@ public class ButtonPress : MonoBehaviour {
 		ignore.Add ("playerExplosion");
 		ignore.Add ("enemyExplosion");
 
+		if (exclusive) {
+			buttons = GameObject.FindGameObjectsWithTag("Button");
+		}
+
 		ringMaterialRenderer = GetComponentsInChildren <Renderer> ()[1];
 
 		if (pressed) {
@@ -39,6 +47,7 @@ public class ButtonPress : MonoBehaviour {
 			}
 		} else {
 			ringMaterialRenderer.material.SetColor ("_Color", Color.red);
+			activated=false;
 		}
 	}
 
@@ -49,11 +58,21 @@ public class ButtonPress : MonoBehaviour {
 			    && !gOsPressingButton.Contains(other.gameObject)){
 
 				ringMaterialRenderer.material.SetColor ("_Color", Color.green);
+				activated=true;
 				gOsPressingButton.Add(other.gameObject);
 				if(stay == Stay.UntilNextPress && changed) {
 					door.Open(!opensDoor);
 					changed = false; 
 				} else {
+					if(exclusive) {
+						for(int i=0; i<buttons.Length; i++) {
+							if(buttons[i]==this.gameObject)
+								continue;
+							buttons[i].GetComponent<ButtonPress>().Deactivate();
+						}
+					}
+
+					door.Open(opensDoor);
 					changed = true; 
 				}
 			}
@@ -68,10 +87,21 @@ public class ButtonPress : MonoBehaviour {
 
 				if (gOsPressingButton.Count == 0 && stay != Stay.UntilNextPress) {
 					ringMaterialRenderer.material.SetColor ("_Color", Color.red);
+					activated=false;
 					door.Open (!opensDoor);
 					changed = false;
 				}
 			}
 		}
 	}
+	public void Deactivate(){
+		if (!activated)
+			return;
+		ringMaterialRenderer.material.SetColor ("_Color", Color.red);
+		activated = false;
+
+		door.Open (!opensDoor);
+		changed = false;
+	}
+
 }

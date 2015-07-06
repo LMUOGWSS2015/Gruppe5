@@ -41,10 +41,10 @@ public class ShotsFired : MonoBehaviour {
 				animator.SetBool ("shooting", false);
 
 			animator.SetBool ("firing", true);
-			if (counter > shotSpeed) {
+/*			if (counter > shotSpeed) {
 				counter = 0;
 				shoot ();
-				}
+				}*/
 		}else{
 			animator.SetBool ("firing", false);
 		}

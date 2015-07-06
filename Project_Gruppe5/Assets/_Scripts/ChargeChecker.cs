@@ -4,6 +4,7 @@ using System.Collections;
 public class ChargeChecker : MonoBehaviour {
 
 	public AudioClip noSound = null;
+	public GameObject activateObject;
 	public int numChargers = 2;
 	int[] checkArray;
 	// Use this for initialization
@@ -19,9 +20,10 @@ public class ChargeChecker : MonoBehaviour {
 		}
 		if (isFull()) {
 			if(isInOrder()) {
-				DoubleDoorsOpen doors = GameObject.FindGameObjectWithTag ("DDoors").gameObject.GetComponent<DoubleDoorsOpen> ();
+				//DoubleDoorsOpen doors = GameObject.FindGameObjectWithTag ("DDoors").gameObject.GetComponent<DoubleDoorsOpen> ();
 				//doors.OpenDoors ();
-				doors.enabled = true;
+				//doors.enabled = true;
+				activateObject.GetComponent<Activatable>().enabled=true;
 			} else {
 				this.GetComponent<AudioSource>().PlayOneShot(noSound);
 				resetChargers();
@@ -33,7 +35,10 @@ public class ChargeChecker : MonoBehaviour {
 		GameObject[] chargers = GameObject.FindGameObjectsWithTag("Charger");
 		foreach (GameObject charger in chargers) {
 			ChargeGlow c = charger.gameObject.GetComponent<ChargeGlow>();
-			c.resetCharge();
+			if(c==null)
+				continue;
+			if(c.partOfOrder)
+				c.resetCharge();
 		}
 	}
 

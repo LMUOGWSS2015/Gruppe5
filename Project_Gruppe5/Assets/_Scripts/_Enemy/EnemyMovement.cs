@@ -24,6 +24,8 @@ public class EnemyMovement : MonoBehaviour {
 		animator = GetComponentInChildren<Animator>();
 		nav = GetComponent <NavMeshAgent> ();
 		nav.speed = speed;
+		
+		transform.GetComponentInParent<Enemies> ().More(1);
 	}
 	
 	

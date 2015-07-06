@@ -18,6 +18,7 @@ public class EnemyAttackFar : MonoBehaviour {
 	PlayerHealth playerHealth; 
 	GameObject player;
 	Transform playerPos;
+	Transform gunPos;
 	Animator animator;
 
 	Ray shootRay;  
@@ -26,6 +27,8 @@ public class EnemyAttackFar : MonoBehaviour {
 
 	void Awake(){
 		player = GameObject.FindGameObjectWithTag ("Player");
+		gunPos = transform.FindChild("Gun");
+
 		playerPos = player.transform;
 		playerHealth = player.gameObject.GetComponent<PlayerHealth> ();
 	//	gunLine = GetComponentInChildren <LineRenderer> ();
@@ -65,8 +68,12 @@ public class EnemyAttackFar : MonoBehaviour {
 	void Shoot(){
 		animator.SetTrigger ("shoot");
 		timer = 0f;
-		Instantiate (enemyBullet, transform.position + Vector3.up*height, this.transform.rotation);
-
+		//Instantiate (enemyBullet, transform.position + Vector3.up*height, this.transform.rotation);
+		//Use the GunPos if it is set.
+		if(gunPos != null)Instantiate (enemyBullet, gunPos.position, this.transform.rotation);
+		else{
+			Instantiate (enemyBullet, transform.position + Vector3.up*height, this.transform.rotation);
+		}
 
 //		shootRay.origin = transform.position;
 //		shootRay.direction = transform.forward;

@@ -266,9 +266,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   useEyeTracking: 0
-  speed: 2
+  speed: 8
   stagewidth: 40
   stageheight: 20
+  flickerAmount: 9.99999975e-05
   flicker: 1
 --- !u!136 &13602826
 CapsuleCollider:
