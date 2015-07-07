@@ -1561,7 +1561,7 @@ MonoBehaviour:
   shotSounds:
   - {fileID: 8300000, guid: bf75b984df8a84987bcf3a8bf6e2862d, type: 3}
   - {fileID: 8300000, guid: 8f073365f99210a468c509852b4987c4, type: 3}
-  - {fileID: 8300000, guid: ccfc0dd34595d2042891c0432d6a182b, type: 3}
+  - {fileID: 8300000, guid: 8fb7865e5252e9346829bc2ace67780d, type: 3}
   bullet: {fileID: 138146, guid: cf60ba45d98b54865b8bbb647a6b94fb, type: 2}
   shotSpeed: 15
 --- !u!114 &11486138
