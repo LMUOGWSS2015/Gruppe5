@@ -27,3 +27,5 @@ EditorBuildSettings:
     path: Assets/_Scenes/_Room4Chargers.unity
   - enabled: 1
     path: Assets/_Scenes/_Room5Maze.unity
+  - enabled: 1
+    path: Assets/_Scenes/_FinalRoom.unity
