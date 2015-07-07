@@ -21,18 +21,12 @@ public class NeutralLookAt : MonoBehaviour {
 	
 	
 	protected void Update (){
-
-	
-
-				Rotate (player, true);
+		if(player.GetComponent<PlayerHealth> ().currentHealth > 0)
+			Rotate (player, true);
 
 	}
 	
 	protected void Rotate(Transform t, bool player){
-	
-		
-
-		
 		Vector3 dir = t.position - transform.position;
 		dir.y = 0;
 		
