@@ -1,4 +1,4 @@
-﻿ using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
 
@@ -22,6 +22,9 @@ public class MainMenu : MonoBehaviour {
 	bool moveCam = false;
 	Camera cam;
 	public GameObject player;
+
+	bool wait = false;
+	float secsToWait = .3f;
 
 	// Use this for initialization
 	void Start () {
@@ -74,23 +77,26 @@ public class MainMenu : MonoBehaviour {
 				abutton = Input.GetButton("Fire1");
 			} else if (controllerWin) {
 				updown = Input.GetAxis ("XboxWinLeftY");
-				
 				abutton = Input.GetButtonDown("Fire1");
-
 			} else {
 				updown = Input.GetAxis ("Vertical");
 				
 				//abutton = Input.GetButton("Space");
 			}
-			if(updown>0.2) {
+			if(updown>0.2 && !wait) {
 				current-=1;
 				if (current<0)
 					current = 0;
+				else 
+					StartCoroutine(Wait(secsToWait));
 			}
-			else if (updown<-0.2) {
+			else if (updown<-0.2 && !wait) {
 				current+=1;
-				if(current>1) current = 1;
+				if(current>2) current = 2;
+				else
+					StartCoroutine(Wait(secsToWait));
 			}
+
 			for (int i=0; i<buttons.Length; i++) {
 				if(i==current)
 					buttons[i].GetComponentInChildren<Text>().fontSize=24;
@@ -107,5 +113,11 @@ public class MainMenu : MonoBehaviour {
 				}
 			}
 		}
+	}
+
+	IEnumerator Wait(float secs){
+		wait = true;
+		yield return new WaitForSeconds(secs);
+		wait = false;
 	}
 }

@@ -866,8 +866,8 @@ MonoBehaviour:
   play: {fileID: 522713165}
   controls: {fileID: 1686747824}
   exit: {fileID: 197520266}
-  controllerMac: 0
-  controllerWin: 1
+  controllerMac: 1
+  controllerWin: 0
   updown: 0
   player: {fileID: 216418314}
 --- !u!1 &692506541

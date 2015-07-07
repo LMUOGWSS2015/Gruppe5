@@ -31,6 +31,7 @@ public class ShowDeathScreen : MonoBehaviour {
 	}
 
 	public void RestartLevel(){
+		PlayerPrefs.SetInt ("health", 10);
 		Application.LoadLevel (Application.loadedLevel);
 	}
 
