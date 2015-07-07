@@ -133,7 +133,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 916e9b255d97f47ac88c78c626cdeed2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Levelname: _Room1Something
+  Levelname: _IntroRoom
 --- !u!23 &97036481
 MeshRenderer:
   m_ObjectHideFlags: 0

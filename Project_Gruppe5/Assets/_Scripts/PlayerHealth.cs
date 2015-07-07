@@ -3,8 +3,8 @@ using UnityEngine.UI;
 using System.Collections;
 
 public class PlayerHealth : MonoBehaviour {
-	public int startingHealth = 3;                            	// The amount of health the player starts the game with.
-	public int currentHealth = 3;			                    // The current health the player has.
+	public int startingHealth = 10;                            	// The amount of health the player starts the game with.
+	public int currentHealth;			                    // The current health the player has.
 	public Slider healthSlider;                                 // Reference to the UI's health bar.
 	public Image damageImage;                                   // Reference to an image to flash on the screen on being hurt.
 	//public AudioClip deathClip;                               // The audio clip to play when the player dies.
@@ -39,13 +39,13 @@ public class PlayerHealth : MonoBehaviour {
 		playerMovement = GetComponent <PlayerMovement> ();
 		//shotsFired = GetComponent <ShotsFired> ();
 
-		currentHealth = startingHealth;
+		currentHealth = PlayerPrefs.GetInt("health");
 
 		sds = GameObject.FindGameObjectWithTag ("DeathScreen").GetComponentInChildren<ShowDeathScreen>();
 		sds.Show(false);
 
 		healthSlider.maxValue = startingHealth;
-		healthSlider.value = startingHealth;
+		healthSlider.value = currentHealth;
 	}
 	
 	
