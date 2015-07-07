@@ -7,7 +7,7 @@ Material:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: rost
-  m_Shader: {fileID: 4800000, guid: 0a5ee393eb41d614ebbcc13355b73393, type: 3}
+  m_Shader: {fileID: 5, guid: 0000000000000000f000000000000000, type: 0}
   m_ShaderKeywords: 
   m_LightmapFlags: 5
   m_CustomRenderQueue: -1
@@ -33,6 +33,13 @@ Material:
           name: _DetailNormalMap
         second:
           m_Texture: {fileID: 0}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _MatCap
+        second:
+          m_Texture: {fileID: 2800000, guid: 04173e7d552d5854ebf8b2080ac3eb27, type: 3}
           m_Scale: {x: 1, y: 1}
           m_Offset: {x: 0, y: 0}
       data:
@@ -79,9 +86,9 @@ Material:
           m_Offset: {x: 0, y: 0}
       data:
         first:
-          name: _MatCap
+          name: _Detail
         second:
-          m_Texture: {fileID: 2800000, guid: 04173e7d552d5854ebf8b2080ac3eb27, type: 3}
+          m_Texture: {fileID: 0}
           m_Scale: {x: 1, y: 1}
           m_Offset: {x: 0, y: 0}
     m_Floats:
@@ -96,6 +103,10 @@ Material:
       data:
         first:
           name: _DstBlend
+        second: 0
+      data:
+        first:
+          name: _MatCapAccurate
         second: 0
       data:
         first:
@@ -136,10 +147,6 @@ Material:
       data:
         first:
           name: _Metallic
-        second: 0
-      data:
-        first:
-          name: _MatCapAccurate
         second: 0
     m_Colors:
       data:
