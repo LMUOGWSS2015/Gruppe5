@@ -24,4 +24,12 @@ public class ScreenShake : MonoBehaviour {
 			this.transform.position=basePosition;
 		}
 	}
+
+	public void SetShake(float newShake){
+		shake = newShake;
+	}
+	
+	public float GetShake(){
+		return shake;
+	}
 }

@@ -6,22 +6,21 @@ public class NeutralLookAt : MonoBehaviour {
 	public float speed = 0.01f;
 
 	protected Transform gazeLight;
-	protected Transform player;
-	protected PlayerHealth playerHealth;
 	EnemyHealth enemyHealth;
 	Animator anim;*/
 	public float rotSpeed = 5f;
 	private Transform player;
+	private PlayerHealth playerHealth;
 
 	
 	protected void Awake (){
 		player = GameObject.FindGameObjectWithTag ("Player").transform;
-	
+		playerHealth = player.GetComponent<PlayerHealth> ();
 	}
 	
 	
 	protected void Update (){
-		if(player.GetComponent<PlayerHealth> ().currentHealth > 0)
+		if(playerHealth.currentHealth > 0)
 			Rotate (player, true);
 
 	}

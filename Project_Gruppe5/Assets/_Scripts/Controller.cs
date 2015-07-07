@@ -31,7 +31,8 @@ public class Controller : MonoBehaviour {
 		if (Input.GetKey (KeyCode.Escape)) {
 			Application.Quit ();
 		} else if (Input.GetButtonDown ("Start")) {
-			pauseCanvas.GetComponent<PauseCanvas> ().Show(true);
+			if(!pauseCanvas.GetComponent<PauseCanvas> ().GetPause())
+				pauseCanvas.GetComponent<PauseCanvas> ().Show(true);
 		}
 		
 //		if (Input.GetKeyDown (KeyCode.G)) {
