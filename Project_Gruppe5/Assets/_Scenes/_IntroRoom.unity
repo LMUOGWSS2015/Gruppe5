@@ -2152,6 +2152,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 17
       objectReference: {fileID: 0}
+    - target: {fileID: 11443388, guid: 47da28b3f04144ce2aa90b882a17315f, type: 2}
+      propertyPath: Levelname
+      value: _Room1enemies_intro
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 47da28b3f04144ce2aa90b882a17315f, type: 2}
   m_IsPrefabParent: 0

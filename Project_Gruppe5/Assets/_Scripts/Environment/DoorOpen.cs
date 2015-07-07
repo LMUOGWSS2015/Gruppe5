@@ -2,6 +2,7 @@
 using System.Collections;
 
 public class DoorOpen : MonoBehaviour {
+	public AudioClip slideSound = null;
 	public float doorSpeed = 7f;
 	public bool isOpen = false;
 
@@ -42,6 +43,7 @@ public class DoorOpen : MonoBehaviour {
 	}
 
 	public void Open(bool openDoor){
+		this.GetComponent<AudioSource>().PlayOneShot(slideSound);
 		if (openDoor) {
 			toOpen = true;
 			toClose = false;

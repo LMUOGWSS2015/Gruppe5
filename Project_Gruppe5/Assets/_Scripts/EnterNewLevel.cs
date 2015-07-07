@@ -18,7 +18,13 @@ public class EnterNewLevel : MonoBehaviour {
 	void OnTriggerEnter(Collider other) {
 		if (other.gameObject.tag == "Player") {
 
-			StartCoroutine(enterNewLevel());
+			if(!Application.loadedLevelName.Equals("_IntroRoom") && !Application.loadedLevelName.Equals("mainmenu")){
+			PlayerPrefs.SetInt("health", GameObject.FindGameObjectWithTag ("Player").gameObject.GetComponent<PlayerHealth> ().currentHealth);
+			}
+			else
+				PlayerPrefs.SetInt("health", 10);
+				StartCoroutine(enterNewLevel());
+
 
 		}
 	}
