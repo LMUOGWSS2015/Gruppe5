@@ -1017,7 +1017,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 198446}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: .550000012, z: -6}
+  m_LocalPosition: {x: 0, y: .550000012, z: -20}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 418942}
@@ -1558,7 +1558,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ffca6e241f4a7cf4ebb0cfe84d653279, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shotSound: {fileID: 8300000, guid: bf75b984df8a84987bcf3a8bf6e2862d, type: 3}
+  shotSounds:
+  - {fileID: 8300000, guid: bf75b984df8a84987bcf3a8bf6e2862d, type: 3}
+  - {fileID: 8300000, guid: 8f073365f99210a468c509852b4987c4, type: 3}
+  - {fileID: 8300000, guid: ccfc0dd34595d2042891c0432d6a182b, type: 3}
   bullet: {fileID: 138146, guid: cf60ba45d98b54865b8bbb647a6b94fb, type: 2}
   shotSpeed: 15
 --- !u!114 &11486138

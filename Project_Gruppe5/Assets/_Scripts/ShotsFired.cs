@@ -3,7 +3,7 @@ using System.Collections;
 
 public class ShotsFired : MonoBehaviour {
 
-	public AudioClip shotSound;
+	public AudioClip[] shotSounds;
 	public GameObject bullet;
 	private float rightTrigger;
 	int counter = 0;
@@ -77,7 +77,7 @@ public class ShotsFired : MonoBehaviour {
 	}
 
 	void shoot(){
-		this.GetComponent<AudioSource> ().PlayOneShot(shotSound);
+		 this.GetComponent<AudioSource> ().PlayOneShot(shotSounds[Random.Range(0, shotSounds.Length)]);
 
 
 		if (shootLeft) {
