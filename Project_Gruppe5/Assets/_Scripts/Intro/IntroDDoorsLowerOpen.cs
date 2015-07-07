@@ -9,6 +9,8 @@ public class IntroDDoorsLowerOpen : MonoBehaviour {
 	private Transform rightDoor;
 
 	private GameObject button;
+	private GameObject crateLeft;
+	private GameObject crateRight;
 
 	private float leftClosed;
 	private float rightClosed; 
@@ -34,10 +36,14 @@ public class IntroDDoorsLowerOpen : MonoBehaviour {
 	private PlayerMovement player;
 
 	AudioSource audio;
+
+	private Vector3 buttonTargetPosition = new Vector3(0f, 0.57f, 6.52f);
+	private Vector3 crateLeftTargetPosition = new Vector3(-13.27f, 0f, 0f);
+	private Vector3 crateRightTargetPosition = new Vector3(13.27f, 0f, 0f);
 	
-
+	
 	void Awake (){
-
+		
 		audio = GetComponent<AudioSource>();
 		rendererMan = manTV.GetComponent<Renderer> ();
 		rendererWoman = womanTV.GetComponent<Renderer> ();
@@ -50,6 +56,8 @@ public class IntroDDoorsLowerOpen : MonoBehaviour {
 		leftDoor = GameObject.Find ("DoorLeftLower").transform;
 		rightDoor = GameObject.Find ("DoorRightLower").transform;
 		button = GameObject.Find ("Button");
+		crateLeft = GameObject.Find ("CrateLeft");
+		crateRight = GameObject.Find ("CrateRight");
 		//		}
 		//		else if (isLowerDoors) {
 		//			leftDoor = GameObject.Find ("DoorLeft").transform;
@@ -96,19 +104,23 @@ public class IntroDDoorsLowerOpen : MonoBehaviour {
 
 			rendererWoman.material.SetTexture(0,blankTexture);
 			GameObject.Find("IntroController").GetComponent<IntroLevel>().StartLevel(true);
-			button.transform.position = new Vector3(0f, 0.57f, 6.52f);
+			button.transform.position = Vector3.MoveTowards(button.transform.position, buttonTargetPosition, Time.deltaTime * 0.1f);
 
+
+			
 		}
 		if (player.female) {
-			rendererMan.material.SetTexture(0,blankTexture);
-			GameObject.Find("IntroController").GetComponent<IntroLevel>().StartLevel(true);
-			button.transform.position = new Vector3(0f, 0.57f, 6.52f);
-			button.transform.position = new Vector3(
-				transform.position.x + (2f * Time.deltaTime),
-				transform.position.y,
-				transform.position.z
-				);
-			
+			rendererMan.material.SetTexture (0, blankTexture);
+			GameObject.Find ("IntroController").GetComponent<IntroLevel> ().StartLevel (true);
+			button.transform.position = Vector3.MoveTowards(button.transform.position, buttonTargetPosition, Time.deltaTime * 0.1f);
+
+		}
+
+		if (button.GetComponent<IntroButtonPress> ().isactive) {
+
+			crateRight.transform.position = Vector3.MoveTowards(crateRight.transform.position, crateRightTargetPosition, 0.05f);
+			crateLeft.transform.position = Vector3.MoveTowards(crateLeft.transform.position, crateLeftTargetPosition, 0.05f);
+
 		}
 	}
 	}

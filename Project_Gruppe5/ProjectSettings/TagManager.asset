@@ -26,6 +26,7 @@ TagManager:
   - DamageImage
   - HealthSlider
   - Button
+  - HealthPickup
   layers:
   - Default
   - TransparentFX

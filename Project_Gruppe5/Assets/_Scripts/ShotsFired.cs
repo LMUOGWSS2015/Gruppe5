@@ -13,11 +13,16 @@ public class ShotsFired : MonoBehaviour {
 
 	private PlayerMovement playerMovement;
 	Animator animator;
+	private Transform leftGun;
+	private Transform rightGun;
+
+	private bool shootLeft = true;
 
 	void Start(){
 		animator = GameObject.Find ("roboBuddy").GetComponent<Animator>();
 		playerMovement = GameObject.Find ("Player").GetComponent<PlayerMovement>();
-		
+		leftGun = GameObject.Find ("left").GetComponent<Transform>();
+		rightGun = GameObject.Find ("right").GetComponent<Transform>();
 	}
 
 	void FixedUpdate(){
@@ -73,6 +78,16 @@ public class ShotsFired : MonoBehaviour {
 
 	void shoot(){
 		this.GetComponent<AudioSource> ().PlayOneShot(shotSound);
-		Instantiate (bullet, new Vector3 (this.transform.position.x, this.transform.position.y, this.transform.position.z), this.transform.rotation);
+
+
+		if (shootLeft) {
+			Instantiate (bullet, new Vector3 (leftGun.position.x, leftGun.position.y, leftGun.position.z), leftGun.rotation);
+
+		} else {
+			Instantiate (bullet, new Vector3 (rightGun.position.x, rightGun.position.y, rightGun.position.z), rightGun.rotation);
+
+		}
+
+		shootLeft = ! shootLeft;
 	}
 }
