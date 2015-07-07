@@ -18,6 +18,7 @@ public class FinalLevelController : MonoBehaviour {
 	public GameObject galaxyPortal;
 	private GameObject galaxyPortalClone;
 	private bool galaxyTwist = false;
+	private bool galaxyGlow = false;
 
 	private Light galaxyPortalCloneLight;
 
@@ -31,6 +32,7 @@ public class FinalLevelController : MonoBehaviour {
 	private Vector3 origin = new Vector3 (0f, 0f, 0f);
 	private GameObject enemy1CloneFirst;
 	private GameObject enemy1Clone;
+	private GameObject enemy2Clone;
 	private int enemy1counter = 0;
 	private Vector3 lerpEnemy1 = new Vector3 (0f, 0f, 0f);
 	private float xValue = 17f;
@@ -38,15 +40,15 @@ public class FinalLevelController : MonoBehaviour {
 
 	private bool doneWithEnemies = false;
 
-	private AudioSource audioSource;
-
+	private AudioSource[] audioSource;
+	
 	void Start () {
 		cam = camObj.GetComponent<Camera> ();
 		camTrans = camObj.transform;
 
 		playerMovement = playerObj.GetComponent<PlayerMovement> ();
 
-		audioSource = this.gameObject.GetComponent<AudioSource> ();
+		audioSource = this.gameObject.GetComponents<AudioSource> ();
 	}
 	
 	void Update () {
@@ -55,7 +57,7 @@ public class FinalLevelController : MonoBehaviour {
 				camTrans.localPosition = originalPos + Random.insideUnitSphere * shakeAmount;
 				shake -= Time.deltaTime * decreaseFactor;
 
-				galaxyPortalClone.transform.localScale += new Vector3 (0.05f, 0f, 0.05f);
+				galaxyGlow = true;
 
 				galaxyPortalCloneLight.intensity += 0.017f;
 			}
@@ -67,6 +69,10 @@ public class FinalLevelController : MonoBehaviour {
 				StartCoroutine (InfinityEnemies ());
 				StartCoroutine (FadeOutGalaxyRising ());
 			}
+		}
+
+		if (galaxyGlow && galaxyPortalClone.transform.localScale.x < 8.0f) {
+			galaxyPortalClone.transform.localScale += new Vector3 (0.05f, 0f, 0.05f);
 		}
 
 		if (galaxyTwist) {
@@ -107,9 +113,8 @@ public class FinalLevelController : MonoBehaviour {
 			}
 		}
 
-//		GameObject obj = GameObject.FindGameObjectWithTag ("Enemy");
 		if ((GameObject.FindGameObjectWithTag ("Enemy") == null) && doneWithEnemies) {
-			levelBeaten =true;
+			levelBeaten = true;
 		}
 	}
 
@@ -136,7 +141,7 @@ public class FinalLevelController : MonoBehaviour {
 	}
 
 	public void startFinalLevel () {
-		audioSource.enabled = true;
+		audioSource [0].enabled = true;
 		lockPlayerMovement (true);
 		shakeCam ();
 		startGalaxyPortal ();
@@ -144,9 +149,12 @@ public class FinalLevelController : MonoBehaviour {
 
 	IEnumerator FadeOutGalaxyRising () {
 		for (int i = 0; i < 10; i++) {
-			audioSource.volume -= 0.1f;
+			audioSource [0].volume -= 0.1f;
 			yield return new WaitForSeconds (0.02f);
 		}
+		audioSource [1].enabled = false;
+		audioSource [0].enabled = false;
+		audioSource [2].enabled = true;
 	}
 
 	IEnumerator InfinityEnemies () {
@@ -181,7 +189,7 @@ public class FinalLevelController : MonoBehaviour {
 		enemy1counter++;
 		yield return new WaitForSeconds (10f);
 
-		Instantiate (enemy2, origin, Quaternion.identity);
+		enemy2Clone = Instantiate (enemy2, origin, Quaternion.identity) as GameObject;
 		yield return new WaitForSeconds (3f);
 
 		enemy1Clone = Instantiate (enemy1, origin, Quaternion.identity) as GameObject;
@@ -193,11 +201,11 @@ public class FinalLevelController : MonoBehaviour {
 		enemy1Clone = Instantiate (enemy1, origin, Quaternion.identity) as GameObject;
 		enemy1counter++;
 
-		Instantiate (enemy2, origin, Quaternion.identity);
+		enemy2Clone = Instantiate (enemy2, origin, Quaternion.identity) as GameObject;
 		yield return new WaitForSeconds (7f);
-		Instantiate (enemy2, origin, Quaternion.identity);
+		enemy2Clone = Instantiate (enemy2, origin, Quaternion.identity) as GameObject;
 		yield return new WaitForSeconds (2f);
-		Instantiate (enemy2, origin, Quaternion.identity);
+		enemy2Clone = Instantiate (enemy2, origin, Quaternion.identity) as GameObject;
 		yield return new WaitForSeconds (30f);
 
 		doneWithEnemies = true;
