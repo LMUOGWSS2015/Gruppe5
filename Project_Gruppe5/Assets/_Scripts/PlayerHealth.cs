@@ -26,12 +26,14 @@ public class PlayerHealth : MonoBehaviour {
 	public float explDuration = 1f;
 	public float hitDuration = 2f;
 
+	private ScreenShake screenShake;
 	static int deadState = Animator.StringToHash("Base.Dead");  
 
 	
 	ShowDeathScreen sds;
 	
 	void Awake (){
+		screenShake = GameObject.FindGameObjectWithTag ("MainCamera").gameObject.GetComponent<ScreenShake> ();
 		anim = GetComponentInChildren <Animator> ();
 		//playerAudio = GetComponent <AudioSource> ();
 		playerMovement = GetComponent <PlayerMovement> ();
@@ -73,6 +75,8 @@ public class PlayerHealth : MonoBehaviour {
 	
 	
 	public void TakeDamage (int amount) {
+
+		screenShake.shake++;
 		damaged = true;
 
 		if (!isDead) {
