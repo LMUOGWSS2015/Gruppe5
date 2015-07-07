@@ -17,7 +17,6 @@ public class ScreenShake : MonoBehaviour {
 	void Update () {
 		if (shake > 0) {
 			this.transform.position = new Vector3(basePosition.x+Random.Range(-shakeAmount, shakeAmount), basePosition.y+Random.Range(-shakeAmount, shakeAmount), basePosition.z+Random.Range(-shakeAmount,shakeAmount));
-			Debug.Log (shake+","+(float)Time.deltaTime +","+decreaseFactor);
 			shake -= ((float)Time.deltaTime) * (float)decreaseFactor;
 			
 		} else {
