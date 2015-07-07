@@ -42,7 +42,7 @@ public class EnemyHealth : MonoBehaviour {
 
 		Destroy (Instantiate (enemyExplosion, this.gameObject.transform.position, Quaternion.identity), explDuration);
 	
-		if (transform.parent.gameObject.tag == "Enemy") {
+		if (this.transform.parent != null && transform.parent.gameObject.tag == "Enemy") {
 			Destroy (this.transform.parent.gameObject);
 		} else {
 			Destroy (this.gameObject);

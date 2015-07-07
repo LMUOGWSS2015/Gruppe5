@@ -74,7 +74,7 @@ public class MainMenu : MonoBehaviour {
 			bool abutton = false;
 			if (controllerMac) {
 				updown = Input.GetAxis ("XboxMacLeftY");
-				abutton = Input.GetButton("Fire1");
+				abutton = Input.GetButtonDown("Fire1");
 			} else if (controllerWin) {
 				updown = Input.GetAxis ("XboxWinLeftY");
 				abutton = Input.GetButtonDown("Fire1");

@@ -1230,6 +1230,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 11489658, guid: cc80cc8be25268e45a9898720798c0ae, type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: cc80cc8be25268e45a9898720798c0ae, type: 2}
   m_IsPrefabParent: 0
@@ -2558,6 +2562,10 @@ Prefab:
       propertyPath: stay
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 11432224, guid: 2c0904ad84456e348b672cda433b2e3e, type: 2}
+      propertyPath: playerActivated
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2c0904ad84456e348b672cda433b2e3e, type: 2}
   m_IsPrefabParent: 0
@@ -2867,6 +2875,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5dbbf96599e95ea4c91b9c06fc03eec8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pickupHealthSound: {fileID: 0}
 --- !u!65 &1160467913
 BoxCollider:
   m_ObjectHideFlags: 0
