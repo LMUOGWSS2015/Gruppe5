@@ -94,7 +94,6 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 466346}
-  - 114: {fileID: 11471994}
   - 136: {fileID: 13686712}
   - 114: {fileID: 11438500}
   - 54: {fileID: 5420998}
@@ -413,18 +412,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pickupHealthSound: {fileID: 8300000, guid: 5571857531c0c96428566d3fc633be24, type: 3}
---- !u!114 &11471994
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 181320}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4c11cee01df621848a0bd8dfd04f7239, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  brokenCrate: {fileID: 417220, guid: 7b7a9989d1a3a5545bd8ff0b5c2303c0, type: 2}
 --- !u!122 &12269136
 Halo:
   m_ObjectHideFlags: 1
