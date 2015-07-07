@@ -7,15 +7,21 @@ public class IntroButtonPress : MonoBehaviour {
 	public bool pressed = false;
 	public bool isactive = false;
 	public bool playerActivated = false;
+
+	private PlayerMovement player;
 	
 	ArrayList gOsPressingButton = new ArrayList ();
 	ArrayList ignore = new ArrayList();
-	
 	private Renderer ringMaterialRenderer;
-	
 	private bool changed = false;
 	
+	AudioSource audio1;
+	AudioSource audio2;
+	
 	void Start(){
+
+		audio1 = this.GetComponentsInChildren<AudioSource> () [0];
+		audio2 = this.GetComponentsInChildren<AudioSource> () [1];
 		ignore.Add ("Light");
 		ignore.Add ("Floor");
 		ignore.Add ("Bullet");
@@ -25,6 +31,8 @@ public class IntroButtonPress : MonoBehaviour {
 		ignore.Add ("enemyExplosion");
 		
 		ringMaterialRenderer = GetComponentsInChildren <Renderer> ()[1];
+
+		player = GameObject.Find ("Player").GetComponent<PlayerMovement> ();
 		
 		if (pressed) {
 			
@@ -47,6 +55,14 @@ public class IntroButtonPress : MonoBehaviour {
 			   && !gOsPressingButton.Contains(other.gameObject)){
 
 				isactive = true;
+
+				if(player.female){
+					audio2.Play();	
+				}
+				if(player.male){
+					audio1.Play();
+				}
+
 				ringMaterialRenderer.material.SetColor ("_Color", Color.green);
 				gOsPressingButton.Add(other.gameObject);
 				if(stay == Stay.UntilNextPress && changed) {
