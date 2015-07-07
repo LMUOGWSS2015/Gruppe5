@@ -2,6 +2,8 @@
 using System.Collections;
 
 public class ButtonPress : MonoBehaviour {
+	
+	public AudioClip activateSound;
 	public DoorOpen door;
 	public enum Stay{Never, UntilNextPress, Forever};
 	public Stay stay = Stay.Never;
@@ -57,6 +59,8 @@ public class ButtonPress : MonoBehaviour {
 			    || (playerActivated && other.gameObject.tag == "Player"))
 			    && !gOsPressingButton.Contains(other.gameObject)){
 
+
+				this.GetComponent<AudioSource>().PlayOneShot(activateSound);
 				ringMaterialRenderer.material.SetColor ("_Color", Color.green);
 				activated=true;
 				gOsPressingButton.Add(other.gameObject);
@@ -86,6 +90,8 @@ public class ButtonPress : MonoBehaviour {
 
 
 				if (gOsPressingButton.Count == 0 && stay != Stay.UntilNextPress) {
+					
+					this.GetComponent<AudioSource>().PlayOneShot(activateSound);
 					ringMaterialRenderer.material.SetColor ("_Color", Color.red);
 					activated=false;
 					door.Open (!opensDoor);
@@ -97,6 +103,8 @@ public class ButtonPress : MonoBehaviour {
 	public void Deactivate(){
 		if (!activated)
 			return;
+		
+		this.GetComponent<AudioSource>().PlayOneShot(activateSound);
 		ringMaterialRenderer.material.SetColor ("_Color", Color.red);
 		activated = false;
 

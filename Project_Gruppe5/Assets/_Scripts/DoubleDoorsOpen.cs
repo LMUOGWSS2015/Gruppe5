@@ -4,8 +4,11 @@ using System.Collections;
 public class DoubleDoorsOpen : Activatable {
 	public float doorSpeed = 7f;
 	public bool roomHasEnemies = true;
+	public AudioClip doorOpenSound;
 	
 	private bool enemiesDead;
+
+	private bool opened = false;
 	
 	private Transform leftDoor;
 	private Transform rightDoor;
@@ -27,6 +30,10 @@ public class DoubleDoorsOpen : Activatable {
 	
 	void Update () {
 		if (!roomHasEnemies || enemiesDead) {
+			if(!opened) {
+				this.GetComponent<AudioSource>().PlayOneShot(doorOpenSound);
+				opened=true;
+			}
 			leftDoor.rotation = Quaternion.Slerp (leftDoor.rotation, leftRotation, .05f); 
 			rightDoor.rotation = Quaternion.Slerp (rightDoor.rotation, rightRotation, .05f);
 		}
