@@ -17,11 +17,16 @@ public class DoubleDoorsOpen : Activatable {
 	
 	private Quaternion leftRotation;
 	private Quaternion rightRotation; 
+
+	public Light leftLight;
+	public Light rightLight;
 	
 	
 	void Awake (){
 		leftDoor = GameObject.Find ("DoorLeft").transform;
 		rightDoor = GameObject.Find ("DoorRight").transform;
+
+
 
 		leftRotation = Quaternion.AngleAxis(-70, Vector3.up);
 		rightRotation = Quaternion.AngleAxis(70, Vector3.up);
@@ -34,6 +39,10 @@ public class DoubleDoorsOpen : Activatable {
 				this.GetComponent<AudioSource>().PlayOneShot(doorOpenSound);
 				opened=true;
 			}
+
+			leftLight.color = Color.green;
+			rightLight.color = Color.green;
+
 			leftDoor.rotation = Quaternion.Slerp (leftDoor.rotation, leftRotation, .05f); 
 			rightDoor.rotation = Quaternion.Slerp (rightDoor.rotation, rightRotation, .05f);
 		}
