@@ -178,7 +178,7 @@ GameObject:
   - 4: {fileID: 409442}
   - 114: {fileID: 11489658}
   - 82: {fileID: 8201204}
-  - 114: {fileID: 11483404}
+  - 114: {fileID: 11497042}
   m_Layer: 8
   m_Name: DDoors
   m_TagString: DDoors
@@ -683,17 +683,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletExplosion: {fileID: 192264, guid: 579562710378d4fdab9e9b804dea0672, type: 2}
   explDuration: 2
---- !u!114 &11483404
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 197094}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c6b9543ba23526b4487c86f17a400fd5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &11489658
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -708,6 +697,36 @@ MonoBehaviour:
   doorSpeed: 7
   roomHasEnemies: 1
   doorOpenSound: {fileID: 8300000, guid: 75cde2ae4d481f54fbbe3921c4fe9a99, type: 3}
+  leftLight: {fileID: 10818342}
+  rightLight: {fileID: 10877582}
+--- !u!114 &11497042
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 197094}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d998497e84362f24eb2159b846d4a01a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemiesLeft:
+  - enemiesLeftForOpen: 0
+    doors:
+    - {fileID: 0}
+    enemiesToActivate: []
+  - enemiesLeftForOpen: 1
+    doors:
+    - {fileID: 0}
+    enemiesToActivate:
+    - {fileID: 0}
+  - enemiesLeftForOpen: 3
+    doors:
+    - {fileID: 0}
+    - {fileID: 0}
+    enemiesToActivate:
+    - {fileID: 0}
+    - {fileID: 0}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
