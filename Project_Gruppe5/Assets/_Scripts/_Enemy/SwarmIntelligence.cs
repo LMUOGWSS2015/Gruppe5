@@ -26,7 +26,7 @@ public class SwarmIntelligence : MonoBehaviour {
 			spheres.Add(s);
 			s.transform.parent = transform;
 		}
-		transform.GetComponentInParent<Enemies> ().More(amntOfSpheres);
+		GameObject.FindGameObjectWithTag ("DDoors").GetComponent<Enemies> ().More(amntOfSpheres);
 	}
 
 	void OnDrawGizmosSelected(){

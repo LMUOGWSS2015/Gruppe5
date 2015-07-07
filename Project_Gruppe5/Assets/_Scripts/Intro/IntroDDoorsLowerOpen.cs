@@ -23,6 +23,7 @@ public class IntroDDoorsLowerOpen : MonoBehaviour {
 	
 	//	private bool isLowerDoors = false;
 	private bool closing = false;
+	private bool firsttime = true;
 
 	public GameObject manTV;
 	public GameObject womanTV;
@@ -33,9 +34,14 @@ public class IntroDDoorsLowerOpen : MonoBehaviour {
 	public Texture womanTexture;
 	public Texture blankTexture;
 
+	public Light leftLight;
+	public Light rightLight;
+
 	private PlayerMovement player;
 
-	AudioSource audio;
+	AudioSource audioWelcome;
+	AudioSource audioTVOn;
+	AudioSource audioTVOff;
 
 	private Vector3 buttonTargetPosition = new Vector3(0f, 0.57f, 6.52f);
 	private Vector3 crateLeftTargetPosition = new Vector3(-13.27f, 0f, 0f);
@@ -43,8 +49,14 @@ public class IntroDDoorsLowerOpen : MonoBehaviour {
 	
 	
 	void Awake (){
+
+		leftLight.enabled = false;
+		rightLight.enabled = false;
 		
-		audio = GetComponent<AudioSource>();
+
+		audioWelcome = this.GetComponents<AudioSource> () [1];
+		audioTVOn = this.GetComponents<AudioSource> () [0];
+
 		rendererMan = manTV.GetComponent<Renderer> ();
 		rendererWoman = womanTV.GetComponent<Renderer> ();
 		player = GameObject.Find ("Player").GetComponent<PlayerMovement> ();
@@ -70,12 +82,24 @@ public class IntroDDoorsLowerOpen : MonoBehaviour {
 	}
 	
 	public void closeDoors () {
-		audio.Play();
+		audioWelcome.Play();
 		closing = true;
 		leftRotationClose = Quaternion.AngleAxis(-0, Vector3.down);
 		rightRotationClose = Quaternion.AngleAxis(0, Vector3.down);
 
 		GameObject.Find ("Spotlight").GetComponent<CapsuleCollider> ().enabled = true;
+	}
+
+	public void playTVOn(){
+
+		if (!audioWelcome.isPlaying && firsttime) {
+			leftLight.enabled = true;
+			rightLight.enabled = true;
+			audioTVOn.Play ();
+		}
+
+		firsttime = false;
+
 	}
 	
 	
@@ -92,28 +116,27 @@ public class IntroDDoorsLowerOpen : MonoBehaviour {
 
 		}
 			
-			if(Quaternion.Angle(leftDoor.rotation, leftRotationClose) < Mathf.Epsilon && !audio.isPlaying){
+			if(Quaternion.Angle(leftDoor.rotation, leftRotationClose) < Mathf.Epsilon && !audioWelcome.isPlaying){
 
 			rendererMan.material.SetTexture(0,manTexture);
 			rendererWoman.material.SetTexture(0,womanTexture);
-
+			playTVOn();
 
 			}
 
 		if (player.male) {
 
 			rendererWoman.material.SetTexture(0,blankTexture);
+			rightLight.enabled = false;
 			GameObject.Find("IntroController").GetComponent<IntroLevel>().StartLevel(true);
 			button.transform.position = Vector3.MoveTowards(button.transform.position, buttonTargetPosition, Time.deltaTime * 0.1f);
-
-
-			
+	
 		}
 		if (player.female) {
 			rendererMan.material.SetTexture (0, blankTexture);
+			leftLight.enabled = false;
 			GameObject.Find ("IntroController").GetComponent<IntroLevel> ().StartLevel (true);
 			button.transform.position = Vector3.MoveTowards(button.transform.position, buttonTargetPosition, Time.deltaTime * 0.1f);
-
 		}
 
 		if (button.GetComponent<IntroButtonPress> ().isactive) {
