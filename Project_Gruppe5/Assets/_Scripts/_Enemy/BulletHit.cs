@@ -12,14 +12,15 @@ public class BulletHit : MonoBehaviour {
 		if (other.gameObject.tag == "Bullet") {
 			Destroy(Instantiate (bulletExplosion, other.gameObject.transform.position, Quaternion.identity),explDuration);
 			Destroy(other.gameObject);
-			if (this.transform.parent.gameObject.tag == "Enemy")
-				this.transform.parent.GetComponent<FlashRed>().Flash();
-			else
-				this.GetComponent<FlashRed>().Flash();
-			enemyHealth = this.GetComponent <EnemyHealth> ();
-			if(enemyHealth != null){
-				enemyHealth.TakeDamage (damagePerShot);
-			}
+				if (this.transform.parent != null && this.transform.parent.gameObject.tag == "Enemy")
+					this.transform.parent.GetComponent<FlashRed>().Flash();
+				else
+					this.GetComponent<FlashRed>().Flash();
+				enemyHealth = this.GetComponent <EnemyHealth> ();
+				if(enemyHealth != null){
+					enemyHealth.TakeDamage (damagePerShot);
+				}
+
 		}
 	}
 
