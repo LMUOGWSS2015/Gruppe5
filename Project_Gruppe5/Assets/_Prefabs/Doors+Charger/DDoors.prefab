@@ -177,6 +177,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 409442}
   - 114: {fileID: 11489658}
+  - 114: {fileID: 11432014}
   m_Layer: 8
   m_Name: DDoors
   m_TagString: DDoors
@@ -612,18 +613,30 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletExplosion: {fileID: 192264, guid: 579562710378d4fdab9e9b804dea0672, type: 2}
   explDuration: 2
+--- !u!114 &11432014
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 197094}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6b9543ba23526b4487c86f17a400fd5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &11489658
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 197094}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4bf00b0a0bbee6446bf08e0c244c03b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   doorSpeed: 7
+  roomHasEnemies: 1
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

@@ -26,7 +26,7 @@ public class EnemyMovementRotOnly : EnemyMovement {
 		eaf.enabled = false;
 		animator = GetComponentInChildren<Animator>();
 		
-		transform.GetComponentInParent<Enemies> ().More(1);
+		GameObject.FindGameObjectWithTag ("DDoors").GetComponent<Enemies> ().More(1);
 	}
 	
 	

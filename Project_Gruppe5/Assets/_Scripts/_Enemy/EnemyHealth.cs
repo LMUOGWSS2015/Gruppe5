@@ -48,6 +48,6 @@ public class EnemyHealth : MonoBehaviour {
 			Destroy (this.gameObject);
 		}
 
-		transform.GetComponentInParent<Enemies> ().Less(1);
+		GameObject.FindGameObjectWithTag ("DDoors").GetComponent<Enemies> ().Less(1);
 	}
 }
