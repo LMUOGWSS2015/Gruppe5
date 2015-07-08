@@ -91,7 +91,12 @@ public class FinalLevelController : MonoBehaviour {
 
 		if (levelBeaten) {
 			StopCoroutine (co);
-			finalWinMenu.SetActive(true);
+			if (PlayerPrefs.GetString("gender") == "male") {
+				audioSource [5].enabled = true;
+			}
+			else {
+				audioSource [6].enabled = true;
+			}
 		}
 
 		if (enemy1CloneFirst != null) {
