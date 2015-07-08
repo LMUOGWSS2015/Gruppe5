@@ -20,6 +20,8 @@ public class IntroDDoorsOpen : Activatable {
 	public Light leftlight;
 
 	public AudioClip doorOpenSound;
+	public AudioClip nextLevelSoundMale;
+	public AudioClip nextLevelSoundFemale;
 	
 	
 	void Awake (){
@@ -33,8 +35,19 @@ public class IntroDDoorsOpen : Activatable {
 	
 	void Update () {
 		if (rightlight.color == Color.green && leftlight.color == Color.green) {
+
 			if(!opened){
+
+				if(PlayerPrefs.GetString("gender").Equals("male")){
+					this.GetComponent<AudioSource>().PlayOneShot(nextLevelSoundMale);
+				}
+				else
+					this.GetComponent<AudioSource>().PlayOneShot(nextLevelSoundFemale);
+				
+
+
 			this.GetComponent<AudioSource>().PlayOneShot(doorOpenSound);
+
 				opened = true;
 			}
 			leftDoor.rotation = Quaternion.Slerp (leftDoor.rotation, leftRotation, .05f); 
