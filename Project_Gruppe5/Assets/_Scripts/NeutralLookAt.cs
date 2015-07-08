@@ -20,7 +20,8 @@ public class NeutralLookAt : MonoBehaviour {
 	
 	
 	protected void Update (){
-		if(playerHealth.currentHealth > 0)
+
+		if(!(playerHealth == null) && playerHealth.currentHealth > 0)
 			Rotate (player, true);
 
 	}

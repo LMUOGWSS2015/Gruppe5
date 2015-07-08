@@ -27,6 +27,7 @@ public class ManTV : MonoBehaviour {
 			if (!welcomeSource.isPlaying && !otherTVSound.isPlaying && !player.female && !player.male) {
 				
 				player.male = true;
+				PlayerPrefs.SetString("gender", "male");
 				tvOff.Play ();
 				audio.Play ();
 			}

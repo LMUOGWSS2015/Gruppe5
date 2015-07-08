@@ -50,6 +50,8 @@ public class IntroDDoorsLowerOpen : MonoBehaviour {
 	
 	void Awake (){
 
+		PlayerPrefs.SetString ("gender", null);
+
 		leftLight.enabled = false;
 		rightLight.enabled = false;
 		
