@@ -1,0 +1,363 @@
+fileFormatVersion: 2
+guid: c0a0627c5c3c34d4a9480bb13231490c
+timeCreated: 1436363720
+licenseType: Free
+ModelImporter:
+  serializedVersion: 18
+  fileIDToRecycleName:
+    100000: Arm
+    100002: Arm._right
+    100004: Armature_Body
+    100006: Band
+    100008: becken
+    100010: Blaster
+    100012: blaster
+    100014: blaster_end
+    100016: Body
+    100018: Bone
+    100020: Bone_end
+    100022: Eyes
+    100024: HardHat
+    100026: Head
+    100028: headR
+    100030: headR_end
+    100032: larm1
+    100034: larm2
+    100036: larm3
+    100038: larm4
+    100040: larm4_end
+    100042: leftshoulder
+    100044: leftshoulderC
+    100046: Light
+    100048: Light.001
+    100050: lowerspine
+    100052: rarm1
+    100054: rArm2
+    100056: rArm3
+    100058: rArm4
+    100060: rArm4_end
+    100062: rightshoulder
+    100064: rightshoulderC
+    100066: //RootNode
+    100068: upperspine
+    100070: HeadLIGHT
+    400000: Arm
+    400002: Arm._right
+    400004: Armature_Body
+    400006: Band
+    400008: becken
+    400010: Blaster
+    400012: blaster
+    400014: blaster_end
+    400016: Body
+    400018: Bone
+    400020: Bone_end
+    400022: Eyes
+    400024: HardHat
+    400026: Head
+    400028: headR
+    400030: headR_end
+    400032: larm1
+    400034: larm2
+    400036: larm3
+    400038: larm4
+    400040: larm4_end
+    400042: leftshoulder
+    400044: leftshoulderC
+    400046: Light
+    400048: Light.001
+    400050: lowerspine
+    400052: rarm1
+    400054: rArm2
+    400056: rArm3
+    400058: rArm4
+    400060: rArm4_end
+    400062: rightshoulder
+    400064: rightshoulderC
+    400066: //RootNode
+    400068: upperspine
+    400070: HeadLIGHT
+    2300000: Band
+    2300002: Blaster
+    2300004: Eyes
+    2300006: HardHat
+    2300008: Head
+    2300010: Light
+    2300012: Light.001
+    2300014: HeadLIGHT
+    3300000: Band
+    3300002: Blaster
+    3300004: Eyes
+    3300006: HardHat
+    3300008: Head
+    3300010: Light
+    3300012: Light.001
+    3300014: HeadLIGHT
+    4300000: Eyes
+    4300002: Head
+    4300004: Blaster
+    4300006: Arm._right
+    4300008: Arm
+    4300010: Body
+    4300012: Band
+    4300014: HardHat
+    4300016: Light.001
+    4300018: Light
+    4300020: HeadLIGHT
+    7400000: Armature_Body|dying
+    7400002: Armature_Body|findHelm
+    7400004: Armature_Body|idle
+    7400006: Armature_Body|preShoot
+    7400008: Armature_Body|selfdestruct
+    7400010: Armature_Body|shoot
+    7400012: Armature_Body|walk
+    7400014: HeadLIGHT|helmetThrow
+    9500000: //RootNode
+    13700000: Arm
+    13700002: Arm._right
+    13700004: Body
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 1
+    motionNodeName: 
+    animationCompression: 3
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths:
+    - Armature_Body/Bone/Bone_end
+    clipAnimations:
+    - serializedVersion: 16
+      name: Armature_Body|findHelm
+      takeName: Armature_Body|findHelm
+      firstFrame: 0
+      lastFrame: 550
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Arm
+        weight: 1
+      - path: Arm._right
+        weight: 1
+      - path: Armature_Body
+        weight: 1
+      - path: Armature_Body/becken
+        weight: 1
+      - path: Armature_Body/becken/blaster
+        weight: 1
+      - path: Armature_Body/becken/blaster/Blaster
+        weight: 1
+      - path: Armature_Body/becken/blaster/blaster_end
+        weight: 1
+      - path: Armature_Body/becken/lowerspine
+        weight: 1
+      - path: Armature_Body/becken/lowerspine/leftshoulder
+        weight: 1
+      - path: Armature_Body/becken/lowerspine/leftshoulder/leftshoulderC
+        weight: 1
+      - path: Armature_Body/becken/lowerspine/leftshoulder/leftshoulderC/larm1
+        weight: 1
+      - path: Armature_Body/becken/lowerspine/leftshoulder/leftshoulderC/larm1/larm2
+        weight: 1
+      - path: Armature_Body/becken/lowerspine/leftshoulder/leftshoulderC/larm1/larm2/larm3
+        weight: 1
+      - path: Armature_Body/becken/lowerspine/leftshoulder/leftshoulderC/larm1/larm2/larm3/larm4
+        weight: 1
+      - path: Armature_Body/becken/lowerspine/leftshoulder/leftshoulderC/larm1/larm2/larm3/larm4/larm4_end
+        weight: 1
+      - path: Armature_Body/becken/lowerspine/rightshoulder
+        weight: 1
+      - path: Armature_Body/becken/lowerspine/rightshoulder/rightshoulderC
+        weight: 1
+      - path: Armature_Body/becken/lowerspine/rightshoulder/rightshoulderC/rarm1
+        weight: 1
+      - path: Armature_Body/becken/lowerspine/rightshoulder/rightshoulderC/rarm1/rArm2
+        weight: 1
+      - path: Armature_Body/becken/lowerspine/rightshoulder/rightshoulderC/rarm1/rArm2/rArm3
+        weight: 1
+      - path: Armature_Body/becken/lowerspine/rightshoulder/rightshoulderC/rarm1/rArm2/rArm3/rArm4
+        weight: 1
+      - path: Armature_Body/becken/lowerspine/rightshoulder/rightshoulderC/rarm1/rArm2/rArm3/rArm4/rArm4_end
+        weight: 1
+      - path: Armature_Body/becken/lowerspine/upperspine
+        weight: 1
+      - path: Armature_Body/becken/lowerspine/upperspine/headR
+        weight: 1
+      - path: Armature_Body/becken/lowerspine/upperspine/headR/Eyes
+        weight: 1
+      - path: Armature_Body/becken/lowerspine/upperspine/headR/Head
+        weight: 1
+      - path: Armature_Body/becken/lowerspine/upperspine/headR/headR_end
+        weight: 1
+      - path: Armature_Body/Bone
+        weight: 1
+      - path: Armature_Body/Bone/Bone_end
+        weight: 1
+      - path: Band
+        weight: 1
+      - path: Body
+        weight: 1
+      - path: HardHat
+        weight: 1
+      - path: Light
+        weight: 1
+      - path: Light.001
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: HeadLIGHT|helmetThrow
+      takeName: HeadLIGHT|helmetThrow
+      firstFrame: 0
+      lastFrame: 550
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature_Body
+        weight: 1
+      - path: Armature_Body/becken
+        weight: 1
+      - path: Armature_Body/becken/lowerspine
+        weight: 1
+      - path: Armature_Body/becken/lowerspine/upperspine
+        weight: 1
+      - path: Armature_Body/becken/lowerspine/upperspine/headR
+        weight: 1
+      - path: Armature_Body/becken/lowerspine/upperspine/headR/Eyes
+        weight: 1
+      - path: Armature_Body/becken/lowerspine/upperspine/headR/Head
+        weight: 1
+      - path: Armature_Body/becken/lowerspine/upperspine/headR/headR_end
+        weight: 1
+      - path: Armature_Body/becken/lowerspine/leftshoulder
+        weight: 1
+      - path: Armature_Body/becken/lowerspine/leftshoulder/leftshoulderC
+        weight: 1
+      - path: Armature_Body/becken/lowerspine/leftshoulder/leftshoulderC/larm1
+        weight: 1
+      - path: Armature_Body/becken/lowerspine/leftshoulder/leftshoulderC/larm1/larm2
+        weight: 1
+      - path: Armature_Body/becken/lowerspine/leftshoulder/leftshoulderC/larm1/larm2/larm3
+        weight: 1
+      - path: Armature_Body/becken/lowerspine/leftshoulder/leftshoulderC/larm1/larm2/larm3/larm4
+        weight: 1
+      - path: Armature_Body/becken/lowerspine/leftshoulder/leftshoulderC/larm1/larm2/larm3/larm4/larm4_end
+        weight: 1
+      - path: Armature_Body/becken/lowerspine/rightshoulder
+        weight: 1
+      - path: Armature_Body/becken/lowerspine/rightshoulder/rightshoulderC
+        weight: 1
+      - path: Armature_Body/becken/lowerspine/rightshoulder/rightshoulderC/rarm1
+        weight: 1
+      - path: Armature_Body/becken/lowerspine/rightshoulder/rightshoulderC/rarm1/rArm2
+        weight: 1
+      - path: Armature_Body/becken/lowerspine/rightshoulder/rightshoulderC/rarm1/rArm2/rArm3
+        weight: 1
+      - path: Armature_Body/becken/lowerspine/rightshoulder/rightshoulderC/rarm1/rArm2/rArm3/rArm4
+        weight: 1
+      - path: Armature_Body/becken/lowerspine/rightshoulder/rightshoulderC/rarm1/rArm2/rArm3/rArm4/rArm4_end
+        weight: 1
+      - path: Armature_Body/becken/blaster
+        weight: 1
+      - path: Armature_Body/becken/blaster/Blaster
+        weight: 1
+      - path: Armature_Body/becken/blaster/blaster_end
+        weight: 1
+      - path: Armature_Body/Bone
+        weight: 1
+      - path: Armature_Body/Bone/Bone_end
+        weight: 1
+      - path: Arm._right
+        weight: 1
+      - path: Arm
+        weight: 1
+      - path: Body
+        weight: 1
+      - path: HeadLIGHT
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
