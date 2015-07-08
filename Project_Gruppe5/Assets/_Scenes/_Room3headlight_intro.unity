@@ -1538,6 +1538,10 @@ Prefab:
       propertyPath: freezeInLight
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2318658, guid: 81c2d88863ec2164fa1ce0fa3711c41d, type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: a6e317e4ce866ae4b88a555782173d31, type: 2}
     m_RemovedComponents:
     - {fileID: 11441478, guid: 81c2d88863ec2164fa1ce0fa3711c41d, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 81c2d88863ec2164fa1ce0fa3711c41d, type: 2}
