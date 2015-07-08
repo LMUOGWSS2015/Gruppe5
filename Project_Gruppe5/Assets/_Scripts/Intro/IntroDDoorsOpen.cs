@@ -24,6 +24,9 @@ public class IntroDDoorsOpen : Activatable {
 
 	private AudioSource maleAudio;
 	private AudioSource femaleAudio;
+
+	private AudioSource otherAudio1;
+	private AudioSource otherAudio2;
 	
 	
 	void Awake (){
@@ -36,6 +39,11 @@ public class IntroDDoorsOpen : Activatable {
 		maleAudio = this.GetComponents<AudioSource>() [1];
 		femaleAudio = this.GetComponents<AudioSource>() [2];
 
+		otherAudio1 = GameObject.Find ("Button").GetComponents<AudioSource> () [0];
+		otherAudio2 = GameObject.Find ("Button").GetComponents<AudioSource> () [1];
+
+
+
 	}
 	
 	
@@ -44,6 +52,12 @@ public class IntroDDoorsOpen : Activatable {
 		if (rightlight.color == Color.green && leftlight.color == Color.green) {
 
 			if(!nextLevel){
+
+				if(otherAudio1.isPlaying || otherAudio2.isPlaying){
+
+					otherAudio1.Stop();
+					otherAudio2.Stop();
+				}
 
 				if(PlayerPrefs.GetString("gender").Equals("male")){
 					maleAudio.Play();
