@@ -15,7 +15,7 @@ public class ManTV : MonoBehaviour {
 		animator = this.GetComponent<Animator>();
 		audio = this.GetComponents<AudioSource> () [1];
 		tvOff = this.GetComponents<AudioSource> () [0];
-		welcomeSource = GameObject.Find("DDoorsLower").GetComponents<AudioSource>()  [0];
+		welcomeSource = GameObject.Find("DDoorsLower").GetComponents<AudioSource>()  [1];
 		otherTVSound = GameObject.Find ("TVset_woman").GetComponent<AudioSource> ();
 		player = GameObject.Find ("Player").GetComponent<PlayerMovement> ();
 	}
