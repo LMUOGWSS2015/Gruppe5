@@ -50,7 +50,6 @@ public class PlayerHealth : MonoBehaviour {
 	
 	
 	void Update () {
-
 		if(damaged) {
 			damageImage.color = flashColour;
 		} else {
@@ -84,14 +83,12 @@ public class PlayerHealth : MonoBehaviour {
 			currentHealth -= amount;
 			PlayerPrefs.SetInt("health", currentHealth);
 			healthSlider.value = currentHealth;
-
 		}
 
 		//playerAudio.Play ();
 
 		if(currentHealth <= 0 && !isDead) {
 			isDead = true;
-			PlayerPrefs.SetInt("health", 0);
 			Death ();
 		} else {
 			Destroy(Instantiate (playerHit, this.gameObject.transform.position, Quaternion.identity),hitDuration);
