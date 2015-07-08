@@ -15,13 +15,17 @@ public class IntroButtonPress : MonoBehaviour {
 	private Renderer ringMaterialRenderer;
 	private bool changed = false;
 	
-	AudioSource audio1;
-	AudioSource audio2;
+	AudioSource audioMale;
+	AudioSource audioFemale;
+	AudioSource tvWomanSound;
+	AudioSource tvManSound;
 	
 	void Start(){
 
-		audio1 = this.GetComponentsInChildren<AudioSource> () [0];
-		audio2 = this.GetComponentsInChildren<AudioSource> () [1];
+		audioMale = this.GetComponentsInChildren<AudioSource> () [0];
+		audioFemale = this.GetComponentsInChildren<AudioSource> () [1];
+		tvWomanSound = GameObject.Find ("TVset_woman").GetComponents<AudioSource> () [1];
+		tvManSound = GameObject.Find ("TVset_man").GetComponents<AudioSource> () [1];
 		ignore.Add ("Light");
 		ignore.Add ("Floor");
 		ignore.Add ("Bullet");
@@ -56,11 +60,11 @@ public class IntroButtonPress : MonoBehaviour {
 
 				isactive = true;
 
-				if(player.female){
-					audio2.Play();	
+				if(player.female && !tvWomanSound.isPlaying && !tvManSound.isPlaying){
+					audioFemale.Play();	
 				}
-				if(player.male){
-					audio1.Play();
+				if(player.male && !tvWomanSound.isPlaying && !tvManSound.isPlaying){
+					audioMale.Play();
 				}
 
 				ringMaterialRenderer.material.SetColor ("_Color", Color.green);

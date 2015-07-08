@@ -23,6 +23,8 @@ public class IntroController : MonoBehaviour {
 		
 		doors.enabled = true;
 		movePlayer = true;
+
+		PlayerPrefs.SetInt ("health", 10);
 	}
 	
 	void Update() {

@@ -6,6 +6,7 @@ public class IntroDDoorsOpen : Activatable {
 	public bool roomHasEnemies = true;
 	
 	private bool enemiesDead;
+	private bool opened = false;
 	
 	private Transform leftDoor;
 	private Transform rightDoor;
@@ -17,6 +18,8 @@ public class IntroDDoorsOpen : Activatable {
 
 	public Light rightlight;
 	public Light leftlight;
+
+	public AudioClip doorOpenSound;
 	
 	
 	void Awake (){
@@ -30,6 +33,10 @@ public class IntroDDoorsOpen : Activatable {
 	
 	void Update () {
 		if (rightlight.color == Color.green && leftlight.color == Color.green) {
+			if(!opened){
+			this.GetComponent<AudioSource>().PlayOneShot(doorOpenSound);
+				opened = true;
+			}
 			leftDoor.rotation = Quaternion.Slerp (leftDoor.rotation, leftRotation, .05f); 
 			rightDoor.rotation = Quaternion.Slerp (rightDoor.rotation, rightRotation, .05f);
 		}

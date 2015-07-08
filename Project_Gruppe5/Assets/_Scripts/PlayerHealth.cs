@@ -81,6 +81,7 @@ public class PlayerHealth : MonoBehaviour {
 
 		if (!isDead) {
 			currentHealth -= amount;
+			PlayerPrefs.SetInt("health", currentHealth);
 			healthSlider.value = currentHealth;
 		}
 
