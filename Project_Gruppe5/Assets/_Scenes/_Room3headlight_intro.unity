@@ -1067,6 +1067,10 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: .700000107
       objectReference: {fileID: 0}
+    - target: {fileID: 11414022, guid: 8e73b706f17ee00498433eff50c472e2, type: 2}
+      propertyPath: stepTime
+      value: .00100000005
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8e73b706f17ee00498433eff50c472e2, type: 2}
   m_IsPrefabParent: 0
@@ -1874,6 +1878,10 @@ Prefab:
       propertyPath: number
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 11414022, guid: 8e73b706f17ee00498433eff50c472e2, type: 2}
+      propertyPath: stepTime
+      value: .00100000005
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8e73b706f17ee00498433eff50c472e2, type: 2}
   m_IsPrefabParent: 0
@@ -2065,7 +2073,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 482386, guid: d1cf23df406d6324687b6a9c26795dae, type: 2}
       propertyPath: m_RootOrder
-      value: 17
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 11414094, guid: d1cf23df406d6324687b6a9c26795dae, type: 2}
       propertyPath: healthSlider
@@ -2075,6 +2083,10 @@ Prefab:
       propertyPath: damageImage
       value: 
       objectReference: {fileID: 1870246814}
+    - target: {fileID: 10842146, guid: d1cf23df406d6324687b6a9c26795dae, type: 2}
+      propertyPath: m_Intensity
+      value: 2.63000011
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d1cf23df406d6324687b6a9c26795dae, type: 2}
   m_IsPrefabParent: 0
