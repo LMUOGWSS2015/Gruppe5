@@ -927,6 +927,9 @@ MonoBehaviour:
   rightlight: {fileID: 1341121095}
   leftlight: {fileID: 1835588820}
   doorOpenSound: {fileID: 8300000, guid: 75cde2ae4d481f54fbbe3921c4fe9a99, type: 3}
+  nextLevelSoundMale: {fileID: 8300000, guid: 2c2dc4ff533804c66b0e88d2d4ec9f00, type: 3}
+  nextLevelSoundFemale: {fileID: 8300000, guid: 1eddea2337bfc402099f535a1d749390,
+    type: 3}
 --- !u!1 &662739624 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 198446, guid: d1cf23df406d6324687b6a9c26795dae, type: 2}
