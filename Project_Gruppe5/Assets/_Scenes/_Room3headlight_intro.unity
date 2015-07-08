@@ -23,7 +23,7 @@ RenderSettings:
   m_AmbientSkyColor: {r: .211999997, g: .226999998, b: .259000003, a: 1}
   m_AmbientEquatorColor: {r: .114, g: .125, b: .133000001, a: 1}
   m_AmbientGroundColor: {r: .0469999984, g: .0430000015, b: .0350000001, a: 1}
-  m_AmbientIntensity: 1
+  m_AmbientIntensity: .195999995
   m_AmbientMode: 0
   m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
   m_HaloStrength: .5
@@ -34,7 +34,7 @@ RenderSettings:
   m_DefaultReflectionMode: 0
   m_DefaultReflectionResolution: 128
   m_ReflectionBounces: 1
-  m_ReflectionIntensity: 1
+  m_ReflectionIntensity: 0
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
 --- !u!127 &3
@@ -1284,16 +1284,40 @@ Prefab:
       value: 13.1499996
       objectReference: {fileID: 0}
     - target: {fileID: 437072, guid: e86e84bc723d21844a1fe2676c197033, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: .5
+      objectReference: {fileID: 0}
+    - target: {fileID: 437072, guid: e86e84bc723d21844a1fe2676c197033, type: 2}
       propertyPath: m_LocalPosition.z
       value: 3.03999996
+      objectReference: {fileID: 0}
+    - target: {fileID: 437072, guid: e86e84bc723d21844a1fe2676c197033, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 437072, guid: e86e84bc723d21844a1fe2676c197033, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 437072, guid: e86e84bc723d21844a1fe2676c197033, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 437072, guid: e86e84bc723d21844a1fe2676c197033, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 437072, guid: e86e84bc723d21844a1fe2676c197033, type: 2}
+      propertyPath: m_RootOrder
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 128774, guid: e86e84bc723d21844a1fe2676c197033, type: 2}
       propertyPath: m_Name
       value: Turret right
       objectReference: {fileID: 0}
-    - target: {fileID: 437072, guid: e86e84bc723d21844a1fe2676c197033, type: 2}
-      propertyPath: m_RootOrder
-      value: 3
+    - target: {fileID: 10891724, guid: e86e84bc723d21844a1fe2676c197033, type: 2}
+      propertyPath: m_Intensity
+      value: 1.35000002
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e86e84bc723d21844a1fe2676c197033, type: 2}
