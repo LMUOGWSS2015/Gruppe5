@@ -16,7 +16,7 @@ public class PlayerHealth : MonoBehaviour {
 	//AudioSource playerAudio;                                    // Reference to the AudioSource component.
 	PlayerMovement playerMovement;                              // Reference to the player's movement.
 	//ShotsFired shotsFired;     			                         // Reference to the PlayerShooting script.
-	bool isDead;
+	public bool isDead;
 	bool deathTriggered;   // Whether the player is dead.
 	bool damaged;                                               // True when the player gets damaged.
 
@@ -90,6 +90,7 @@ public class PlayerHealth : MonoBehaviour {
 		if(currentHealth <= 0 && !isDead) {
 			isDead = true;
 			Death ();
+			PlayerPrefs.SetInt("health", 10);
 		} else {
 			Destroy(Instantiate (playerHit, this.gameObject.transform.position, Quaternion.identity),hitDuration);
 		}

@@ -129,10 +129,11 @@ public class FinalLevelController : MonoBehaviour {
 		}
 
 		health = PlayerPrefs.GetInt ("health");
-		Debug.Log (health);
 		if ((playerHealth.isDead)) {
+
 			audioSource [2].Stop ();
 			audioSource [2].enabled = false;
+
 			audioSource [3].Stop ();
 			audioSource [3].enabled = false;
 		}
