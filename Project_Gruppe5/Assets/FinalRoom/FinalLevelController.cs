@@ -37,10 +37,14 @@ public class FinalLevelController : MonoBehaviour {
 	private Vector3 lerpEnemy1 = new Vector3 (0f, 0f, 0f);
 	private float xValue = 17f;
 	private float zValue = 13f;
-
+	
 	private bool doneWithEnemies = false;
 
 	private AudioSource[] audioSource;
+
+	public GameObject player;
+	private PlayerHealth playerHealth;
+	private int health;
 	
 	void Start () {
 		cam = camObj.GetComponent<Camera> ();
@@ -49,6 +53,11 @@ public class FinalLevelController : MonoBehaviour {
 		playerMovement = playerObj.GetComponent<PlayerMovement> ();
 
 		audioSource = this.gameObject.GetComponents<AudioSource> ();
+
+		playerHealth = player.GetComponent <PlayerHealth> ();
+		Debug.Log (playerHealth.isDead);
+
+		health = PlayerPrefs.GetInt ("health");
 	}
 	
 	void Update () {
@@ -115,6 +124,17 @@ public class FinalLevelController : MonoBehaviour {
 
 		if ((GameObject.FindGameObjectWithTag ("Enemy") == null) && doneWithEnemies) {
 			levelBeaten = true;
+			audioSource [2].enabled = false;
+			audioSource [3].enabled = false;
+		}
+
+		health = PlayerPrefs.GetInt ("health");
+		Debug.Log (health);
+		if ((playerHealth.isDead)) {
+			audioSource [2].Stop ();
+			audioSource [2].enabled = false;
+			audioSource [3].Stop ();
+			audioSource [3].enabled = false;
 		}
 	}
 
@@ -155,6 +175,7 @@ public class FinalLevelController : MonoBehaviour {
 		audioSource [1].enabled = false;
 		audioSource [0].enabled = false;
 		audioSource [2].enabled = true;
+		audioSource [3].enabled = true;
 	}
 
 	IEnumerator InfinityEnemies () {

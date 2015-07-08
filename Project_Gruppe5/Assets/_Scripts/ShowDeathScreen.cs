@@ -13,24 +13,43 @@ public class ShowDeathScreen : MonoBehaviour {
 	public bool controllerWin = false;
 	private float updown;
 
+	private AudioSource gameOver;
+
+	private bool started = false;
+
 	// Use this for initialization
 	void Start(){
+		Debug.Log ("Start");
 		restart = restart.GetComponent<Button> ();
 		mainmenu = mainmenu.GetComponent<Button> ();
 		
 		buttons [0] = restart;
 		buttons [1] = mainmenu;
+
+		gameOver = this.gameObject.GetComponent<AudioSource> ();
+		Debug.Log (gameOver);
+
+		started = true;
+		Debug.Log (started);
 	}
 	public void Show (bool show) {
+		Debug.Log ("show");
 		current = 0;
 		this.gameObject.SetActive (show);
+		if (started) {
+			gameOver.enabled = true;
+		}
 	}
 
 	public void ToMainMenu(){
+		gameOver.Stop ();
+		gameOver.enabled = false;
 		Application.LoadLevel ("mainmenu");
 	}
 
 	public void RestartLevel(){
+		gameOver.Stop ();
+		gameOver.enabled = false;
 		PlayerPrefs.SetInt ("health", 10);
 		Application.LoadLevel (Application.loadedLevel);
 	}
