@@ -44,8 +44,10 @@ public class FinalLevelController : MonoBehaviour {
 
 	public GameObject player;
 	private PlayerHealth playerHealth;
-	private int health;
-	
+	private bool firstDeathOfScene = false;
+
+	private IEnumerator co;
+
 	void Start () {
 		cam = camObj.GetComponent<Camera> ();
 		camTrans = camObj.transform;
@@ -55,10 +57,9 @@ public class FinalLevelController : MonoBehaviour {
 		audioSource = this.gameObject.GetComponents<AudioSource> ();
 
 		playerHealth = player.GetComponent <PlayerHealth> ();
-		Debug.Log (playerHealth.isDead);
 
-		health = PlayerPrefs.GetInt ("health");
-	}
+		co = InfinityEnemies ();
+ 	}
 	
 	void Update () {
 		if (shaking) {
@@ -75,7 +76,7 @@ public class FinalLevelController : MonoBehaviour {
 				camTrans.localPosition = originalPos;
 				shaking = false;
 				lockPlayerMovement (false);
-				StartCoroutine (InfinityEnemies ());
+				StartCoroutine (co);
 				StartCoroutine (FadeOutGalaxyRising ());
 			}
 		}
@@ -89,7 +90,7 @@ public class FinalLevelController : MonoBehaviour {
 		}
 
 		if (levelBeaten) {
-			StopCoroutine (InfinityEnemies ());
+			StopCoroutine (co);
 			finalWinMenu.SetActive(true);
 		}
 
@@ -128,11 +129,22 @@ public class FinalLevelController : MonoBehaviour {
 			audioSource [3].enabled = false;
 		}
 
-		health = PlayerPrefs.GetInt ("health");
-		if ((playerHealth.isDead)) {
+		if (playerHealth.isDead) {
+			StopCoroutine (co);
 
-			audioSource [2].Stop ();
-			audioSource [2].enabled = false;
+			firstDeathOfScene = true;
+
+//			audioSource [2].Stop ();
+//			audioSource [2].enabled = false;
+
+			audioSource [4].Stop ();
+			audioSource [4].enabled = false;
+
+			audioSource [3].enabled = true;
+		}
+
+		if (!playerHealth.isDead && firstDeathOfScene) {
+			audioSource [4].enabled = true;
 
 			audioSource [3].Stop ();
 			audioSource [3].enabled = false;
@@ -175,8 +187,9 @@ public class FinalLevelController : MonoBehaviour {
 		}
 		audioSource [1].enabled = false;
 		audioSource [0].enabled = false;
+		audioSource [3].enabled = false;
 		audioSource [2].enabled = true;
-		audioSource [3].enabled = true;
+		audioSource [4].enabled = true;
 	}
 
 	IEnumerator InfinityEnemies () {
