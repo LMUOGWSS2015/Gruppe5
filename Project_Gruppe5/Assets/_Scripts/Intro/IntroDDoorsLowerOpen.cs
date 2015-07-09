@@ -143,8 +143,8 @@ public class IntroDDoorsLowerOpen : MonoBehaviour {
 
 		if (button.GetComponent<IntroButtonPress> ().isactive) {
 
-			crateRight.transform.position = Vector3.MoveTowards(crateRight.transform.position, crateRightTargetPosition, 0.05f);
-			crateLeft.transform.position = Vector3.MoveTowards(crateLeft.transform.position, crateLeftTargetPosition, 0.05f);
+			crateRight.transform.position = Vector3.MoveTowards(crateRight.transform.position, crateRightTargetPosition, 0.25f);
+			crateLeft.transform.position = Vector3.MoveTowards(crateLeft.transform.position, crateLeftTargetPosition, 0.25f);
 
 		}
 	}
