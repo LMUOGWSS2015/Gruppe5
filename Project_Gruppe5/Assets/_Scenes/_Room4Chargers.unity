@@ -851,7 +851,7 @@ Transform:
   - {fileID: 997241225}
   - {fileID: 1289218872}
   m_Father: {fileID: 0}
-  m_RootOrder: 24
+  m_RootOrder: 25
 --- !u!4 &325019492 stripped
 Transform:
   m_PrefabParentObject: {fileID: 409918, guid: 5d9d52ff815550a47862e91fe7a54b01, type: 2}
@@ -1355,26 +1355,6 @@ Prefab:
     - target: {fileID: 169964, guid: 582c5acac0c8f054e90140b0fb162dc5, type: 2}
       propertyPath: m_Name
       value: MiniTurret 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 461254, guid: 582c5acac0c8f054e90140b0fb162dc5, type: 2}
-      propertyPath: m_LocalScale.z
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 461254, guid: 582c5acac0c8f054e90140b0fb162dc5, type: 2}
-      propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 461254, guid: 582c5acac0c8f054e90140b0fb162dc5, type: 2}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 11444426, guid: 582c5acac0c8f054e90140b0fb162dc5, type: 2}
-      propertyPath: currentHealth
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 11444426, guid: 582c5acac0c8f054e90140b0fb162dc5, type: 2}
-      propertyPath: startingHealth
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 582c5acac0c8f054e90140b0fb162dc5, type: 2}

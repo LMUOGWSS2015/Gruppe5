@@ -110,6 +110,8 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 480840}
+  - 54: {fileID: 5472394}
+  - 65: {fileID: 6504046}
   m_Layer: 0
   m_Name: JunkRobo
   m_TagString: Untagged
@@ -241,7 +243,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 193350}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 18.2000008, y: -.00999999978, z: 3.02999997}
+  m_LocalPosition: {x: 18.1700001, y: 0, z: 5.65999985}
   m_LocalScale: {x: .693641067, y: .69364053, z: .69364053}
   m_Children:
   - {fileID: 439290}
@@ -452,6 +454,33 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 158202}
   m_Mesh: {fileID: 4300010, guid: 95d0e0e7305f26046ba2745ebc5439c9, type: 3}
+--- !u!54 &5472394
+Rigidbody:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 193350}
+  serializedVersion: 2
+  m_Mass: 1000
+  m_Drag: 0
+  m_AngularDrag: .0500000007
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!65 &6504046
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 193350}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.31999993, y: 2.48000002, z: 3.43000007}
+  m_Center: {x: 1.16999996, y: 1.27999997, z: -.280000001}
 --- !u!95 &9577034
 Animator:
   serializedVersion: 3

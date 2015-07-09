@@ -23,9 +23,9 @@ public class IntroButtonPress : MonoBehaviour {
 	
 	void Start(){
 
-		audioMale = this.GetComponentsInChildren<AudioSource> () [0];
-		audioFemale = this.GetComponentsInChildren<AudioSource> () [1];
-		crateSound = this.GetComponentsInChildren<AudioSource> () [2];
+		audioMale = this.GetComponentsInChildren<AudioSource> () [1];
+		audioFemale = this.GetComponentsInChildren<AudioSource> () [2];
+		crateSound = this.GetComponentsInChildren<AudioSource> () [0];
 		tvWomanSound = GameObject.Find ("TVset_woman").GetComponents<AudioSource> () [1];
 		tvManSound = GameObject.Find ("TVset_man").GetComponents<AudioSource> () [1];
 		ignore.Add ("Light");
