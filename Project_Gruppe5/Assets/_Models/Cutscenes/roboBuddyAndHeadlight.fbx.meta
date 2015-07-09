@@ -112,6 +112,7 @@ ModelImporter:
     7400010: Armature_Body|shoot
     7400012: Armature_Body|walk
     7400014: HeadLIGHT|helmetThrow
+    7400016: Armature_Body|Action
     9500000: //RootNode
     13700000: Arm
     13700002: Arm._right
@@ -134,104 +135,8 @@ ModelImporter:
     - Armature_Body/Bone/Bone_end
     clipAnimations:
     - serializedVersion: 16
-      name: Armature_Body|findHelm
-      takeName: Armature_Body|findHelm
-      firstFrame: 0
-      lastFrame: 550
-      wrapMode: 0
-      orientationOffsetY: 0
-      level: 0
-      cycleOffset: 0
-      loop: 0
-      loopTime: 0
-      loopBlend: 0
-      loopBlendOrientation: 0
-      loopBlendPositionY: 0
-      loopBlendPositionXZ: 0
-      keepOriginalOrientation: 0
-      keepOriginalPositionY: 1
-      keepOriginalPositionXZ: 0
-      heightFromFeet: 0
-      mirror: 0
-      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
-      curves: []
-      events: []
-      transformMask:
-      - path: 
-        weight: 1
-      - path: Arm
-        weight: 1
-      - path: Arm._right
-        weight: 1
-      - path: Armature_Body
-        weight: 1
-      - path: Armature_Body/becken
-        weight: 1
-      - path: Armature_Body/becken/blaster
-        weight: 1
-      - path: Armature_Body/becken/blaster/Blaster
-        weight: 1
-      - path: Armature_Body/becken/blaster/blaster_end
-        weight: 1
-      - path: Armature_Body/becken/lowerspine
-        weight: 1
-      - path: Armature_Body/becken/lowerspine/leftshoulder
-        weight: 1
-      - path: Armature_Body/becken/lowerspine/leftshoulder/leftshoulderC
-        weight: 1
-      - path: Armature_Body/becken/lowerspine/leftshoulder/leftshoulderC/larm1
-        weight: 1
-      - path: Armature_Body/becken/lowerspine/leftshoulder/leftshoulderC/larm1/larm2
-        weight: 1
-      - path: Armature_Body/becken/lowerspine/leftshoulder/leftshoulderC/larm1/larm2/larm3
-        weight: 1
-      - path: Armature_Body/becken/lowerspine/leftshoulder/leftshoulderC/larm1/larm2/larm3/larm4
-        weight: 1
-      - path: Armature_Body/becken/lowerspine/leftshoulder/leftshoulderC/larm1/larm2/larm3/larm4/larm4_end
-        weight: 1
-      - path: Armature_Body/becken/lowerspine/rightshoulder
-        weight: 1
-      - path: Armature_Body/becken/lowerspine/rightshoulder/rightshoulderC
-        weight: 1
-      - path: Armature_Body/becken/lowerspine/rightshoulder/rightshoulderC/rarm1
-        weight: 1
-      - path: Armature_Body/becken/lowerspine/rightshoulder/rightshoulderC/rarm1/rArm2
-        weight: 1
-      - path: Armature_Body/becken/lowerspine/rightshoulder/rightshoulderC/rarm1/rArm2/rArm3
-        weight: 1
-      - path: Armature_Body/becken/lowerspine/rightshoulder/rightshoulderC/rarm1/rArm2/rArm3/rArm4
-        weight: 1
-      - path: Armature_Body/becken/lowerspine/rightshoulder/rightshoulderC/rarm1/rArm2/rArm3/rArm4/rArm4_end
-        weight: 1
-      - path: Armature_Body/becken/lowerspine/upperspine
-        weight: 1
-      - path: Armature_Body/becken/lowerspine/upperspine/headR
-        weight: 1
-      - path: Armature_Body/becken/lowerspine/upperspine/headR/Eyes
-        weight: 1
-      - path: Armature_Body/becken/lowerspine/upperspine/headR/Head
-        weight: 1
-      - path: Armature_Body/becken/lowerspine/upperspine/headR/headR_end
-        weight: 1
-      - path: Armature_Body/Bone
-        weight: 1
-      - path: Armature_Body/Bone/Bone_end
-        weight: 1
-      - path: Band
-        weight: 1
-      - path: Body
-        weight: 1
-      - path: HardHat
-        weight: 1
-      - path: Light
-        weight: 1
-      - path: Light.001
-        weight: 1
-      maskType: 0
-      maskSource: {instanceID: 0}
-    - serializedVersion: 16
-      name: HeadLIGHT|helmetThrow
-      takeName: HeadLIGHT|helmetThrow
+      name: Armature_Body|Action
+      takeName: Armature_Body|Action
       firstFrame: 0
       lastFrame: 550
       wrapMode: 0
@@ -307,6 +212,16 @@ ModelImporter:
         weight: 1
       - path: Armature_Body/Bone
         weight: 1
+      - path: Armature_Body/Bone/HeadLight
+        weight: 1
+      - path: Armature_Body/Bone/HeadLight/Band
+        weight: 1
+      - path: Armature_Body/Bone/HeadLight/HardHat
+        weight: 1
+      - path: Armature_Body/Bone/HeadLight/Light.001
+        weight: 1
+      - path: Armature_Body/Bone/HeadLight/Light
+        weight: 1
       - path: Armature_Body/Bone/Bone_end
         weight: 1
       - path: Arm._right
@@ -314,8 +229,6 @@ ModelImporter:
       - path: Arm
         weight: 1
       - path: Body
-        weight: 1
-      - path: HeadLIGHT
         weight: 1
       maskType: 0
       maskSource: {instanceID: 0}
