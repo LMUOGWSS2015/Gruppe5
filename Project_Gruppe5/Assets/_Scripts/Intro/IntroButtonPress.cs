@@ -19,11 +19,13 @@ public class IntroButtonPress : MonoBehaviour {
 	AudioSource audioFemale;
 	AudioSource tvWomanSound;
 	AudioSource tvManSound;
+	AudioSource crateSound;
 	
 	void Start(){
 
 		audioMale = this.GetComponentsInChildren<AudioSource> () [0];
 		audioFemale = this.GetComponentsInChildren<AudioSource> () [1];
+		crateSound = this.GetComponentsInChildren<AudioSource> () [2];
 		tvWomanSound = GameObject.Find ("TVset_woman").GetComponents<AudioSource> () [1];
 		tvManSound = GameObject.Find ("TVset_man").GetComponents<AudioSource> () [1];
 		ignore.Add ("Light");
@@ -57,6 +59,8 @@ public class IntroButtonPress : MonoBehaviour {
 			if((!playerActivated
 			    || (playerActivated && other.gameObject.tag == "Player"))
 			   && !gOsPressingButton.Contains(other.gameObject)){
+
+				crateSound.Play();
 
 				isactive = true;
 
