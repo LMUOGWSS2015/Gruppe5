@@ -12,12 +12,7 @@ public class ShowDeathScreen : MonoBehaviour {
 	public bool controllerMac = false;
 	public bool controllerWin = false;
 	private float updown;
-
-//	private AudioSource gameOver;
-
-//	private bool started = false;
-
-	// Use this for initialization
+	
 	void Start(){
 		Debug.Log ("Start");
 		restart = restart.GetComponent<Button> ();
@@ -25,31 +20,17 @@ public class ShowDeathScreen : MonoBehaviour {
 		
 		buttons [0] = restart;
 		buttons [1] = mainmenu;
-
-//		gameOver = this.gameObject.GetComponent<AudioSource> ();
-//		Debug.Log (gameOver);
-
-//		started = true;
-//		Debug.Log (started);
 	}
 	public void Show (bool show) {
-		Debug.Log ("show");
 		current = 0;
 		this.gameObject.SetActive (show);
-//		if (started) {
-//			gameOver.enabled = true;
-//		}
 	}
 
 	public void ToMainMenu(){
-//		gameOver.Stop ();
-//		gameOver.enabled = false;
 		Application.LoadLevel ("mainmenu");
 	}
 
 	public void RestartLevel(){
-//		gameOver.Stop ();
-//		gameOver.enabled = false;
 		PlayerPrefs.SetInt ("health", 10);
 		Application.LoadLevel (Application.loadedLevel);
 	}
@@ -66,8 +47,6 @@ public class ShowDeathScreen : MonoBehaviour {
 			
 		} else {
 			updown = Input.GetAxis ("Vertical");
-			
-			//abutton = Input.GetButton("Space");
 		}
 		if(updown>0.2) {
 			current-=1;
