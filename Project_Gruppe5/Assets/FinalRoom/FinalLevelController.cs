@@ -143,17 +143,12 @@ public class FinalLevelController : MonoBehaviour {
 			audioSource [2].Stop ();
 			audioSource [2].enabled = false;
 			audioSource [5].volume = 0.1f;
-//			audioSource [5].Stop ();
-//			audioSource [5].enabled = false;
 		}
 
 		if (playerHealth.isDead) {
 			StopCoroutine (co);
 
 			firstDeathOfScene = true;
-
-//			audioSource [2].Stop ();
-//			audioSource [2].enabled = false;
 
 			audioSource [5].Stop ();
 			audioSource [5].enabled = false;
@@ -216,52 +211,51 @@ public class FinalLevelController : MonoBehaviour {
 		enemy1CloneFirst = Instantiate (enemy1, origin, Quaternion.identity) as GameObject;
 		yield return new WaitForSeconds (5f);
 
-//		enemy1Clone = Instantiate (enemy1, origin, Quaternion.identity) as GameObject;
-//		enemy1counter++;
-//		yield return new WaitForSeconds (3f);
-//		enemy1Clone = Instantiate (enemy1, origin, Quaternion.identity) as GameObject;
-//		enemy1counter++;
-//		yield return new WaitForSeconds (3f);
-//		enemy1Clone = Instantiate (enemy1, origin, Quaternion.identity) as GameObject;
-//		enemy1counter++;
-//		yield return new WaitForSeconds (3f);
-//		enemy1Clone = Instantiate (enemy1, origin, Quaternion.identity) as GameObject;
-//		enemy1counter++;
-//		yield return new WaitForSeconds (3f);
-//		enemy1Clone = Instantiate (enemy1, origin, Quaternion.identity) as GameObject;
-//		enemy1counter++;
-//		yield return new WaitForSeconds (0.5f);
-//
-//		enemy1CloneFirst = Instantiate (enemy1, origin, Quaternion.identity) as GameObject;
-//		yield return new WaitForSeconds (1f);
-//
-//		enemy1Clone = Instantiate (enemy1, origin, Quaternion.identity) as GameObject;
-//		enemy1counter++;
-//		yield return new WaitForSeconds (1f);
-//		enemy1Clone = Instantiate (enemy1, origin, Quaternion.identity) as GameObject;
-//		enemy1counter++;
-//		yield return new WaitForSeconds (10f);
-//
-//		enemy2Clone = Instantiate (enemy2, origin, Quaternion.identity) as GameObject;
-//		yield return new WaitForSeconds (3f);
-//
-//		enemy1Clone = Instantiate (enemy1, origin, Quaternion.identity) as GameObject;
-//		enemy1counter++;
-//		yield return new WaitForSeconds (1f);
-//		enemy1Clone = Instantiate (enemy1, origin, Quaternion.identity) as GameObject;
-//		enemy1counter++;
-//		yield return new WaitForSeconds (1f);
-//		enemy1Clone = Instantiate (enemy1, origin, Quaternion.identity) as GameObject;
-//		enemy1counter++;
-//
-//		enemy2Clone = Instantiate (enemy2, origin, Quaternion.identity) as GameObject;
-//		yield return new WaitForSeconds (7f);
-//		enemy2Clone = Instantiate (enemy2, origin, Quaternion.identity) as GameObject;
-//		yield return new WaitForSeconds (2f);
-//		enemy2Clone = Instantiate (enemy2, origin, Quaternion.identity) as GameObject;
-//		yield return new WaitForSeconds (0f);
+		enemy1Clone = Instantiate (enemy1, origin, Quaternion.identity) as GameObject;
+		enemy1counter++;
+		yield return new WaitForSeconds (3f);
+		enemy1Clone = Instantiate (enemy1, origin, Quaternion.identity) as GameObject;
+		enemy1counter++;
+		yield return new WaitForSeconds (3f);
+		enemy1Clone = Instantiate (enemy1, origin, Quaternion.identity) as GameObject;
+		enemy1counter++;
+		yield return new WaitForSeconds (3f);
+		enemy1Clone = Instantiate (enemy1, origin, Quaternion.identity) as GameObject;
+		enemy1counter++;
+		yield return new WaitForSeconds (3f);
+		enemy1Clone = Instantiate (enemy1, origin, Quaternion.identity) as GameObject;
+		enemy1counter++;
+		yield return new WaitForSeconds (0.5f);
+
+		enemy1CloneFirst = Instantiate (enemy1, origin, Quaternion.identity) as GameObject;
+		yield return new WaitForSeconds (1f);
+
+		enemy1Clone = Instantiate (enemy1, origin, Quaternion.identity) as GameObject;
+		enemy1counter++;
+		yield return new WaitForSeconds (1f);
+		enemy1Clone = Instantiate (enemy1, origin, Quaternion.identity) as GameObject;
+		enemy1counter++;
+		yield return new WaitForSeconds (10f);
+
+		enemy2Clone = Instantiate (enemy2, origin, Quaternion.identity) as GameObject;
+		yield return new WaitForSeconds (3f);
+
+		enemy1Clone = Instantiate (enemy1, origin, Quaternion.identity) as GameObject;
+		enemy1counter++;
+		yield return new WaitForSeconds (1f);
+		enemy1Clone = Instantiate (enemy1, origin, Quaternion.identity) as GameObject;
+		enemy1counter++;
+		yield return new WaitForSeconds (1f);
+		enemy1Clone = Instantiate (enemy1, origin, Quaternion.identity) as GameObject;
+		enemy1counter++;
+
+		enemy2Clone = Instantiate (enemy2, origin, Quaternion.identity) as GameObject;
+		yield return new WaitForSeconds (7f);
+		enemy2Clone = Instantiate (enemy2, origin, Quaternion.identity) as GameObject;
+		yield return new WaitForSeconds (2f);
+		enemy2Clone = Instantiate (enemy2, origin, Quaternion.identity) as GameObject;
+		yield return new WaitForSeconds (0f);
 
 		doneWithEnemies = true;
-//		levelBeaten = true;
 	}
 }
