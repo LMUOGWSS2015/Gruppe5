@@ -21,6 +21,8 @@ public class EnemyMovement : MonoBehaviour {
 		player = GameObject.FindGameObjectWithTag ("Player").transform;
 		playerHealth = player.GetComponent <PlayerHealth> ();
 		enemyHealth = GetComponent <EnemyHealth> ();
+		if (enemyHealth == null)
+			enemyHealth = GetComponentInChildren <EnemyHealth> ();
 		animator = GetComponentInChildren<Animator>();
 		nav = GetComponent <NavMeshAgent> ();
 		nav.speed = speed;

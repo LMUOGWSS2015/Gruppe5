@@ -73,9 +73,7 @@ public class EnemyMovementRandom : EnemyMovement {
 		if (nav.enabled == true) {
 			if (nav.remainingDistance <= distToNewGoal) {//<= float.Epsilon){
 				Vector3 trans = new Vector3 (Random.Range (rangeXXYY [0], rangeXXYY [1]), 0f, Random.Range (rangeXXYY [2], rangeXXYY [3]));
-//			trans = trans;// + transform.position;
 				trans.y = 0;
-//			Debug.Log(trans);
 			
 				NavMesh.SamplePosition (trans, out hit, 1f, 1 << NavMesh.GetAreaFromName ("Walkable"));
 				nav.SetDestination (hit.position);
@@ -84,12 +82,20 @@ public class EnemyMovementRandom : EnemyMovement {
 		}
 	}
 
-	protected override void OnTriggerEnter (Collider other){
-		base.OnTriggerEnter (other);
-
-		if(other.gameObject.tag == "Wall"){
+//	protected override void OnTriggerEnter (Collider other){
+//		base.OnTriggerEnter (other);
+//
+//		if(other.gameObject.tag == "Wall"){
 //			Debug.Log("wall " + transform.position);
-			NewGoal();
-		}
+//			NewGoal();
+//		}
+//	}
+
+	void OnDrawGizmosSelected(){
+		Gizmos.color = Color.yellow;
+		float x = rangeXXYY[1]-rangeXXYY[0];
+		float y = rangeXXYY[3]-rangeXXYY[2];
+
+		Gizmos.DrawWireCube (Vector3.zero, new Vector3 (x,1,y));
 	}
 }

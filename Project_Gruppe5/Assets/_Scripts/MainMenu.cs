@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
+using iView;
 
 public class MainMenu : MonoBehaviour {
 
@@ -8,11 +9,12 @@ public class MainMenu : MonoBehaviour {
 	public Canvas controlsCanvas;
 	public Button play;
 	public Button controls;
+	public Button calibrate;
 	public Button exit;
 	public bool controllerMac = false;
 	public bool controllerWin = false;
 	public float updown;
-	Button[] buttons = new Button[3];
+	Button[] buttons = new Button[4];
 	int current = 0;
 	float startTime;
 	float journeyLength;
@@ -33,16 +35,23 @@ public class MainMenu : MonoBehaviour {
 
 		play = play.GetComponent<Button> ();
 		controls = controls.GetComponent<Button> ();
+		calibrate = calibrate.GetComponent<Button> ();
 		exit = exit.GetComponent<Button> ();
 		
 		buttons [0] = play;
 		buttons [1] = controls;
-		buttons [2] = exit;
+		buttons [2] = calibrate;
+		buttons [3] = exit;
 	}
 
 	public void exitPressed() {
 		//Debug.Log ("exit pressed");
 		Application.Quit ();
+	}
+	
+	public void calibratePressed() {
+		//calibrate Eye Tracker
+		iView.SMIGazeController.Instance.StartCalibration (5);
 	}
 
 	public void controlsPressed() {
@@ -92,7 +101,7 @@ public class MainMenu : MonoBehaviour {
 			}
 			else if (updown<-0.2 && !wait) {
 				current+=1;
-				if(current>2) current = 2;
+				if(current>buttons.Length-1) current = buttons.Length-1;
 				else
 					StartCoroutine(Wait(secsToWait));
 			}
@@ -108,7 +117,8 @@ public class MainMenu : MonoBehaviour {
 				switch(current){
 				case 0: playPressed(); break;
 				case 1: controlsPressed(); break;
-				case 2: exitPressed(); break;
+				case 2: calibratePressed(); break;
+				case 3: exitPressed(); break;
 				default: Debug.Log("Pressed non-existing button"); return;
 				}
 			}

@@ -18,7 +18,7 @@ public class ObjectShatter : MonoBehaviour {
 	void OnTriggerEnter (Collider other) {
 		if (tags.Contains(other.gameObject.tag)) {
 			hp.SetToPick(true);
-			Instantiate (brokenCrate,transform.position,transform.rotation);
+			Destroy (Instantiate (brokenCrate,transform.position,transform.rotation), 3f);
 			Destroy (this.gameObject);
 		}
 	}
