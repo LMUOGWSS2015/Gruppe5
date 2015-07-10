@@ -11,7 +11,12 @@ public class EnemiesForRoomGainHeadlight : Enemies {
 	
 	public List<EnemiesLeft> enemiesLeft;
 
+	private Transform headlight;
+
 	void Awake(){
+		headlight = GameObject.FindGameObjectWithTag ("HeadlightPickUp").transform;
+		headlight.GetComponent<BoxCollider>().enabled = false;
+
 		foreach (EnemiesLeft el in enemiesLeft) {
 			foreach (GameObject e in el.enemiesToActivate) 
 				ChangeActivated (e, false);
@@ -40,6 +45,10 @@ public class EnemiesForRoomGainHeadlight : Enemies {
 
 				enemiesLeft.RemoveAt(i);
 			}
+		}
+
+		if (size <= 0) {
+			headlight.GetComponent<BoxCollider>().enabled = true;
 		}
 	}
 

@@ -9,12 +9,11 @@ public class MainMenu : MonoBehaviour {
 	public Canvas controlsCanvas;
 	public Button play;
 	public Button controls;
-	public Button calibrate;
 	public Button exit;
 	public bool controllerMac = false;
 	public bool controllerWin = false;
 	public float updown;
-	Button[] buttons = new Button[4];
+	Button[] buttons = new Button[3];
 	int current = 0;
 	float startTime;
 	float journeyLength;
@@ -35,13 +34,11 @@ public class MainMenu : MonoBehaviour {
 
 		play = play.GetComponent<Button> ();
 		controls = controls.GetComponent<Button> ();
-		calibrate = calibrate.GetComponent<Button> ();
 		exit = exit.GetComponent<Button> ();
 		
 		buttons [0] = play;
 		buttons [1] = controls;
-		buttons [2] = calibrate;
-		buttons [3] = exit;
+		buttons [2] = exit;
 	}
 
 	public void exitPressed() {
@@ -49,10 +46,10 @@ public class MainMenu : MonoBehaviour {
 		Application.Quit ();
 	}
 	
-	public void calibratePressed() {
+	/*public void calibratePressed() {
 		//calibrate Eye Tracker
-		iView.SMIGazeController.Instance.StartCalibration (5);
-	}
+		iView.SMIGazeController.Instance.StartCalibration (7);
+	}*/
 
 	public void controlsPressed() {
 		controlsCanvas.GetComponent<CaPCanvas>().Show(true);
@@ -117,8 +114,7 @@ public class MainMenu : MonoBehaviour {
 				switch(current){
 				case 0: playPressed(); break;
 				case 1: controlsPressed(); break;
-				case 2: calibratePressed(); break;
-				case 3: exitPressed(); break;
+				case 2: exitPressed(); break;
 				default: Debug.Log("Pressed non-existing button"); return;
 				}
 			}
