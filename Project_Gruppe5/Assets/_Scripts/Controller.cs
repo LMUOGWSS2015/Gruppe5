@@ -12,6 +12,7 @@ public class Controller : MonoBehaviour {
 	private Vector3 targetPos = new Vector3 (0f, 0.55f, -6f);
 	private float step;
 	private DoubleDoorsLowerOpen doors;
+	private PlayerMovement pm;
 
 	Level level;
 	
@@ -25,12 +26,15 @@ public class Controller : MonoBehaviour {
 
 		doors.enabled = true;
 		movePlayer = true;
+		
+		pm = GameObject.FindGameObjectWithTag ("Player").GetComponent<PlayerMovement> ();
 	}
 	
 	void Update() {
 		if (Input.GetKey (KeyCode.Escape)) {
 			Application.Quit ();
-		} else if (Input.GetButtonDown ("Start")) {
+		} else if ((pm.win && Input.GetButtonDown ("Start"))
+		           || (pm.mac && Input.GetButtonDown ("StartMac"))){
 			if(!pauseCanvas.GetComponent<PauseCanvas> ().GetPause())
 				pauseCanvas.GetComponent<PauseCanvas> ().Show(true);
 		}

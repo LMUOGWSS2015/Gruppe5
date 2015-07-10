@@ -14,7 +14,8 @@ public class CaPCanvas : MonoBehaviour {
 			|| Input.GetButtonDown ("Fire2")
 			|| Input.GetButtonDown ("Fire3")
 			|| Input.GetButtonDown ("Jump")
-			|| Input.GetButtonDown ("Start");
+			|| Input.GetButtonDown ("Start")
+			|| Input.GetButtonDown ("StartMac");
 		
 		if (exit)
 			Show (false);
