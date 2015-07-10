@@ -541,7 +541,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pipes: {fileID: 0}
-  activateSound: {fileID: 8300000, guid: d752c0947f5f25d4ca478035b6c51720, type: 3}
+  activateSound: {fileID: 8300000, guid: ff8a4fc7de613284c89dc0c5dd657d73, type: 3}
   activatableObject: {fileID: 0}
   pointLight: {fileID: 0}
   stepTime: .00100000005
