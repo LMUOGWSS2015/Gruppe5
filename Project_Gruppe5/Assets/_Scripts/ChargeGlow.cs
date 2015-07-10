@@ -7,6 +7,7 @@ public class ChargeGlow : MonoBehaviour {
 	private Renderer rend;
 	public GameObject pipes;
 	private Animator animator;
+	public AudioClip activateSound;
 	public GameObject activatableObject;
 	private ChargeChecker checker;
 
@@ -126,6 +127,7 @@ public class ChargeGlow : MonoBehaviour {
 				a += aStep;
 			}
 			else {
+				this.GetComponent<AudioSource>().PlayOneShot(activateSound);
 				animator.SetTrigger("close");
 				doCharge = false;
 				full = true;
@@ -183,6 +185,8 @@ public class ChargeGlow : MonoBehaviour {
 		for (int i = 0; i < pipes.transform.childCount; ++i) {
 			pipes.transform.GetChild (i).GetComponent<Renderer> ().material.SetColor ("_Color", reset);
 		}
+		
+		//this.GetComponent<AudioSource>().PlayOneShot(activateSound);
 		animator.SetTrigger ("open");
 
 		if(pointLight!=null)
