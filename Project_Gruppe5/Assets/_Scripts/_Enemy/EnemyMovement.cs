@@ -59,4 +59,10 @@ public class EnemyMovement : MonoBehaviour {
 			animator.SetBool("frozen",frozen);
 		}
 	}
+
+	void OnDrawGizmosSelected(){
+		Gizmos.color = Color.yellow;
+		
+		Gizmos.DrawWireSphere (transform.position, distance);
+	}
 }
