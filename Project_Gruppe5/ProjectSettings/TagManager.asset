@@ -28,6 +28,7 @@ TagManager:
   - Button
   - HealthPickup
   - IntroLevelWall
+  - HeadlightPickUp
   layers:
   - Default
   - TransparentFX
