@@ -473,9 +473,10 @@ MonoBehaviour:
   pipes: {fileID: 0}
   activatableObject: {fileID: 0}
   pointLight: {fileID: 0}
-  stepTime: .00999999978
+  stepTime: .00100000005
   number: 1
   partOfOrder: 0
+  isBlocked: 0
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
