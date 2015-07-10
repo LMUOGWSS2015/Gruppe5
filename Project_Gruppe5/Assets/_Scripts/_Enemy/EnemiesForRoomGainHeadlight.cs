@@ -18,6 +18,14 @@ public class EnemiesForRoomGainHeadlight : Enemies {
 		}
 	}
 
+	public override void More(int amnt){
+		base.More (amnt);
+		foreach (EnemiesLeft el in enemiesLeft) {
+			foreach (GameObject e in el.enemiesToActivate) 
+				ChangeActivated (e, false);
+		}
+	}
+
 	public override void Less(int amnt){
 		base.Less (amnt);
 

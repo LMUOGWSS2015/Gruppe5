@@ -13,10 +13,14 @@ public class DoorOpen : MonoBehaviour {
 	private Vector3 up;
 	private Vector3 down;
 
+	private BoxCollider boxCollider;
+
 	void Start(){
+		boxCollider = GetComponent<BoxCollider> ();
 		if(isOpen){
 			up = transform.position + Vector3.up * transform.localScale.y;
 			down = transform.position;
+			boxCollider.isTrigger = true;
 		} else {
 			up = transform.position;
 			down = transform.position - Vector3.up * transform.localScale.y;
@@ -30,8 +34,10 @@ public class DoorOpen : MonoBehaviour {
 		
 			var fracJourney = distCovered / journeyLength;
 			transform.position = Vector3.Lerp (up, down, fracJourney);
-			if(Vector3.Distance(transform.position, down) < Mathf.Epsilon)
+			if(Vector3.Distance(transform.position, down) < Mathf.Epsilon){
+				boxCollider.isTrigger = true;
 				toOpen = false;
+			}
 		} else if(toClose) {
 			var distCovered = (Time.time - startTime) * doorSpeed;
 			
@@ -48,6 +54,7 @@ public class DoorOpen : MonoBehaviour {
 			toOpen = true;
 			toClose = false;
 		} else {
+			boxCollider.isTrigger = false;
 			toClose = true;
 			toOpen = false;
 		}

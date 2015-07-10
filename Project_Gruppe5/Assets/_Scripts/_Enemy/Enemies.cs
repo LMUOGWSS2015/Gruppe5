@@ -9,7 +9,7 @@ public class Enemies : MonoBehaviour {
 			this.gameObject.GetComponent<DoubleDoorsOpen> ().SetEnemiesDead(true);
 	}
 
-	public void More(int amnt){
+	public virtual void More(int amnt){
 		size += amnt;
 	}
 }

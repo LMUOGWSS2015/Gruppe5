@@ -16,9 +16,9 @@ public class MainMusic : MonoBehaviour {
 
 		audioSource [0].enabled = true;
 
-		Debug.Log (audioSource [0].clip);
-		Debug.Log (audioSource [1].clip);
-		Debug.Log (playerHealth.isDead);
+//		Debug.Log (audioSource [0].clip);
+//		Debug.Log (audioSource [1].clip);
+//		Debug.Log (playerHealth.isDead);
 	}
 	
 	void Update () {
