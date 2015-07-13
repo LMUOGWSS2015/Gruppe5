@@ -11,6 +11,9 @@ public class PickupHeadLight : MonoBehaviour {
 	private Transform player;
 	private Vector3 playerPos;
 
+	public Light Spotlight1;
+	public Light Spotlight2;
+
 	void Awake(){
 		ddo = GameObject.FindGameObjectWithTag ("DDoors").gameObject.GetComponent<DoubleDoorsOpen> ();
 		gazeLight = GameObject.FindGameObjectsWithTag ("Light");
@@ -49,6 +52,9 @@ public class PickupHeadLight : MonoBehaviour {
 			player.GetComponent<PlayerMovement> ().enabled = true;
 			
 			ddo.enabled = true;
+
+			Spotlight1.enabled = true;
+			Spotlight2.enabled = true;
 
 			foreach(GameObject gl in gazeLight)
 				gl.GetComponent<Light> ().enabled = true;

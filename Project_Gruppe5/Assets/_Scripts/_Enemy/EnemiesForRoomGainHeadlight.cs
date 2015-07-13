@@ -2,6 +2,16 @@ using UnityEngine;
 using System.Collections.Generic;
 
 public class EnemiesForRoomGainHeadlight : Enemies {
+
+
+	public Light AmbientLight;
+	public Light SpotLight1;
+	public Light SpotLight2;
+
+	private AudioSource male;
+	private AudioSource female;
+
+
 	[System.Serializable]
 	public struct EnemiesLeft {
 		public int enemiesLeftForOpen;
@@ -14,6 +24,13 @@ public class EnemiesForRoomGainHeadlight : Enemies {
 	private Transform headlight;
 
 	void Awake(){
+
+		SpotLight1.enabled = false;
+		SpotLight2.enabled = false;
+
+		male = this.GetComponentsInChildren<AudioSource> () [1];
+		female = this.GetComponentsInChildren<AudioSource> () [2];
+
 		headlight = GameObject.FindGameObjectWithTag ("HeadlightPickUp").transform;
 		headlight.GetComponent<BoxCollider>().enabled = false;
 
@@ -48,9 +65,19 @@ public class EnemiesForRoomGainHeadlight : Enemies {
 		}
 
 		if (size <= 0) {
+
+			if(PlayerPrefs.GetString("gender").Equals("male")){
+				male.Play();
+			}
+			else
+				female.Play();
+
+			AmbientLight.enabled = false;
 			headlight.GetComponent<BoxCollider>().enabled = true;
 		}
 	}
+
+
 
 	void ChangeActivated(GameObject e, bool active){
 		if(e != null){
