@@ -65,6 +65,8 @@ public class ShotsFired : MonoBehaviour {
 
 			Instantiate (bullet, new Vector3(this.transform.position.x, this.transform.position.y, this.transform.position.z), this.transform.rotation);
 
+			this.GetComponent<AudioSource> ().PlayOneShot(shotSounds[Random.Range(0, shotSounds.Length)]);
+
 			bulletExplosion = GameObject.FindGameObjectsWithTag("bulletExplosion");
 			enemyExplosion = GameObject.FindGameObjectsWithTag("enemyExplosion");
 			foreach (GameObject obj in bulletExplosion) {
@@ -78,6 +80,7 @@ public class ShotsFired : MonoBehaviour {
 
 	void shoot(){
 		 this.GetComponent<AudioSource> ().PlayOneShot(shotSounds[Random.Range(0, shotSounds.Length)]);
+		Debug.Log ("shotsounds");
 
 
 		if (shootLeft) {

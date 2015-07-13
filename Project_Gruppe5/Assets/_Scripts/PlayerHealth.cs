@@ -33,8 +33,7 @@ public class PlayerHealth : MonoBehaviour {
 
 	private AudioSource audioSource;
 	public AudioClip hithurt;
-//	public AudioClip playerExplosionAudio;
-	
+
 	void Awake (){
 		screenShake = GameObject.FindGameObjectWithTag ("MainCamera").gameObject.GetComponent<ScreenShake> ();
 		anim = GetComponentInChildren <Animator> ();
@@ -76,7 +75,6 @@ public class PlayerHealth : MonoBehaviour {
 			sds.Show(true);
 			isDead = true;
 
-//			audioSource.PlayOneShot (playerExplosionAudio);
 		}
 	}
 	
