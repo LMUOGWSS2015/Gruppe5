@@ -121,10 +121,10 @@ public class ChargeGlow : MonoBehaviour {
 	
 			if (!isBlocked&&animator.GetCurrentAnimatorStateInfo(0).IsName ("Base.Opened")) {
 			if (r < rEnd) {
-				r += rStep;
-				g += gStep;
-				b += bStep;
-				a += aStep;
+				r += (rStep * 3);
+				g += (gStep * 3);
+				b += (bStep * 3);
+				a += (aStep * 3);
 			}
 			else {
 				this.GetComponent<AudioSource>().PlayOneShot(activateSound);
@@ -147,17 +147,17 @@ public class ChargeGlow : MonoBehaviour {
 				pipes.transform.GetChild (i).GetComponent<Renderer> ().material.SetColor ("_Color", new Color(r/255f, g/255f, b/255f, a/255f));
 			}
 			}
-			yield return new WaitForSeconds (stepTime);
+			yield return new WaitForSeconds (0.002f);
 		}
 	}
 
 	IEnumerator CounterCharge () {
 		while (doCounterCharge && !full) {
 			if (r > rStart) {
-				r -= rStep;
-				g -= gStep;
-				b -= bStep;
-				a -= aStep;
+				r -= (rStep * 3);
+				g -= (gStep * 3);
+				b -= (bStep * 3);
+				a -= (aStep * 3);
 			}
 			else {
 				doCounterCharge = false;
@@ -168,7 +168,7 @@ public class ChargeGlow : MonoBehaviour {
 			for (int i = 0; i < pipes.transform.childCount; ++i) {
 				pipes.transform.GetChild (i).GetComponent<Renderer> ().material.SetColor ("_Color", new Color(r/255f, g/255f, b/255f, a/255f));
 			}
-			yield return new WaitForSeconds (stepTime);
+			yield return new WaitForSeconds (0.002f);
 		}
 	}
 
