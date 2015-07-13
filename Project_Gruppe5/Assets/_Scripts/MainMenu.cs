@@ -23,6 +23,7 @@ public class MainMenu : MonoBehaviour {
 	bool moveCam = false;
 	Camera cam;
 	public GameObject player;
+	public Animator anim;
 
 	bool wait = false;
 	float secsToWait = .3f;
@@ -31,6 +32,7 @@ public class MainMenu : MonoBehaviour {
 	void Start () {
 		goal = new Vector3 (0, 0.55f, -2);
 		mainMenu = mainMenu.GetComponent<Canvas>();
+
 
 		play = play.GetComponent<Button> ();
 		controls = controls.GetComponent<Button> ();
@@ -65,7 +67,7 @@ public class MainMenu : MonoBehaviour {
 
 	public void playPressed() {
 		//Debug.Log ("play pressed");
-		
+		anim.SetTrigger("unbox");
 		cam = Camera.main;
 		start = cam.transform.position;
 		startTime = Time.time;

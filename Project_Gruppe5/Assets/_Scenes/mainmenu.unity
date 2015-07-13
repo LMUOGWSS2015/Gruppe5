@@ -750,6 +750,30 @@ Prefab:
       propertyPath: maxEmission
       value: 18
       objectReference: {fileID: 0}
+    - target: {fileID: 2342662, guid: d1cf23df406d6324687b6a9c26795dae, type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: d5060f8d1e5ee45bda88c992f3f8ba23, type: 2}
+    - target: {fileID: 438618, guid: d1cf23df406d6324687b6a9c26795dae, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 438618, guid: d1cf23df406d6324687b6a9c26795dae, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: .519999981
+      objectReference: {fileID: 0}
+    - target: {fileID: 464708, guid: d1cf23df406d6324687b6a9c26795dae, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 464708, guid: d1cf23df406d6324687b6a9c26795dae, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -.0599999987
+      objectReference: {fileID: 0}
+    - target: {fileID: 464708, guid: d1cf23df406d6324687b6a9c26795dae, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -.0399999991
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 11414094, guid: d1cf23df406d6324687b6a9c26795dae, type: 2}
     - {fileID: 11450230, guid: d1cf23df406d6324687b6a9c26795dae, type: 2}
@@ -867,6 +891,7 @@ MonoBehaviour:
   controls: {fileID: 1686747824}
   exit: {fileID: 197520266}
   player: {fileID: 216418314}
+  anim: {fileID: 1472653702}
 --- !u!1 &692506541
 GameObject:
   m_ObjectHideFlags: 0
@@ -1309,6 +1334,11 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1325554762}
+--- !u!95 &1472653702 stripped
+Animator:
+  m_PrefabParentObject: {fileID: 9500000, guid: 2d43e3fe13f95fa468db56de739dc1db,
+    type: 3}
+  m_PrefabInternal: {fileID: 1794258099}
 --- !u!1 &1530591594
 GameObject:
   m_ObjectHideFlags: 0
