@@ -80,6 +80,7 @@ ModelImporter:
     4300012: Cylinder
     7400000: grappleTop
     7400002: boxNormal
+    7400004: finish
     9500000: //RootNode
     13700000: Cylinder
   materials:
@@ -190,6 +191,86 @@ ModelImporter:
       loop: 0
       loopTime: 1
       loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature Grappler
+        weight: 1
+      - path: Armature Grappler/Bone
+        weight: 1
+      - path: Armature Grappler/Bone/Bone.001
+        weight: 1
+      - path: Armature Grappler/Bone/Bone.001/Bone.002
+        weight: 1
+      - path: Armature Grappler/Bone/Bone.001/Bone.002/Bone.003
+        weight: 1
+      - path: Armature Grappler/Bone/Bone.001/Bone.002/Bone.003/Bone.004
+        weight: 1
+      - path: Armature Grappler/Bone/Bone.001/Bone.002/Bone.003/Bone.004/Bone.005
+        weight: 1
+      - path: Armature Grappler/Bone/Bone.001/Bone.002/Bone.003/Bone.004/Bone.005/Bone.006
+        weight: 1
+      - path: Armature Grappler/Bone/Bone.001/Bone.002/Bone.003/Bone.004/Bone.005/Bone.006/Bone.006_end
+        weight: 1
+      - path: Armature Grappler/Bone.007
+        weight: 1
+      - path: Armature Grappler/Bone.007/Bone.007_end
+        weight: 1
+      - path: Armature Grappler/Bone.007/Box_top
+        weight: 1
+      - path: Armature Grappler/Bone.008
+        weight: 1
+      - path: Armature Grappler/Bone.008/Bone.008_end
+        weight: 1
+      - path: Armature Grappler/Bone.008/Box_back
+        weight: 1
+      - path: Armature Grappler/Bone.009
+        weight: 1
+      - path: Armature Grappler/Bone.009/Bone.009_end
+        weight: 1
+      - path: Armature Grappler/Bone.009/Box_front
+        weight: 1
+      - path: Armature Grappler/Bone.010
+        weight: 1
+      - path: Armature Grappler/Bone.010/Bone.010_end
+        weight: 1
+      - path: Armature Grappler/Bone.010/Box_right
+        weight: 1
+      - path: Armature Grappler/Bone.011
+        weight: 1
+      - path: Armature Grappler/Bone.011/Bone.011_end
+        weight: 1
+      - path: Armature Grappler/Bone.011/Box_left
+        weight: 1
+      - path: Box.bottom
+        weight: 1
+      - path: Cylinder
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: finish
+      takeName: grappleTop
+      firstFrame: 118
+      lastFrame: 119
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
       loopBlendOrientation: 0
       loopBlendPositionY: 0
       loopBlendPositionXZ: 0
