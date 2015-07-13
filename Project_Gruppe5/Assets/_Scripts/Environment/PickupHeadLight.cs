@@ -14,6 +14,8 @@ public class PickupHeadLight : MonoBehaviour {
 	public Light Spotlight1;
 	public Light Spotlight2;
 
+	public Transform animEnd;
+
 	void Awake(){
 		ddo = GameObject.FindGameObjectWithTag ("DDoors").gameObject.GetComponent<DoubleDoorsOpen> ();
 		gazeLight = GameObject.FindGameObjectsWithTag ("Light");
@@ -32,11 +34,12 @@ public class PickupHeadLight : MonoBehaviour {
 			pickupCam.SetActive(true);
 			headlightAnim.gameObject.SetActive(true);
 
-			playerPos = player.position;
+			//playerPos = player.position;
 			player.position = new Vector3 (0,-10,0);
 			player.GetComponent<PlayerMovement> ().enabled = false;
 
 			this.enabled = true;
+			this.GetComponent<BoxCollider>().enabled = false;
 		}
 	}
 
@@ -48,7 +51,8 @@ public class PickupHeadLight : MonoBehaviour {
 			pickupCam.SetActive(false);
 			Destroy (headlightAnim.gameObject);
 
-			player.position = playerPos;
+			//player.position = playerPos;
+			player.position = animEnd.position;
 			player.GetComponent<PlayerMovement> ().enabled = true;
 			
 			ddo.enabled = true;

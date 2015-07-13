@@ -44,7 +44,7 @@ LevelGameManager:
 LightmapSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 5
-  m_GIWorkflowMode: 0
+  m_GIWorkflowMode: 1
   m_LightmapsMode: 1
   m_GISettings:
     serializedVersion: 2
@@ -2708,7 +2708,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11414022, guid: 8e73b706f17ee00498433eff50c472e2, type: 2}
       propertyPath: stepTime
-      value: .00100000005
+      value: .000500000024
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8e73b706f17ee00498433eff50c472e2, type: 2}
@@ -3735,7 +3735,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11414022, guid: 8e73b706f17ee00498433eff50c472e2, type: 2}
       propertyPath: stepTime
-      value: .00100000005
+      value: .000500000024
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8e73b706f17ee00498433eff50c472e2, type: 2}
@@ -3973,7 +3973,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11414022, guid: 8e73b706f17ee00498433eff50c472e2, type: 2}
       propertyPath: stepTime
-      value: .00100000005
+      value: .000500000024
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8e73b706f17ee00498433eff50c472e2, type: 2}
@@ -4678,7 +4678,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11414022, guid: 8e73b706f17ee00498433eff50c472e2, type: 2}
       propertyPath: stepTime
-      value: .00100000005
+      value: .000500000024
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8e73b706f17ee00498433eff50c472e2, type: 2}
@@ -5069,7 +5069,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11414022, guid: 8e73b706f17ee00498433eff50c472e2, type: 2}
       propertyPath: stepTime
-      value: .00100000005
+      value: .000500000024
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8e73b706f17ee00498433eff50c472e2, type: 2}
