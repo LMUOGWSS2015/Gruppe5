@@ -544,7 +544,7 @@ MonoBehaviour:
   activateSound: {fileID: 8300000, guid: ff8a4fc7de613284c89dc0c5dd657d73, type: 3}
   activatableObject: {fileID: 0}
   pointLight: {fileID: 0}
-  stepTime: .00100000005
+  stepTime: .000500000024
   number: 1
   partOfOrder: 0
   isBlocked: 0
