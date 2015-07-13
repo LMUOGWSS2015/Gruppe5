@@ -77,15 +77,15 @@ NavMeshSettings:
   m_ObjectHideFlags: 0
   m_BuildSettings:
     serializedVersion: 2
-    agentRadius: 1.5
+    agentRadius: 2
     agentHeight: 2
-    agentSlope: 20.2000008
-    agentClimb: .400000006
+    agentSlope: 13.6000004
+    agentClimb: .100000001
     ledgeDropHeight: 0
     maxJumpAcrossDistance: 0
     accuratePlacement: 0
     minRegionArea: 2
-    cellSize: .5
+    cellSize: .666666687
     manualCellSize: 0
   m_NavMeshData: {fileID: 23800000, guid: 6816702bbc1fc34488707bf815f49d3c, type: 2}
 --- !u!1 &8839814
@@ -1098,6 +1098,14 @@ Prefab:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 19513818, guid: 9707ed729ad26fa41b07677cc98dfceb, type: 2}
+      propertyPath: m_Radius
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 13687852, guid: 9707ed729ad26fa41b07677cc98dfceb, type: 2}
+      propertyPath: m_Radius
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9707ed729ad26fa41b07677cc98dfceb, type: 2}
   m_IsPrefabParent: 0
@@ -1522,6 +1530,33 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9acae6a813216d0458d91fd18d40a59b, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &521476506
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 521476507}
+  m_Layer: 0
+  m_Name: AnimEnd
+  m_TagString: Untagged
+  m_Icon: {fileID: 2800000, guid: 0a6b0f186297d7347898981270cf8762, type: 3}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &521476507
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 521476506}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 2.36999989, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 624494037}
+  m_RootOrder: 2
 --- !u!1001 &551283890
 Prefab:
   m_ObjectHideFlags: 0
@@ -1713,6 +1748,7 @@ Transform:
   m_Children:
   - {fileID: 458606253}
   - {fileID: 1817630261}
+  - {fileID: 521476507}
   m_Father: {fileID: 0}
   m_RootOrder: 23
 --- !u!65 &624494038
@@ -1741,6 +1777,7 @@ MonoBehaviour:
   pickupCam: {fileID: 1607876785}
   Spotlight1: {fileID: 295680741}
   Spotlight2: {fileID: 295680742}
+  animEnd: {fileID: 521476507}
 --- !u!1 &657588187 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 181320, guid: 9acae6a813216d0458d91fd18d40a59b, type: 2}
