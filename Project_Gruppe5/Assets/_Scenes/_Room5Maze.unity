@@ -1459,7 +1459,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   distance: 8
-  speed: 5
+  speed: 4
   freezeInLight: 1
   follow: 2
   patrolSpeed: 2
@@ -3578,6 +3578,10 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 11471940, guid: 81c2d88863ec2164fa1ce0fa3711c41d, type: 2}
+      propertyPath: attackDamage
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 11441478, guid: 81c2d88863ec2164fa1ce0fa3711c41d, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 81c2d88863ec2164fa1ce0fa3711c41d, type: 2}
@@ -3602,7 +3606,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   distance: 8
-  speed: 5
+  speed: 4
   freezeInLight: 1
   follow: 2
   patrolSpeed: 2
@@ -3625,11 +3629,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 464146, guid: 7cd42d61630df364aa3d6516fccdc0d0, type: 2}
       propertyPath: m_RootOrder
-      value: 14
-      objectReference: {fileID: 0}
-    - target: {fileID: 11492460, guid: 7cd42d61630df364aa3d6516fccdc0d0, type: 2}
-      propertyPath: useEyeTracking
-      value: 0
+      value: 15
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7cd42d61630df364aa3d6516fccdc0d0, type: 2}
@@ -3852,6 +3852,10 @@ Prefab:
     - target: {fileID: 413916, guid: 81c2d88863ec2164fa1ce0fa3711c41d, type: 2}
       propertyPath: m_LocalScale.z
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 11471940, guid: 81c2d88863ec2164fa1ce0fa3711c41d, type: 2}
+      propertyPath: attackDamage
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 11441478, guid: 81c2d88863ec2164fa1ce0fa3711c41d, type: 2}
@@ -4085,6 +4089,10 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 11471940, guid: 81c2d88863ec2164fa1ce0fa3711c41d, type: 2}
+      propertyPath: attackDamage
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 11441478, guid: 81c2d88863ec2164fa1ce0fa3711c41d, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 81c2d88863ec2164fa1ce0fa3711c41d, type: 2}
@@ -4109,7 +4117,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   distance: 8
-  speed: 5
+  speed: 4
   freezeInLight: 1
   follow: 2
   patrolSpeed: 2

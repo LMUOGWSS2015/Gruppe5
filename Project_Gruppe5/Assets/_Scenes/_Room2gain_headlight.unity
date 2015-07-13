@@ -3258,6 +3258,10 @@ Prefab:
       propertyPath: distance
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 11441478, guid: 81c2d88863ec2164fa1ce0fa3711c41d, type: 2}
+      propertyPath: freezeInLight
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 81c2d88863ec2164fa1ce0fa3711c41d, type: 2}
   m_IsPrefabParent: 0
