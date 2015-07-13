@@ -23,6 +23,7 @@ public class MainMenu : MonoBehaviour {
 	bool moveCam = false;
 	Camera cam;
 	public GameObject player;
+	public Animator anim;
 
 	bool wait = false;
 	float secsToWait = .3f;
@@ -31,6 +32,7 @@ public class MainMenu : MonoBehaviour {
 	void Start () {
 		goal = new Vector3 (0, 0.55f, -2);
 		mainMenu = mainMenu.GetComponent<Canvas>();
+
 
 		play = play.GetComponent<Button> ();
 		controls = controls.GetComponent<Button> ();
@@ -64,16 +66,31 @@ public class MainMenu : MonoBehaviour {
 	}
 
 	public void playPressed() {
-		//Debug.Log ("play pressed");
-		
+		Debug.Log ("play pressed");
+		anim.SetTrigger("unbox");
+		Debug.Log("IN");
 		cam = Camera.main;
 		start = cam.transform.position;
-		startTime = Time.time;
 		journeyLength = Vector3.Distance(start,goal);
-		moveCam = true;
+
+
+
+
 	}
 
 	public void Update(){
+
+		
+		AnimatorStateInfo currentState = anim.GetCurrentAnimatorStateInfo(0);
+		if (currentState.IsName ("Base.finish") &&!moveCam) {
+			
+			startTime = Time.time;
+
+			moveCam = true;
+			
+		}
+
+
 		if (moveCam) {
 			// Distance moved = time * speed.
 			var distCovered = (Time.time - startTime) * speed;
