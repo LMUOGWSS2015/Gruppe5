@@ -10,9 +10,9 @@ public class MainMenu : MonoBehaviour {
 	public Button play;
 	public Button controls;
 	public Button exit;
-	public bool controllerMac = false;
-	public bool controllerWin = false;
-	public float updown;
+	bool controllerMac = false;
+	bool controllerWin = false;
+	float updown;
 	Button[] buttons = new Button[3];
 	int current = 0;
 	float startTime;
@@ -39,6 +39,14 @@ public class MainMenu : MonoBehaviour {
 		buttons [0] = play;
 		buttons [1] = controls;
 		buttons [2] = exit;
+
+		if (Application.platform == RuntimePlatform.OSXEditor || Application.platform == RuntimePlatform.OSXPlayer) {
+			controllerMac = true;
+			controllerWin = false;
+		} else if (Application.platform == RuntimePlatform.WindowsEditor || Application.platform == RuntimePlatform.WindowsPlayer) {
+			controllerMac = false;
+			controllerWin = true;
+		}
 	}
 
 	public void exitPressed() {
@@ -113,7 +121,7 @@ public class MainMenu : MonoBehaviour {
 				//Debug.Log ("Active");
 				switch(current){
 				case 0: playPressed(); break;
-				case 1: controlsPressed(); break;
+				case 1: controlsPressed(); wait = false; break;
 				case 2: exitPressed(); break;
 				default: Debug.Log("Pressed non-existing button"); return;
 				}
