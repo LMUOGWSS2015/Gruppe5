@@ -64,6 +64,11 @@ public class IntroButtonPress : MonoBehaviour {
 
 				isactive = true;
 
+				if(tvWomanSound.isPlaying)
+					tvWomanSound.Stop();
+				if(tvManSound.isPlaying)
+					tvManSound.Stop();
+
 				if(player.female && !tvWomanSound.isPlaying && !tvManSound.isPlaying){
 					audioFemale.Play();	
 				}

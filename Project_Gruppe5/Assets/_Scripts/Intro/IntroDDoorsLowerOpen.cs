@@ -106,6 +106,10 @@ public class IntroDDoorsLowerOpen : MonoBehaviour {
 	
 	
 	void Update () {
+		if (audioWelcome.isPlaying &&
+		     Input.GetButtonDown ("Fire1")) {
+			audioWelcome.Stop();
+		}
 
 		if (!closing) {
 			leftDoor.rotation = Quaternion.Slerp (leftDoor.rotation, leftRotation, .05f); 
