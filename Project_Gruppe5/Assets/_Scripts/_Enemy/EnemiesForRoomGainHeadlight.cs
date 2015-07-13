@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections;
 using System.Collections.Generic;
 
 public class EnemiesForRoomGainHeadlight : Enemies {
@@ -40,6 +41,17 @@ public class EnemiesForRoomGainHeadlight : Enemies {
 		}
 	}
 
+	IEnumerator FlickerLight(){
+		for(int i = 0; i<3; i++){
+		AmbientLight.enabled = false;
+		yield return new WaitForSeconds (Random.Range (0.1f, 1.0f));
+		AmbientLight.enabled = true;
+		yield return new WaitForSeconds (Random.Range (0.1f, 1.0f));
+		AmbientLight.enabled = false;
+		}
+
+	}
+
 	public override void More(int amnt){
 		base.More (amnt);
 		foreach (EnemiesLeft el in enemiesLeft) {
@@ -72,7 +84,8 @@ public class EnemiesForRoomGainHeadlight : Enemies {
 			else
 				female.Play();
 
-			AmbientLight.enabled = false;
+
+			StartCoroutine(FlickerLight());
 			headlight.GetComponent<BoxCollider>().enabled = true;
 		}
 	}
