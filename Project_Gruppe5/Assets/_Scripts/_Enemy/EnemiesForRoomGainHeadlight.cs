@@ -29,8 +29,8 @@ public class EnemiesForRoomGainHeadlight : Enemies {
 		SpotLight1.enabled = false;
 		SpotLight2.enabled = false;
 
-		male = this.GetComponentsInChildren<AudioSource> () [1];
-		female = this.GetComponentsInChildren<AudioSource> () [2];
+		male = this.GetComponentsInChildren<AudioSource> () [2];
+		female = this.GetComponentsInChildren<AudioSource> () [1];
 
 		headlight = GameObject.FindGameObjectWithTag ("HeadlightPickUp").transform;
 		headlight.GetComponent<BoxCollider>().enabled = false;
@@ -77,7 +77,6 @@ public class EnemiesForRoomGainHeadlight : Enemies {
 		}
 
 		if (size <= 0) {
-
 			if(PlayerPrefs.GetString("gender").Equals("male")){
 				male.Play();
 			}
